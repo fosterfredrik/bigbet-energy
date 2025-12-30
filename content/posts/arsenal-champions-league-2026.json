@@ -1,0 +1,93 @@
+{
+  "slug": "arsenal-champions-league-2026",
+  "title": "21 Years. Zero European Trophies.",
+  "category": "Champions League",
+  "created": "2025-12-27",
+  "blocks": [
+    {
+      "type": "Hero",
+      "props": {
+        "category": "Champions League",
+        "headline": "21 Years. Zero European Trophies.",
+        "subhead": "Arsenal are favorites. But history says they'll find a way to lose. Is this finally the year?",
+        "image": "/images/arsenal-cl/arsenal-hero.jpg"
+      }
+    },
+    {
+      "type": "OddsBar",
+      "props": {
+        "market": "Champions League Winner 2025/26",
+        "date": "Dec 2025",
+        "source": "Polymarket",
+        "variant": "light",
+        "odds": [
+          { "label": "Arsenal", "value": 19 },
+          { "label": "Bayern Munich", "value": 17 },
+          { "label": "Man City", "value": 12 }
+        ],
+        "portrait": "/images/arsenal-cl/arsenal-saka.png"
+      }
+    },
+    {
+      "type": "Context",
+      "props": {
+        "label": "Why This Year Is Different",
+        "title": "The Squad Is Finally Complete",
+        "body": "Arsenal have [[plugged every gap]]. Gyökeres provides the goals. Zubimendi controls the midfield. Saka, Saliba, Ødegaard — are entering their [[peak years]].",
+        "date": "Dec 2025",
+        "source": "Analysis"
+      }
+    },
+    {
+      "type": "Quote",
+      "props": {
+        "quote": "The 2006 final is the biggest regret of my football career.",
+        "author": "Cesc Fàbregas",
+        "role": "Arsenal Legend",
+        "context": "Arsenal led until the 76th minute, then conceded twice in 4 minutes",
+        "date": "2020",
+        "source": "Interview",
+        "portrait": "/images/arsenal-cl/fabregas-face.jpg"
+      }
+    },
+    {
+      "type": "ProgressBar",
+      "props": {
+        "label": "Years Since Last CL Final",
+        "subtitle": "Paris 2006. Lehmann sent off. Sol Campbell header. Then heartbreak.",
+        "value": 19,
+        "date": "Dec 2025",
+        "source": "UEFA"
+      },
+      "cta": {
+        "logo": "/images/sponsors/bet365-logo.jpg",
+        "headline": "Arsenal to win CL?",
+        "subhead": "5.25x odds at Bet365",
+        "buttonText": "Get Bonus",
+        "buttonUrl": "https://bet365.com",
+        "disclaimer": "Gambling can be addictive. Please play responsibly. 18+. T&Cs apply.",
+        "termsUrl": "https://bet365.com/terms"
+      }
+    },
+    {
+      "type": "ProgressRing",
+      "props": {
+        "label": "Minutes Without Conceding",
+        "subtitle": "2006 Champions League run. A record. Then they lost the final.",
+        "value": 99,
+        "date": "May 17, 2006",
+        "source": "UEFA",
+        "portrait": "/images/arsenal-cl/arteta-face.png"
+      },
+      "cta": {
+        "logo": "/images/sponsors/bet365-logo.jpg",
+        "headline": "Arteta's year?",
+        "subhead": "Manager of the Season 3.50x",
+        "buttonText": "Get Bonus",
+        "buttonUrl": "https://bet365.com",
+        "disclaimer": "Gambling can be addictive. Please play responsibly. 18+. T&Cs apply.",
+        "termsUrl": "https://bet365.com/terms"
+      }
+    }
+  ]
+}

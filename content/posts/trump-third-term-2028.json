@@ -1,0 +1,93 @@
+{
+  "slug": "trump-third-term-2028",
+  "title": "The Constitution Says No.",
+  "category": "2028 Election",
+  "created": "2025-12-22",
+  "blocks": [
+    {
+      "type": "Hero",
+      "props": {
+        "category": "2028 Election",
+        "headline": "The Constitution Says No.",
+        "subhead": "Trump allies launch the 'Third Term Project.' Red caps already on sale. Bannon says there's a plan.",
+        "image": "/images/trump-2028/djt_rally.jpg"
+      }
+    },
+    {
+      "type": "OddsBar",
+      "props": {
+        "market": "Presidential Election Winner 2028",
+        "date": "Dec 2025",
+        "source": "Polymarket",
+        "variant": "light",
+        "odds": [
+          { "label": "JD Vance", "value": 31 },
+          { "label": "Gavin Newsom", "value": 18 },
+          { "label": "Donald Trump", "value": 4 }
+        ],
+        "portrait": "/images/trump-2028/djt-face.png"
+      }
+    },
+    {
+      "type": "Context",
+      "props": {
+        "label": "Why This Matters",
+        "title": "The Loophole Hunt",
+        "body": "The 22nd Amendment bans a third term. But the 'Third Term Project' is [[actively hunting for loopholes]] in the 12th and 25th Amendments.",
+        "date": "Dec 2025",
+        "source": "NotebookLM Research"
+      }
+    },
+    {
+      "type": "Quote",
+      "props": {
+        "quote": "Trump is going to be president in '28, and people ought to just get accommodated with that... there is a plan.",
+        "author": "Steve Bannon",
+        "role": "Former Trump Strategist",
+        "context": "On the 2028 race",
+        "date": "Dec 2025",
+        "source": "Interview",
+        "portrait": "/images/trump-2028/sb-shot.png"
+      }
+    },
+    {
+      "type": "ProgressBar",
+      "props": {
+        "label": "Trump's Legal Limit",
+        "subtitle": "Constitutional maximum completed (2 terms / 8 years)",
+        "value": 62,
+        "date": "Dec 2025",
+        "source": "22nd Amendment"
+      },
+      "cta": {
+        "logo": "/images/sponsors/bet365-logo.jpg",
+        "headline": "Bet on Trump 2028?",
+        "subhead": "31x odds at Bet365",
+        "buttonText": "Get Bonus",
+        "buttonUrl": "https://bet365.com",
+        "disclaimer": "Gambling can be addictive. Please play responsibly. For help visit stodlinjen.se | spelpaus.se. Bonus terms: New customers only, minimum deposit $10, 1x wagering requirement.",
+        "termsUrl": "https://bet365.com/terms"
+      }
+    },
+    {
+      "type": "ProgressRing",
+      "props": {
+        "label": "JD Vance",
+        "subtitle": "Republican primary frontrunner. The heir apparent.",
+        "value": 50,
+        "date": "Dec 2025",
+        "source": "Polymarket",
+        "portrait": "/images/trump-2028/jd-mug.jpg"
+      },
+      "cta": {
+        "logo": "/images/sponsors/bet365-logo.jpg",
+        "headline": "Is JD Vance your next president?",
+        "subhead": "3,25x odds at Bet365",
+        "buttonText": "Get Bonus",
+        "buttonUrl": "https://bet365.com",
+        "disclaimer": "Gambling can be addictive. Please play responsibly. For help visit stodlinjen.se | spelpaus.se. Bonus terms: New customers only, minimum deposit $10, 1x wagering requirement.",
+        "termsUrl": "https://bet365.com/terms"
+      }
+    }
+  ]
+}

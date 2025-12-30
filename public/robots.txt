@@ -1,7 +1,4 @@
 # AI Citation & Crawling Optimization
-# Updated: November 2025
-
-# Allow all major search engines and AI crawlers
 User-agent: *
 Allow: /
 
@@ -31,7 +28,6 @@ User-agent: Applebot-Extended
 Allow: /
 
 # Sitemap location
-Sitemap: https://isaidtoptop.com/sitemap.xml
+Sitemap: https://bigbet.energy/sitemap.xml
 
-# Crawl-delay (polite crawling, but not blocking)
 Crawl-delay: 1

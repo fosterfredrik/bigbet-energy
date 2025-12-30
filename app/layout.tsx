@@ -32,8 +32,8 @@ const geomanist = localFont({
 })
 
 export const metadata: Metadata = {
-  title: "I Said Top Top",
-  description: "Transparent product research with verified specs and no BS",
+  title: "Big Bet Energy",
+  description: "Betting intelligence that hits different",
 };
 
 export default function RootLayout({
