@@ -72,11 +72,11 @@ export default async function HomePage() {
       </header>
 
       {/* Main Hero + Posts Section */}
-      <section className="bg-black py-8 px-4 relative overflow-hidden">
+      <section className="bg-amber-400 py-8 px-4 relative overflow-hidden">
         <div
-          className="absolute inset-0 opacity-[0.04]"
+          className="absolute inset-0 opacity-[0.08]"
           style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='200' height='200' viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,0 L45,3 L50,0 L95,5 L100,0 L150,8 L155,2 L200,0 L200,35 L160,40 L155,32 L100,38 L90,42 L45,35 L40,40 L0,38 Z' fill='none' stroke='%23fff' stroke-width='1'/%3E%3Cpath d='M0,38 L35,45 L80,40 L85,48 L140,42 L145,50 L200,45 L200,85 L150,90 L145,82 L95,88 L50,82 L45,90 L0,85 Z' fill='none' stroke='%23fff' stroke-width='1'/%3E%3Cpath d='M0,85 L50,92 L55,88 L110,95 L115,90 L165,98 L200,92 L200,135 L155,140 L100,132 L95,140 L40,135 L35,142 L0,138 Z' fill='none' stroke='%23fff' stroke-width='1'/%3E%3Cpath d='M0,138 L40,145 L90,140 L95,150 L150,142 L155,152 L200,148 L200,190 L160,195 L105,188 L100,198 L50,192 L45,200 L0,195 Z' fill='none' stroke='%23fff' stroke-width='1'/%3E%3Cpath d='M25,10 L25,35' stroke='%23fff' stroke-width='1'/%3E%3Cpath d='M75,5 L78,38' stroke='%23fff' stroke-width='1'/%3E%3Cpath d='M130,8 L125,40' stroke='%23fff' stroke-width='1'/%3E%3Cpath d='M180,5 L182,42' stroke='%23fff' stroke-width='1'/%3E%3Cpath d='M60,45 L58,82' stroke='%23fff' stroke-width='1'/%3E%3Cpath d='M120,48 L122,85' stroke='%23fff' stroke-width='1'/%3E%3Cpath d='M175,50 L170,88' stroke='%23fff' stroke-width='1'/%3E%3Cpath d='M20,90 L22,135' stroke='%23fff' stroke-width='1'/%3E%3Cpath d='M70,88 L68,138' stroke='%23fff' stroke-width='1'/%3E%3Cpath d='M135,95 L138,140' stroke='%23fff' stroke-width='1'/%3E%3Cpath d='M50,145 L52,192' stroke='%23fff' stroke-width='1'/%3E%3Cpath d='M130,150 L128,195' stroke='%23fff' stroke-width='1'/%3E%3C/svg%3E")`,
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='200' height='200' viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,0 L45,3 L50,0 L95,5 L100,0 L150,8 L155,2 L200,0 L200,35 L160,40 L155,32 L100,38 L90,42 L45,35 L40,40 L0,38 Z' fill='none' stroke='%23000' stroke-width='1'/%3E%3Cpath d='M0,38 L35,45 L80,40 L85,48 L140,42 L145,50 L200,45 L200,85 L150,90 L145,82 L95,88 L50,82 L45,90 L0,85 Z' fill='none' stroke='%23000' stroke-width='1'/%3E%3Cpath d='M0,85 L50,92 L55,88 L110,95 L115,90 L165,98 L200,92 L200,135 L155,140 L100,132 L95,140 L40,135 L35,142 L0,138 Z' fill='none' stroke='%23000' stroke-width='1'/%3E%3Cpath d='M0,138 L40,145 L90,140 L95,150 L150,142 L155,152 L200,148 L200,190 L160,195 L105,188 L100,198 L50,192 L45,200 L0,195 Z' fill='none' stroke='%23000' stroke-width='1'/%3E%3Cpath d='M25,10 L25,35' stroke='%23000' stroke-width='1'/%3E%3Cpath d='M75,5 L78,38' stroke='%23000' stroke-width='1'/%3E%3Cpath d='M130,8 L125,40' stroke='%23000' stroke-width='1'/%3E%3Cpath d='M180,5 L182,42' stroke='%23000' stroke-width='1'/%3E%3Cpath d='M60,45 L58,82' stroke='%23000' stroke-width='1'/%3E%3Cpath d='M120,48 L122,85' stroke='%23000' stroke-width='1'/%3E%3Cpath d='M175,50 L170,88' stroke='%23000' stroke-width='1'/%3E%3Cpath d='M20,90 L22,135' stroke='%23000' stroke-width='1'/%3E%3Cpath d='M70,88 L68,138' stroke='%23000' stroke-width='1'/%3E%3Cpath d='M135,95 L138,140' stroke='%23000' stroke-width='1'/%3E%3Cpath d='M50,145 L52,192' stroke='%23000' stroke-width='1'/%3E%3Cpath d='M130,150 L128,195' stroke='%23000' stroke-width='1'/%3E%3C/svg%3E")`,
             backgroundSize: '200px 200px',
           }}
         />
@@ -85,10 +85,10 @@ export default async function HomePage() {
 
             {/* Left - Intro */}
             <div className="lg:w-1/2 flex flex-col justify-center">
-              <h1 className="text-3xl sm:text-4xl font-bold text-white mb-3">
+              <h1 className="text-5xl sm:text-5xl font-bold text-black mb-3">
                 Betting Intelligence That Hits Different
               </h1>
-              <p className="text-neutral-400 text-sm mb-4">
+              <p className="text-neutral-800 text-base mb-4">
                 Odds that matter. Stories that move.
               </p>
             </div>
@@ -100,7 +100,7 @@ export default async function HomePage() {
                   <Link
                     key={post.slug}
                     href={`/post/${post.slug}`}
-                    className="group flex items-stretch bg-neutral-900 hover:bg-neutral-800 rounded-lg border border-neutral-800 hover:border-amber-400 transition-colors overflow-hidden"
+                    className="group flex items-stretch bg-black hover:bg-neutral-900 rounded-lg border border-neutral-800 hover:border-black transition-colors overflow-hidden"
                   >
                     <div className="w-16 h-16 flex-shrink-0">
                       <img
@@ -124,13 +124,13 @@ export default async function HomePage() {
                 ))}
 
                 {posts.length === 0 && (
-                  <p className="text-neutral-500 py-8">No posts yet.</p>
+                  <p className="text-neutral-800 py-8">No posts yet.</p>
                 )}
               </div>
-              
-              <Link 
-                href="/stories" 
-                className="mt-4 text-amber-400 hover:text-amber-300 font-bold text-sm inline-flex items-center gap-2 transition-colors"
+
+              <Link
+                href="/stories"
+                className="mt-4 text-black hover:text-neutral-700 font-bold text-sm inline-flex items-center gap-2 transition-colors"
               >
                 All Stories <span>→</span>
               </Link>
