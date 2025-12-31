@@ -2,127 +2,141 @@ export interface Casino {
   id: string;
   name: string;
   logo: string;
-  stripImage: string;
+  bannerImage: string;
   tagline: string;
   url: string;
   countries: string[];
   usStates: string[];
   ratings: {
     bonusValue: number;
-    withdrawalSpeed: number;
+    payoutSpeed: number;
     gameVariety: number;
     appExperience: number;
   };
+  responsibleGambling: {
+    text: string;
+    helpUrl: string;
+  };
+  termsAndConditions: string;
 }
 
 export const casinos: Casino[] = [
   {
     id: 'betmgm-casino',
     name: 'BetMGM Casino',
-    logo: '/images/sponsors/betmgm-casino-badge.jpg',
-    stripImage: '/images/sponsors/betmgm-casino-strip.jpg',
+    logo: '/images/casinos/betmgm-logo.png',
+    bannerImage: '/images/casinos/betmgm-banner.png',
     tagline: 'Largest game library in the US',
-    url: 'https://casino.betmgm.com',
+    url: 'https://casino.betmgm.com', // Replace with Raketech tracking link
     countries: ['US'],
-    usStates: ['NJ', 'PA', 'MI', 'WV'],
+    usStates: ['MI', 'NJ', 'PA', 'WV'],
     ratings: {
-      bonusValue: 90,
-      withdrawalSpeed: 82,
+      bonusValue: 92,
+      payoutSpeed: 88,
       gameVariety: 95,
-      appExperience: 88,
+      appExperience: 90,
     },
+    responsibleGambling: {
+      text: '21+ | Gamble responsibly',
+      helpUrl: 'https://www.betmgm.com/en/responsible-gaming',
+    },
+    termsAndConditions: '21+ only. Please Gamble Responsibly. See BetMGM.com for Terms. New customers only. Subject to eligibility requirements.',
   },
   {
     id: 'draftkings-casino',
     name: 'DraftKings Casino',
-    logo: '/images/sponsors/draftkings-casino-badge.jpg',
-    stripImage: '/images/sponsors/draftkings-casino-strip.jpg',
+    logo: '/images/casinos/draftkings-logo.png',
+    bannerImage: '/images/casinos/draftkings-banner.png',
     tagline: 'Seamless sportsbook integration',
-    url: 'https://casino.draftkings.com',
+    url: 'https://casino.draftkings.com', // Replace with Raketech tracking link
     countries: ['US'],
-    usStates: ['NJ', 'PA', 'MI', 'WV', 'CT'],
+    usStates: ['CT', 'MI', 'NJ', 'PA', 'WV'],
     ratings: {
       bonusValue: 88,
-      withdrawalSpeed: 80,
-      gameVariety: 85,
+      payoutSpeed: 90,
+      gameVariety: 88,
       appExperience: 92,
     },
+    responsibleGambling: {
+      text: '21+ | Gamble responsibly',
+      helpUrl: 'https://www.draftkings.com/about/responsible-gaming',
+    },
+    termsAndConditions: '21+ only. Gaming license varies by state. See DraftKings.com for Terms. New customers only.',
   },
   {
     id: 'fanduel-casino',
     name: 'FanDuel Casino',
-    logo: '/images/sponsors/fanduel-casino-badge.jpg',
-    stripImage: '/images/sponsors/fanduel-casino-strip.jpg',
+    logo: '/images/casinos/fanduel-logo.png',
+    bannerImage: '/images/casinos/fanduel-banner.png',
     tagline: 'Daily promotions and rewards',
-    url: 'https://casino.fanduel.com',
+    url: 'https://casino.fanduel.com', // Replace with Raketech tracking link
     countries: ['US'],
-    usStates: ['NJ', 'PA', 'MI', 'WV'],
+    usStates: ['CT', 'MI', 'NJ', 'PA', 'WV'],
     ratings: {
       bonusValue: 85,
-      withdrawalSpeed: 85,
+      payoutSpeed: 85,
       gameVariety: 82,
-      appExperience: 90,
+      appExperience: 94,
     },
+    responsibleGambling: {
+      text: '21+ | Gamble responsibly',
+      helpUrl: 'https://www.fanduel.com/rg',
+    },
+    termsAndConditions: '21+ and present in select states. Gambling Problem? Call 1-800-GAMBLER or visit FanDuel.com/RG.',
   },
   {
     id: 'caesars-casino',
     name: 'Caesars Casino',
-    logo: '/images/sponsors/caesars-casino-badge.jpg',
-    stripImage: '/images/sponsors/caesars-casino-strip.jpg',
+    logo: '/images/casinos/caesars-logo.png',
+    bannerImage: '/images/casinos/caesars-banner.png',
     tagline: 'Vegas experience online',
-    url: 'https://casino.caesars.com',
+    url: 'https://www.caesars.com/casino', // Replace with Raketech tracking link
     countries: ['US'],
-    usStates: ['NJ', 'PA', 'MI', 'WV'],
+    usStates: ['MI', 'NJ', 'PA', 'WV'],
     ratings: {
-      bonusValue: 92,
-      withdrawalSpeed: 75,
-      gameVariety: 88,
-      appExperience: 80,
+      bonusValue: 80,
+      payoutSpeed: 85,
+      gameVariety: 85,
+      appExperience: 88,
     },
+    responsibleGambling: {
+      text: '21+ | Gamble responsibly',
+      helpUrl: 'https://www.caesars.com/responsible-gaming',
+    },
+    termsAndConditions: '21+ and present in a participating state. Void where prohibited. New users only. See Caesars.com for full terms.',
   },
   {
     id: 'borgata-casino',
     name: 'Borgata Casino',
-    logo: '/images/sponsors/borgata-casino-badge.jpg',
-    stripImage: '/images/sponsors/borgata-casino-strip.jpg',
-    tagline: 'Atlantic City favorite',
-    url: 'https://casino.borgataonline.com',
+    logo: '/images/casinos/borgata-logo.png',
+    bannerImage: '/images/casinos/borgata-banner.png',
+    tagline: 'Atlantic City luxury online',
+    url: 'https://www.borgataonline.com/casino', // Replace with Raketech tracking link
     countries: ['US'],
     usStates: ['NJ', 'PA'],
     ratings: {
-      bonusValue: 82,
-      withdrawalSpeed: 78,
+      bonusValue: 78,
+      payoutSpeed: 82,
       gameVariety: 80,
-      appExperience: 75,
+      appExperience: 85,
     },
-  },
-  {
-    id: '888-casino',
-    name: '888 Casino',
-    logo: '/images/sponsors/888-casino-badge.jpg',
-    stripImage: '/images/sponsors/888-casino-strip.jpg',
-    tagline: 'Global brand, trusted name',
-    url: 'https://888casino.com',
-    countries: ['UK', 'CA', 'DE'],
-    usStates: [],
-    ratings: {
-      bonusValue: 85,
-      withdrawalSpeed: 80,
-      gameVariety: 90,
-      appExperience: 82,
+    responsibleGambling: {
+      text: '21+ | Gamble responsibly',
+      helpUrl: 'https://www.borgataonline.com/responsible-gaming',
     },
+    termsAndConditions: '21+ only. NJ/PA only. See BorgataOnline.com for Terms. New Customer Offer.',
   },
 ];
 
 export function filterCasinos(
-  list: Casino[],
+  casinoList: Casino[],
   country: string,
   state?: string
 ): Casino[] {
-  return list.filter((item) => {
+  return casinoList.filter((casino) => {
     if (country === 'US' && state) {
-      return item.countries.includes('US') && item.usStates.includes(state);
+      return casino.countries.includes('US') && casino.usStates.includes(state);
     }
-    return item.countries.includes(country);
+    return casino.countries.includes(country);
   });
 }

@@ -64,7 +64,7 @@ export default function BettingSections() {
     <section className="bg-neutral-900 py-12 px-4">
       <div className="max-w-[1104px] mx-auto">
         <h2 className="text-white text-2xl font-bold text-center mb-2">
-          Our favorite betting sites right now
+          Where to play right now
         </h2>
         
         <LocationPicker

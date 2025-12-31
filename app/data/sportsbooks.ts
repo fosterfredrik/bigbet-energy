@@ -2,122 +2,183 @@ export interface Sportsbook {
   id: string;
   name: string;
   logo: string;
-  stripImage: string;
+  bannerImage: string;
   tagline: string;
   url: string;
   countries: string[];
   usStates: string[];
   ratings: {
     bonusValue: number;
-    withdrawalSpeed: number;
+    payoutSpeed: number;
     oddsQuality: number;
     appExperience: number;
   };
+  responsibleGambling: {
+    text: string;
+    helpUrl: string;
+  };
+  termsAndConditions: string;
 }
 
 export const sportsbooks: Sportsbook[] = [
   {
-    id: 'bet365',
-    name: 'Bet365',
-    logo: '/images/sponsors/bet365-badge.jpg',
-    stripImage: '/images/sponsors/bet365-strip.jpg',
-    tagline: 'Best all-around sportsbook',
-    url: 'https://bet365.com',
-    countries: ['US', 'UK', 'CA', 'AU', 'DE'],
-    usStates: ['NJ', 'CO', 'OH', 'VA', 'KY', 'IA', 'LA'],
-    ratings: {
-      bonusValue: 85,
-      withdrawalSpeed: 95,
-      oddsQuality: 90,
-      appExperience: 88,
-    },
-  },
-  {
-    id: 'draftkings',
-    name: 'DraftKings',
-    logo: '/images/sponsors/draftkings-badge.jpg',
-    stripImage: '/images/sponsors/draftkings-strip.jpg',
-    tagline: 'Great for daily fantasy crossover',
-    url: 'https://draftkings.com',
-    countries: ['US'],
-    usStates: ['NJ', 'PA', 'MI', 'IL', 'CO', 'AZ', 'NY', 'MA', 'OH', 'MD', 'KS', 'KY', 'LA', 'IA', 'WV', 'WY', 'IN', 'TN', 'VA', 'CT'],
-    ratings: {
-      bonusValue: 92,
-      withdrawalSpeed: 80,
-      oddsQuality: 85,
-      appExperience: 95,
-    },
-  },
-  {
     id: 'fanduel',
     name: 'FanDuel',
-    logo: '/images/sponsors/fanduel-badge.jpg',
-    stripImage: '/images/sponsors/fanduel-strip.jpg',
-    tagline: 'Slick app, same-game parlays',
-    url: 'https://fanduel.com',
-    countries: ['US', 'CA'],
-    usStates: ['NJ', 'PA', 'MI', 'IL', 'CO', 'AZ', 'NY', 'MA', 'OH', 'MD', 'KS', 'KY', 'LA', 'IA', 'WV', 'WY', 'IN', 'TN', 'VA', 'CT'],
-    ratings: {
-      bonusValue: 88,
-      withdrawalSpeed: 85,
-      oddsQuality: 82,
-      appExperience: 92,
-    },
-  },
-  {
-    id: 'caesars',
-    name: 'Caesars',
-    logo: '/images/sponsors/caesars-badge.jpg',
-    stripImage: '/images/sponsors/caesars-strip.jpg',
-    tagline: 'Vegas legacy, rewards program',
-    url: 'https://caesars.com',
+    logo: '/images/sportsbooks/fanduel-logo.png',
+    bannerImage: '/images/sportsbooks/fanduel-banner.png',
+    tagline: 'America\'s #1 Sportsbook',
+    url: 'https://fanduel.com', // Replace with Raketech tracking link
     countries: ['US'],
-    usStates: ['NJ', 'PA', 'MI', 'IL', 'CO', 'AZ', 'NY', 'VA', 'TN', 'LA', 'MD', 'IN', 'IA', 'WV'],
+    usStates: ['AZ', 'CO', 'CT', 'DC', 'IA', 'IL', 'IN', 'KS', 'KY', 'LA', 'MA', 'MD', 'MI', 'NC', 'NH', 'NJ', 'NY', 'OH', 'PA', 'TN', 'VA', 'VT', 'WV', 'WY'],
     ratings: {
-      bonusValue: 90,
-      withdrawalSpeed: 75,
-      oddsQuality: 80,
-      appExperience: 78,
+      bonusValue: 68,
+      payoutSpeed: 85,
+      oddsQuality: 88,
+      appExperience: 94,
     },
+    responsibleGambling: {
+      text: '21+ | Gambling Problem? Call 1-800-GAMBLER',
+      helpUrl: 'https://www.fanduel.com/rg',
+    },
+    termsAndConditions: '21+ and present in select states. Gambling Problem? Call 1-800-GAMBLER or visit FanDuel.com/RG. First online real money wager only. $5 first deposit required. Bonus issued as nonwithdrawable bonus bets that expire 7 days after receipt.',
   },
   {
     id: 'betmgm',
     name: 'BetMGM',
-    logo: '/images/sponsors/betmgm-badge.jpg',
-    stripImage: '/images/sponsors/betmgm-strip.jpg',
-    tagline: 'Strong promos, MGM rewards',
-    url: 'https://betmgm.com',
+    logo: '/images/sportsbooks/betmgm-logo.png',
+    bannerImage: '/images/sportsbooks/betmgm-banner.png',
+    tagline: 'The King of Sportsbooks',
+    url: 'https://betmgm.com', // Replace with Raketech tracking link
     countries: ['US'],
-    usStates: ['NJ', 'PA', 'MI', 'IL', 'CO', 'AZ', 'NY', 'VA', 'TN', 'LA', 'MD', 'IN', 'IA', 'WV', 'MA', 'OH', 'KS', 'KY'],
+    usStates: ['AZ', 'CO', 'DC', 'IA', 'IL', 'IN', 'KS', 'KY', 'LA', 'MA', 'MD', 'MI', 'MS', 'NC', 'NJ', 'NV', 'NY', 'OH', 'PA', 'TN', 'VA', 'WV', 'WY'],
     ratings: {
-      bonusValue: 87,
-      withdrawalSpeed: 78,
-      oddsQuality: 83,
-      appExperience: 85,
+      bonusValue: 95,
+      payoutSpeed: 90,
+      oddsQuality: 80,
+      appExperience: 89,
     },
+    responsibleGambling: {
+      text: '21+ | Gambling Problem? Call 1-800-GAMBLER',
+      helpUrl: 'https://www.betmgm.com/en/responsible-gaming',
+    },
+    termsAndConditions: '21+ only. Please Gamble Responsibly. See BetMGM.com for Terms. First Bet Offer for new customers only. Subject to eligibility requirements. Bonus bets are non-withdrawable and expire 7 days after receipt.',
   },
   {
-    id: 'pointsbet',
-    name: 'PointsBet',
-    logo: '/images/sponsors/pointsbet-badge.jpg',
-    stripImage: '/images/sponsors/pointsbet-strip.jpg',
-    tagline: 'Unique PointsBetting feature',
-    url: 'https://pointsbet.com',
-    countries: ['US', 'AU'],
-    usStates: ['NJ', 'PA', 'MI', 'IL', 'CO', 'NY', 'VA', 'IA', 'IN', 'KS', 'LA', 'MD', 'OH', 'WV'],
+    id: 'bet365',
+    name: 'Bet365',
+    logo: '/images/sportsbooks/bet365-logo.png',
+    bannerImage: '/images/sportsbooks/bet365-banner.png',
+    tagline: 'World\'s Favorite Sportsbook',
+    url: 'https://bet365.com', // Replace with Raketech tracking link
+    countries: ['US'],
+    usStates: ['AZ', 'CO', 'IN', 'IA', 'KY', 'LA', 'NJ', 'NC', 'OH', 'PA', 'VA'],
     ratings: {
-      bonusValue: 80,
-      withdrawalSpeed: 82,
-      oddsQuality: 88,
-      appExperience: 80,
+      bonusValue: 70,
+      payoutSpeed: 88,
+      oddsQuality: 95,
+      appExperience: 90,
     },
+    responsibleGambling: {
+      text: '21+ | Gambling Problem? Call 1-800-GAMBLER',
+      helpUrl: 'https://www.bet365.com/responsiblegambling',
+    },
+    termsAndConditions: '21+ (18+ KY). New customers only. Min $10 deposit. Bonus Bets wager excluded from returns. T&Cs, time limits and exclusions apply.',
   },
+  {
+    id: 'betrivers',
+    name: 'BetRivers',
+    logo: '/images/sportsbooks/betrivers-logo.png',
+    bannerImage: '/images/sportsbooks/betrivers-banner.png',
+    tagline: 'Fast Payouts, Great Odds',
+    url: 'https://betrivers.com', // Replace with Raketech tracking link
+    countries: ['US'],
+    usStates: ['AZ', 'CO', 'CT', 'IL', 'IN', 'IA', 'KY', 'LA', 'MD', 'MI', 'NC', 'NJ', 'NY', 'OH', 'PA', 'VA', 'WV'],
+    ratings: {
+      bonusValue: 75,
+      payoutSpeed: 95,
+      oddsQuality: 82,
+      appExperience: 95,
+    },
+    responsibleGambling: {
+      text: '21+ | Gambling Problem? Call 1-800-GAMBLER',
+      helpUrl: 'https://www.betrivers.com/responsible-gaming/',
+    },
+    termsAndConditions: '21+ only. New users only. Must be physically present in a legal state. Bonus Bet equal to stake up to $500 if first bet loses. Bonus Bet issued within 24 hours and expires 30 days after receipt.',
+  },
+  {
+    id: 'borgata',
+    name: 'Borgata',
+    logo: '/images/sportsbooks/borgata-logo.png',
+    bannerImage: '/images/sportsbooks/borgata-banner.png',
+    tagline: 'Atlantic City\'s Finest',
+    url: 'https://borgataonline.com', // Replace with Raketech tracking link
+    countries: ['US'],
+    usStates: ['NJ', 'PA'],
+    ratings: {
+      bonusValue: 78,
+      payoutSpeed: 80,
+      oddsQuality: 78,
+      appExperience: 86,
+    },
+    responsibleGambling: {
+      text: '21+ | Gambling Problem? Call 1-800-GAMBLER',
+      helpUrl: 'https://www.borgataonline.com/responsible-gaming',
+    },
+    termsAndConditions: '21+ only. NJ/PA only. See BorgataOnline.com for Terms. New Customer Offer. Subject to eligibility requirements. Bonus bets are non-withdrawable.',
+  },
+  {
+    id: 'caesars',
+    name: 'Caesars',
+    logo: '/images/sportsbooks/caesars-logo.png',
+    bannerImage: '/images/sportsbooks/caesars-banner.png',
+    tagline: 'Bet Like a Caesar',
+    url: 'https://caesars.com/sportsbook', // Replace with Raketech tracking link
+    countries: ['US'],
+    usStates: ['AZ', 'CO', 'IA', 'IL', 'IN', 'KS', 'KY', 'LA', 'MA', 'MD', 'MI', 'NC', 'NJ', 'NV', 'NY', 'OH', 'PA', 'TN', 'VA', 'WV', 'WY'],
+    ratings: {
+      bonusValue: 75,
+      payoutSpeed: 92,
+      oddsQuality: 85,
+      appExperience: 93,
+    },
+    responsibleGambling: {
+      text: '21+ | Gambling Problem? Call 1-800-GAMBLER',
+      helpUrl: 'https://www.caesars.com/responsible-gaming',
+    },
+    termsAndConditions: '21+ and present in a participating state. Void where prohibited. New users only. Must register using eligible promo code. Bonus Bet expires 14 days after receipt. See Caesars.com/promos for full terms.',
+  },
+  {
+    id: 'fanatics',
+    name: 'Fanatics',
+    logo: '/images/sportsbooks/fanatics-logo.png',
+    bannerImage: '/images/sportsbooks/fanatics-banner.png',
+    tagline: 'Earn While You Bet',
+    url: 'https://sportsbook.fanatics.com', // Replace with Raketech tracking link
+    countries: ['US'],
+    usStates: ['AZ', 'CO', 'CT', 'IA', 'IL', 'IN', 'KS', 'KY', 'MA', 'MD', 'MI', 'NC', 'NJ', 'NY', 'OH', 'PA', 'TN', 'VA', 'WV'],
+    ratings: {
+      bonusValue: 90,
+      payoutSpeed: 78,
+      oddsQuality: 75,
+      appExperience: 95,
+    },
+    responsibleGambling: {
+      text: '21+ | Gambling Problem? Call 1-800-GAMBLER',
+      helpUrl: 'https://sportsbook.fanatics.com/responsible-gaming',
+    },
+    termsAndConditions: '21+ and present in select states. New customers only. Must opt-in and wager $10+ cash on any market with odds -500 or longer. FanCash expires 7 days from issuance. See Fanatics Sportsbook app for full terms.',
+  },
+];
+
+export const countries = [
+  { code: 'US', name: 'United States' }
 ];
 
 export const usStates = [
   { code: 'AZ', name: 'Arizona' },
   { code: 'CO', name: 'Colorado' },
   { code: 'CT', name: 'Connecticut' },
+  { code: 'DC', name: 'Washington DC' },
   { code: 'IA', name: 'Iowa' },
   { code: 'IL', name: 'Illinois' },
   { code: 'IN', name: 'Indiana' },
@@ -127,22 +188,19 @@ export const usStates = [
   { code: 'MA', name: 'Massachusetts' },
   { code: 'MD', name: 'Maryland' },
   { code: 'MI', name: 'Michigan' },
+  { code: 'MS', name: 'Mississippi' },
+  { code: 'NC', name: 'North Carolina' },
+  { code: 'NH', name: 'New Hampshire' },
   { code: 'NJ', name: 'New Jersey' },
+  { code: 'NV', name: 'Nevada' },
   { code: 'NY', name: 'New York' },
   { code: 'OH', name: 'Ohio' },
   { code: 'PA', name: 'Pennsylvania' },
   { code: 'TN', name: 'Tennessee' },
   { code: 'VA', name: 'Virginia' },
+  { code: 'VT', name: 'Vermont' },
   { code: 'WV', name: 'West Virginia' },
   { code: 'WY', name: 'Wyoming' },
-];
-
-export const countries = [
-  { code: 'US', name: 'United States' },
-  { code: 'UK', name: 'United Kingdom' },
-  { code: 'CA', name: 'Canada' },
-  { code: 'AU', name: 'Australia' },
-  { code: 'DE', name: 'Germany' },
 ];
 
 export function filterSportsbooks(
