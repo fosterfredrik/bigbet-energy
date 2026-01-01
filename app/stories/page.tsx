@@ -8,6 +8,7 @@ import Footer from '../components/Footer';
 interface PostMeta {
   slug: string;
   title: string;
+  subhead: string;
   category: string;
   created: string;
   image: string;
@@ -15,7 +16,6 @@ interface PostMeta {
 
 async function getPosts(): Promise<PostMeta[]> {
   const postsDir = path.join(process.cwd(), 'content', 'posts');
-
   try {
     const files = await fs.readdir(postsDir);
     const posts: PostMeta[] = [];
@@ -24,12 +24,14 @@ async function getPosts(): Promise<PostMeta[]> {
       if (file.endsWith('.json')) {
         const content = await fs.readFile(path.join(postsDir, file), 'utf-8');
         const data = JSON.parse(content);
-
-        const heroImage = data.blocks?.[0]?.props?.image || '/images/placeholder.jpg';
+        const heroBlock = data.blocks?.[0]?.props;
+        const heroImage = heroBlock?.image || '/images/placeholder.jpg';
+        const heroSubhead = heroBlock?.subhead || '';
 
         posts.push({
           slug: data.slug,
           title: data.title,
+          subhead: heroSubhead,
           category: data.category,
           created: data.created,
           image: heroImage,
@@ -70,29 +72,42 @@ export default async function StoriesPage() {
               <Link
                 key={post.slug}
                 href={`/post/${post.slug}`}
-                className="group bg-black rounded-xl border border-neutral-800 hover:border-amber-400 transition-all overflow-hidden"
+                className="group relative aspect-square rounded-xl overflow-hidden border border-neutral-800 hover:border-amber-400 transition-all"
               >
-                <div className="aspect-video w-full overflow-hidden">
-                  <img
-                    src={post.image}
-                    alt={post.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <div className="p-4">
-                  <span className="text-amber-400 text-xs font-bold tracking-wider">
+                {/* Background image */}
+                <div 
+                  className="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-300"
+                  style={{ backgroundImage: `url(${post.image})` }}
+                />
+                
+                {/* Gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-black/30" />
+
+                {/* Content */}
+                <div className="absolute inset-0 p-5 flex flex-col justify-between">
+                  {/* Category */}
+                  <span className="inline-block self-start bg-amber-400 text-black text-xs font-bold tracking-wider uppercase px-2 py-1">
                     {post.category}
                   </span>
-                  <h2 className="text-white font-bold text-lg mt-1 group-hover:text-amber-400 transition-colors">
-                    {post.title}
-                  </h2>
-                  <p className="text-neutral-500 text-sm mt-2">
-                    {new Date(post.created).toLocaleDateString('en-US', {
-                      month: 'short',
-                      day: 'numeric',
-                      year: 'numeric',
-                    })}
-                  </p>
+
+                  {/* Title + Subhead + Date */}
+                  <div>
+                    <h2 className="text-white font-bold text-2xl leading-tight group-hover:text-amber-400 transition-colors">
+                      {post.title}
+                    </h2>
+                    {post.subhead && (
+                      <p className="text-neutral-300 text-sm mt-2 line-clamp-2">
+                        {post.subhead}
+                      </p>
+                    )}
+                    <p className="text-neutral-500 text-xs mt-3">
+                      {new Date(post.created).toLocaleDateString('en-US', {
+                        month: 'short',
+                        day: 'numeric',
+                        year: 'numeric',
+                      })}
+                    </p>
+                  </div>
                 </div>
               </Link>
             ))}
