@@ -1,6 +1,8 @@
 import { promises as fs } from 'fs';
 import path from 'path';
 import Link from 'next/link';
+import Breadcrumbs from '../components/Breadcrumbs';
+import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 interface PostMeta {
@@ -46,25 +48,16 @@ export default async function StoriesPage() {
 
   return (
     <div className="min-h-screen bg-neutral-900">
-      <header className="bg-gradient-to-br from-neutral-900 via-neutral-900 to-black border-b-4 border-amber-400">
-        <div className="max-w-[1104px] mx-auto px-4 py-5 flex items-center justify-between">
-          <Link href="/">
-            <img
-              src="/images/bbe-png3.png"
-              alt="BigBet.Energy"
-              className="h-8 sm:h-10 w-auto"
-            />
-          </Link>
-          <a
-            href="https://t.me/bigbetenergy"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-amber-400 hover:bg-amber-300 text-black font-bold text-sm px-3 py-2 sm:px-4 rounded transition-all hover:scale-105"
-          >
-            <span>Join Telegram</span>
-          </a>
-        </div>
-      </header>
+      <Header />
+
+      <div className="max-w-[1104px] mx-auto px-4 pt-3">
+        <Breadcrumbs
+          items={[
+            { label: 'Home', href: '/' },
+            { label: 'Stories' }
+          ]}
+        />
+      </div>
 
       <main className="max-w-[1104px] mx-auto px-4 py-12">
         <h1 className="text-3xl font-bold text-white mb-8">All Stories</h1>

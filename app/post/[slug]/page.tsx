@@ -12,7 +12,8 @@ import LineChart from '../../components/LineChart';
 import Bubble from '../../components/Bubble';
 import VerticalBar from '../../components/VerticalBar';
 import SmartCTA from '../../components/SmartCTA';
-import BettingCTA from '../../components/BettingCTA';
+import Header from '../../components/Header';
+import Breadcrumbs from '../../components/Breadcrumbs';
 import Footer from '../../components/Footer';
 
 const componentMap: Record<string, React.ComponentType<any>> = {
@@ -68,17 +69,18 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
   return (
     <div className="min-h-screen bg-neutral-900">
       {/* Header */}
-      <header className="bg-gradient-to-br from-neutral-900 via-neutral-900 to-black border-b-4 border-amber-400">
-        <div className="max-w-[1104px] mx-auto px-4 py-5">
-          <Link href="/">
-            <img
-              src="/images/bbe-logo.png"
-              alt="BigBet.Energy"
-              className="h-8 sm:h-10 w-auto"
-            />
-          </Link>
-        </div>
-      </header>
+      <Header />
+
+      {/* Breadcrumbs */}
+      <div className="max-w-[1104px] mx-auto px-4 pt-3">
+        <Breadcrumbs
+          items={[
+            { label: 'Home', href: '/' },
+            { label: 'Stories', href: '/stories' },
+            { label: story.title }
+          ]}
+        />
+      </div>
 
       {/* Main */}
       <main className="py-12 px-4">
