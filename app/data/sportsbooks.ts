@@ -210,6 +210,12 @@ export function filterSportsbooks(
   country: string,
   state?: string
 ): { results: Sportsbook[]; isFallback: boolean } {
+  // If Global selected, return all global books
+  if (country === 'Global') {
+    const results = books.filter(book => book.global === true);
+    return { results, isFallback: false };
+  }
+
   let results: Sportsbook[];
   
   if (country === 'US' && state) {

@@ -184,7 +184,7 @@ interface CasinosSectionProps {
 }
 
 export default function CasinosSection({ country, state }: CasinosSectionProps) {
-  const { results: filtered, isFallback } = filterCasinos(casinos, country, state);
+  const { results: filtered } = filterCasinos(casinos, country, state);
   const topThree = filtered.slice(0, 3);
   const rest = filtered.slice(3);
 
@@ -199,12 +199,6 @@ export default function CasinosSection({ country, state }: CasinosSectionProps) 
   return (
     <section className="mt-12">
       <h2 className="text-xl font-bold text-white mb-6">Online Casinos</h2>
-      
-      {isFallback && (
-        <div className="mb-4 text-amber-400/70 text-sm">
-          ⚠️ Showing international options. Availability may vary in your region.
-        </div>
-      )}
 
       {/* Top 3 Cards */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">

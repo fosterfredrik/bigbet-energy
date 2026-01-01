@@ -135,6 +135,12 @@ export function filterCasinos(
   country: string,
   state?: string
 ): { results: Casino[]; isFallback: boolean } {
+  // If Global selected, return all global casinos
+  if (country === 'Global') {
+    const results = casinoList.filter(casino => casino.global === true);
+    return { results, isFallback: false };
+  }
+
   let results: Casino[];
   
   if (country === 'US' && state) {

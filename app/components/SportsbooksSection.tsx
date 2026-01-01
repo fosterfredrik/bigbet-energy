@@ -184,7 +184,7 @@ interface SportsbooksSectionProps {
 }
 
 export default function SportsbooksSection({ country, state }: SportsbooksSectionProps) {
-  const { results: filtered, isFallback } = filterSportsbooks(sportsbooks, country, state);
+  const { results: filtered } = filterSportsbooks(sportsbooks, country, state);
   const topThree = filtered.slice(0, 3);
   const rest = filtered.slice(3);
 
@@ -199,12 +199,6 @@ export default function SportsbooksSection({ country, state }: SportsbooksSectio
   return (
     <section>
       <h2 className="text-xl font-bold text-white mb-6">Top Sportsbooks</h2>
-      
-      {isFallback && (
-        <div className="mb-4 text-amber-400/70 text-sm">
-          ⚠️ Showing international options. Availability may vary in your region.
-        </div>
-      )}
 
       {/* Top 3 Cards */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">

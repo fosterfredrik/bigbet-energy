@@ -10,6 +10,12 @@ interface LocationPickerProps {
   onStateChange: (state: string) => void;
 }
 
+// Add Global to countries list
+const allCountries = [
+  ...countries,
+  { code: 'Global', name: 'Global' }
+];
+
 export default function LocationPicker({
   country,
   state,
@@ -20,21 +26,21 @@ export default function LocationPicker({
   if (loading) {
     return (
       <div className="flex items-center justify-center gap-3 mb-8 text-sm">
-        <span className="text-neutral-400">📍 Detecting location...</span>
+        <span className="text-neutral-400">Detecting location...</span>
       </div>
     );
   }
 
   return (
     <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-8 text-sm">
-      <span className="text-neutral-400">📍 Showing offers for</span>
+      <span className="text-neutral-400">Sites available in</span>
       <div className="flex gap-2">
         <select
           value={country}
           onChange={(e) => onCountryChange(e.target.value)}
           className="bg-neutral-800 text-white border border-neutral-700 rounded px-3 py-1.5 text-sm focus:outline-none focus:border-amber-400 cursor-pointer"
         >
-          {countries.map((c) => (
+          {allCountries.map((c) => (
             <option key={c.code} value={c.code}>
               {c.name}
             </option>
