@@ -7,6 +7,7 @@ export interface Casino {
   url: string;
   countries: string[];
   usStates: string[];
+  global?: boolean;
   ratings: {
     bonusValue: number;
     payoutSpeed: number;
@@ -30,6 +31,7 @@ export const casinos: Casino[] = [
     url: 'https://casino.betmgm.com', // Replace with Raketech tracking link
     countries: ['US'],
     usStates: ['MI', 'NJ', 'PA', 'WV'],
+    global: true,
     ratings: {
       bonusValue: 92,
       payoutSpeed: 88,
@@ -132,11 +134,22 @@ export function filterCasinos(
   casinoList: Casino[],
   country: string,
   state?: string
-): Casino[] {
-  return casinoList.filter((casino) => {
-    if (country === 'US' && state) {
-      return casino.countries.includes('US') && casino.usStates.includes(state);
-    }
-    return casino.countries.includes(country);
-  });
+): { results: Casino[]; isFallback: boolean } {
+  let results: Casino[];
+  
+  if (country === 'US' && state) {
+    results = casinoList.filter(casino => 
+      casino.countries.includes('US') && casino.usStates.includes(state)
+    );
+  } else {
+    results = casinoList.filter(casino => casino.countries.includes(country));
+  }
+
+  // If no local results, fall back to global casinos
+  if (results.length === 0) {
+    results = casinoList.filter(casino => casino.global === true);
+    return { results, isFallback: true };
+  }
+
+  return { results, isFallback: false };
 }

@@ -11,7 +11,7 @@ import ProgressBar from '../../components/ProgressBar';
 import LineChart from '../../components/LineChart';
 import Bubble from '../../components/Bubble';
 import VerticalBar from '../../components/VerticalBar';
-import CTABanner from '../../components/CTABanner';
+import SmartCTA from '../../components/SmartCTA';
 import BettingCTA from '../../components/BettingCTA';
 import Footer from '../../components/Footer';
 
@@ -33,6 +33,11 @@ interface Story {
   title: string;
   category: string;
   created: string;
+  ctaBanner?: {
+    headline?: string;
+    subhead?: string;
+    buttonText?: string;
+  };
   blocks: { type: string; props: any }[];
 }
 
@@ -66,9 +71,9 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
       <header className="bg-gradient-to-br from-neutral-900 via-neutral-900 to-black border-b-4 border-amber-400">
         <div className="max-w-[1104px] mx-auto px-4 py-5">
           <Link href="/">
-            <img 
-              src="/images/bbe-logo.png" 
-              alt="BigBet.Energy" 
+            <img
+              src="/images/bbe-logo.png"
+              alt="BigBet.Energy"
               className="h-8 sm:h-10 w-auto"
             />
           </Link>
@@ -78,10 +83,10 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
       {/* Main */}
       <main className="py-12 px-4">
         <div className="max-w-[1104px] mx-auto">
-          
+
           {/* All content in one unified container */}
           <div className="bg-black overflow-hidden">
-            
+
             {/* Row 1: Hero + Odds (gold frame) */}
             {blocks.length >= 2 && (
               <div className="bg-amber-400 p-2 grid grid-cols-1 lg:grid-cols-2 gap-2">
@@ -97,16 +102,13 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
               </div>
             )}
 
-            {/* CTA Banner */}
+            {/* CTA Banner - location aware */}
             <div className="p-4 border-t border-amber-400/50">
-              <CTABanner 
-                logo="/images/sponsors/bet365-logo.jpg"
-                headline="Want to bet on this market?"
-                subhead="Best odds available at Bet365"
-                buttonText="Get Bonus"
-                buttonUrl="https://bet365.com"
-                disclaimer="Gambling can be addictive. Please play responsibly. For help visit stodlinjen.se | spelpaus.se. Bonus terms: New customers only, minimum deposit $10, 1x wagering requirement."
-                termsUrl="https://bet365.com/terms"
+              <SmartCTA
+                headline={story.ctaBanner?.headline}
+                subhead={story.ctaBanner?.subhead}
+                buttonText={story.ctaBanner?.buttonText}
+                size="large"
               />
             </div>
 
@@ -117,8 +119,8 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
                   const Component = componentMap[block.type];
                   if (!Component) return null;
                   return (
-                    <div 
-                      key={index} 
+                    <div
+                      key={index}
                       className="min-h-[400px] lg:min-h-0 lg:aspect-square overflow-visible lg:overflow-hidden"
                     >
                       <Component {...block.props} />
@@ -142,15 +144,7 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
                       </div>
                       {cta && (
                         <div className="p-4 border-t border-amber-400/50">
-                          <BettingCTA 
-                            logo={cta.logo}
-                            headline={cta.headline}
-                            subhead={cta.subhead}
-                            buttonText={cta.buttonText}
-                            buttonUrl={cta.buttonUrl}
-                            disclaimer={cta.disclaimer}
-                            termsUrl={cta.termsUrl}
-                          />
+                          <SmartCTA size="small" />
                         </div>
                       )}
                     </div>
@@ -166,8 +160,8 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
                   const Component = componentMap[block.type];
                   if (!Component) return null;
                   return (
-                    <div 
-                      key={index} 
+                    <div
+                      key={index}
                       className="min-h-[400px] lg:min-h-0 lg:aspect-square overflow-visible lg:overflow-hidden"
                     >
                       <Component {...block.props} />
@@ -178,7 +172,7 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
             )}
 
           </div>
-          
+
         </div>
       </main>
 

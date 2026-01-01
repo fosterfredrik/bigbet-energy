@@ -7,6 +7,7 @@ export interface Sportsbook {
   url: string;
   countries: string[];
   usStates: string[];
+  global?: boolean;
   ratings: {
     bonusValue: number;
     payoutSpeed: number;
@@ -72,6 +73,7 @@ export const sportsbooks: Sportsbook[] = [
     url: 'https://bet365.com', // Replace with Raketech tracking link
     countries: ['US'],
     usStates: ['AZ', 'CO', 'IN', 'IA', 'KY', 'LA', 'NJ', 'NC', 'OH', 'PA', 'VA'],
+    global: true,
     ratings: {
       bonusValue: 70,
       payoutSpeed: 88,
@@ -207,11 +209,22 @@ export function filterSportsbooks(
   books: Sportsbook[],
   country: string,
   state?: string
-): Sportsbook[] {
-  return books.filter((book) => {
-    if (country === 'US' && state) {
-      return book.countries.includes('US') && book.usStates.includes(state);
-    }
-    return book.countries.includes(country);
-  });
+): { results: Sportsbook[]; isFallback: boolean } {
+  let results: Sportsbook[];
+  
+  if (country === 'US' && state) {
+    results = books.filter(book => 
+      book.countries.includes('US') && book.usStates.includes(state)
+    );
+  } else {
+    results = books.filter(book => book.countries.includes(country));
+  }
+
+  // If no local results, fall back to global books
+  if (results.length === 0) {
+    results = books.filter(book => book.global === true);
+    return { results, isFallback: true };
+  }
+
+  return { results, isFallback: false };
 }

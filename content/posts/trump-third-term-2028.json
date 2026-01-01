@@ -2,7 +2,16 @@
   "slug": "trump-third-term-2028",
   "title": "The Constitution Says No.",
   "category": "2028 Election",
-  "created": "2025-12-22",
+  "created": "2025-12-27",
+  "ctaBanner": {
+    "logo": "/images/sportsbooks/bet365-banner.png",
+    "headline": "Bet on Trump 2028?",
+    "subhead": "31x odds at Bet365",
+    "buttonText": "Get Bonus",
+    "buttonUrl": "https://bet365.com",
+    "disclaimer": "Gambling can be addictive. Please play responsibly.",
+    "termsUrl": "https://bet365.com/terms"
+  },
   "blocks": [
     {
       "type": "Hero",
@@ -60,7 +69,7 @@
         "source": "22nd Amendment"
       },
       "cta": {
-        "logo": "/images/sponsors/bet365-logo.jpg",
+        "logo": "/images/sportsbooks/bet365-banner.png",
         "headline": "Bet on Trump 2028?",
         "subhead": "31x odds at Bet365",
         "buttonText": "Get Bonus",
@@ -80,8 +89,8 @@
         "portrait": "/images/trump-2028/jd-mug.jpg"
       },
       "cta": {
-        "logo": "/images/sponsors/bet365-logo.jpg",
-        "headline": "Is JD Vance your next president?",
+        "logo": "/images/sportsbooks/bet365-banner.png",
+        "headline": "Is JD your next president?",
         "subhead": "3,25x odds at Bet365",
         "buttonText": "Get Bonus",
         "buttonUrl": "https://bet365.com",

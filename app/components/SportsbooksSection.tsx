@@ -184,14 +184,14 @@ interface SportsbooksSectionProps {
 }
 
 export default function SportsbooksSection({ country, state }: SportsbooksSectionProps) {
-  const filtered = filterSportsbooks(sportsbooks, country, state);
+  const { results: filtered, isFallback } = filterSportsbooks(sportsbooks, country, state);
   const topThree = filtered.slice(0, 3);
   const rest = filtered.slice(3);
 
   if (filtered.length === 0) {
     return (
       <div className="text-center py-8">
-        <p className="text-neutral-500">No legal sportsbooks available in your location.</p>
+        <p className="text-neutral-500">No sportsbooks available.</p>
       </div>
     );
   }
@@ -199,6 +199,12 @@ export default function SportsbooksSection({ country, state }: SportsbooksSectio
   return (
     <section>
       <h2 className="text-xl font-bold text-white mb-6">Top Sportsbooks</h2>
+      
+      {isFallback && (
+        <div className="mb-4 text-amber-400/70 text-sm">
+          ⚠️ Showing international options. Availability may vary in your region.
+        </div>
+      )}
 
       {/* Top 3 Cards */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
