@@ -97,6 +97,63 @@
         "disclaimer": "Gambling can be addictive. Please play responsibly. For help visit stodlinjen.se | spelpaus.se. Bonus terms: New customers only, minimum deposit $10, 1x wagering requirement.",
         "termsUrl": "https://bet365.com/terms"
       }
+    },
+    {
+      "type": "StatCard",
+      "props": {
+        "stat": "4%",
+        "label": "No hope for Harris?",
+        "subtitle": "Slim chance of Kamala to become President",
+        "quote": "I'm not done",
+        "quoteAuthor": "Kamala Harris",
+        "portrait": "/images/trump-2028/kamala-face.png",
+        "date": "Dec 2025",
+        "source": "Polymarket"
+      }
+    },
+    {
+      "type": "VerticalBar",
+      "props": {
+        "title": "Female President Unlikely",
+        "subtitle": "Who could be the first?",
+        "unit": "%",
+        "date": "Dec 2025",
+        "source": "Polymarket",
+        "items": [
+          { "label": "AOC", "value": 8, "highlight": true },
+          { "label": "Kamala", "value": 4 },
+          { "label": "Ivanka", "value": 4 },
+          { "label": "Haley", "value": 2 },
+          { "label": "Noem", "value": 2 }
+        ]
+      }
+    },
+    {
+      "type": "Gauge",
+      "props": {
+        "label": "The Wildcard",
+        "title": "Is The Rock Cooking?",
+        "subtitle": "Hollywood's hope: Dwayne Johnson",
+        "value": 4,
+        "context": "Same odds as Trump. Difference? He can actually run.",
+        "portrait": "/images/trump-2028/rock-president.png",
+        "date": "Dec 2025",
+        "source": "Polymarket"
+      }
+    },
+    {
+      "type": "OddsBar",
+      "props": {
+        "market": "While We're At It...",
+        "date": "Dec 2025",
+        "source": "Polymarket",
+        "variant": "light",
+        "odds": [
+          { "label": "US Buys Greenland", "value": 7 },
+          { "label": "Canada 51st State", "value": 3 },
+          { "label": "American on Mars", "value": 1 }
+        ]
+      }
     }
   ]
 }

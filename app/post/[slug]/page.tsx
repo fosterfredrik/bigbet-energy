@@ -3,14 +3,17 @@ import path from 'path';
 import Link from 'next/link';
 import Hero from '../../components/Hero';
 import OddsBar from '../../components/OddsBar';
+import Gauge from '../../components/Gauge';
 import Context from '../../components/Context';
 import Donut from '../../components/Donut';
 import Quote from '../../components/Quote';
 import ProgressRing from '../../components/ProgressRing';
+import MoneyChart from '../../components/MoneyChart';
 import ProgressBar from '../../components/ProgressBar';
 import LineChart from '../../components/LineChart';
 import Bubble from '../../components/Bubble';
 import VerticalBar from '../../components/VerticalBar';
+import StatCard from '../../components/StatCard';
 import SmartCTA from '../../components/SmartCTA';
 import Header from '../../components/Header';
 import Breadcrumbs from '../../components/Breadcrumbs';
@@ -20,9 +23,12 @@ const componentMap: Record<string, React.ComponentType<any>> = {
   Hero,
   OddsBar,
   Context,
+  MoneyChart,
+  Gauge,
   Donut,
   Quote,
   ProgressRing,
+  StatCard,
   ProgressBar,
   LineChart,
   Bubble,
@@ -155,23 +161,44 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
               </div>
             )}
 
-            {/* Row 4+: Any remaining blocks */}
-            {blocks.length > 6 && (
-              <div className="border-t border-amber-400/50 grid grid-cols-1 lg:grid-cols-2 divide-y lg:divide-y-0 lg:divide-x divide-amber-400/50">
-                {blocks.slice(6).map((block, index) => {
-                  const Component = componentMap[block.type];
-                  if (!Component) return null;
-                  return (
-                    <div
-                      key={index}
-                      className="min-h-[400px] lg:min-h-0 lg:aspect-square overflow-visible lg:overflow-hidden"
-                    >
-                      <Component {...block.props} />
+            {blocks.length > 6 && (() => {
+              const remainingBlocks = blocks.slice(6);
+              const rows = [];
+              for (let i = 0; i < remainingBlocks.length; i += 2) {
+                rows.push(remainingBlocks.slice(i, i + 2));
+              }
+              return rows.map((row, rowIndex) => {
+                const isLastRow = rowIndex === rows.length - 1;
+
+                return (
+                  <div key={rowIndex}>
+                    <div className="border-t border-amber-400/50 grid grid-cols-1 lg:grid-cols-2 divide-y lg:divide-y-0 lg:divide-x divide-amber-400/50">
+                      {row.map((block, index) => {
+                        const Component = componentMap[block.type];
+                        if (!Component) return null;
+                        return (
+                          <div key={index} className="min-h-[400px] lg:min-h-0 lg:aspect-square overflow-visible lg:overflow-hidden">
+                            <Component {...block.props} />
+                          </div>
+                        );
+                      })}
                     </div>
-                  );
-                })}
-              </div>
-            )}
+
+                    {/* CTA after last row */}
+                    {isLastRow && (
+                      <div className="p-4 border-t border-amber-400/50">
+                        <SmartCTA
+                          headline={story.ctaBanner?.headline}
+                          subhead={story.ctaBanner?.subhead}
+                          buttonText={story.ctaBanner?.buttonText}
+                          size="large"
+                        />
+                      </div>
+                    )}
+                  </div>
+                );
+              });
+            })()}
 
           </div>
 

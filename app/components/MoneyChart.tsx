@@ -72,12 +72,6 @@ interface MoneyItem {
           <div className="text-neutral-600 text-xs uppercase tracking-wide">
             {source} • {date}
           </div>
-          <div className="flex items-center gap-1.5">
-            <span className="text-sm">⚡</span>
-            <span className="text-sm font-bold tracking-wide" style={{ color: '#E5B94E' }}>
-              BIGBET.ENERGY
-            </span>
-          </div>
         </div>
       </div>
     )
