@@ -15,14 +15,14 @@ interface OddsBarProps {
 export default function OddsBar({ market, date, source, odds, variant = 'dark', portrait }: OddsBarProps) {
   const maxValue = Math.max(...odds.map(o => o.value))
   const isDark = variant === 'dark'
-  
+
   const gapSize = odds.length <= 3 ? 'gap-6 sm:gap-8' : 'gap-4 sm:gap-5'
   const barHeight = odds.length <= 3 ? 'h-4' : 'h-3'
   const textSize = odds.length <= 3 ? 'text-3xl sm:text-4xl' : 'text-2xl sm:text-3xl'
 
   return (
     <div className={`relative w-full h-full p-6 sm:p-10 md:p-12 flex flex-col ${isDark ? 'bg-black' : 'bg-amber-400'}`}>
-      
+
       {/* Header */}
       <div className="mb-6 sm:mb-8">
         <div className={`text-xs font-bold tracking-widest uppercase mb-2 ${isDark ? 'text-amber-400' : 'text-black/60'}`}>
@@ -40,28 +40,25 @@ export default function OddsBar({ market, date, source, odds, variant = 'dark', 
           return (
             <div key={index}>
               <div className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-2 gap-1 sm:gap-0">
-                <span className={`text-sm font-bold uppercase tracking-wide ${
-                  isDark 
-                    ? (isHighlight ? 'text-amber-400' : 'text-neutral-500')
-                    : (isHighlight ? 'text-black' : 'text-black/50')
-                }`}>
+                <span className={`text-sm font-bold uppercase tracking-wide ${isDark
+                  ? (isHighlight ? 'text-amber-400' : 'text-neutral-500')
+                  : (isHighlight ? 'text-black' : 'text-black/50')
+                  }`}>
                   {item.label}
                 </span>
-                <span className={`font-bold ${textSize} ${
-                  isDark
-                    ? (isHighlight ? 'text-white' : 'text-neutral-700')
-                    : (isHighlight ? 'text-black' : 'text-black/40')
-                }`}>
+                <span className={`font-bold ${textSize} ${isDark
+                  ? (isHighlight ? 'text-white' : 'text-neutral-700')
+                  : (isHighlight ? 'text-black' : 'text-black/40')
+                  }`}>
                   {item.value}%
                 </span>
               </div>
               <div className={`w-full ${barHeight} rounded-full overflow-hidden ${isDark ? 'bg-neutral-900' : 'bg-black/20'}`}>
-                <div 
-                  className={`h-full rounded-full ${
-                    isDark
-                      ? (isHighlight ? 'bg-amber-400' : 'bg-neutral-800')
-                      : (isHighlight ? 'bg-black' : 'bg-black/30')
-                  }`}
+                <div
+                  className={`h-full rounded-full ${isDark
+                    ? (isHighlight ? 'bg-amber-400' : 'bg-neutral-800')
+                    : (isHighlight ? 'bg-black' : 'bg-black/30')
+                    }`}
                   style={{ width: `${item.value}%` }}
                 />
               </div>
@@ -75,22 +72,13 @@ export default function OddsBar({ market, date, source, odds, variant = 'dark', 
         <div className={`text-xs uppercase tracking-wide ${isDark ? 'text-neutral-600' : 'text-black/50'}`}>
           {source} • {date}
         </div>
-        
-        {!portrait && (
-          <div className="flex items-center gap-1.5">
-            <span className="text-sm">⚡</span>
-            <span className={`text-sm font-bold tracking-wide ${isDark ? 'text-amber-400' : 'text-black'}`}>
-              BIGBET.ENERGY
-            </span>
-          </div>
-        )}
       </div>
 
       {/* Portrait overlay - bottom right corner */}
       {portrait && (
-        <img 
-          src={portrait} 
-          alt="" 
+        <img
+          src={portrait}
+          alt=""
           className="absolute bottom-0 right-0 w-32 h-32 sm:w-40 sm:h-40 object-contain object-bottom"
         />
       )}

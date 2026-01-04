@@ -3,7 +3,6 @@ import path from 'path';
 import Link from 'next/link';
 import Hero from '../../components/Hero';
 import OddsBar from '../../components/OddsBar';
-import Gauge from '../../components/Gauge';
 import Context from '../../components/Context';
 import Donut from '../../components/Donut';
 import Quote from '../../components/Quote';
@@ -14,7 +13,10 @@ import LineChart from '../../components/LineChart';
 import Bubble from '../../components/Bubble';
 import VerticalBar from '../../components/VerticalBar';
 import StatCard from '../../components/StatCard';
+import Gauge from '../../components/Gauge';
 import SmartCTA from '../../components/SmartCTA';
+import InteractiveCTA from '../../components/InteractiveCTA';
+import PreferenceCTA from '../../components/PreferenceCTA';
 import Header from '../../components/Header';
 import Breadcrumbs from '../../components/Breadcrumbs';
 import Footer from '../../components/Footer';
@@ -24,7 +26,6 @@ const componentMap: Record<string, React.ComponentType<any>> = {
   OddsBar,
   Context,
   MoneyChart,
-  Gauge,
   Donut,
   Quote,
   ProgressRing,
@@ -33,18 +34,20 @@ const componentMap: Record<string, React.ComponentType<any>> = {
   LineChart,
   Bubble,
   VerticalBar,
+  Gauge,
+  SmartCTA,
+  InteractiveCTA,
+  PreferenceCTA,
 };
+
+// CTA types render full-width
+const ctaTypes = ['SmartCTA', 'InteractiveCTA', 'PreferenceCTA'];
 
 interface Story {
   slug: string;
   title: string;
   category: string;
   created: string;
-  ctaBanner?: {
-    headline?: string;
-    subhead?: string;
-    buttonText?: string;
-  };
   blocks: { type: string; props: any }[];
 }
 
@@ -72,12 +75,41 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
 
   const blocks = story.blocks;
 
+  // Separate hero row (first 2 blocks) from the rest
+  const heroBlocks = blocks.slice(0, 2);
+  const remainingBlocks = blocks.slice(2);
+
+  // Group remaining blocks: CTAs are standalone, others pair up
+  const groupedBlocks: { type: 'cta' | 'pair'; blocks: typeof blocks }[] = [];
+  let currentPair: typeof blocks = [];
+
+  remainingBlocks.forEach((block) => {
+    if (ctaTypes.includes(block.type)) {
+      // Flush current pair if exists
+      if (currentPair.length > 0) {
+        groupedBlocks.push({ type: 'pair', blocks: currentPair });
+        currentPair = [];
+      }
+      // Add CTA as standalone
+      groupedBlocks.push({ type: 'cta', blocks: [block] });
+    } else {
+      currentPair.push(block);
+      if (currentPair.length === 2) {
+        groupedBlocks.push({ type: 'pair', blocks: currentPair });
+        currentPair = [];
+      }
+    }
+  });
+
+  // Flush any remaining single block
+  if (currentPair.length > 0) {
+    groupedBlocks.push({ type: 'pair', blocks: currentPair });
+  }
+
   return (
     <div className="min-h-screen bg-neutral-900">
-      {/* Header */}
       <Header />
 
-      {/* Breadcrumbs */}
       <div className="max-w-[1104px] mx-auto px-4 pt-3">
         <Breadcrumbs
           items={[
@@ -88,17 +120,14 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
         />
       </div>
 
-      {/* Main */}
       <main className="py-12 px-4">
         <div className="max-w-[1104px] mx-auto">
-
-          {/* All content in one unified container */}
           <div className="bg-black overflow-hidden">
 
-            {/* Row 1: Hero + Odds (gold frame) */}
-            {blocks.length >= 2 && (
+            {/* Row 1: Hero + OddsBar (gold frame) */}
+            {heroBlocks.length >= 2 && (
               <div className="bg-amber-400 p-2 grid grid-cols-1 lg:grid-cols-2 gap-2">
-                {blocks.slice(0, 2).map((block, index) => {
+                {heroBlocks.map((block, index) => {
                   const Component = componentMap[block.type];
                   if (!Component) return null;
                   return (
@@ -110,98 +139,43 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
               </div>
             )}
 
-            {/* CTA Banner - location aware */}
-            <div className="p-4 border-t border-amber-400/50">
-              <SmartCTA
-                headline={story.ctaBanner?.headline}
-                subhead={story.ctaBanner?.subhead}
-                buttonText={story.ctaBanner?.buttonText}
-                size="large"
-              />
-            </div>
-
-            {/* Row 2: Context + Quote (blocks 3-4) */}
-            {blocks.length >= 4 && (
-              <div className="border-t border-amber-400/50 grid grid-cols-1 lg:grid-cols-2 divide-y lg:divide-y-0 lg:divide-x divide-amber-400/50">
-                {blocks.slice(2, 4).map((block, index) => {
-                  const Component = componentMap[block.type];
-                  if (!Component) return null;
-                  return (
-                    <div
-                      key={index}
-                      className="min-h-[400px] lg:min-h-0 lg:aspect-square overflow-visible lg:overflow-hidden"
-                    >
-                      <Component {...block.props} />
-                    </div>
-                  );
-                })}
-              </div>
-            )}
-
-            {/* Row 3: Additional blocks (5-6) */}
-            {blocks.length >= 5 && (
-              <div className="border-t border-amber-400/50 grid grid-cols-1 lg:grid-cols-2 divide-y lg:divide-y-0 lg:divide-x divide-amber-400/50">
-                {blocks.slice(4, 6).map((block, index) => {
-                  const Component = componentMap[block.type];
-                  if (!Component) return null;
-                  const cta = (block as any).cta;
-                  return (
-                    <div key={index} className="flex flex-col">
-                      <div className="min-h-[400px] lg:min-h-0 lg:aspect-square overflow-visible lg:overflow-hidden">
-                        <Component {...block.props} />
-                      </div>
-                      {cta && (
-                        <div className="p-4 border-t border-amber-400/50">
-                          <SmartCTA size="small" />
-                        </div>
-                      )}
-                    </div>
-                  );
-                })}
-              </div>
-            )}
-
-            {blocks.length > 6 && (() => {
-              const remainingBlocks = blocks.slice(6);
-              const rows = [];
-              for (let i = 0; i < remainingBlocks.length; i += 2) {
-                rows.push(remainingBlocks.slice(i, i + 2));
-              }
-              return rows.map((row, rowIndex) => {
-                const isLastRow = rowIndex === rows.length - 1;
-
+            {/* Remaining blocks: grouped */}
+            {groupedBlocks.map((group, groupIndex) => {
+              if (group.type === 'cta') {
+                // CTA: full width
+                const block = group.blocks[0];
+                const Component = componentMap[block.type];
+                if (!Component) return null;
                 return (
-                  <div key={rowIndex}>
-                    <div className="border-t border-amber-400/50 grid grid-cols-1 lg:grid-cols-2 divide-y lg:divide-y-0 lg:divide-x divide-amber-400/50">
-                      {row.map((block, index) => {
-                        const Component = componentMap[block.type];
-                        if (!Component) return null;
-                        return (
-                          <div key={index} className="min-h-[400px] lg:min-h-0 lg:aspect-square overflow-visible lg:overflow-hidden">
-                            <Component {...block.props} />
-                          </div>
-                        );
-                      })}
-                    </div>
-
-                    {/* CTA after last row */}
-                    {isLastRow && (
-                      <div className="p-4 border-t border-amber-400/50">
-                        <SmartCTA
-                          headline={story.ctaBanner?.headline}
-                          subhead={story.ctaBanner?.subhead}
-                          buttonText={story.ctaBanner?.buttonText}
-                          size="large"
-                        />
-                      </div>
-                    )}
+                  <div key={groupIndex} className="p-4 border-t border-amber-400/50">
+                    <Component {...block.props} />
                   </div>
                 );
-              });
-            })()}
+              } else {
+                // Pair: 2-column grid
+                return (
+                  <div
+                    key={groupIndex}
+                    className="border-t border-amber-400/50 grid grid-cols-1 lg:grid-cols-2 divide-y lg:divide-y-0 lg:divide-x divide-amber-400/50"
+                  >
+                    {group.blocks.map((block, index) => {
+                      const Component = componentMap[block.type];
+                      if (!Component) return null;
+                      return (
+                        <div
+                          key={index}
+                          className="min-h-[400px] lg:min-h-0 lg:aspect-square overflow-visible lg:overflow-hidden"
+                        >
+                          <Component {...block.props} />
+                        </div>
+                      );
+                    })}
+                  </div>
+                );
+              }
+            })}
 
           </div>
-
         </div>
       </main>
 

@@ -3,7 +3,12 @@ import { useState, useEffect } from 'react';
 import { sportsbooks, filterSportsbooks, Sportsbook } from '../data/sportsbooks';
 
 interface SmartCTAProps {
+  headline?: string;
+  subhead?: string;
   buttonText?: string;
+  buttonUrl?: string;
+  disclaimer?: string;
+  termsUrl?: string;
   overrideBookId?: string;
   size?: 'small' | 'large';
 }
@@ -23,7 +28,12 @@ function RatingBar({ value }: { value: number }) {
 }
 
 export default function SmartCTA({ 
-  buttonText = 'Get Bonus',
+  headline,
+  subhead,
+  buttonText = 'See live odds',
+  buttonUrl,
+  disclaimer = 'Gambling can be addictive. Please play responsibly.',
+  termsUrl,
   overrideBookId,
   size = 'large'
 }: SmartCTAProps) {
@@ -35,7 +45,6 @@ export default function SmartCTA({
   useEffect(() => {
     async function detectAndSelectBook() {
       try {
-        // Check localStorage first
         const saved = localStorage.getItem('bbe-location');
         let country = 'US';
         let state = 'NJ';
@@ -45,17 +54,13 @@ export default function SmartCTA({
           country = parsed.country || 'US';
           state = parsed.state || '';
         } else {
-          // Detect via IP
           const res = await fetch('https://ipapi.co/json/');
           const data = await res.json();
           country = data.country_code || 'US';
           state = data.region_code || '';
-          
-          // Save for future
           localStorage.setItem('bbe-location', JSON.stringify({ country, state }));
         }
 
-        // If override specified, use that book
         if (overrideBookId) {
           const overrideBook = sportsbooks.find(b => b.id === overrideBookId);
           if (overrideBook) {
@@ -65,7 +70,6 @@ export default function SmartCTA({
           }
         }
 
-        // Filter available books for location
         const { results: available, isFallback: fallback } = filterSportsbooks(sportsbooks, country, state);
         setIsFallback(fallback);
 
@@ -74,7 +78,6 @@ export default function SmartCTA({
           return;
         }
 
-        // Pick best book (highest average rating)
         const ranked = available.sort((a, b) => {
           const avgA = (a.ratings.bonusValue + a.ratings.payoutSpeed + a.ratings.oddsQuality + a.ratings.appExperience) / 4;
           const avgB = (b.ratings.bonusValue + b.ratings.payoutSpeed + b.ratings.oddsQuality + b.ratings.appExperience) / 4;
@@ -83,7 +86,6 @@ export default function SmartCTA({
 
         setBook(ranked[0]);
       } catch (error) {
-        // Fallback to first global book
         const globalBook = sportsbooks.find(b => b.global);
         if (globalBook) {
           setBook(globalBook);
@@ -96,7 +98,6 @@ export default function SmartCTA({
     detectAndSelectBook();
   }, [overrideBookId]);
 
-  // Don't render anything while loading
   if (loading) {
     return (
       <div className="bg-neutral-900 border-2 border-neutral-700 rounded-lg p-5 animate-pulse">
@@ -105,20 +106,33 @@ export default function SmartCTA({
     );
   }
 
-  // No books available at all
   if (!book) {
     return null;
   }
 
-  // Calculate average rating
   const avgRating = Math.round(
     (book.ratings.bonusValue + book.ratings.payoutSpeed + book.ratings.oddsQuality + book.ratings.appExperience) / 4
   );
 
-  // Large variant
+  const finalButtonUrl = buttonUrl || book.url;
+  const finalTermsUrl = termsUrl || book.responsibleGambling.helpUrl;
+
   if (size === 'large') {
     return (
       <div className="bg-neutral-900 border-2 border-amber-400 rounded-lg p-5">
+        {headline && (
+          <div className="mb-4 pb-4 border-b border-neutral-800">
+            <div className="text-white font-bold text-xl sm:text-2xl">
+              {headline}
+            </div>
+            {subhead && (
+              <div className="text-neutral-400 text-sm mt-1">
+                {subhead}
+              </div>
+            )}
+          </div>
+        )}
+
         <div className="flex flex-col sm:flex-row sm:items-center gap-4">
           <div className="flex items-center gap-4 flex-1 min-w-0">
             <div className="flex-shrink-0">
@@ -129,17 +143,15 @@ export default function SmartCTA({
               />
             </div>
             <div className="flex-1 min-w-0">
-              <div className="text-white font-bold text-base sm:text-lg">
-                Sponsor: {book.name}
-              </div>
-              <div className="flex items-center gap-2 mt-1">
+              <div className="flex items-center gap-2">
                 <span className="text-neutral-400 text-xs">Rating:</span>
                 <RatingBar value={avgRating} />
               </div>
             </div>
           </div>
+          
           <a
-            href={book.url}
+            href={finalButtonUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="flex-shrink-0 bg-amber-400 hover:bg-amber-300 text-black font-bold text-sm sm:text-base px-5 py-2.5 rounded transition-all hover:scale-105 text-center"
@@ -147,14 +159,15 @@ export default function SmartCTA({
             {buttonText}
           </a>
         </div>
+
         <div className="mt-3 pt-3 border-t border-neutral-800">
           <div className="flex items-center gap-2 text-neutral-500 text-xs">
             <span>18+</span>
             <span>|</span>
-            <span>Play responsibly</span>
+            <span>{disclaimer}</span>
             <span>|</span>
             <a 
-              href={book.responsibleGambling.helpUrl}
+              href={finalTermsUrl}
               target="_blank" 
               rel="noopener noreferrer"
               className="hover:text-neutral-300 underline"
@@ -183,9 +196,21 @@ export default function SmartCTA({
     );
   }
 
-  // Small variant
   return (
     <div className="bg-neutral-900 border-2 border-amber-400 rounded-lg p-4">
+      {headline && (
+        <div className="mb-3 pb-3 border-b border-neutral-800">
+          <div className="text-white font-bold text-base sm:text-lg">
+            {headline}
+          </div>
+          {subhead && (
+            <div className="text-neutral-400 text-xs mt-1">
+              {subhead}
+            </div>
+          )}
+        </div>
+      )}
+
       <div className="flex flex-col sm:flex-row sm:items-center gap-4">
         <div className="flex items-center gap-4 flex-1 min-w-0">
           <div className="flex-shrink-0">
@@ -196,17 +221,15 @@ export default function SmartCTA({
             />
           </div>
           <div className="flex-1 min-w-0">
-            <div className="text-white font-bold text-sm sm:text-base">
-              Sponsor: {book.name}
-            </div>
-            <div className="flex items-center gap-2 mt-1">
+            <div className="flex items-center gap-2">
               <span className="text-neutral-400 text-xs">Rating:</span>
               <RatingBar value={avgRating} />
             </div>
           </div>
         </div>
+        
         <a
-          href={book.url}
+          href={finalButtonUrl}
           target="_blank"
           rel="noopener noreferrer"
           className="flex-shrink-0 bg-amber-400 hover:bg-amber-300 text-black font-bold text-sm px-4 py-2 rounded transition-all hover:scale-105 text-center"
@@ -214,14 +237,15 @@ export default function SmartCTA({
           {buttonText}
         </a>
       </div>
+
       <div className="mt-3 pt-3 border-t border-neutral-800">
         <div className="flex items-center gap-2 text-neutral-500 text-xs">
           <span>18+</span>
           <span>|</span>
-          <span>Play responsibly</span>
+          <span>{disclaimer}</span>
           <span>|</span>
           <a 
-            href={book.responsibleGambling.helpUrl}
+            href={finalTermsUrl}
             target="_blank" 
             rel="noopener noreferrer"
             className="hover:text-neutral-300 underline"
