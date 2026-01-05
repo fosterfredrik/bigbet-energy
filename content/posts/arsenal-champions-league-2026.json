@@ -3,15 +3,6 @@
   "title": "21 Years. Zero European Trophies.",
   "category": "Champions League",
   "created": "2025-12-27",
-  "ctaBanner": {
-    "logo": "/images/sportsbooks/bet365-banner.png",
-    "headline": "Bet on Arsenal's UCL run?",
-    "subhead": "Best odds at Bet365",
-    "buttonText": "Get Bonus",
-    "buttonUrl": "https://bet365.com",
-    "disclaimer": "Gambling can be addictive. Please play responsibly. 18+ only.",
-    "termsUrl": "https://bet365.com/terms"
-  },
   "blocks": [
     {
       "type": "Hero",
@@ -38,64 +29,135 @@
       }
     },
     {
-      "type": "Context",
+      "type": "InteractiveCTA",
       "props": {
-        "label": "Why This Year Is Different",
-        "title": "The Squad Is Finally Complete",
-        "body": "Arsenal have [[plugged every gap]]. Gyökeres provides the goals. Zubimendi controls the midfield. Saka, Saliba, Ødegaard — are entering their [[peak years]].",
-        "date": "Dec 2025",
-        "source": "Analysis"
+        "question": "What chance do you give Arsenal this year?",
+        "marketOdds": 19,
+        "candidate": "Arsenal",
+        "alternatives": [
+          { "name": "Bayern Munich", "odds": 17 },
+          { "name": "Man City", "odds": 12 }
+        ]
       }
     },
     {
       "type": "Quote",
       "props": {
-        "quote": "The 2006 final is the biggest regret of my football career.",
-        "author": "Cesc Fàbregas",
-        "role": "Arsenal Legend",
-        "context": "Arsenal led until the 76th minute, then conceded twice in 4 minutes",
-        "date": "2020",
-        "source": "Interview",
-        "portrait": "/images/arsenal-cl/fabregas-face.jpg"
+        "quote": "That's the history of our club and that's what we want to change.",
+        "author": "Mikel Arteta",
+        "role": "Arsenal Manager",
+        "context": "On winning the Champions League",
+        "date": "Sep 2025",
+        "source": "ESPN",
+        "portrait": "/images/arsenal-cl/arteta-portrait.png"
       }
     },
     {
-      "type": "ProgressBar",
+      "type": "Context",
       "props": {
-        "label": "Years Since Last CL Final",
-        "subtitle": "Paris 2006. Lehmann sent off. Sol Campbell header. Then heartbreak.",
-        "value": 19,
-        "date": "Dec 2025",
-        "source": "UEFA"
-      },
-      "cta": {
-        "logo": "/images/sportsbooks/bet365-banner.png",
-        "headline": "Arsenal to win CL?",
-        "subhead": "5.25x odds at Bet365",
-        "buttonText": "Get Bonus",
-        "buttonUrl": "https://bet365.com",
-        "disclaimer": "Gambling can be addictive. Please play responsibly. 18+. T&Cs apply.",
-        "termsUrl": "https://bet365.com/terms"
+        "label": "Why This Matters",
+        "title": "The Final Frontier",
+        "body": "Arsenal has [[never won the Champions League.]] 2006 was supposed to be the year, but Barcelona turned 0-1 to 2-1 the last 15 minutes of the final.",
+        "date": "Jan 2026",
+        "source": "UEFA Records"
       }
     },
     {
       "type": "ProgressRing",
       "props": {
-        "label": "Minutes Without Conceding",
-        "subtitle": "2006 Champions League run. A record. Then they lost the final.",
-        "value": 99,
-        "date": "May 17, 2006",
-        "source": "UEFA",
-        "portrait": "/images/arsenal-cl/arteta-face.png"
-      },
-      "cta": {
-        "logo": "/images/sportsbooks/bet365-banner.png",
-        "headline": "Arteta's year?",
-        "subhead": "Manager of the Season 3.50x",
-        "buttonText": "Get Bonus",
-        "buttonUrl": "https://bet365.com",
-        "disclaimer": "Gambling can be addictive. Please play responsibly. 18+. T&Cs apply.",
-        "termsUrl": "https://bet365.com/terms"
+        "label": "Arsenal",
+        "subtitle": "Odds to reach the final. Can they go one step further?",
+        "value": 36,
+        "date": "Jan 2026",
+        "source": "Smarkets",
+        "portrait": "/images/arsenal-cl/arsenal-final.png"
+      }
+    },
+    {
+      "type": "Gauge",
+      "props": {
+        "label": "The Ghost",
+        "title": "Barcelona Returns",
+        "subtitle": "The club that broke Arsenal's heart in 2006",
+        "value": 10,
+        "context": "Odds say that Barcelona has a 1 in 10 chance to win CL 2026.",
+        "portrait": "/images/arsenal-cl/yamal-portrait.png",
+        "date": "Jan 2026",
+        "source": "Smarkets"
+      }
+    },
+    {
+      "type": "PreferenceCTA",
+      "props": {
+        "question": "What matters more?",
+        "options": ["bonusValue", "payoutSpeed"]
+      }
+    },
+    {
+      "type": "Milestone",
+      "props": {
+        "label": "Club Record",
+        "title": "Gabriel Martinelli",
+        "subtitle": "Best goal scoring streak in Arsenal Champions League history",
+        "stat": "5",
+        "statLabel": "Consecutive Games",
+        "portrait": "/images/arsenal-cl/martinelli-portrait.png",
+        "date": "Jan 2026",
+        "source": "UEFA Records"
+      }
+    },
+    {
+      "type": "VerticalBar",
+      "props": {
+        "title": "Is It Coming Home?",
+        "subtitle": "English clubs odds to win",
+        "unit": "%",
+        "date": "Jan 2026",
+        "source": "Smarkets",
+        "items": [
+          { "label": "Arsenal", "value": 22, "highlight": true },
+          { "label": "Man City", "value": 14 },
+          { "label": "Liverpool", "value": 9 },
+          { "label": "Chelsea", "value": 5 },
+          { "label": "Tottenham", "value": 2 }
+        ]
+      }
+    },
+    {
+      "type": "MoneyChart",
+      "props": {
+        "title": "Money Talks",
+        "subtitle": "Arsenal's squad is the 2nd most valuable in the world",
+        "date": "Jan 2026",
+        "source": "Transfermarkt",
+        "currency": "€",
+        "items": [
+          { "label": "Real Madrid", "value": 1.35, "unit": "bn" },
+          { "label": "Arsenal", "value": 1.31, "unit": "bn" },
+          { "label": "Man City", "value": 1.21, "unit": "bn" },
+          { "label": "PSG", "value": 1.19, "unit": "bn" }
+        ]
+      }
+    },
+    {
+      "type": "OddsBar",
+      "props": {
+        "market": "Golden Boot Winner",
+        "date": "Jan 2026",
+        "source": "Smarkets",
+        "variant": "light",
+        "odds": [
+          { "label": "Kylian Mbappé", "value": 55 },
+          { "label": "Erling Haaland", "value": 20 },
+          { "label": "Harry Kane", "value": 13 }
+        ]
+      }
+    },
+    {
+      "type": "PreferenceCTA",
+      "props": {
+        "question": "What matters more?",
+        "options": ["oddsQuality", "appExperience"]
       }
     }
   ]

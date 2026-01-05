@@ -11,9 +11,11 @@ import MoneyChart from '../../components/MoneyChart';
 import ProgressBar from '../../components/ProgressBar';
 import LineChart from '../../components/LineChart';
 import Bubble from '../../components/Bubble';
+import Timeline from '../../components/Timeline';
 import VerticalBar from '../../components/VerticalBar';
 import StatCard from '../../components/StatCard';
 import Gauge from '../../components/Gauge';
+import Milestone from '../../components/Milestone';
 import SmartCTA from '../../components/SmartCTA';
 import InteractiveCTA from '../../components/InteractiveCTA';
 import PreferenceCTA from '../../components/PreferenceCTA';
@@ -30,9 +32,11 @@ const componentMap: Record<string, React.ComponentType<any>> = {
   Quote,
   ProgressRing,
   StatCard,
+  Milestone,
   ProgressBar,
   LineChart,
   Bubble,
+  Timeline,
   VerticalBar,
   Gauge,
   SmartCTA,
