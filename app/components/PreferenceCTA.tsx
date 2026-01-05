@@ -9,39 +9,130 @@ interface PreferenceCTAProps {
   options?: Category[];
 }
 
-const categoryLabels: Record<Category, { label: string; shortLabel: string; description: string }> = {
+const categoryLabels: Record<Category, { label: string; shortLabel: string; description: string; badge: string }> = {
   bonusValue: {
     label: 'Biggest bonus available right now',
-    shortLabel: 'BIGGEST BONUS',
-    description: 'Highest welcome bonus and promotions'
+    shortLabel: 'BIG BONUS',
+    description: 'Highest welcome bonus and promotions',
+    badge: '#1 FOR BONUS'
   },
   payoutSpeed: {
     label: 'Fastest withdrawals possible',
-    shortLabel: 'FASTEST PAYOUT',
-    description: 'Quickest withdrawals'
+    shortLabel: 'FAST PAYOUTS',
+    description: 'Quickest withdrawals',
+    badge: '#1 FOR PAYOUTS'
   },
   oddsQuality: {
     label: 'Most competitive odds on the market',
     shortLabel: 'BEST ODDS',
-    description: 'Highest odds and lowest margins'
+    description: 'Highest odds and lowest margins',
+    badge: '#1 FOR ODDS'
   },
   appExperience: {
     label: 'Highest rated sportsbook app',
     shortLabel: 'BEST APP',
-    description: 'Smoothest mobile experience'
+    description: 'Smoothest mobile experience',
+    badge: '#1 FOR APP'
   },
 };
 
-function RatingBar({ value }: { value: number }) {
+function RatingBar({ label, value }: { label: string; value: number }) {
   return (
-    <div className="flex items-center gap-2 flex-1">
-      <div className="flex-1 h-2 bg-neutral-700 rounded-full overflow-hidden">
+    <div className="flex items-center gap-2">
+      <span className="text-neutral-500 text-xs w-16">{label}</span>
+      <div className="flex-1 h-2 bg-neutral-800 rounded-full overflow-hidden">
         <div
           className="h-full bg-amber-400 rounded-full"
           style={{ width: `${value}%` }}
         />
       </div>
-      <span className="text-amber-400 font-bold text-sm">{value}</span>
+      <span className="text-neutral-500 text-xs w-8">{value}</span>
+    </div>
+  );
+}
+
+function TermsDropdown({ terms }: { terms: string }) {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <div className="mt-2">
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="text-neutral-500 text-xs hover:text-neutral-400 transition flex items-center gap-1"
+      >
+        <span>T&Cs</span>
+        <svg
+          className={`w-3 h-3 transition-transform ${isOpen ? 'rotate-180' : ''}`}
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+      {isOpen && (
+        <p className="text-neutral-600 text-xs mt-2 leading-relaxed">
+          {terms}
+        </p>
+      )}
+    </div>
+  );
+}
+
+function SportsbookCard({ book, badge }: { book: Sportsbook; badge: string }) {
+  return (
+    <div className="bg-black rounded-xl border-2 border-amber-400 overflow-visible relative mt-4 max-w-[350px]">
+      {/* Badge */}
+      <div className="absolute -top-3 left-4 bg-amber-400 text-black text-xs font-bold px-3 py-1.5 rounded-full border border-amber-500 shadow-lg z-10">
+        {badge}
+      </div>
+
+      {/* Banner Image */}
+      <div className="rounded-t-xl overflow-hidden">
+        <img
+          src={book.bannerImage}
+          alt={book.name}
+          className="w-full h-24 object-cover"
+        />
+      </div>
+
+      {/* Content */}
+      <div className="p-4">
+        <p className="text-neutral-400 text-sm mb-4">{book.tagline}</p>
+
+        {/* Ratings */}
+        <div className="space-y-2 mb-4">
+          <RatingBar label="Bonus" value={book.ratings.bonusValue} />
+          <RatingBar label="Payouts" value={book.ratings.payoutSpeed} />
+          <RatingBar label="Odds" value={book.ratings.oddsQuality} />
+          <RatingBar label="App" value={book.ratings.appExperience} />
+        </div>
+
+        {/* CTA - Gold */}
+        <a
+          href={book.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block w-full bg-amber-400 hover:bg-amber-300 text-black font-bold text-center py-3 rounded-lg transition"
+        >
+          Claim Bonus
+        </a>
+
+        {/* Responsible Gambling */}
+        <div className="mt-3 text-center">
+          <a
+            href={book.responsibleGambling.helpUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-neutral-500 text-xs hover:text-neutral-400 transition"
+          >
+            {book.responsibleGambling.text}
+          </a>
+        </div>
+
+        {/* Collapsible T&Cs */}
+        <TermsDropdown terms={book.termsAndConditions} />
+      </div>
     </div>
   );
 }
@@ -52,7 +143,6 @@ export default function PreferenceCTA({
 }: PreferenceCTAProps) {
   const [selectedCategory, setSelectedCategory] = useState<Category | null>(null);
   const [availableBooks, setAvailableBooks] = useState<Sportsbook[]>([]);
-  const [expanded, setExpanded] = useState(false);
 
   const displayOptions: Category[] = options || ['bonusValue', 'payoutSpeed', 'oddsQuality', 'appExperience'];
 
@@ -88,47 +178,40 @@ export default function PreferenceCTA({
 
   const getBestBook = (category: Category): Sportsbook | null => {
     if (availableBooks.length === 0) return null;
-
-    return [...availableBooks].sort((a, b) =>
-      b.ratings[category] - a.ratings[category]
-    )[0];
+    return [...availableBooks].sort((a, b) => b.ratings[category] - a.ratings[category])[0];
   };
 
   // State 1: The Question
-if (!selectedCategory) {
-  return (
-    <div className="bg-neutral-900 border-2 border-amber-400 rounded-lg p-6">
-      {/* Header - centered */}
-      <div className="text-center mb-6">
-        <div className="text-amber-400 text-xs font-bold tracking-widest uppercase mb-2">
-          Find Your Sportsbook
+  if (!selectedCategory) {
+    return (
+      <div className="bg-neutral-900 border-2 border-amber-400 rounded-lg p-6">
+        {/* Header - centered */}
+        <div className="text-center mb-6">
+          <div className="text-xs font-bold tracking-widest uppercase mb-2" style={{ color: '#E5B94E' }}>
+            Find Your Sportsbook
+          </div>
+          <div className="text-white text-lg font-bold">
+            {question}
+          </div>
         </div>
-        <div className="text-white text-lg font-bold">
-          {question}
-        </div>
-      </div>
 
-      {/* Options */}
-      <div className="flex flex-col sm:flex-row gap-3">
-        {displayOptions.map((category, index) => (
-          <button
-            key={category}
-            onClick={() => setSelectedCategory(category)}
-            className={`flex-1 rounded-lg py-4 px-6 text-center transition-all hover:scale-105 ${
-              index === 0 
-                ? 'bg-amber-400 hover:bg-amber-300 text-black' 
-                : 'bg-black hover:bg-neutral-800 border border-neutral-700 text-amber-400'
-            }`}
-          >
-            <span className="font-bold text-sm">
-              {categoryLabels[category].shortLabel}
-            </span>
-          </button>
-        ))}
+        {/* Options */}
+        <div className="flex flex-col sm:flex-row gap-3">
+          {displayOptions.map((category) => (
+            <button
+              key={category}
+              onClick={() => setSelectedCategory(category)}
+              className="flex-1 bg-black border border-neutral-700 hover:border-amber-400 rounded-lg py-4 px-6 text-center transition-all hover:scale-105"
+            >
+              <span className="font-bold text-sm" style={{ color: '#E5B94E' }}>
+                {categoryLabels[category].shortLabel}
+              </span>
+            </button>
+          ))}
+        </div>
       </div>
-    </div>
-  );
-}
+    );
+  }
 
   // State 2: The Result
   const book = getBestBook(selectedCategory);
@@ -150,79 +233,30 @@ if (!selectedCategory) {
 
   return (
     <div className="bg-neutral-900 border-2 border-amber-400 rounded-lg p-6">
-      {/* Result Header */}
-      <div className="mb-6 pb-6 border-b border-neutral-800">
-        <div className="text-amber-400 text-xs font-bold tracking-widest uppercase mb-2">
+      {/* Header - centered */}
+      <div className="text-center mb-6">
+        <div className="text-xs font-bold tracking-widest uppercase mb-2" style={{ color: '#E5B94E' }}>
           {categoryInfo.shortLabel}
         </div>
-        <div className="text-white font-bold text-lg">
+        <div className="text-white text-lg font-bold">
           {categoryInfo.description}
         </div>
       </div>
 
-      {/* Winner */}
-      <div className="flex flex-col sm:flex-row sm:items-center gap-4 mb-4">
-        <div className="flex items-center gap-4 flex-1 min-w-0">
-          <div className="flex-shrink-0">
-            <img
-              src={book.bannerImage}
-              alt={book.name}
-              className="h-12 sm:h-14 w-auto object-contain rounded-md"
-            />
-          </div>
-          <div className="flex-1 min-w-0">
-            <div className="flex items-center gap-2">
-              <span className="text-neutral-400 text-xs">Rating:</span>
-              <RatingBar value={book.ratings[selectedCategory]} />
-            </div>
-          </div>
-        </div>
-
-        <a
-          href={book.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex-shrink-0 bg-amber-400 hover:bg-amber-300 text-black font-bold text-sm sm:text-base px-5 py-2.5 rounded transition-all hover:scale-105 text-center"
-        >
-          Claim Bonus →
-        </a>
-      </div>
-
-      {/* Footer */}
-      <div className="pt-3 border-t border-neutral-800">
-        <div className="flex items-center gap-2 text-neutral-500 text-xs">
-          <span>18+</span>
-          <span>|</span>
-          <span>Play responsibly</span>
-          <span>|</span>
-          <a
-            href={book.responsibleGambling.helpUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-neutral-300 underline"
-          >
-            T&amp;C
-          </a>
-          <button
-            onClick={() => setExpanded(!expanded)}
-            className="ml-auto hover:text-neutral-300 transition-colors"
-          >
-            {expanded ? '▲' : '▼'}
-          </button>
-        </div>
-        {expanded && (
-          <div className="mt-2 text-neutral-500 text-xs leading-relaxed">
-            {book.termsAndConditions}
-          </div>
-        )}
+      {/* Card */}
+      <div className="flex justify-center">
+        <SportsbookCard
+          book={book}
+          badge={categoryInfo.badge}
+        />
       </div>
 
       {/* Reset */}
       <button
         onClick={() => setSelectedCategory(null)}
-        className="w-full text-neutral-500 hover:text-neutral-300 text-sm mt-4 transition-colors"
+        className="w-full text-neutral-500 hover:text-neutral-300 text-sm mt-6 transition-colors"
       >
-        &larr; Choose again
+        &larr; Try again
       </button>
     </div>
   );

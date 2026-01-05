@@ -87,13 +87,14 @@ function SportsbookCard({ book, badge, highlighted }: { book: Sportsbook; badge:
         </div>
 
         {/* CTA - Gold */}
+
         <a
           href={book.url}
           target="_blank"
           rel="noopener noreferrer"
           className="block w-full bg-amber-400 hover:bg-amber-300 text-black font-bold text-center py-3 rounded-lg transition"
         >
-          Check out {book.name}
+          Claim Bonus
         </a>
 
         {/* Responsible Gambling */}
@@ -166,6 +167,15 @@ export default function InteractiveCTA({
     return [...availableBooks].sort((a, b) => b.ratings.bonusValue - a.ratings.bonusValue)[0];
   };
 
+  const getBestOverallBook = (): Sportsbook | null => {
+    if (availableBooks.length === 0) return null;
+    return [...availableBooks].sort((a, b) => {
+      const avgA = (a.ratings.bonusValue + a.ratings.payoutSpeed + a.ratings.oddsQuality + a.ratings.appExperience) / 4;
+      const avgB = (b.ratings.bonusValue + b.ratings.payoutSpeed + b.ratings.oddsQuality + b.ratings.appExperience) / 4;
+      return avgB - avgA;
+    })[0];
+  };
+
   const getVerdict = () => {
     const diff = userOdds - marketOdds;
 
@@ -182,7 +192,7 @@ export default function InteractiveCTA({
     } else {
       return {
         tone: 'neutral' as const,
-        headline: 'Best bonus or best odds?',
+        headline: 'Your bonus is ready',
       };
     }
   };
@@ -278,20 +288,27 @@ export default function InteractiveCTA({
         </div>
       </div>
 
-      {/* Cards - always show both */}
-      <div className="flex flex-col sm:flex-row justify-center gap-4">
-        {bestBonusBook && (
-          <SportsbookCard
-            book={bestBonusBook}
-            badge="BEST BONUS"
-            highlighted={verdict.tone === 'bearish'}
-          />
-        )}
-        {bestOddsBook && (
+      {/* Card - show one based on verdict */}
+      <div className="flex justify-center">
+        {verdict.tone === 'bullish' && bestOddsBook && (
           <SportsbookCard
             book={bestOddsBook}
             badge="BEST ODDS"
-            highlighted={verdict.tone === 'bullish'}
+            highlighted={true}
+          />
+        )}
+        {verdict.tone === 'bearish' && bestBonusBook && (
+          <SportsbookCard
+            book={bestBonusBook}
+            badge="BEST BONUS"
+            highlighted={true}
+          />
+        )}
+        {verdict.tone === 'neutral' && getBestOverallBook() && (
+          <SportsbookCard
+            book={getBestOverallBook()!}
+            badge="TOP PICK"
+            highlighted={true}
           />
         )}
       </div>
