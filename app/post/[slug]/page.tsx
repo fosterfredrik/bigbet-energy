@@ -12,6 +12,7 @@ import ProgressBar from '../../components/ProgressBar';
 import LineChart from '../../components/LineChart';
 import Bubble from '../../components/Bubble';
 import Timeline from '../../components/Timeline';
+import HeadToHead from '../../components/HeadToHead';
 import VerticalBar from '../../components/VerticalBar';
 import StatCard from '../../components/StatCard';
 import Gauge from '../../components/Gauge';
@@ -35,6 +36,7 @@ const componentMap: Record<string, React.ComponentType<any>> = {
   Milestone,
   ProgressBar,
   LineChart,
+  HeadToHead,
   Bubble,
   Timeline,
   VerticalBar,

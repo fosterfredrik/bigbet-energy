@@ -11,19 +11,19 @@ interface MilestoneProps {
   source: string
 }
 
-export default function Milestone({ 
-  label, 
-  stat, 
-  statLabel, 
-  title, 
+export default function Milestone({
+  label,
+  stat,
+  statLabel,
+  title,
   subtitle,
-  portrait, 
-  date, 
-  source 
+  portrait,
+  date,
+  source
 }: MilestoneProps) {
   return (
     <div className="relative w-full h-full bg-black p-6 sm:p-10 md:p-12 flex flex-col">
-      
+
       {/* Header */}
       <div className="mb-6">
         <div className="text-xs font-bold tracking-widest uppercase mb-2" style={{ color: '#E5B94E' }}>
@@ -44,7 +44,7 @@ export default function Milestone({
         <div className="text-amber-400 text-8xl sm:text-9xl font-black">
           {stat}
         </div>
-        <div className="text-white text-xl sm:text-2xl font-bold uppercase tracking-widest mt-2">
+        <div className="text-neutral-500 text-lg sm:text-xl font-bold uppercase tracking-wide mt-2">
           {statLabel}
         </div>
       </div>

@@ -8,7 +8,7 @@
       "type": "Hero",
       "props": {
         "category": "Champions League",
-        "headline": "21 Years. Zero European Trophies.",
+        "headline": "32 Years. Zero European Trophies.",
         "subhead": "Arsenal are favorites. But history says they'll find a way to lose. Is this finally the year?",
         "image": "/images/arsenal-cl/arsenal-hero.jpg"
       }
@@ -17,13 +17,22 @@
       "type": "OddsBar",
       "props": {
         "market": "Champions League Winner 2025/26",
-        "date": "Dec 2025",
-        "source": "Polymarket",
+        "date": "Jan 2025",
+        "source": "Bet365",
         "variant": "light",
         "odds": [
-          { "label": "Arsenal", "value": 19 },
-          { "label": "Bayern Munich", "value": 17 },
-          { "label": "Man City", "value": 12 }
+          {
+            "label": "Arsenal",
+            "value": 22
+          },
+          {
+            "label": "Bayern Munich",
+            "value": 18
+          },
+          {
+            "label": "Man City",
+            "value": 14
+          }
         ],
         "portrait": "/images/arsenal-cl/arsenal-saka.png"
       }
@@ -32,11 +41,17 @@
       "type": "InteractiveCTA",
       "props": {
         "question": "What chance do you give Arsenal this year?",
-        "marketOdds": 19,
+        "marketOdds": 22,
         "candidate": "Arsenal",
         "alternatives": [
-          { "name": "Bayern Munich", "odds": 17 },
-          { "name": "Man City", "odds": 12 }
+          {
+            "name": "Bayern Munich",
+            "odds": 18
+          },
+          {
+            "name": "Man City",
+            "odds": 14
+          }
         ]
       }
     },
@@ -48,7 +63,7 @@
         "role": "Arsenal Manager",
         "context": "On winning the Champions League",
         "date": "Sep 2025",
-        "source": "ESPN",
+        "source": "Arsenal.com",
         "portrait": "/images/arsenal-cl/arteta-portrait.png"
       }
     },
@@ -65,32 +80,44 @@
     {
       "type": "ProgressRing",
       "props": {
-        "label": "Arsenal",
-        "subtitle": "Odds to reach the final. Can they go one step further?",
+        "category": "Market Probability",
+        "label": "Finalists?",
+        "subtitle": "1 in 3 chance to get there. Best odds in years.",
         "value": 36,
         "date": "Jan 2026",
-        "source": "Smarkets",
+        "source": "Bet365",
         "portrait": "/images/arsenal-cl/arsenal-final.png"
       }
     },
     {
-      "type": "Gauge",
+      "type": "HeadToHead",
       "props": {
         "label": "The Ghost",
-        "title": "Barcelona Returns",
+        "title": "Barcelona still in the race",
         "subtitle": "The club that broke Arsenal's heart in 2006",
-        "value": 10,
-        "context": "Odds say that Barcelona has a 1 in 10 chance to win CL 2026.",
-        "portrait": "/images/arsenal-cl/yamal-portrait.png",
+        "leftTeam": {
+          "name": "Arsenal",
+          "image": "/images/arsenal-cl/arsenal-crest.png",
+          "wins": 1
+        },
+        "rightTeam": {
+          "name": "Barcelona",
+          "image": "/images/arsenal-cl/barcelona-crest.png",
+          "wins": 6
+        },
+        "draws": 2,
         "date": "Jan 2026",
-        "source": "Smarkets"
+        "source": "UEFA Records"
       }
     },
     {
       "type": "PreferenceCTA",
       "props": {
         "question": "What matters more?",
-        "options": ["bonusValue", "payoutSpeed"]
+        "options": [
+          "bonusValue",
+          "payoutSpeed"
+        ]
       }
     },
     {
@@ -113,13 +140,29 @@
         "subtitle": "English clubs odds to win",
         "unit": "%",
         "date": "Jan 2026",
-        "source": "Smarkets",
+        "source": "Bet365",
         "items": [
-          { "label": "Arsenal", "value": 22, "highlight": true },
-          { "label": "Man City", "value": 14 },
-          { "label": "Liverpool", "value": 9 },
-          { "label": "Chelsea", "value": 5 },
-          { "label": "Tottenham", "value": 2 }
+          {
+            "label": "Arsenal",
+            "value": 22,
+            "highlight": true
+          },
+          {
+            "label": "Man City",
+            "value": 14
+          },
+          {
+            "label": "Liverpool",
+            "value": 9
+          },
+          {
+            "label": "Chelsea",
+            "value": 5
+          },
+          {
+            "label": "Tottenham",
+            "value": 2
+          }
         ]
       }
     },
@@ -132,10 +175,27 @@
         "source": "Transfermarkt",
         "currency": "€",
         "items": [
-          { "label": "Real Madrid", "value": 1.35, "unit": "bn" },
-          { "label": "Arsenal", "value": 1.31, "unit": "bn" },
-          { "label": "Man City", "value": 1.21, "unit": "bn" },
-          { "label": "PSG", "value": 1.19, "unit": "bn" }
+          {
+            "label": "Real Madrid",
+            "value": 1.35,
+            "unit": "bn"
+          },
+          {
+            "label": "Arsenal",
+            "value": 1.31,
+            "unit": "bn",
+            "highlight": true
+          },
+          {
+            "label": "Man City",
+            "value": 1.21,
+            "unit": "bn"
+          },
+          {
+            "label": "PSG",
+            "value": 1.19,
+            "unit": "bn"
+          }
         ]
       }
     },
@@ -144,12 +204,21 @@
       "props": {
         "market": "Golden Boot Winner",
         "date": "Jan 2026",
-        "source": "Smarkets",
+        "source": "Bet365",
         "variant": "light",
         "odds": [
-          { "label": "Kylian Mbappé", "value": 55 },
-          { "label": "Erling Haaland", "value": 20 },
-          { "label": "Harry Kane", "value": 13 }
+          {
+            "label": "Kylian Mbappé",
+            "value": 55
+          },
+          {
+            "label": "Erling Haaland",
+            "value": 20
+          },
+          {
+            "label": "Harry Kane",
+            "value": 13
+          }
         ]
       }
     },
@@ -157,7 +226,10 @@
       "type": "PreferenceCTA",
       "props": {
         "question": "What matters more?",
-        "options": ["oddsQuality", "appExperience"]
+        "options": [
+          "oddsQuality",
+          "appExperience"
+        ]
       }
     }
   ]

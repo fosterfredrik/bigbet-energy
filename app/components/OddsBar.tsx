@@ -1,6 +1,7 @@
 interface OddsItem {
   label: string
   value: number
+  highlight?: boolean
 }
 
 interface OddsBarProps {
@@ -14,6 +15,7 @@ interface OddsBarProps {
 
 export default function OddsBar({ market, date, source, odds, variant = 'dark', portrait }: OddsBarProps) {
   const maxValue = Math.max(...odds.map(o => o.value))
+  const hasHighlight = odds.some(o => o.highlight)
   const isDark = variant === 'dark'
 
   const gapSize = odds.length <= 3 ? 'gap-6 sm:gap-8' : 'gap-4 sm:gap-5'
@@ -22,7 +24,6 @@ export default function OddsBar({ market, date, source, odds, variant = 'dark', 
 
   return (
     <div className={`relative w-full h-full p-6 sm:p-10 md:p-12 flex flex-col ${isDark ? 'bg-black' : 'bg-amber-400'}`}>
-
       {/* Header */}
       <div className="mb-6 sm:mb-8">
         <div className={`text-xs font-bold tracking-widest uppercase mb-2 ${isDark ? 'text-amber-400' : 'text-black/60'}`}>
@@ -36,20 +37,21 @@ export default function OddsBar({ market, date, source, odds, variant = 'dark', 
       {/* Bars */}
       <div className={`flex-1 flex flex-col justify-center ${gapSize}`}>
         {odds.map((item, index) => {
-          const isHighlight = item.value === maxValue
+          const isHighlight = hasHighlight ? item.highlight : item.value === maxValue
+
           return (
             <div key={index}>
               <div className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-2 gap-1 sm:gap-0">
                 <span className={`text-sm font-bold uppercase tracking-wide ${isDark
                   ? (isHighlight ? 'text-amber-400' : 'text-neutral-500')
                   : (isHighlight ? 'text-black' : 'text-black/50')
-                  }`}>
+                }`}>
                   {item.label}
                 </span>
                 <span className={`font-bold ${textSize} ${isDark
                   ? (isHighlight ? 'text-white' : 'text-neutral-700')
                   : (isHighlight ? 'text-black' : 'text-black/40')
-                  }`}>
+                }`}>
                   {item.value}%
                 </span>
               </div>
@@ -58,7 +60,7 @@ export default function OddsBar({ market, date, source, odds, variant = 'dark', 
                   className={`h-full rounded-full ${isDark
                     ? (isHighlight ? 'bg-amber-400' : 'bg-neutral-800')
                     : (isHighlight ? 'bg-black' : 'bg-black/30')
-                    }`}
+                  }`}
                   style={{ width: `${item.value}%` }}
                 />
               </div>

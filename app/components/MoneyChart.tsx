@@ -2,6 +2,7 @@ interface MoneyItem {
   label: string
   value: number
   unit: string
+  highlight?: boolean
 }
 
 interface MoneyChartProps {
@@ -15,15 +16,14 @@ interface MoneyChartProps {
 
 export default function MoneyChart({ title, subtitle, date, source, items, currency = '$' }: MoneyChartProps) {
   const maxValue = Math.max(...items.map(i => i.value))
-  
-  // Auto-size based on number of items
+  const hasHighlight = items.some(i => i.highlight)
+
   const gapSize = items.length <= 3 ? 'gap-5 sm:gap-6' : 'gap-3 sm:gap-4'
   const textSize = items.length <= 3 ? 'text-xl sm:text-2xl' : 'text-lg sm:text-xl'
   const barHeight = items.length <= 3 ? 'h-7 sm:h-8' : 'h-5 sm:h-6'
 
   return (
     <div className="w-full h-full bg-black p-6 sm:p-10 md:p-12 flex flex-col">
-      
       {/* Header */}
       <div className="mb-6 sm:mb-8">
         <div className="text-xs font-bold tracking-widest uppercase mb-2" style={{ color: '#E5B94E' }}>
@@ -42,7 +42,7 @@ export default function MoneyChart({ title, subtitle, date, source, items, curre
       {/* Money Items */}
       <div className={`flex-1 flex flex-col justify-center ${gapSize}`}>
         {items.map((item, index) => {
-          const isMax = item.value === maxValue
+          const isHighlighted = hasHighlight ? item.highlight : item.value === maxValue
           const barWidth = (item.value / maxValue) * 100
 
           return (
@@ -53,11 +53,11 @@ export default function MoneyChart({ title, subtitle, date, source, items, curre
               <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
                 <div className={`flex-1 ${barHeight} bg-neutral-900 rounded overflow-hidden`}>
                   <div 
-                    className={`h-full rounded ${isMax ? 'bg-amber-400' : 'bg-neutral-700'}`}
+                    className={`h-full rounded ${isHighlighted ? 'bg-amber-400' : 'bg-neutral-700'}`}
                     style={{ width: `${barWidth}%` }}
                   />
                 </div>
-                <div className={`font-bold sm:min-w-[90px] sm:text-right ${textSize} ${isMax ? 'text-amber-400' : 'text-white'}`}>
+                <div className={`font-bold sm:min-w-[90px] sm:text-right ${textSize} ${isHighlighted ? 'text-amber-400' : 'text-white'}`}>
                   {currency}{item.value}{item.unit}
                 </div>
               </div>

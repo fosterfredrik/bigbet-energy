@@ -31,7 +31,8 @@
           },
           {
             "label": "Donald Trump",
-            "value": 4
+            "value": 4,
+            "highlight": true
           }
         ],
         "portrait": "/images/trump-2028/djt-face.png"
