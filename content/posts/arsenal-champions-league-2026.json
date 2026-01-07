@@ -231,6 +231,15 @@
           "appExperience"
         ]
       }
+    },
+    {
+      "type": "Sources",
+      "props": {
+        "items": [
+          { "label": "Arteta quote – Arsenal.com", "url": "https://www.arsenal.com/news/..." },
+          { "label": "Martinelli photo – @Arsenal", "url": "https://x.com/Arsenal/status/..." }
+        ]
+      }
     }
   ]
 }

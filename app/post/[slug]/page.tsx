@@ -20,6 +20,7 @@ import Milestone from '../../components/Milestone';
 import SmartCTA from '../../components/SmartCTA';
 import InteractiveCTA from '../../components/InteractiveCTA';
 import PreferenceCTA from '../../components/PreferenceCTA';
+import Sources from '../../components/Sources';
 import Header from '../../components/Header';
 import Breadcrumbs from '../../components/Breadcrumbs';
 import Footer from '../../components/Footer';
@@ -40,6 +41,7 @@ const componentMap: Record<string, React.ComponentType<any>> = {
   Bubble,
   Timeline,
   VerticalBar,
+  Sources,
   Gauge,
   SmartCTA,
   InteractiveCTA,
@@ -47,7 +49,7 @@ const componentMap: Record<string, React.ComponentType<any>> = {
 };
 
 // CTA types render full-width
-const ctaTypes = ['SmartCTA', 'InteractiveCTA', 'PreferenceCTA'];
+const ctaTypes = ['SmartCTA', 'InteractiveCTA', 'PreferenceCTA', 'Sources'];
 
 interface Story {
   slug: string;

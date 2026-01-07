@@ -17,21 +17,21 @@
       "type": "OddsBar",
       "props": {
         "market": "Presidential Election Winner 2028",
-        "date": "Dec 2025",
+        "date": "Jan 2025",
         "source": "Polymarket",
         "variant": "light",
         "odds": [
           {
             "label": "JD Vance",
-            "value": 31
+            "value": 30
           },
           {
             "label": "Gavin Newsom",
-            "value": 18
+            "value": 19
           },
           {
             "label": "Donald Trump",
-            "value": 4,
+            "value": 3,
             "highlight": true
           }
         ],
@@ -42,16 +42,16 @@
       "type": "InteractiveCTA",
       "props": {
         "question": "What chance do you give Trump in 2028?",
-        "marketOdds": 4,
+        "marketOdds": 3,
         "candidate": "Trump",
         "alternatives": [
           {
             "name": "JD Vance",
-            "odds": 31
+            "odds": 30
           },
           {
             "name": "Gavin Newsom",
-            "odds": 18
+            "odds": 19
           }
         ]
       }
@@ -63,8 +63,8 @@
         "author": "Steve Bannon",
         "role": "Former Trump Strategist",
         "context": "On the 2028 race",
-        "date": "Dec 2025",
-        "source": "Interview",
+        "date": "Oct 2025",
+        "source": "The Economist",
         "portrait": "/images/trump-2028/sb-shot.png"
       }
     },
@@ -74,18 +74,19 @@
         "label": "Why This Matters",
         "title": "The Loophole Hunt",
         "body": "The 22nd Amendment bans a third term. But the 'Third Term Project' is [[actively hunting for loopholes]] in the 12th and 25th Amendments.",
-        "date": "Dec 2025",
-        "source": "NotebookLM Research"
+        "date": "Jan 2026",
+        "source": "NPR"
       }
     },
     {
       "type": "ProgressRing",
       "props": {
-        "label": "JD Vance",
-        "subtitle": "Republican primary frontrunner. The heir apparent.",
-        "value": 50,
-        "date": "Dec 2025",
-        "source": "Polymarket",
+        "category": "GOP Primary",
+        "label": "Republican primary frontrunner",
+        "subtitle": "JD Vance - the heir apparent.",
+        "value": 57,
+        "date": "Jan 2026",
+        "source": "Betsafe",
         "portrait": "/images/trump-2028/jd-mug.jpg"
       }
     },
@@ -94,11 +95,10 @@
       "props": {
         "label": "The Wildcard",
         "title": "Is The Rock Cooking?",
-        "subtitle": "Hollywood's hope: Dwayne Johnson",
-        "value": 4,
-        "context": "Same odds as Trump. Difference? He can actually run.",
+        "subtitle": "Would not be the first time a Johnson was President.",
+        "value": 2,
         "portrait": "/images/trump-2028/rock-president.png",
-        "date": "Dec 2025",
+        "date": "Jan 2026",
         "source": "Polymarket"
       }
     },
@@ -115,13 +115,13 @@
     {
       "type": "StatCard",
       "props": {
-        "stat": "4%",
+        "stat": "2%",
         "label": "No hope for Harris?",
         "subtitle": "Slim chance of Kamala to become President",
         "quote": "I'm not done",
         "quoteAuthor": "Kamala Harris",
         "portrait": "/images/trump-2028/kamala-face.png",
-        "date": "Dec 2025",
+        "date": "Jan 2026",
         "source": "Polymarket"
       }
     },
@@ -131,30 +131,13 @@
         "title": "Female President Unlikely",
         "subtitle": "Who could be the first?",
         "unit": "%",
-        "date": "Dec 2025",
-        "source": "Polymarket",
+        "date": "Jan 2026",
+        "source": "Bet365",
         "items": [
-          {
-            "label": "AOC",
-            "value": 8,
-            "highlight": true
-          },
-          {
-            "label": "Kamala",
-            "value": 4
-          },
-          {
-            "label": "Ivanka",
-            "value": 4
-          },
-          {
-            "label": "Haley",
-            "value": 2
-          },
-          {
-            "label": "Noem",
-            "value": 2
-          }
+          { "label": "AOC", "value": 8, "highlight": true },
+          { "label": "Whitmer", "value": 3 },
+          { "label": "Kamala", "value": 3 },
+          { "label": "Ivanka", "value": 2 }
         ]
       }
     },
@@ -163,17 +146,17 @@
       "props": {
         "label": "Trump's Legal Limit",
         "subtitle": "Constitutional maximum completed (2 terms / 8 years)",
-        "value": 62,
-        "date": "Dec 2025",
+        "value": 63,
+        "date": "Jan 2026",
         "source": "22nd Amendment"
       }
     },
     {
       "type": "OddsBar",
       "props": {
-        "market": "While We're At It...",
-        "date": "Dec 2025",
-        "source": "Polymarket",
+        "market": "Trump's 2029 Wishlist",
+        "date": "Jan 2026",
+        "source": "Betsafe",
         "variant": "light",
         "odds": [
           {
@@ -181,7 +164,7 @@
             "value": 7
           },
           {
-            "label": "Canada 51st State",
+            "label": "Canada becomes state #51",
             "value": 3
           },
           {
