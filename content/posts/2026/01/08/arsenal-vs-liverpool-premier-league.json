@@ -1,0 +1,197 @@
+{
+  "slug": "arsenal-vs-liverpool-premier-league",
+  "title": "22 Years. Zero Titles.",
+  "category": "Premier League",
+  "date": "2026-01-08",
+  "blocks": [
+    {
+      "type": "Hero",
+      "props": {
+        "category": "Premier League",
+        "headline": "No Weakness.",
+        "subhead": "Liverpool's manager said it himself. Arsenal are the complete package. Tonight, they prove it.",
+        "image": "/images/arsenal-liverpool/hero.jpg"
+      }
+    },
+    {
+      "type": "OddsBar",
+      "props": {
+        "market": "Match Odds",
+        "date": "Jan 2026",
+        "source": "Betsafe",
+        "variant": "light",
+        "odds": [
+          { "label": "Arsenal", "value": 65, "highlight": true },
+          { "label": "Draw", "value": 23 },
+          { "label": "Liverpool", "value": 17 }
+        ],
+        "portrait": "/images/arsenal-liverpool/gyokeres-portrait.png"
+      }
+    },
+    {
+      "type": "InteractiveCTA",
+      "props": {
+        "question": "What chance do you give Arsenal tonight?",
+        "marketOdds": 65,
+        "candidate": "Arsenal",
+        "alternatives": [
+          { "name": "Draw", "odds": 23 },
+          { "name": "Liverpool", "odds": 17 }
+        ]
+      }
+    },
+    {
+      "type": "Quote",
+      "props": {
+        "quote": "Their main strength is probably that they don't have anything that is their weakness. They are the complete package.",
+        "author": "Arne Slot",
+        "role": "Liverpool Manager",
+        "context": "On facing Arsenal",
+        "date": "Jan 2026",
+        "source": "The Guardian",
+        "portrait": "/images/arsenal-liverpool/slot-portrait.png"
+      }
+    },
+    {
+      "type": "Context",
+      "props": {
+        "label": "Why This Matters",
+        "title": "The Gap Widens",
+        "body": "Arsenal can go eight points clear tonight. Liverpool arrive [[without Salah or Isak]] — the champions are limping.",
+        "date": "Jan 2026",
+        "source": "Premier League"
+      }
+    },
+    {
+      "type": "HeadToHead",
+      "props": {
+        "label": "The Rivalry",
+        "title": "245 Meetings",
+        "subtitle": "Liverpool leads all-time, but Arsenal won the match that mattered most — 1989 title decider at Anfield",
+        "leftTeam": {
+          "name": "Arsenal",
+          "image": "/images/arsenal-liverpool/arsenal-crest.png",
+          "wins": 83
+        },
+        "rightTeam": {
+          "name": "Liverpool",
+          "image": "/images/arsenal-liverpool/liverpool-crest.png",
+          "wins": 96
+        },
+        "draws": 66,
+        "date": "Jan 2026",
+        "source": "Premier League Records"
+      }
+    },
+    {
+      "type": "Milestone",
+      "props": {
+        "label": "History Awaits",
+        "title": "Bukayo Saka",
+        "subtitle": "A goal tonight makes him the first Arsenal player ever to score in four consecutive home league games against Liverpool",
+        "stat": "3",
+        "statLabel": "Straight Home Goals vs Liverpool",
+        "portrait": "/images/arsenal-liverpool/saka-portrait.png",
+        "date": "Jan 2026",
+        "source": "Premier League Records"
+      }
+    },
+    {
+      "type": "PreferenceCTA",
+      "props": {
+        "question": "What matters more?",
+        "options": ["bonusValue", "payoutSpeed"]
+      }
+    },
+    {
+      "type": "StatCard",
+      "props": {
+        "stat": "15",
+        "label": "Liverpool's Achilles Heel",
+        "subtitle": "Goals conceded in the second half (of 28 total)",
+        "quote": "We all know at home they are unbeaten this season.",
+        "quoteAuthor": "Virgil Van Dijk",
+        "portrait": "/images/arsenal-liverpool/van-dijk-portrait.png",
+        "date": "Jan 2026",
+        "source": "Liverpool FC"
+      }
+    },
+    {
+      "type": "VerticalBar",
+      "props": {
+        "title": "Set Piece Battle",
+        "subtitle": "Arsenal's biggest weapon meets Liverpool's worst vulnerability",
+        "unit": "",
+        "date": "Jan 2026",
+        "source": "Premier League Stats",
+        "items": [
+          { "label": "Arsenal set piece goals", "value": 12, "highlight": true },
+          { "label": "Liverpool set piece conceded", "value": 13 }
+        ]
+      }
+    },
+    {
+      "type": "ProgressBar",
+      "props": {
+        "label": "Late Collapse",
+        "subtitle": "Liverpool goals conceded in 90th minute or later (9 of 28)",
+        "value": 32,
+        "date": "Jan 2026",
+        "source": "Premier League"
+      }
+    },
+    {
+      "type": "OddsBar",
+      "props": {
+        "market": "First Goalscorer",
+        "date": "Jan 2026",
+        "source": "Bet365",
+        "variant": "light",
+        "odds": [
+          { "label": "Trossard", "value": 17 },
+          { "label": "Gyökeres", "value": 17 },
+          { "label": "Havertz", "value": 17 },
+          { "label": "Jesus", "value": 15 }
+        ]
+      }
+    },
+    {
+      "type": "PreferenceCTA",
+      "props": {
+        "question": "What matters more?",
+        "options": ["oddsQuality", "appExperience"]
+      }
+    },
+    {
+      "type": "Sources",
+      "props": {
+        "items": [
+          {
+            "label": "Slot quotes – The Guardian",
+            "url": "https://www.theguardian.com/football/2026/jan/07/arsenal-liverpool-premier-league-slot-arteta"
+          },
+          {
+            "label": "Van Dijk quotes – Liverpool FC",
+            "url": "https://www.liverpoolfc.com/news/virgil-van-dijk-arsenal-preview"
+          },
+          {
+            "label": "Head-to-head record – Premier League",
+            "url": "https://www.premierleague.com/clubs/1/Arsenal/head-to-head"
+          },
+          {
+            "label": "Saka scoring record – Outlook India",
+            "url": "https://www.outlookindia.com/sports/arsenal-liverpool-saka-record"
+          },
+          {
+            "label": "Set piece stats – Premier League",
+            "url": "https://www.premierleague.com/stats"
+          },
+          {
+            "label": "Match odds – Betsafe",
+            "url": "https://www.betsafe.com/en/sportsbook/football/england/premier-league"
+          }
+        ]
+      }
+    }
+  ]
+}
