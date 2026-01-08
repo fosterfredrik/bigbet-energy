@@ -1,29 +1,29 @@
 import { promises as fs } from 'fs';
 import path from 'path';
-import Link from 'next/link';
-import Hero from '../../components/Hero';
-import OddsBar from '../../components/OddsBar';
-import Context from '../../components/Context';
-import Donut from '../../components/Donut';
-import Quote from '../../components/Quote';
-import ProgressRing from '../../components/ProgressRing';
-import MoneyChart from '../../components/MoneyChart';
-import ProgressBar from '../../components/ProgressBar';
-import LineChart from '../../components/LineChart';
-import Bubble from '../../components/Bubble';
-import Timeline from '../../components/Timeline';
-import HeadToHead from '../../components/HeadToHead';
-import VerticalBar from '../../components/VerticalBar';
-import StatCard from '../../components/StatCard';
-import Gauge from '../../components/Gauge';
-import Milestone from '../../components/Milestone';
-import SmartCTA from '../../components/SmartCTA';
-import InteractiveCTA from '../../components/InteractiveCTA';
-import PreferenceCTA from '../../components/PreferenceCTA';
-import Sources from '../../components/Sources';
-import Header from '../../components/Header';
-import Breadcrumbs from '../../components/Breadcrumbs';
-import Footer from '../../components/Footer';
+import { notFound } from 'next/navigation';
+import Hero from '@/app/components/Hero';
+import OddsBar from '@/app/components/OddsBar';
+import Context from '@/app/components/Context';
+import Donut from '@/app/components/Donut';
+import Quote from '@/app/components/Quote';
+import ProgressRing from '@/app/components/ProgressRing';
+import MoneyChart from '@/app/components/MoneyChart';
+import ProgressBar from '@/app/components/ProgressBar';
+import LineChart from '@/app/components/LineChart';
+import Bubble from '@/app/components/Bubble';
+import Timeline from '@/app/components/Timeline';
+import HeadToHead from '@/app/components/HeadToHead';
+import VerticalBar from '@/app/components/VerticalBar';
+import StatCard from '@/app/components/StatCard';
+import Gauge from '@/app/components/Gauge';
+import Milestone from '@/app/components/Milestone';
+import SmartCTA from '@/app/components/SmartCTA';
+import InteractiveCTA from '@/app/components/InteractiveCTA';
+import PreferenceCTA from '@/app/components/PreferenceCTA';
+import Sources from '@/app/components/Sources';
+import Header from '@/app/components/Header';
+import Breadcrumbs from '@/app/components/Breadcrumbs';
+import Footer from '@/app/components/Footer';
 
 const componentMap: Record<string, React.ComponentType<any>> = {
   Hero,
@@ -55,13 +55,20 @@ interface Story {
   slug: string;
   title: string;
   category: string;
-  created: string;
+  date: string;
   blocks: { type: string; props: any }[];
 }
 
-async function loadStory(slug: string): Promise<Story | null> {
+interface PageParams {
+  year: string;
+  month: string;
+  day: string;
+  slug: string;
+}
+
+async function loadStory(year: string, month: string, day: string, slug: string): Promise<Story | null> {
   try {
-    const filePath = path.join(process.cwd(), 'content', 'posts', `${slug}.json`);
+    const filePath = path.join(process.cwd(), 'content', 'posts', year, month, day, `${slug}.json`);
     const fileContent = await fs.readFile(filePath, 'utf-8');
     return JSON.parse(fileContent);
   } catch (error) {
@@ -69,16 +76,12 @@ async function loadStory(slug: string): Promise<Story | null> {
   }
 }
 
-export default async function PostPage({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params;
-  const story = await loadStory(slug);
+export default async function PostPage({ params }: { params: PageParams }) {
+  const { year, month, day, slug } = params;
+  const story = await loadStory(year, month, day, slug);
 
   if (!story) {
-    return (
-      <div className="min-h-screen bg-black text-white p-12">
-        <p>Story not found: {slug}</p>
-      </div>
-    );
+    notFound();
   }
 
   const blocks = story.blocks;
@@ -93,12 +96,10 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
 
   remainingBlocks.forEach((block) => {
     if (ctaTypes.includes(block.type)) {
-      // Flush current pair if exists
       if (currentPair.length > 0) {
         groupedBlocks.push({ type: 'pair', blocks: currentPair });
         currentPair = [];
       }
-      // Add CTA as standalone
       groupedBlocks.push({ type: 'cta', blocks: [block] });
     } else {
       currentPair.push(block);
@@ -109,7 +110,6 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
     }
   });
 
-  // Flush any remaining single block
   if (currentPair.length > 0) {
     groupedBlocks.push({ type: 'pair', blocks: currentPair });
   }
@@ -122,7 +122,7 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
         <Breadcrumbs
           items={[
             { label: 'Home', href: '/' },
-            { label: 'Stories', href: '/stories' },
+            { label: story.category, href: `/?category=${story.category.toLowerCase().replace(' ', '-')}` },
             { label: story.title }
           ]}
         />
@@ -132,7 +132,6 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
         <div className="max-w-[1104px] mx-auto">
           <div className="bg-black overflow-hidden">
 
-            {/* Row 1: Hero + OddsBar (gold frame) */}
             {heroBlocks.length >= 2 && (
               <div className="bg-amber-400 p-2 grid grid-cols-1 lg:grid-cols-2 gap-2">
                 {heroBlocks.map((block, index) => {
@@ -147,10 +146,8 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
               </div>
             )}
 
-            {/* Remaining blocks: grouped */}
             {groupedBlocks.map((group, groupIndex) => {
               if (group.type === 'cta') {
-                // CTA: full width
                 const block = group.blocks[0];
                 const Component = componentMap[block.type];
                 if (!Component) return null;
@@ -160,7 +157,6 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
                   </div>
                 );
               } else {
-                // Pair: 2-column grid
                 return (
                   <div
                     key={groupIndex}

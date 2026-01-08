@@ -1,8 +1,7 @@
 {
   "slug": "trump-third-term-2028",
   "title": "The Constitution Says No.",
-  "category": "2028 Election",
-  "created": "2025-12-27",
+  "category": "Politics",
   "blocks": [
     {
       "type": "Hero",
@@ -134,10 +133,23 @@
         "date": "Jan 2026",
         "source": "Bet365",
         "items": [
-          { "label": "AOC", "value": 8, "highlight": true },
-          { "label": "Whitmer", "value": 3 },
-          { "label": "Kamala", "value": 3 },
-          { "label": "Ivanka", "value": 2 }
+          {
+            "label": "AOC",
+            "value": 8,
+            "highlight": true
+          },
+          {
+            "label": "Whitmer",
+            "value": 3
+          },
+          {
+            "label": "Kamala",
+            "value": 3
+          },
+          {
+            "label": "Ivanka",
+            "value": 2
+          }
         ]
       }
     },
@@ -183,6 +195,34 @@
           "appExperience"
         ]
       }
+    },
+    {
+      "type": "Sources",
+      "props": {
+        "items": [
+          {
+            "label": "Bannon quote – The Economist",
+            "url": "https://www.economist.com/united-states/2025/10/27/steve-bannon-on-trumps-third-term"
+          },
+          {
+            "label": "Harris quote – BBC",
+            "url": "https://www.bbc.com/news/articles/cvg9vnvgn7jo"
+          },
+          {
+            "label": "2028 election odds – Polymarket",
+            "url": "https://polymarket.com/elections"
+          },
+          {
+            "label": "GOP primary odds – Betsafe",
+            "url": "https://betsafe.com"
+          },
+          {
+            "label": "Female president odds – Bet365",
+            "url": "https://bet365.com"
+          }
+        ]
+      }
     }
-  ]
+  ],
+  "date": "2026-01-08"
 }

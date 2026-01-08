@@ -9,35 +9,62 @@ interface PostMeta {
   slug: string;
   title: string;
   category: string;
-  created: string;
+  date: string;  // was 'created'
   image: string;
 }
 
 async function getPosts(): Promise<PostMeta[]> {
   const postsDir = path.join(process.cwd(), 'content', 'posts');
+  const posts: PostMeta[] = [];
 
   try {
-    const files = await fs.readdir(postsDir);
-    const posts: PostMeta[] = [];
+    // Traverse year folders
+    const years = await fs.readdir(postsDir);
+    
+    for (const year of years) {
+      if (year.startsWith('.')) continue;
+      const yearPath = path.join(postsDir, year);
+      const yearStat = await fs.stat(yearPath);
+      if (!yearStat.isDirectory()) continue;
 
-    for (const file of files) {
-      if (file.endsWith('.json')) {
-        const content = await fs.readFile(path.join(postsDir, file), 'utf-8');
-        const data = JSON.parse(content);
+      // Traverse month folders
+      const months = await fs.readdir(yearPath);
+      for (const month of months) {
+        if (month.startsWith('.')) continue;
+        const monthPath = path.join(yearPath, month);
+        const monthStat = await fs.stat(monthPath);
+        if (!monthStat.isDirectory()) continue;
 
-        const heroImage = data.blocks?.[0]?.props?.image || '/images/placeholder.jpg';
+        // Traverse day folders
+        const days = await fs.readdir(monthPath);
+        for (const day of days) {
+          if (day.startsWith('.')) continue;
+          const dayPath = path.join(monthPath, day);
+          const dayStat = await fs.stat(dayPath);
+          if (!dayStat.isDirectory()) continue;
 
-        posts.push({
-          slug: data.slug,
-          title: data.title,
-          category: data.category,
-          created: data.created,
-          image: heroImage,
-        });
+          // Read JSON files
+          const files = await fs.readdir(dayPath);
+          for (const file of files) {
+            if (file.endsWith('.json')) {
+              const content = await fs.readFile(path.join(dayPath, file), 'utf-8');
+              const data = JSON.parse(content);
+              const heroImage = data.blocks?.[0]?.props?.image || '/images/placeholder.jpg';
+              
+              posts.push({
+                slug: data.slug,
+                title: data.title,
+                category: data.category,
+                date: data.date,
+                image: heroImage,
+              });
+            }
+          }
+        }
       }
     }
 
-    return posts.sort((a, b) => new Date(b.created).getTime() - new Date(a.created).getTime());
+    return posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
   } catch (error) {
     return [];
   }
@@ -79,7 +106,7 @@ export default async function HomePage() {
                 {posts.slice(0, 3).map((post) => (
                   <Link
                     key={post.slug}
-                    href={`/post/${post.slug}`}
+                    href={`/${post.date.replace(/-/g, '/')}/${post.slug}`}
                     className="group flex items-stretch bg-black hover:bg-neutral-900 rounded-lg border border-neutral-800 hover:border-black transition-colors overflow-hidden"
                   >
                     <div className="w-16 h-16 flex-shrink-0">

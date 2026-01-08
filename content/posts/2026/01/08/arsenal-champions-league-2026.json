@@ -2,7 +2,6 @@
   "slug": "arsenal-champions-league-2026",
   "title": "21 Years. Zero European Trophies.",
   "category": "Champions League",
-  "created": "2025-12-27",
   "blocks": [
     {
       "type": "Hero",
@@ -236,10 +235,25 @@
       "type": "Sources",
       "props": {
         "items": [
-          { "label": "Arteta quote – Arsenal.com", "url": "https://www.arsenal.com/news/..." },
-          { "label": "Martinelli photo – @Arsenal", "url": "https://x.com/Arsenal/status/..." }
+          {
+            "label": "Arteta quote – Arsenal.com",
+            "url": "https://www.arsenal.com/news/every-word-artetas-pre-athletic-club-presser"
+          },
+          {
+            "label": "Champions League odds – Bet365",
+            "url": "https://bet365.com"
+          },
+          {
+            "label": "Squad values – Transfermarkt",
+            "url": "https://www.transfermarkt.com/spieler-statistik/wertvollstemannschaften/marktwertetop"
+          },
+          {
+            "label": "Head to head – UEFA",
+            "url": "https://www.uefa.com/uefachampionsleague/"
+          }
         ]
       }
     }
-  ]
+  ],
+  "date": "2026-01-08"
 }
