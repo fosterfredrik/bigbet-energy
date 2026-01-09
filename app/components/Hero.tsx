@@ -36,13 +36,13 @@ export default function Hero({ category, headline, subhead, image }: HeroProps) 
             {headline}
           </h1>
           {subhead && (
-            <p className="text-neutral-300 text-sm sm:text-base leading-relaxed">
+            <p className="text-neutral-200 text-base sm:text-lg leading-relaxed">
               {subhead}
             </p>
           )}
 
           {/* Footer */}
-          <div className="flex items-center mt-6 pt-4 border-t border-white/20">
+          <div className="flex items-center mt-6 pt-4 border-t border-white/30">
             <img 
               src="/images/bbe-logo.svg" 
               alt="BigBet.Energy" 

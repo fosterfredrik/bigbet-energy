@@ -88,7 +88,7 @@ export default function ProgressRing({ label, category = "Market Probability", v
 
         {/* Subtitle - below ring */}
         {subtitle && (
-          <p className="text-neutral-500 text-sm mt-6 text-center max-w-[280px]">
+          <p className="text-neutral-400 text-base mt-6 text-center max-w-[280px]">
             {subtitle}
           </p>
         )}
@@ -96,7 +96,7 @@ export default function ProgressRing({ label, category = "Market Probability", v
 
       {/* Footer */}
       <div className="pt-4 border-t border-neutral-800">
-        <div className="text-neutral-600 text-xs uppercase tracking-wide text-center">
+        <div className="text-neutral-500 text-sm uppercase tracking-wide text-center">
           {source} • {date}
         </div>
       </div>

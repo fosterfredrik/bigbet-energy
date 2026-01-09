@@ -33,7 +33,7 @@ export default function MoneyChart({ title, subtitle, date, source, items, curre
           {title}
         </h2>
         {subtitle && (
-          <p className="text-neutral-500 text-sm mt-2">
+          <p className="text-neutral-400 text-base mt-2">
             {subtitle}
           </p>
         )}
@@ -47,7 +47,7 @@ export default function MoneyChart({ title, subtitle, date, source, items, curre
 
           return (
             <div key={index}>
-              <div className="text-neutral-500 text-xs font-bold uppercase tracking-wide mb-2">
+              <div className="text-neutral-400 text-sm font-bold uppercase tracking-wide mb-2">
                 {item.label}
               </div>
               <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
@@ -68,7 +68,7 @@ export default function MoneyChart({ title, subtitle, date, source, items, curre
 
       {/* Footer */}
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 sm:gap-0 mt-6 sm:mt-8 pt-4 border-t border-neutral-800">
-        <div className="text-neutral-600 text-xs uppercase tracking-wide">
+        <div className="text-neutral-500 text-sm uppercase tracking-wide">
           {source} • {date}
         </div>
       </div>

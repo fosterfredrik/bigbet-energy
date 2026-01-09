@@ -23,7 +23,6 @@ export default function Milestone({
 }: MilestoneProps) {
   return (
     <div className="relative w-full h-full bg-black p-6 sm:p-10 md:p-12 flex flex-col">
-
       {/* Header */}
       <div className="mb-6">
         <div className="text-xs font-bold tracking-widest uppercase mb-2" style={{ color: '#E5B94E' }}>
@@ -33,7 +32,7 @@ export default function Milestone({
           {title}
         </h2>
         {subtitle && (
-          <p className="text-neutral-500 text-sm mt-2">
+          <p className="text-neutral-400 text-base mt-2">
             {subtitle}
           </p>
         )}
@@ -44,14 +43,14 @@ export default function Milestone({
         <div className="text-amber-400 text-8xl sm:text-9xl font-black">
           {stat}
         </div>
-        <div className="text-neutral-500 text-lg sm:text-xl font-bold uppercase tracking-wide mt-2">
+        <div className="text-neutral-400 text-lg sm:text-xl font-bold uppercase tracking-wide mt-2">
           {statLabel}
         </div>
       </div>
 
       {/* Footer */}
       <div className="mt-6 sm:mt-8 pt-4 border-t border-neutral-800">
-        <div className="text-xs uppercase tracking-wide text-neutral-600 text-right">
+        <div className="text-sm uppercase tracking-wide text-neutral-500 text-right">
           {source} • {date}
         </div>
       </div>

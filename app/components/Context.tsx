@@ -7,7 +7,6 @@ interface ContextProps {
 }
 
 export default function Context({ label, title, body, date, source }: ContextProps) {
-  
   // Parse [[highlighted]] text
   const renderBody = (text: string) => {
     const parts = text.split(/\[\[|\]\]/)
@@ -29,7 +28,6 @@ export default function Context({ label, title, body, date, source }: ContextPro
 
   return (
     <div className="w-full h-full bg-black p-6 sm:p-10 md:p-12 flex flex-col">
-      
       {/* Label */}
       <div className="mb-2">
         <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#E5B94E' }}>
@@ -39,7 +37,7 @@ export default function Context({ label, title, body, date, source }: ContextPro
 
       {/* Title - secondary now */}
       <div className="mb-8">
-        <h2 className="text-neutral-500 text-lg sm:text-xl font-bold uppercase tracking-wide">
+        <h2 className="text-neutral-400 text-lg sm:text-xl font-bold uppercase tracking-wide">
           {title}
         </h2>
       </div>
@@ -50,7 +48,6 @@ export default function Context({ label, title, body, date, source }: ContextPro
           {renderBody(body)}
         </p>
       </div>
-
     </div>
   )
 }

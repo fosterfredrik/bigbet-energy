@@ -20,7 +20,6 @@ interface TimelineProps {
 export default function Timeline({ label = "The Journey", title, subtitle, date, source, events }: TimelineProps) {
   return (
     <div className="w-full h-full bg-black p-6 sm:p-10 md:p-12 flex flex-col">
-      
       {/* Header */}
       <div className="mb-6">
         <div className="text-xs font-bold tracking-widest uppercase mb-2" style={{ color: '#E5B94E' }}>
@@ -30,7 +29,7 @@ export default function Timeline({ label = "The Journey", title, subtitle, date,
           {title}
         </h2>
         {subtitle && (
-          <p className="text-neutral-500 text-sm mt-2">
+          <p className="text-neutral-400 text-base mt-2">
             {subtitle}
           </p>
         )}
@@ -41,7 +40,6 @@ export default function Timeline({ label = "The Journey", title, subtitle, date,
         <div className="relative">
           {events.map((event, index) => (
             <div key={index} className="flex items-center gap-4 mb-4 last:mb-0">
-              
               {/* Year */}
               <div className="w-14 text-right">
                 <span className="text-sm font-bold" style={{ color: '#E5B94E' }}>
@@ -53,7 +51,7 @@ export default function Timeline({ label = "The Journey", title, subtitle, date,
               <div 
                 className={`w-3 h-3 rounded-full flex-shrink-0 ${
                   event.empty 
-                    ? 'border-2 border-neutral-600 bg-transparent' 
+                    ? 'border-2 border-neutral-500 bg-transparent' 
                     : 'bg-amber-400'
                 }`}
               />
@@ -64,12 +62,11 @@ export default function Timeline({ label = "The Journey", title, subtitle, date,
                   {event.label}
                 </span>
                 {event.description && (
-                  <span className="text-neutral-500 text-sm">
+                  <span className="text-neutral-400 text-sm">
                     {event.description}
                   </span>
                 )}
               </div>
-
             </div>
           ))}
         </div>
@@ -77,7 +74,7 @@ export default function Timeline({ label = "The Journey", title, subtitle, date,
 
       {/* Footer */}
       <div className="pt-4 border-t border-neutral-800">
-        <div className="text-neutral-600 text-xs uppercase tracking-wide">
+        <div className="text-neutral-500 text-sm uppercase tracking-wide">
           {source} • {date}
         </div>
       </div>

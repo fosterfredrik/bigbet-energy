@@ -30,7 +30,7 @@ export default function HeadToHead({ label, title, subtitle, leftTeam, rightTeam
           {title}
         </h2>
         {subtitle && (
-          <p className="text-neutral-500 text-sm mt-2">
+          <p className="text-neutral-400 text-base mt-2">
             {subtitle}
           </p>
         )}
@@ -48,13 +48,13 @@ export default function HeadToHead({ label, title, subtitle, leftTeam, rightTeam
                 className="w-full h-full object-contain"
               />
             </div>
-            <span className={`text-sm sm:text-base font-bold uppercase tracking-wide ${leftWins ? 'text-amber-400' : 'text-neutral-500'}`}>
+            <span className={`text-sm sm:text-base font-bold uppercase tracking-wide ${leftWins ? 'text-amber-400' : 'text-neutral-400'}`}>
               {leftTeam.name}
             </span>
           </div>
 
           {/* VS */}
-          <div className="text-neutral-600 text-lg sm:text-xl font-bold">
+          <div className="text-neutral-500 text-lg sm:text-xl font-bold">
             vs
           </div>
 
@@ -67,7 +67,7 @@ export default function HeadToHead({ label, title, subtitle, leftTeam, rightTeam
                 className="w-full h-full object-contain"
               />
             </div>
-            <span className={`text-sm sm:text-base font-bold uppercase tracking-wide ${rightWins ? 'text-amber-400' : 'text-neutral-500'}`}>
+            <span className={`text-sm sm:text-base font-bold uppercase tracking-wide ${rightWins ? 'text-amber-400' : 'text-neutral-400'}`}>
               {rightTeam.name}
             </span>
           </div>
@@ -80,17 +80,17 @@ export default function HeadToHead({ label, title, subtitle, leftTeam, rightTeam
             <span className={`text-4xl sm:text-5xl font-black ${leftWins ? 'text-amber-400' : 'text-white'}`}>
               {leftTeam.wins}
             </span>
-            <span className="text-neutral-500 text-xs sm:text-sm uppercase tracking-wide mt-1">
+            <span className="text-neutral-400 text-sm uppercase tracking-wide mt-1">
               Wins
             </span>
           </div>
 
           {/* Draws */}
           <div className="flex flex-col items-center">
-            <span className="text-4xl sm:text-5xl font-black text-neutral-600">
+            <span className="text-4xl sm:text-5xl font-black text-neutral-500">
               {draws}
             </span>
-            <span className="text-neutral-500 text-xs sm:text-sm uppercase tracking-wide mt-1">
+            <span className="text-neutral-400 text-sm uppercase tracking-wide mt-1">
               Draws
             </span>
           </div>
@@ -100,7 +100,7 @@ export default function HeadToHead({ label, title, subtitle, leftTeam, rightTeam
             <span className={`text-4xl sm:text-5xl font-black ${rightWins ? 'text-amber-400' : 'text-white'}`}>
               {rightTeam.wins}
             </span>
-            <span className="text-neutral-500 text-xs sm:text-sm uppercase tracking-wide mt-1">
+            <span className="text-neutral-400 text-sm uppercase tracking-wide mt-1">
               Wins
             </span>
           </div>
@@ -109,7 +109,7 @@ export default function HeadToHead({ label, title, subtitle, leftTeam, rightTeam
 
       {/* Footer */}
       <div className="pt-4 border-t border-neutral-800">
-        <div className="text-neutral-600 text-xs uppercase tracking-wide text-center">
+        <div className="text-neutral-500 text-sm uppercase tracking-wide text-center">
           {source} • {date}
         </div>
       </div>

@@ -18,14 +18,13 @@ export default function Quote({ quote, author, role, context, date, source, port
 
   return (
     <div className="relative w-full h-full bg-black p-6 sm:p-10 md:p-12 flex flex-col border-t-2 border-amber-400 lg:border-t-0">
-      
       {/* Header */}
       <div className="mb-4">
         <div className="text-xs font-bold tracking-widest uppercase mb-2" style={{ color: '#E5B94E' }}>
           Notable Quote
         </div>
         {context && (
-          <p className="text-neutral-500 text-sm">
+          <p className="text-neutral-400 text-base">
             {context}
           </p>
         )}
@@ -48,7 +47,7 @@ export default function Quote({ quote, author, role, context, date, source, port
           {author}
         </div>
         {role && (
-          <div className="text-neutral-500 text-sm">
+          <div className="text-neutral-400 text-sm">
             {role}
           </div>
         )}
@@ -56,10 +55,9 @@ export default function Quote({ quote, author, role, context, date, source, port
 
       {/* Footer */}
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 sm:gap-0 pt-4 border-t border-neutral-800">
-        <div className="text-neutral-600 text-xs uppercase tracking-wide">
+        <div className="text-neutral-500 text-sm uppercase tracking-wide">
           {source} • {date}
         </div>
-        
         {!portrait && (
           <div className="flex items-center gap-1.5">
             <span className="text-sm">⚡</span>

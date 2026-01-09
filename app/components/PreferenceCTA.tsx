@@ -39,14 +39,14 @@ const categoryLabels: Record<Category, { label: string; shortLabel: string; desc
 function RatingBar({ label, value }: { label: string; value: number }) {
   return (
     <div className="flex items-center gap-2">
-      <span className="text-neutral-500 text-xs w-16">{label}</span>
+      <span className="text-neutral-400 text-sm w-16">{label}</span>
       <div className="flex-1 h-2 bg-neutral-800 rounded-full overflow-hidden">
         <div
           className="h-full bg-amber-400 rounded-full"
           style={{ width: `${value}%` }}
         />
       </div>
-      <span className="text-neutral-500 text-xs w-8">{value}</span>
+      <span className="text-neutral-400 text-sm w-8">{value}</span>
     </div>
   );
 }
@@ -58,7 +58,7 @@ function TermsDropdown({ terms }: { terms: string }) {
     <div className="mt-2">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="text-neutral-500 text-xs hover:text-neutral-400 transition flex items-center gap-1"
+        className="text-neutral-400 text-sm hover:text-neutral-300 transition flex items-center gap-1"
       >
         <span>T&Cs</span>
         <svg
@@ -71,7 +71,7 @@ function TermsDropdown({ terms }: { terms: string }) {
         </svg>
       </button>
       {isOpen && (
-        <p className="text-neutral-600 text-xs mt-2 leading-relaxed">
+        <p className="text-neutral-500 text-sm mt-2 leading-relaxed">
           {terms}
         </p>
       )}
@@ -109,8 +109,8 @@ function SportsbookCard({ book, badge }: { book: Sportsbook; badge: string }) {
         </div>
 
         {/* CTA - Gold */}
-        <a
-          href={book.url}
+
+        <a href={book.url}
           target="_blank"
           rel="noopener noreferrer"
           className="block w-full bg-amber-400 hover:bg-amber-300 text-black font-bold text-center py-3 rounded-lg transition"
@@ -120,11 +120,11 @@ function SportsbookCard({ book, badge }: { book: Sportsbook; badge: string }) {
 
         {/* Responsible Gambling */}
         <div className="mt-3 text-center">
-          <a
-            href={book.responsibleGambling.helpUrl}
+
+          <a href={book.responsibleGambling.helpUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-neutral-500 text-xs hover:text-neutral-400 transition"
+            className="text-neutral-400 text-sm hover:text-neutral-300 transition"
           >
             {book.responsibleGambling.text}
           </a>
@@ -254,7 +254,7 @@ export default function PreferenceCTA({
       {/* Reset */}
       <button
         onClick={() => setSelectedCategory(null)}
-        className="w-full text-neutral-500 hover:text-neutral-300 text-sm mt-6 transition-colors"
+        className="w-full text-neutral-400 hover:text-neutral-300 text-sm mt-6 transition-colors"
       >
         &larr; Try again
       </button>

@@ -81,14 +81,14 @@ export default function Gauge({ label, title, subtitle, value, date, source, por
 
         {/* Labels */}
         <div className="flex justify-between w-[280px] sm:w-[320px] mt-2 px-4">
-          <span className="text-neutral-600 text-xs">0%</span>
+          <span className="text-neutral-500 text-sm">0%</span>
           <span className="text-amber-400 text-3xl sm:text-4xl font-black">{value}%</span>
-          <span className="text-neutral-600 text-xs">100%</span>
+          <span className="text-neutral-500 text-sm">100%</span>
         </div>
 
         {/* Subtitle - gray */}
         {subtitle && (
-          <p className="text-neutral-500 text-sm mt-4 text-center max-w-[280px]">
+          <p className="text-neutral-400 text-base mt-4 text-center max-w-[280px]">
             {subtitle}
           </p>
         )}
@@ -96,7 +96,7 @@ export default function Gauge({ label, title, subtitle, value, date, source, por
 
       {/* Footer */}
       <div className="pt-4 border-t border-neutral-800">
-        <div className="text-neutral-600 text-xs uppercase tracking-wide text-center">
+        <div className="text-neutral-500 text-sm uppercase tracking-wide text-center">
           {source} • {date}
         </div>
       </div>

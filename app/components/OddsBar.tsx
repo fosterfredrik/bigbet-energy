@@ -43,13 +43,13 @@ export default function OddsBar({ market, date, source, odds, variant = 'dark', 
             <div key={index}>
               <div className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-2 gap-1 sm:gap-0">
                 <span className={`text-sm font-bold uppercase tracking-wide ${isDark
-                  ? (isHighlight ? 'text-amber-400' : 'text-neutral-500')
+                  ? (isHighlight ? 'text-amber-400' : 'text-neutral-400')
                   : (isHighlight ? 'text-black' : 'text-black/50')
                 }`}>
                   {item.label}
                 </span>
                 <span className={`font-bold ${textSize} ${isDark
-                  ? (isHighlight ? 'text-white' : 'text-neutral-700')
+                  ? (isHighlight ? 'text-white' : 'text-neutral-600')
                   : (isHighlight ? 'text-black' : 'text-black/40')
                 }`}>
                   {item.value}%
@@ -58,7 +58,7 @@ export default function OddsBar({ market, date, source, odds, variant = 'dark', 
               <div className={`w-full ${barHeight} rounded-full overflow-hidden ${isDark ? 'bg-neutral-900' : 'bg-black/20'}`}>
                 <div
                   className={`h-full rounded-full ${isDark
-                    ? (isHighlight ? 'bg-amber-400' : 'bg-neutral-800')
+                    ? (isHighlight ? 'bg-amber-400' : 'bg-neutral-700')
                     : (isHighlight ? 'bg-black' : 'bg-black/30')
                   }`}
                   style={{ width: `${item.value}%` }}
@@ -71,7 +71,7 @@ export default function OddsBar({ market, date, source, odds, variant = 'dark', 
 
       {/* Footer */}
       <div className={`flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 sm:gap-0 mt-6 sm:mt-8 pt-4 border-t ${isDark ? 'border-neutral-800' : 'border-black/20'}`}>
-        <div className={`text-xs uppercase tracking-wide ${isDark ? 'text-neutral-600' : 'text-black/50'}`}>
+        <div className={`text-sm uppercase tracking-wide ${isDark ? 'text-neutral-500' : 'text-black/50'}`}>
           {source} • {date}
         </div>
       </div>

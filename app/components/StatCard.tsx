@@ -12,7 +12,6 @@ interface StatCardProps {
 export default function StatCard({ stat, label, subtitle, date, source, portrait, quote, quoteAuthor }: StatCardProps) {
   return (
     <div className="relative w-full h-full p-6 sm:p-10 md:p-12 flex flex-col bg-black">
-
       {/* Header */}
       <div className="mb-6">
         <div className="text-xs font-bold tracking-widest uppercase mb-2" style={{ color: '#E5B94E' }}>
@@ -22,7 +21,7 @@ export default function StatCard({ stat, label, subtitle, date, source, portrait
           {label}
         </h2>
         {subtitle && (
-          <p className="text-neutral-500 text-sm mt-2">
+          <p className="text-neutral-400 text-base mt-2">
             {subtitle}
           </p>
         )}
@@ -37,7 +36,7 @@ export default function StatCard({ stat, label, subtitle, date, source, portrait
               "{quote}"
             </span>
             {quoteAuthor && (
-              <span className="text-neutral-500 text-sm mt-2">
+              <span className="text-neutral-400 text-sm mt-2">
                 — {quoteAuthor}
               </span>
             )}
@@ -52,7 +51,7 @@ export default function StatCard({ stat, label, subtitle, date, source, portrait
 
       {/* Footer */}
       <div className="mt-6 sm:mt-8 pt-4 border-t border-neutral-800">
-        <div className="text-xs uppercase tracking-wide text-neutral-600 text-right">
+        <div className="text-sm uppercase tracking-wide text-neutral-500 text-right">
           {source} • {date}
         </div>
       </div>

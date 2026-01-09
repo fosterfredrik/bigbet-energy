@@ -102,14 +102,14 @@ export default function Footer() {
               <Link href="/methodology" className="hover:text-amber-400 transition">
                 How We Rate
               </Link>
-              <span className="text-neutral-600">21+ Only</span>
-              <span className="text-neutral-600">Gamble Responsibly</span>
+              <span className="text-neutral-500">21+ Only</span>
+              <span className="text-neutral-500">Gamble Responsibly</span>
             </div>
           </nav>
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-neutral-800 mt-8 pt-6 text-center text-sm text-neutral-500">
+        <div className="border-t border-neutral-800 mt-8 pt-6 text-center text-sm text-neutral-400">
           <p>© 2025 Big Bet Energy • All rights reserved</p>
         </div>
       </div>
