@@ -39,22 +39,22 @@ export default function VerticalBar({ title, subtitle, items, unit = '', date, s
           const heightPercent = (item.value / maxValue) * 100
 
           return (
-            <div key={index} className="flex flex-col items-center gap-2 flex-1 max-w-[80px]">
+            <div key={index} className="flex flex-col items-center gap-2 flex-1 max-w-[100px]">
               {/* Value */}
-              <span className={`text-xs sm:text-sm font-bold ${item.highlight ? 'text-amber-400' : 'text-neutral-400'}`}>
+              <span className={`text-xs sm:text-sm font-bold ${item.highlight ? 'text-amber-400' : 'text-neutral-300'}`}>
                 {item.value.toLocaleString()}{unit}
               </span>
 
               {/* Bar */}
               <div className="w-full h-[180px] sm:h-[220px] flex items-end">
-                <div 
+                <div
                   className={`w-full rounded-t ${item.highlight ? 'bg-amber-400' : 'bg-neutral-700'}`}
                   style={{ height: `${heightPercent}%` }}
                 />
               </div>
 
               {/* Label */}
-              <span className={`text-xs font-bold text-center leading-tight ${item.highlight ? 'text-amber-400' : 'text-neutral-400'}`}>
+              <span className={`text-xs font-bold text-center leading-tight ${item.highlight ? 'text-amber-400' : 'text-neutral-300'}`}>
                 {item.label}
               </span>
             </div>

@@ -32,11 +32,11 @@ export default function StatCard({ stat, label, subtitle, date, source, portrait
         {/* Quote on left */}
         {quote && (
           <div className="flex flex-col">
-            <span className="text-white text-2xl sm:text-3xl font-bold italic">
+            <span className="text-neutral-400 text-2xl sm:text-3xl font-bold italic">
               "{quote}"
             </span>
             {quoteAuthor && (
-              <span className="text-neutral-400 text-sm mt-2">
+              <span className="text-neutral-400 text-sm mt-2 pl-[88px] sm:pl-[100px] lg:pl-0">
                 — {quoteAuthor}
               </span>
             )}
