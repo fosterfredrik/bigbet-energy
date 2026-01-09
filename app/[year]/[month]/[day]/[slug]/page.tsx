@@ -2,6 +2,7 @@ import { promises as fs } from 'fs';
 import path from 'path';
 import { notFound } from 'next/navigation';
 import Hero from '@/app/components/Hero';
+import HeroVS from '@/app/components/HeroVS';
 import OddsBar from '@/app/components/OddsBar';
 import Context from '@/app/components/Context';
 import Donut from '@/app/components/Donut';
@@ -27,6 +28,7 @@ import Footer from '@/app/components/Footer';
 
 const componentMap: Record<string, React.ComponentType<any>> = {
   Hero,
+  HeroVS,
   OddsBar,
   Context,
   MoneyChart,

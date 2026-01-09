@@ -116,6 +116,7 @@
       "props": {
         "stat": "2%",
         "label": "No hope for Harris?",
+        "statLabel": "chance",
         "subtitle": "Slim chance of Kamala to become President",
         "quote": "I'm not done",
         "quoteAuthor": "Kamala Harris",

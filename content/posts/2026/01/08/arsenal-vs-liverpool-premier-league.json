@@ -5,11 +5,16 @@
   "date": "2026-01-08",
   "blocks": [
     {
-      "type": "Hero",
+      "type": "HeroVS",
       "props": {
         "category": "Premier League",
-        "headline": "No Weakness.",
-        "subhead": "Liverpool's manager said it himself. Arsenal are the complete package. Tonight, they prove it.",
+        "headline": "Arsenal vs Liverpool",
+        "subhead": "Undefeated Home",
+        "leftImage": "/images/arsenal-liverpool/arsenal.jpg",
+        "leftOdds": 65,
+        "rightImage": "/images/arsenal-liverpool/liverpool.jpg",
+        "rightOdds": 17,
+        "pointerSide": "left",
         "image": "/images/arsenal-liverpool/hero.jpg"
       }
     },
@@ -107,13 +112,14 @@
       "type": "StatCard",
       "props": {
         "stat": "15",
+        "statLabel": "goals",
         "label": "Liverpool's Achilles Heel",
-        "subtitle": "Goals conceded in the second half (of 28 total)",
+        "subtitle": "Goals conceded in the second half (15 of 28 total)",
         "quote": "We all know at home they are unbeaten this season.",
         "quoteAuthor": "Virgil Van Dijk",
         "portrait": "/images/arsenal-liverpool/van-dijk-portrait.png",
-        "date": "Jan 2026",
-        "source": "Liverpool FC"
+        "source": "Liverpool FC",
+        "date": "Jan 2026"
       }
     },
     {

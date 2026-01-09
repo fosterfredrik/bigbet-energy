@@ -1,5 +1,6 @@
 interface StatCardProps {
   stat: string
+  statLabel?: string
   label: string
   subtitle?: string
   date: string
@@ -9,7 +10,7 @@ interface StatCardProps {
   quoteAuthor?: string
 }
 
-export default function StatCard({ stat, label, subtitle, date, source, portrait, quote, quoteAuthor }: StatCardProps) {
+export default function StatCard({ stat, statLabel, label, subtitle, date, source, portrait, quote, quoteAuthor }: StatCardProps) {
   return (
     <div className="relative w-full h-full p-6 sm:p-10 md:p-12 flex flex-col bg-black">
       {/* Header */}
@@ -32,7 +33,7 @@ export default function StatCard({ stat, label, subtitle, date, source, portrait
         {/* Quote on left */}
         {quote && (
           <div className="flex flex-col">
-            <span className="text-neutral-400 text-2xl sm:text-3xl font-bold italic">
+            <span className="text-neutral-400 text-xl sm:text-2xl font-bold italic">
               "{quote}"
             </span>
             {quoteAuthor && (
@@ -44,8 +45,15 @@ export default function StatCard({ stat, label, subtitle, date, source, portrait
         )}
 
         {/* Stat on right */}
-        <div className="text-amber-400 text-6xl sm:text-7xl md:text-8xl font-black text-right">
-          {stat}
+        <div className="text-right">
+          <div className="text-amber-400 text-6xl sm:text-7xl md:text-8xl font-black">
+            {stat}
+          </div>
+          {statLabel && (
+            <div className="text-amber-400 text-sm font-bold uppercase tracking-wide mt-1">
+              {statLabel}
+            </div>
+          )}
         </div>
       </div>
 
