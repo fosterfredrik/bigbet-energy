@@ -1,0 +1,175 @@
+{
+  "slug": "rams-vs-panthers-wild-card",
+  "title": "85% vs History",
+  "category": "nfl",
+  "date": "2026-01-10",
+  "blocks": [
+    {
+      "type": "HeroVS",
+      "props": {
+        "category": "NFL Wild Card",
+        "headline": "85% vs History",
+        "subhead": "Big mismatch",
+        "leftImage": "/images/rams-panthers/stafford-portrait.png",
+        "leftOdds": 85,
+        "rightImage": "/images/rams-panthers/young-portrait.png",
+        "rightOdds": 15,
+        "pointerSide": "left",
+        "image": "/images/rams-panthers/hero-bg.jpg"
+      }
+    },
+    {
+      "type": "OddsBar",
+      "props": {
+        "market": "Win Probability",
+        "date": "Jan 10, 2026",
+        "source": "FOX Sports",
+        "variant": "light",
+        "odds": [
+          { "label": "Rams", "value": 85, "highlight": true },
+          { "label": "Panthers", "value": 15 }
+        ],
+        "portrait": "/images/rams-panthers/puca-portrait.png"
+      }
+    },
+    {
+      "type": "InteractiveCTA",
+      "props": {
+        "question": "What chance do you give the Panthers?",
+        "marketOdds": 15,
+        "candidate": "Carolina"
+      }
+    },
+    {
+      "type": "Quote",
+      "props": {
+        "quote": "I think Matthew's the MVP of the league. He played that way. Wouldn't want anyone else leading the way.",
+        "author": "Sean McVay",
+        "role": "Rams Head Coach",
+        "portrait": "/images/rams-panthers/mcvay-portrait.png",
+        "source": "therams.com",
+        "date": "Jan 4, 2026"
+      }
+    },
+    {
+      "type": "Context",
+      "props": {
+        "label": "The Mismatch",
+        "title": "How Are They Here?",
+        "body": "The Panthers are [[8-9 with a -69 point differential]] — 4th-worst in NFL playoff history. They face a Rams team that [[led the league in scoring]] at 30.5 points per game.",
+        "date": "Jan 2026",
+        "source": "Sports Illustrated"
+      }
+    },
+    {
+      "type": "ProgressRing",
+      "props": {
+        "label": "The Favorite",
+        "title": "Los Angeles Rams",
+        "subtitle": "Biggest favorite of Wild Card weekend. Stafford's MVP season meets the league's worst playoff team.",
+        "percentage": 85,
+        "category": "Win Probability",
+        "portrait": "/images/rams-panthers/stafford-portrait.png",
+        "source": "FOX Sports",
+        "date": "Jan 2026"
+      }
+    },
+    {
+      "type": "Gauge",
+      "props": {
+        "label": "The Longshot",
+        "title": "History Says Yes",
+        "subtitle": "Every team with a worse point differential won their first playoff game.",
+        "percentage": 100,
+        "portrait": "/images/rams-panthers/young-portrait.png",
+        "source": "Sports Illustrated",
+        "date": "Jan 2026"
+      }
+    },
+    {
+      "type": "PreferenceCTA",
+      "props": {
+        "question": "What matters more?",
+        "options": ["bonusValue", "payoutSpeed"]
+      }
+    },
+    {
+      "type": "StatCard",
+      "props": {
+        "stat": "6",
+        "statLabel": "Game-Winning Drives",
+        "label": "Bryce Young",
+        "subtitle": "Most by any QB under 25 in NFL history. The #1 pick's redemption tour continues.",
+        "portrait": "/images/rams-panthers/young-portrait.png",
+        "quote": "I'm going to lean on them on Saturday like I have been all year. We're all going to lean on each other.",
+        "quoteAuthor": "Bryce Young",
+        "source": "Panthers.com",
+        "date": "Jan 6, 2026"
+      }
+    },
+    {
+      "type": "VerticalBar",
+      "props": {
+        "title": "Bad Teams, Big Wins",
+        "subtitle": "Worst point differentials to win a playoff game — all three won",
+        "items": [
+          { "label": "2010 Seahawks", "value": 97, "highlight": true },
+          { "label": "2011 Broncos", "value": 81 },
+          { "label": "2004 Rams", "value": 73 },
+          { "label": "2025 Panthers", "value": 69, "highlight": true }
+        ],
+        "unit": "",
+        "source": "Sports Illustrated",
+        "date": "Jan 2026"
+      }
+    },
+    {
+      "type": "Milestone",
+      "props": {
+        "label": "Historic Season",
+        "title": "Matthew Stafford",
+        "subtitle": "Joins Tom Brady (2007) as the only QBs to lead the league in passing yards and TDs with 8 or fewer interceptions",
+        "stat": "46",
+        "statLabel": "Passing TDs",
+        "portrait": "/images/rams-panthers/stafford-portrait.png",
+        "date": "Jan 2026",
+        "source": "StatMuse"
+      }
+    },
+    {
+      "type": "OddsBar",
+      "props": {
+        "market": "First Touchdown Scorer",
+        "variant": "light",
+        "odds": [
+          { "label": "D. Adams", "value": 5.75, "highlight": true },
+          { "label": "B. Corum", "value": 11.00 },
+          { "label": "J. Coker", "value": 26.00 },
+          { "label": "B. Young", "value": 51.00 }
+        ],
+        "source": "Bet365",
+        "date": "Jan 10, 2026"
+      }
+    },
+    {
+      "type": "PreferenceCTA",
+      "props": {
+        "question": "What matters more?",
+        "options": ["oddsQuality", "appExperience"]
+      }
+    },
+    {
+      "type": "Sources",
+      "props": {
+        "items": [
+          { "label": "McVay quote — therams.com, Jan 4, 2026", "url": "https://www.therams.com" },
+          { "label": "Young quote — Panthers.com, Jan 6, 2026", "url": "https://www.panthers.com" },
+          { "label": "Win probability — FOX Sports, Jan 10, 2026", "url": "https://www.foxsports.com" },
+          { "label": "Point differential history — Sports Illustrated, Jan 5, 2026", "url": "https://www.si.com" },
+          { "label": "Stafford stats — StatMuse, Jan 2026", "url": "https://www.statmuse.com" },
+          { "label": "First TD odds — Bet365, Jan 10, 2026", "url": "https://www.bet365.com" }
+        ]
+      }
+    }
+  ]
+}

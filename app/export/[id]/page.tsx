@@ -1,6 +1,7 @@
 import { promises as fs } from 'fs';
 import path from 'path';
 import Hero from '../../components/Hero';
+import HeroVS from '@/app/components/HeroVS';
 import OddsBar from '../../components/OddsBar';
 import Context from '../../components/Context';
 import Donut from '../../components/Donut';
@@ -22,6 +23,7 @@ const legacyBlocks: Record<string, { type: string; props: any }> = {
 
 const componentMap: Record<string, React.ComponentType<any>> = {
   Hero,
+  HeroVS,
   OddsBar,
   Context,
   Donut,
