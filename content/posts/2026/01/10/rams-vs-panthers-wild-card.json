@@ -64,14 +64,13 @@
     {
       "type": "ProgressRing",
       "props": {
-        "label": "The Favorite",
-        "title": "Los Angeles Rams",
-        "subtitle": "Biggest favorite of Wild Card weekend. Stafford's MVP season meets the league's worst playoff team.",
-        "percentage": 85,
         "category": "Win Probability",
-        "portrait": "/images/rams-panthers/stafford-portrait.png",
+        "label": "The Favorite",
+        "subtitle": "Biggest favorite of Wild Card weekend.",
+        "value": 85,
+        "date": "Jan 2026",
         "source": "FOX Sports",
-        "date": "Jan 2026"
+        "portrait": "/images/rams-panthers/stafford-favorite.png"
       }
     },
     {
@@ -80,10 +79,10 @@
         "label": "The Longshot",
         "title": "History Says Yes",
         "subtitle": "Every team with a worse point differential won their first playoff game.",
-        "percentage": 100,
-        "portrait": "/images/rams-panthers/young-portrait.png",
-        "source": "Sports Illustrated",
-        "date": "Jan 2026"
+        "value": 100,
+        "portrait": "/images/rams-panthers/panthers-badge.png",
+        "date": "Jan 2026",
+        "source": "Sports Illustrated"
       }
     },
     {
@@ -100,8 +99,8 @@
         "statLabel": "Game-Winning Drives",
         "label": "Bryce Young",
         "subtitle": "Most by any QB under 25 in NFL history. The #1 pick's redemption tour continues.",
-        "portrait": "/images/rams-panthers/young-portrait.png",
-        "quote": "I'm going to lean on them on Saturday like I have been all year. We're all going to lean on each other.",
+        "portrait": "/images/rams-panthers/young-fun.png",
+        "quote": "We're all going to lean on each other.",
         "quoteAuthor": "Bryce Young",
         "source": "Panthers.com",
         "date": "Jan 6, 2026"
@@ -131,7 +130,7 @@
         "subtitle": "Joins Tom Brady (2007) as the only QBs to lead the league in passing yards and TDs with 8 or fewer interceptions",
         "stat": "46",
         "statLabel": "Passing TDs",
-        "portrait": "/images/rams-panthers/stafford-portrait.png",
+        "portrait": "/images/rams-panthers/stafford-record.png",
         "date": "Jan 2026",
         "source": "StatMuse"
       }
