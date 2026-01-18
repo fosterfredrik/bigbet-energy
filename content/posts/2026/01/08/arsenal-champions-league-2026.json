@@ -1,17 +1,10 @@
 {
   "slug": "arsenal-champions-league-2026",
-  "title": "21 Years. Zero European Trophies.",
+  "title": "Arsenal wins Champions League?",
+  "subtitle": "Arsenal are favorites. But history says they'll find a way to lose. Is this finally the year?.",
   "category": "Champions League",
+  "date": "2026-01-08",
   "blocks": [
-    {
-      "type": "Hero",
-      "props": {
-        "category": "Champions League",
-        "headline": "32 Years. Zero European Trophies.",
-        "subhead": "Arsenal are favorites. But history says they'll find a way to lose. Is this finally the year?",
-        "image": "/images/arsenal-cl/arsenal-hero.jpg"
-      }
-    },
     {
       "type": "OddsBar",
       "props": {
@@ -254,6 +247,5 @@
         ]
       }
     }
-  ],
-  "date": "2026-01-08"
+  ]
 }

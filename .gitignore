@@ -41,3 +41,5 @@ yarn-error.log*
 next-env.d.ts
 app/[slug]_BACKUP_*/
 migrate_products.py
+remotion/node_modules/
+remotion/out/

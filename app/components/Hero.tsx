@@ -1,56 +1,35 @@
 interface HeroProps {
-  category: string
-  headline: string
-  subhead?: string
-  image: string
+  headline: string;
+  subhead?: string;
+  image: string;
+  odds?: number;
+  category?: string;
+  oddsLabel?: string;
 }
 
-export default function Hero({ category, headline, subhead, image }: HeroProps) {
-  const headlineSize = headline.length < 30 
-    ? 'text-4xl sm:text-5xl md:text-6xl'
-    : headline.length < 50 
-      ? 'text-3xl sm:text-4xl md:text-5xl'
-      : 'text-2xl sm:text-3xl md:text-4xl'
-
+export default function Hero({ 
+  headline, 
+  image,
+}: HeroProps) {
   return (
-    <div className="absolute inset-0 bg-black flex flex-col">
-      {/* Background image with overlay */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${image})` }}
-      />
-      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-black/40" />
-
-      {/* Content */}
-      <div className="relative z-10 flex flex-col justify-between h-full p-6 sm:p-10 md:p-12">
-        {/* Category */}
-        <div>
-          <span className="inline-block bg-amber-400 text-black text-xs font-bold tracking-widest uppercase px-3 py-1">
-            {category}
-          </span>
-        </div>
-
-        {/* Headline */}
-        <div>
-          <h1 className={`text-white font-bold uppercase leading-tight mb-3 ${headlineSize}`}>
-            {headline}
-          </h1>
-          {subhead && (
-            <p className="text-neutral-200 text-base sm:text-lg leading-relaxed">
-              {subhead}
-            </p>
-          )}
-
-          {/* Footer */}
-          <div className="flex items-center mt-6 pt-4 border-t border-white/30">
-            <img 
-              src="/images/bbe-logo.svg" 
-              alt="BigBet.Energy" 
-              className="h-5 sm:h-6 w-auto"
-            />
-          </div>
-        </div>
+    <div className="relative w-full h-full bg-black">
+      
+      {/* Headline - at top */}
+      <div className="pt-6 sm:pt-10 md:pt-12 px-6 sm:px-10 md:px-12">
+        <h1 className="text-white text-2xl sm:text-4xl md:text-5xl font-black text-center uppercase leading-tight tracking-tight">
+          {headline}
+        </h1>
       </div>
+
+      {/* Image bar - absolute bottom, touching edge */}
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[180px] sm:w-[220px] md:w-[280px] h-[240px] sm:h-[300px] md:h-[380px] rounded-t-xl overflow-hidden border-4 border-b-0 border-amber-400 shadow-[0_0_40px_rgba(251,191,36,0.4)]">
+        <img
+          src={image}
+          alt=""
+          className="w-full h-full object-cover object-top"
+        />
+      </div>
+
     </div>
-  )
+  );
 }

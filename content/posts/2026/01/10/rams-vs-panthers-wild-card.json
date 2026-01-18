@@ -1,23 +1,10 @@
 {
   "slug": "rams-vs-panthers-wild-card",
-  "title": "85% vs History",
-  "category": "nfl",
+  "title": "Rams vs Panthers",
+  "subtitle": "Big mismatch.",
+  "category": "NFL",
   "date": "2026-01-10",
   "blocks": [
-    {
-      "type": "HeroVS",
-      "props": {
-        "category": "NFL Wild Card",
-        "headline": "85% vs History",
-        "subhead": "Big mismatch",
-        "leftImage": "/images/rams-panthers/stafford-portrait.png",
-        "leftOdds": 85,
-        "rightImage": "/images/rams-panthers/young-portrait.png",
-        "rightOdds": 15,
-        "pointerSide": "left",
-        "image": "/images/rams-panthers/hero-bg.jpg"
-      }
-    },
     {
       "type": "OddsBar",
       "props": {

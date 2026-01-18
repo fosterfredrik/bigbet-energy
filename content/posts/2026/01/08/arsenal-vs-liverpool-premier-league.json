@@ -1,23 +1,10 @@
 {
   "slug": "arsenal-vs-liverpool-premier-league",
-  "title": "22 Years. Zero Titles.",
+  "title": "Arsenal vs Liverpool",
+  "subtitle": "Arsenal is still undefeated at home this seasson.",
   "category": "Premier League",
   "date": "2026-01-08",
   "blocks": [
-    {
-      "type": "HeroVS",
-      "props": {
-        "category": "Premier League",
-        "headline": "Arsenal vs Liverpool",
-        "subhead": "Undefeated Home",
-        "leftImage": "/images/arsenal-liverpool/arsenal.jpg",
-        "leftOdds": 65,
-        "rightImage": "/images/arsenal-liverpool/liverpool.jpg",
-        "rightOdds": 17,
-        "pointerSide": "left",
-        "image": "/images/arsenal-liverpool/hero.jpg"
-      }
-    },
     {
       "type": "OddsBar",
       "props": {

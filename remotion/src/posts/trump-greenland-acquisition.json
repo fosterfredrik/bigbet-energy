@@ -4,7 +4,6 @@
   "subtitle": "Trump wants Greenland. Denmark says no.",
   "category": "Politics",
   "date": "2026-01-11",
-  "videoSequence": [0, 3, 2, 4, 7, 5, 8, 10, 9, 11],
   "blocks": [
     {
       "type": "OddsBar",
@@ -26,7 +25,7 @@
             "value": 10
           }
         ],
-        "portrait": "/images/trump-greenland/dtj-face.png",
+        "portrait": "images/trump-greenland/dtj-face.png",
         "source": "Polymarket",
         "date": "Jan 2026"
       }
@@ -45,7 +44,7 @@
         "quote": "We are going to do something on Greenland, whether they like it or not. I would like to make a deal the easy way but if we don't do it the easy way, we're going to do it the hard way.",
         "author": "Donald Trump",
         "role": "US President",
-        "portrait": "/images/trump-greenland/trump-quote.png",
+        "portrait": "images/trump-greenland/trump-quote.png",
         "source": "The Economic Times",
         "date": "Jan 10, 2026"
       }
@@ -67,7 +66,7 @@
         "label": "Greenlanders Say No",
         "subtitle": "Reject becoming part of the United States.",
         "value": 85,
-        "portrait": "/images/trump-greenland/greenlander.png",
+        "portrait": "images/trump-greenland/greenlander.png",
         "source": "Verian Poll",
         "date": "Jan 2025"
       }
@@ -79,7 +78,7 @@
         "title": "Invasion Odds",
         "subtitle": "US military action against a NATO ally.",
         "value": 10,
-        "portrait": "/images/trump-greenland/nato.png",
+        "portrait": "images/trump-greenland/nato.png",
         "source": "Polymarket",
         "date": "Jan 2026"
       }
@@ -100,7 +99,7 @@
         "quote": "If the United States chooses to attack another NATO country militarily, then everything stops. Including our NATO and thus the security that has been provided since the end of the Second World War.",
         "author": "Mette Frederiksen",
         "role": "Danish Prime Minister",
-        "portrait": "/images/trump-greenland/frederiksen-quote.png",
+        "portrait": "images/trump-greenland/frederiksen-quote.png",
         "source": "GBH News",
         "date": "Jan 6, 2026"
       }
@@ -112,7 +111,7 @@
         "statLabel": "Tons of Rare Earths",
         "label": "The Real Prize",
         "subtitle": "8th largest reserves globally. Essential for defense tech and breaking China's monopoly.",
-        "portrait": "/images/trump-greenland/china-earth.png",
+        "portrait": "images/trump-greenland/china-earth.png",
         "source": "CSIS",
         "date": "Jan 8, 2026"
       }
@@ -150,7 +149,7 @@
         "subtitle": "Secretly offered Denmark $100 million in gold bullion for Greenland, citing military necessity. Denmark said no.",
         "stat": "1946",
         "statLabel": "First US Offer",
-        "portrait": "/images/trump-greenland/truman-portrait.png",
+        "portrait": "images/trump-greenland/truman-portrait.png",
         "source": "Historical Records",
         "date": "1946"
       }

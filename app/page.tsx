@@ -8,9 +8,9 @@ import BettingSections from './components/BettingSections';
 interface PostMeta {
   slug: string;
   title: string;
+  subtitle: string;
   category: string;
-  date: string;  // was 'created'
-  image: string;
+  date: string;
 }
 
 async function getPosts(): Promise<PostMeta[]> {
@@ -18,16 +18,14 @@ async function getPosts(): Promise<PostMeta[]> {
   const posts: PostMeta[] = [];
 
   try {
-    // Traverse year folders
     const years = await fs.readdir(postsDir);
-    
+
     for (const year of years) {
       if (year.startsWith('.')) continue;
       const yearPath = path.join(postsDir, year);
       const yearStat = await fs.stat(yearPath);
       if (!yearStat.isDirectory()) continue;
 
-      // Traverse month folders
       const months = await fs.readdir(yearPath);
       for (const month of months) {
         if (month.startsWith('.')) continue;
@@ -35,7 +33,6 @@ async function getPosts(): Promise<PostMeta[]> {
         const monthStat = await fs.stat(monthPath);
         if (!monthStat.isDirectory()) continue;
 
-        // Traverse day folders
         const days = await fs.readdir(monthPath);
         for (const day of days) {
           if (day.startsWith('.')) continue;
@@ -43,20 +40,18 @@ async function getPosts(): Promise<PostMeta[]> {
           const dayStat = await fs.stat(dayPath);
           if (!dayStat.isDirectory()) continue;
 
-          // Read JSON files
           const files = await fs.readdir(dayPath);
           for (const file of files) {
             if (file.endsWith('.json')) {
               const content = await fs.readFile(path.join(dayPath, file), 'utf-8');
               const data = JSON.parse(content);
-              const heroImage = data.blocks?.[0]?.props?.image || '/images/placeholder.jpg';
-              
+
               posts.push({
                 slug: data.slug,
                 title: data.title,
+                subtitle: data.subtitle || '',
                 category: data.category,
                 date: data.date,
-                image: heroImage,
               });
             }
           }
@@ -75,7 +70,6 @@ export default async function HomePage() {
 
   return (
     <div className="min-h-screen bg-neutral-900">
-      {/* Header */}
       <Header />
 
       {/* Main Hero + Posts Section */}
@@ -107,26 +101,28 @@ export default async function HomePage() {
                   <Link
                     key={post.slug}
                     href={`/${post.date.replace(/-/g, '/')}/${post.slug}`}
-                    className="group flex items-stretch bg-black hover:bg-neutral-900 rounded-lg border border-neutral-800 hover:border-black transition-colors overflow-hidden"
+                    className="group flex items-center gap-4 bg-black hover:bg-neutral-900 rounded-lg overflow-hidden border border-neutral-800 hover:border-amber-400 transition-colors"
                   >
-                    <div className="w-16 h-16 flex-shrink-0">
-                      <img
-                        src={post.image}
-                        alt={post.title}
-                        className="w-full h-full object-cover"
-                      />
+                    {/* Square with Title */}
+                    <div className="w-24 h-24 sm:w-28 sm:h-28 flex-shrink-0 bg-neutral-900 p-3 flex items-center justify-center border-r border-neutral-800">
+                      <span className="text-white font-bold text-sm sm:text-base leading-tight text-center line-clamp-3">
+                        {post.title}
+                      </span>
                     </div>
 
-                    <div className="flex-1 min-w-0 flex flex-col justify-center px-4">
-                      <span className="text-amber-400 text-xs font-bold tracking-wider">
+                    {/* Category + Subtitle */}
+                    <div className="flex-1 min-w-0 py-3 pr-3">
+                      <span className="text-amber-400 text-xs font-bold tracking-wider uppercase">
                         {post.category}
                       </span>
-                      <h3 className="text-white font-bold text-base group-hover:text-amber-400 transition-colors">
-                        {post.title}
-                      </h3>
+                      {post.subtitle && (
+                        <p className="text-neutral-400 text-sm mt-1 line-clamp-2">
+                          {post.subtitle}
+                        </p>
+                      )}
                     </div>
 
-                    <span className="text-amber-400 text-xl flex items-center pr-4">→</span>
+                    <span className="text-amber-400 text-xl flex-shrink-0 pr-4">→</span>
                   </Link>
                 ))}
 
@@ -150,10 +146,8 @@ export default async function HomePage() {
       {/* Gold Divider */}
       <div className="h-1 bg-amber-400"></div>
 
-      {/* Betting Sections - Sportsbooks + Casinos */}
       <BettingSections />
 
-      {/* Spacer before footer */}
       <div className="flex-1 bg-neutral-900"></div>
 
       <Footer />

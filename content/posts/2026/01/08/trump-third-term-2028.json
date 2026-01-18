@@ -1,17 +1,10 @@
 {
   "slug": "trump-third-term-2028",
-  "title": "The Constitution Says No.",
+  "title": "Trump for President 2028?",
+  "subtitle": "Trump allies launch the Third Term Project.",
   "category": "Politics",
+  "date": "2026-01-08",
   "blocks": [
-    {
-      "type": "Hero",
-      "props": {
-        "category": "2028 Election",
-        "headline": "The Constitution Says No.",
-        "subhead": "Trump allies launch the 'Third Term Project.' Red caps already on sale. Bannon says there's a plan.",
-        "image": "/images/trump-2028/djt_rally.jpg"
-      }
-    },
     {
       "type": "OddsBar",
       "props": {
@@ -224,6 +217,5 @@
         ]
       }
     }
-  ],
-  "date": "2026-01-08"
+  ]
 }

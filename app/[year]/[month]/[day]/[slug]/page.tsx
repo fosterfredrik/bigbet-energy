@@ -1,6 +1,7 @@
 import { promises as fs } from 'fs';
 import path from 'path';
 import { notFound } from 'next/navigation';
+import PostHeader from '@/app/components/PostHeader';
 import Hero from '@/app/components/Hero';
 import HeroVS from '@/app/components/HeroVS';
 import OddsBar from '@/app/components/OddsBar';
@@ -27,6 +28,7 @@ import Breadcrumbs from '@/app/components/Breadcrumbs';
 import Footer from '@/app/components/Footer';
 
 const componentMap: Record<string, React.ComponentType<any>> = {
+  PostHeader,
   Hero,
   HeroVS,
   OddsBar,
@@ -56,6 +58,7 @@ const ctaTypes = ['SmartCTA', 'InteractiveCTA', 'PreferenceCTA', 'Sources'];
 interface Story {
   slug: string;
   title: string;
+  subtitle?: string;
   category: string;
   date: string;
   blocks: { type: string; props: any }[];
@@ -86,15 +89,27 @@ export default async function PostPage({ params }: { params: PageParams }) {
     notFound();
   }
 
-  const blocks = story.blocks;
+  // Auto-inject PostHeader as first block using top-level metadata
+  const postHeaderBlock = {
+    type: 'PostHeader',
+    props: {
+      category: story.category,
+      title: story.title,
+      subtitle: story.subtitle || '',
+      date: story.date,
+    }
+  };
+
+  // Combine: PostHeader + content blocks
+  const allBlocks = [postHeaderBlock, ...story.blocks];
 
   // Separate hero row (first 2 blocks) from the rest
-  const heroBlocks = blocks.slice(0, 2);
-  const remainingBlocks = blocks.slice(2);
+  const heroBlocks = allBlocks.slice(0, 2);
+  const remainingBlocks = allBlocks.slice(2);
 
   // Group remaining blocks: CTAs are standalone, others pair up
-  const groupedBlocks: { type: 'cta' | 'pair'; blocks: typeof blocks }[] = [];
-  let currentPair: typeof blocks = [];
+  const groupedBlocks: { type: 'cta' | 'pair'; blocks: typeof allBlocks }[] = [];
+  let currentPair: typeof allBlocks = [];
 
   remainingBlocks.forEach((block) => {
     if (ctaTypes.includes(block.type)) {
