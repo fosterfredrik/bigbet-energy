@@ -124,7 +124,7 @@ export default async function HomePage() {
 
                     {/* Title + Subtitle */}
                     <div className="flex-1 min-w-0 py-2 px-4">
-                      <h3 className="text-white font-bold text-sm sm:text-base leading-tight">
+                      <h3 className="text-white font-bold text-sm sm:text-base leading-tight line-clamp-1">
                         {post.title}
                       </h3>
                       {post.subtitle && (

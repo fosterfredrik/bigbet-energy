@@ -1,11 +1,12 @@
 {
   "slug": "arsenal-champions-league-2026",
   "title": "Arsenal wins Champions League?",
-  "subtitle": "Arsenal are favorites. But history says they'll find a way to lose. Is this finally the year?.",
+  "subtitle": "Arsenal are favorites. But history says they'll find a way to lose.",
   "category": "Champions League",
   "date": "2026-01-08",
   "thumbnail": "/images/organisations/champions-league.png",
   "image": "/images/arsenal-cl/hero-bg.png",
+  "videoSequence": [0, 3, 2, 4, 7, 8, 10],
   "blocks": [
     {
       "type": "OddsBar",
