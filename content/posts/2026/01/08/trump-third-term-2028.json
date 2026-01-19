@@ -4,6 +4,8 @@
   "subtitle": "Trump allies launch the Third Term Project.",
   "category": "Politics",
   "date": "2026-01-08",
+  "thumbnail": "/images/trump-2028/jd-mug.jpg",
+  "image": "/images/trump-2028/hero-bg.png",
   "blocks": [
     {
       "type": "OddsBar",

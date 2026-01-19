@@ -4,6 +4,8 @@
   "subtitle": "Big mismatch.",
   "category": "NFL",
   "date": "2026-01-10",
+  "thumbnail": "/images/organisations/nfl.png",
+  "image": "/images/rams-panthers/hero-bg.png",
   "blocks": [
     {
       "type": "OddsBar",

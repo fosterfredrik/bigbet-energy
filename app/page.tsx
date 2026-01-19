@@ -11,6 +11,7 @@ interface PostMeta {
   subtitle: string;
   category: string;
   date: string;
+  thumbnail?: string;
 }
 
 async function getPosts(): Promise<PostMeta[]> {
@@ -52,6 +53,7 @@ async function getPosts(): Promise<PostMeta[]> {
                 subtitle: data.subtitle || '',
                 category: data.category,
                 date: data.date,
+                thumbnail: data.thumbnail || null,
               });
             }
           }
@@ -101,20 +103,30 @@ export default async function HomePage() {
                   <Link
                     key={post.slug}
                     href={`/${post.date.replace(/-/g, '/')}/${post.slug}`}
-                    className="group flex items-center gap-4 bg-black hover:bg-neutral-900 rounded-lg overflow-hidden border border-neutral-800 hover:border-amber-400 transition-colors"
+                    className="group flex items-center bg-black hover:bg-neutral-900 rounded-lg overflow-hidden border border-neutral-800 hover:border-amber-400 transition-colors"
                   >
-                    {/* Square with Title */}
-                    <div className="w-24 h-24 sm:w-28 sm:h-28 flex-shrink-0 bg-neutral-900 p-3 flex items-center justify-center border-r border-neutral-800">
-                      <span className="text-white font-bold text-sm sm:text-base leading-tight text-center line-clamp-3">
-                        {post.title}
-                      </span>
+                    {/* Square Thumbnail */}
+                    <div className="w-20 h-20 sm:w-24 sm:h-24 flex-shrink-0 bg-neutral-900 overflow-hidden">
+                      {post.thumbnail ? (
+                        <img
+                          src={post.thumbnail}
+                          alt=""
+                          className="w-full h-full object-cover"
+                        />
+                      ) : (
+                        <div className="w-full h-full flex items-center justify-center">
+                          <span className="text-amber-400 text-xs font-bold tracking-wider uppercase text-center p-2">
+                            {post.category}
+                          </span>
+                        </div>
+                      )}
                     </div>
 
-                    {/* Category + Subtitle */}
-                    <div className="flex-1 min-w-0 py-3 pr-3">
-                      <span className="text-amber-400 text-xs font-bold tracking-wider uppercase">
-                        {post.category}
-                      </span>
+                    {/* Title + Subtitle */}
+                    <div className="flex-1 min-w-0 py-2 px-4">
+                      <h3 className="text-white font-bold text-sm sm:text-base leading-tight">
+                        {post.title}
+                      </h3>
                       {post.subtitle && (
                         <p className="text-neutral-400 text-sm mt-1 line-clamp-2">
                           {post.subtitle}

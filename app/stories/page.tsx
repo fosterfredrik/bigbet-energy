@@ -12,6 +12,7 @@ interface PostMeta {
   category: string;
   date: string;
   image: string;
+  thumbnail?: string;
 }
 
 // Define your categories here - add more as needed
@@ -31,7 +32,7 @@ async function getPosts(): Promise<PostMeta[]> {
 
   try {
     const years = await fs.readdir(postsDir);
-    
+
     for (const year of years) {
       if (year.startsWith('.')) continue;
       const yearPath = path.join(postsDir, year);
@@ -58,9 +59,9 @@ async function getPosts(): Promise<PostMeta[]> {
               const content = await fs.readFile(path.join(dayPath, file), 'utf-8');
               const data = JSON.parse(content);
               const heroBlock = data.blocks?.[0]?.props;
-              const heroImage = heroBlock?.image || '/images/placeholder.jpg';
+              const heroImage = data.image || heroBlock?.image || '/images/placeholder.jpg';
               const heroSubhead = heroBlock?.subhead || '';
-              
+
               posts.push({
                 slug: data.slug,
                 title: data.title,
@@ -68,6 +69,7 @@ async function getPosts(): Promise<PostMeta[]> {
                 category: data.category,
                 date: data.date,
                 image: heroImage,
+                thumbnail: data.thumbnail || null,
               });
             }
           }
@@ -122,7 +124,7 @@ export default async function StoriesPage({
           {CATEGORIES.map((cat) => {
             const isActive = activeCategory === cat.value;
             const hasPostsInCategory = cat.value === 'all' || categoriesWithPosts.has(cat.value);
-            
+
             // Only show categories that have posts (or 'All')
             if (!hasPostsInCategory) return null;
 
@@ -130,11 +132,10 @@ export default async function StoriesPage({
               <Link
                 key={cat.value}
                 href={cat.value === 'all' ? '/stories' : `/stories?category=${cat.value}`}
-                className={`px-4 py-2 text-sm font-bold uppercase tracking-wider transition-colors rounded ${
-                  isActive
+                className={`px-4 py-2 text-sm font-bold uppercase tracking-wider transition-colors rounded ${isActive
                     ? 'bg-amber-400 text-black'
                     : 'bg-neutral-800 text-neutral-400 hover:bg-neutral-700 hover:text-white'
-                }`}
+                  }`}
               >
                 {cat.label}
               </Link>
@@ -153,13 +154,25 @@ export default async function StoriesPage({
                 href={`/${post.date.replace(/-/g, '/')}/${post.slug}`}
                 className="group relative aspect-square rounded-xl overflow-hidden border border-neutral-800 hover:border-amber-400 transition-all"
               >
-                <div 
+                <div
                   className="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-300"
                   style={{ backgroundImage: `url(${post.image})` }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-black/30" />
+
+                {/* Thumbnail in top-left */}
+                {post.thumbnail && (
+                  <div className="absolute top-4 left-4 w-16 h-16 rounded-lg overflow-hidden border-2 border-amber-400 bg-neutral-900">
+                    <img
+                      src={post.thumbnail}
+                      alt=""
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                )}
+
                 <div className="absolute inset-0 p-5 flex flex-col justify-between">
-                  <span className="inline-block self-start bg-amber-400 text-black text-xs font-bold tracking-wider uppercase px-2 py-1">
+                  <span className={`inline-block self-start bg-amber-400 text-black text-xs font-bold tracking-wider uppercase px-2 py-1 ${post.thumbnail ? 'ml-20' : ''}`}>
                     {post.category}
                   </span>
                   <div>

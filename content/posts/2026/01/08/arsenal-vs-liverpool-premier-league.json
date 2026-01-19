@@ -4,6 +4,8 @@
   "subtitle": "Arsenal is still undefeated at home this seasson.",
   "category": "Premier League",
   "date": "2026-01-08",
+  "thumbnail": "/images/organisations/premier-league.png",
+  "image": "/images/arsenal-liverpool/hero-bg.png",
   "blocks": [
     {
       "type": "OddsBar",

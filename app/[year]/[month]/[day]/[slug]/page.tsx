@@ -97,6 +97,7 @@ export default async function PostPage({ params }: { params: PageParams }) {
       title: story.title,
       subtitle: story.subtitle || '',
       date: story.date,
+      image: story.image || null,
     }
   };
 
