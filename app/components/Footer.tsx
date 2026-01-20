@@ -43,7 +43,7 @@ export default function Footer() {
               </a>
               {/* X/Twitter */}
               <a
-                href="https://x.com/bigbetenergy"
+                href="https://x.com/bigbet_energy"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-neutral-400 hover:text-amber-400 transition"
@@ -55,7 +55,7 @@ export default function Footer() {
               </a>
               {/* Instagram */}
               <a
-                href="https://instagram.com/bigbetenergy"
+                href="https://www.instagram.com/bigbet.energy/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-neutral-400 hover:text-amber-400 transition"
@@ -67,7 +67,7 @@ export default function Footer() {
               </a>
               {/* TikTok */}
               <a
-                href="https://tiktok.com/@bigbetenergy"
+                href="https://www.tiktok.com/@bigbet.energy"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-neutral-400 hover:text-amber-400 transition"
@@ -79,7 +79,7 @@ export default function Footer() {
               </a>
               {/* YouTube */}
               <a
-                href="https://youtube.com/@bigbetenergy"
+                href="https://www.youtube.com/@bigbet.energy"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-neutral-400 hover:text-amber-400 transition"
