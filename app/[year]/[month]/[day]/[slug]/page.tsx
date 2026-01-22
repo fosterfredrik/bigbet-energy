@@ -19,6 +19,7 @@ import VerticalBar from '@/app/components/VerticalBar';
 import StatCard from '@/app/components/StatCard';
 import Gauge from '@/app/components/Gauge';
 import Milestone from '@/app/components/Milestone';
+import TaleOfTape from '@/app/components/TaleOfTape';
 import SmartCTA from '@/app/components/SmartCTA';
 import InteractiveCTA from '@/app/components/InteractiveCTA';
 import PreferenceCTA from '@/app/components/PreferenceCTA';
@@ -39,6 +40,7 @@ const componentMap: Record<string, React.ComponentType<any>> = {
   ProgressRing,
   StatCard,
   Milestone,
+  TaleOfTape,
   ProgressBar,
   LineChart,
   HeadToHead,

@@ -1,23 +1,29 @@
 'use client';
 
 interface TimelineEvent {
-  year: string
-  label: string
-  description?: string
-  highlight?: boolean
-  empty?: boolean
+  year: string;
+  label: string;
+  description?: string;
+  highlight?: boolean;
 }
 
 interface TimelineProps {
-  label?: string
-  title: string
-  subtitle?: string
-  date: string
-  source: string
-  events: TimelineEvent[]
+  label?: string;
+  title: string;
+  subtitle?: string;
+  date: string;
+  source: string;
+  events: TimelineEvent[];
 }
 
-export default function Timeline({ label = "The Journey", title, subtitle, date, source, events }: TimelineProps) {
+export default function Timeline({ 
+  label = "The Journey", 
+  title, 
+  subtitle, 
+  date, 
+  source, 
+  events 
+}: TimelineProps) {
   return (
     <div className="w-full h-full bg-black p-6 sm:p-10 md:p-12 flex flex-col">
       {/* Header */}
@@ -38,32 +44,41 @@ export default function Timeline({ label = "The Journey", title, subtitle, date,
       {/* Timeline */}
       <div className="flex-1 flex flex-col justify-center">
         <div className="relative">
+          {/* Vertical connecting line */}
+          <div 
+            className="absolute left-[72px] top-1 bottom-1 w-0.5 bg-neutral-800"
+          />
+          
           {events.map((event, index) => (
-            <div key={index} className="flex items-center gap-4 mb-4 last:mb-0">
+            <div key={index} className="flex items-center gap-4 mb-3 last:mb-0 relative">
               {/* Year */}
               <div className="w-14 text-right">
-                <span className="text-sm font-bold" style={{ color: '#E5B94E' }}>
+                <span 
+                  className={`text-sm font-bold ${event.highlight ? 'text-amber-400' : 'text-neutral-500'}`}
+                >
                   {event.year}
                 </span>
               </div>
 
               {/* Dot */}
               <div 
-                className={`w-3 h-3 rounded-full flex-shrink-0 ${
-                  event.empty 
-                    ? 'border-2 border-neutral-500 bg-transparent' 
-                    : 'bg-amber-400'
+                className={`w-2.5 h-2.5 rounded-full flex-shrink-0 relative z-10 ${
+                  event.highlight 
+                    ? 'bg-amber-400 ring-4 ring-amber-400/20' 
+                    : 'bg-neutral-600'
                 }`}
               />
 
-              {/* Content */}
-              <div className="flex-1 flex items-baseline gap-3">
-                <span className="font-bold text-sm" style={{ color: '#E5B94E' }}>
+              {/* Content - inline */}
+              <div className="flex-1 flex items-baseline gap-2">
+                <span 
+                  className={`font-bold text-sm ${event.highlight ? 'text-amber-400' : 'text-neutral-300'}`}
+                >
                   {event.label}
                 </span>
                 {event.description && (
-                  <span className="text-neutral-400 text-sm">
-                    {event.description}
+                  <span className="text-neutral-500 text-sm">
+                    — {event.description}
                   </span>
                 )}
               </div>
@@ -79,5 +94,5 @@ export default function Timeline({ label = "The Journey", title, subtitle, date,
         </div>
       </div>
     </div>
-  )
+  );
 }

@@ -1,0 +1,182 @@
+{
+  "slug": "arsenal-vs-manchester-united-january-2026",
+  "title": "Arsenal vs Man United",
+  "subtitle": "Carrick shocked City. Can he do it again?",
+  "category": "Premier League",
+  "date": "2026-01-22",
+  "thumbnail": "/images/organisations/premier-league.png",
+  "image": "/images/arsenal-united/hero-bg.png",
+  "blocks": [
+    {
+      "type": "OddsBar",
+      "props": {
+        "market": "Winner",
+        "variant": "light",
+        "odds": [
+          { "label": "Arsenal", "value": 61, "highlight": true },
+          { "label": "Draw", "value": 23 },
+          { "label": "Man United", "value": 16 }
+        ],
+        "portrait": "/images/arsenal-united/mainoo.png",
+        "source": "Dimers",
+        "date": "Jan 2026"
+      }
+    },
+    {
+      "type": "InteractiveCTA",
+      "props": {
+        "question": "What chance do you give United?",
+        "marketOdds": 16,
+        "candidate": "Man United"
+      }
+    },
+    {
+      "type": "StatCard",
+      "props": {
+        "stat": "0.45",
+        "statLabel": "xG Allowed",
+        "label": "Carrick's Defense",
+        "subtitle": "City's second-lowest xG in 9 years under Guardiola.",
+        "portrait": "/images/arsenal-united/maguire.png",
+        "source": "Premier League",
+        "date": "Jan 2026"
+      }
+    },
+    {
+      "type": "Quote",
+      "props": {
+        "quote": "It was a bit of a calculated gamble. He's literally trained for two or three days in eight or nine weeks. I thought he was fantastic.",
+        "author": "Michael Carrick",
+        "role": "Man United Interim Manager",
+        "portrait": "/images/arsenal-united/carrick.png",
+        "source": "Man United",
+        "date": "Jan 2026"
+      }
+    },
+    {
+      "type": "VerticalBar",
+      "props": {
+        "title": "Assist Kings",
+        "subtitle": "Premier League assists this season",
+        "items": [
+          { "label": "Bruno Fernandes", "value": 9, "highlight": true },
+          { "label": "Bukayo Saka", "value": 8 },
+          { "label": "Martin Ødegaard", "value": 3 }
+        ],
+        "source": "Premier League",
+        "date": "Jan 2026"
+      }
+    },
+    {
+      "type": "Gauge",
+      "props": {
+        "label": "The Longshot",
+        "title": "Man United",
+        "subtitle": "Just shocked City 2-0. Won 4 of last 5 as underdogs.",
+        "value": 16,
+        "portrait": "/images/arsenal-united/bruno.png",
+        "source": "Dimers",
+        "date": "Jan 2026"
+      }
+    },
+    {
+      "type": "PreferenceCTA",
+      "props": {
+        "question": "What matters more?",
+        "options": [
+          "bonusValue",
+          "payoutSpeed"
+        ]
+      }
+    },
+    {
+      "type": "TaleOfTape",
+      "props": {
+        "label": "Tale of the Tape",
+        "title": "The Matchup",
+        "leftName": "Arsenal",
+        "rightName": "Man Utd",
+        "rows": [
+          { "label": "Position", "left": "1st", "right": "5th", "winner": "left" },
+          { "label": "Points", "left": 50, "right": 35, "winner": "left" },
+          { "label": "Goals For", "left": 40, "right": 38, "winner": "left" },
+          { "label": "Conceded", "left": 14, "right": 32, "winner": "left" },
+          { "label": "Rest Days", "left": 3, "right": 7, "winner": "right" }
+        ],
+        "source": "Premier League",
+        "date": "Jan 2026"
+      }
+    },
+    {
+      "type": "Context",
+      "props": {
+        "label": "The Tension",
+        "title": "Arsenal's Domestic Block",
+        "body": "Despite Champions League brilliance at Inter, Arsenal have [[drawn their last two Premier League games 0-0]]. United's zonal press that stifled City could frustrate them again.",
+        "source": "Premier League",
+        "date": "Jan 2026"
+      }
+    },
+    {
+      "type": "HeadToHead",
+      "props": {
+        "label": "The Rivalry",
+        "title": "244 Meetings",
+        "subtitle": "Arsenal have won 5 of the last 6 league meetings",
+        "leftTeam": {
+          "name": "Arsenal",
+          "image": "/images/arsenal-united/arsenal-crest.png",
+          "wins": 91
+        },
+        "rightTeam": {
+          "name": "Man United",
+          "image": "/images/arsenal-united/united-crest.png",
+          "wins": 102
+        },
+        "draws": 51,
+        "source": "Premier League",
+        "date": "Jan 2026"
+      }
+    },
+    {
+      "type": "Timeline",
+      "props": {
+        "label": "The Chaos",
+        "title": "Post-Ferguson United",
+        "subtitle": "12 managerial changes in 13 years",
+        "events": [
+          { "year": "2013", "label": "Moyes", "description": "10 months" },
+          { "year": "2014", "label": "Van Gaal", "description": "FA Cup" },
+          { "year": "2016", "label": "Mourinho", "description": "Europa League" },
+          { "year": "2018", "label": "Solskjær" },
+          { "year": "2021", "label": "Rangnick", "description": "Interim" },
+          { "year": "2022", "label": "Ten Hag" },
+          { "year": "2024", "label": "Amorim", "description": "Sacked" },
+          { "year": "2026", "label": "Carrick", "description": "Interim", "highlight": true }
+        ],
+        "source": "Sky Sports",
+        "date": "Jan 2026"
+      }
+    },
+    {
+      "type": "PreferenceCTA",
+      "props": {
+        "question": "What matters more?",
+        "options": [
+          "oddsQuality",
+          "appExperience"
+        ]
+      }
+    },
+    {
+      "type": "Sources",
+      "props": {
+        "items": [
+          { "label": "Carrick quotes – Man United", "url": "https://www.manutd.com" },
+          { "label": "Match odds – Dimers", "url": "https://www.dimers.com" },
+          { "label": "Stats – Premier League", "url": "https://www.premierleague.com" }
+        ]
+      }
+    }
+  ]
+}
