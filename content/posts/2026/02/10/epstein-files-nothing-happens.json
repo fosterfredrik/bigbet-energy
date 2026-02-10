@@ -1,0 +1,160 @@
+{
+  "slug": "epstein-files-nothing-happens",
+  "title": "The Epstein Files",
+  "subtitle": "3 million pages. Zero convictions.",
+  "category": "Politics",
+  "date": "2026-02-10",
+  "thumbnail": "/images/epstein/epstein.png",
+  "image": "/images/epstein/hero-bg.png",
+  "videoSequence": [0, 2, 3, 4, 5, 7, 8, 9, 6, 10],
+  "blocks": [
+    {
+      "type": "OddsBar",
+      "props": {
+        "market": "Epstein Accountability",
+        "variant": "light",
+        "odds": [
+          { "label": "Anyone jailed", "value": 18, "highlight": true },
+          { "label": "Foul play confirmed", "value": 11 },
+          { "label": "Epstein alive", "value": 6 }
+        ],
+        "portrait": "/images/epstein/epstein.png",
+        "source": "Polymarket",
+        "date": "Feb 2026"
+      }
+    },
+    {
+      "type": "InteractiveCTA",
+      "props": {
+        "question": "Will anyone be jailed over the Epstein files?",
+        "marketOdds": 18,
+        "candidate": "Justice"
+      }
+    },
+    {
+      "type": "Context",
+      "props": {
+        "label": "The Dump",
+        "title": "6 Million Pages. Half Hidden.",
+        "body": "The DOJ identified [[6 million pages]] of Epstein documents. Only [[3.5 million]] were released. The Deputy AG declared [[the review is over]]. No further releases planned.",
+        "source": "DOJ",
+        "date": "Jan 2026"
+      }
+    },
+    {
+      "type": "Quote",
+      "props": {
+        "quote": "We didn't protect or not protect anybody... I think there's a hunger or a thirst for information that I do not think will be satisfied.",
+        "author": "Todd Blanche",
+        "role": "Deputy Attorney General",
+        "portrait": "/images/epstein/blanche.png",
+        "source": "DOJ",
+        "date": "Jan 2026"
+      }
+    },
+    {
+      "type": "StatCard",
+      "props": {
+        "stat": "38,000",
+        "statLabel": "Times Named",
+        "label": "Trump in the Files",
+        "subtitle": "His name appears over 38,000 times. One document describes Epstein introducing him to a 14-year-old girl. Status: President.",
+        "portrait": "/images/epstein/trump.png",
+        "source": "Epstein Files",
+        "date": "2026"
+      }
+    },
+    {
+      "type": "ProgressRing",
+      "props": {
+        "category": "The Odds",
+        "label": "Epstein Alive",
+        "subtitle": "Half a million dollars bet on whether Jeffrey Epstein faked his own death.",
+        "value": 6,
+        "portrait": "/images/epstein/epstein-alive.png",
+        "source": "Polymarket",
+        "date": "Feb 2026"
+      }
+    },
+    {
+      "type": "PreferenceCTA",
+      "props": {
+        "question": "What matters more?",
+        "options": ["bonusValue", "payoutSpeed"]
+      }
+    },
+    {
+      "type": "Milestone",
+      "props": {
+        "label": "The Night",
+        "title": "August 10, 2019",
+        "subtitle": "10 of 11 cameras broken. Guards asleep. Cellmate transferred out the day before. A critical minute of footage missing.",
+        "stat": "10/11",
+        "statLabel": "Cameras Not Recording",
+        "portrait": "/images/epstein/cell.png",
+        "source": "FBI",
+        "date": "Aug 2019"
+      }
+    },
+    {
+      "type": "Timeline",
+      "props": {
+        "label": "The Timeline",
+        "title": "7 Years of Nothing",
+        "subtitle": "From arrest to impunity",
+        "events": [
+          { "year": "2019", "label": "Arrested", "description": "Sex trafficking charges" },
+          { "year": "2019", "label": "Dead", "description": "Found in cell. Ruled suicide." },
+          { "year": "2021", "label": "Maxwell", "description": "Convicted. 20 years." },
+          { "year": "2025", "label": "Files Act", "description": "Trump signs transparency act" },
+          { "year": "2026", "label": "The Dump", "description": "3.5M pages released" },
+          { "year": "2026", "label": "Contempt", "description": "Clintons held in contempt" },
+          { "year": "2026", "label": "Case Closed", "description": "DOJ: no new prosecutions", "highlight": true }
+        ],
+        "source": "Various",
+        "date": "Feb 2026"
+      }
+    },
+    {
+      "type": "ProgressBar",
+      "props": {
+        "label": "Pages Withheld",
+        "subtitle": "2.5 million pages the DOJ decided you don't need to see.",
+        "value": 42,
+        "source": "DOJ",
+        "date": "Jan 2026"
+      }
+    },
+    {
+      "type": "Gauge",
+      "props": {
+        "label": "The Final Twist",
+        "title": "Maxwell Pardon",
+        "subtitle": "10% chance Trump pardons the only person convicted in the Epstein case.",
+        "value": 10,
+        "portrait": "/images/epstein/maxwell.png",
+        "source": "Polymarket",
+        "date": "Feb 2026"
+      }
+    },
+    {
+      "type": "PreferenceCTA",
+      "props": {
+        "question": "What matters more?",
+        "options": ["oddsQuality", "appExperience"]
+      }
+    },
+    {
+      "type": "Sources",
+      "props": {
+        "items": [
+          { "label": "Prediction markets — Polymarket, Feb 2026", "url": "https://polymarket.com" },
+          { "label": "Epstein files — DOJ release, Jan 2026", "url": "https://www.justice.gov" },
+          { "label": "Congressional hearings — House Oversight Committee, 2026", "url": "https://oversight.house.gov" },
+          { "label": "Blanche quotes — DOJ press conference, Jan 2026", "url": "https://www.justice.gov" },
+          { "label": "FBI surveillance evidence — FBI records, 2019", "url": "https://www.fbi.gov" }
+        ]
+      }
+    }
+  ]
+}

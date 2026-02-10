@@ -114,7 +114,7 @@ export const OddsBarScene: React.FC<OddsBarSceneProps> = ({
       <div
         style={{
           position: "absolute",
-          top: 80,
+          top: 250,
           left: 60,
           right: 60,
           opacity: headerOpacity,
@@ -154,7 +154,7 @@ export const OddsBarScene: React.FC<OddsBarSceneProps> = ({
       <div
         style={{
           position: "absolute",
-          top: 280,
+          top: 120,
           left: 60,
           right: 60,
           bottom: 500,
@@ -235,13 +235,45 @@ export const OddsBarScene: React.FC<OddsBarSceneProps> = ({
         })}
       </div>
 
-      {/* Portrait - bottom right */}
+      {/* Footer - black bar at bottom */}
+      <div
+        style={{
+          position: "absolute",
+          bottom: 0,
+          left: 0,
+          right: 0,
+          height: 280,
+          backgroundColor: "#000",
+          opacity: footerOpacity,
+        }}
+      >
+        <div
+          style={{
+            padding: "24px 60px",
+            borderTop: `1px solid ${borderColor}`,
+          }}
+        >
+          <div
+            style={{
+              color: "#a3a3a3",
+              fontSize: 18,
+              fontFamily: "Geomanist, sans-serif",
+              letterSpacing: "0.1em",
+              textTransform: "uppercase",
+            }}
+          >
+            {source} • {date}
+          </div>
+        </div>
+      </div>
+
+      {/* Portrait - rests on footer */}
       {portrait && (
         <div
           style={{
             position: "absolute",
             right: 0,
-            bottom: 0,
+            bottom: 280,
             width: 600,
             height: 600,
             opacity: portraitOpacity,
@@ -261,30 +293,6 @@ export const OddsBarScene: React.FC<OddsBarSceneProps> = ({
         </div>
       )}
 
-      {/* Footer - fixed at bottom */}
-      <div
-        style={{
-          position: "absolute",
-          bottom: 40,
-          left: 60,
-          right: 540,
-          paddingTop: 24,
-          borderTop: `1px solid ${borderColor}`,
-          opacity: footerOpacity,
-        }}
-      >
-        <div
-          style={{
-            color: footerTextColor,
-            fontSize: 18,
-            fontFamily: "Geomanist, sans-serif",
-            letterSpacing: "0.1em",
-            textTransform: "uppercase",
-          }}
-        >
-          {source} • {date}
-        </div>
-      </div>
     </AbsoluteFill>
   );
 };

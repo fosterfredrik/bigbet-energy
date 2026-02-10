@@ -69,7 +69,7 @@ export const MilestoneScene: React.FC<MilestoneSceneProps> = ({
       <div
         style={{
           position: "absolute",
-          top: 80,
+          top: 250,
           left: 60,
           right: 60,
           textAlign: "center",
@@ -124,7 +124,7 @@ export const MilestoneScene: React.FC<MilestoneSceneProps> = ({
           top: 350,
           left: 60,
           right: 60,
-          bottom: 400,
+          bottom: 700,
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
@@ -164,7 +164,7 @@ export const MilestoneScene: React.FC<MilestoneSceneProps> = ({
         <div
           style={{
             position: "absolute",
-            bottom: 0,
+            bottom: 280,
             left: 0,
             width: 600,
             height: 600,
@@ -182,28 +182,35 @@ export const MilestoneScene: React.FC<MilestoneSceneProps> = ({
         </div>
       )}
 
-      {/* Footer - fixed at bottom */}
+      {/* Footer - black bar at bottom */}
       <div
         style={{
           position: "absolute",
-          bottom: 40,
-          left: portrait ? 470 : 60,
-          right: 60,
-          paddingTop: 24,
-          borderTop: "1px solid #333",
+          bottom: 0,
+          left: 0,
+          right: 0,
+          height: 280,
+          backgroundColor: "#000",
           opacity: footerOpacity,
         }}
       >
         <div
           style={{
-            color: "#737373",
-            fontSize: 18,
-            fontFamily: "Geomanist, sans-serif",
-            letterSpacing: "0.1em",
-            textTransform: "uppercase",
+            padding: "24px 60px",
+            borderTop: "1px solid #333",
           }}
         >
-          {source} • {date}
+          <div
+            style={{
+              color: "#a3a3a3",
+              fontSize: 18,
+              fontFamily: "Geomanist, sans-serif",
+              letterSpacing: "0.1em",
+              textTransform: "uppercase",
+            }}
+          >
+            {source} • {date}
+          </div>
         </div>
       </div>
     </AbsoluteFill>

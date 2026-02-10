@@ -9,6 +9,9 @@ import { StatCardScene } from "../components/StatCardScene";
 import { VerticalBarScene } from "../components/VerticalBarScene";
 import { MilestoneScene } from "../components/MilestoneScene";
 import { OddsBarScene } from "../components/OddsBarScene";
+import { TaleOfTapeScene } from "../components/TaleOfTapeScene";
+import { HeadToHeadScene } from "../components/HeadToHeadScene";
+import { TimelineScene } from "../components/TimelineScene";
 
 export type PostVideoProps = {
   blocks: Array<{ type: string; props: any }>;
@@ -24,6 +27,9 @@ const sceneMap: Record<string, React.ComponentType<any>> = {
   VerticalBar: VerticalBarScene,
   Milestone: MilestoneScene,
   OddsBar: OddsBarScene,
+  TaleOfTape: TaleOfTapeScene,
+  HeadToHead: HeadToHeadScene,
+  Timeline: TimelineScene,
 };
 
 // Types to skip

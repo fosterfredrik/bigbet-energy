@@ -80,7 +80,7 @@ export const ProgressRingScene: React.FC<ProgressRingSceneProps> = ({
       <div
         style={{
           position: "absolute",
-          top: 80,
+          top: 250,
           left: 60,
           right: 60,
           textAlign: "center",
@@ -120,7 +120,7 @@ export const ProgressRingScene: React.FC<ProgressRingSceneProps> = ({
       <div
         style={{
           position: "absolute",
-          top: 430,
+          top: 500,
           left: 0,
           right: 0,
           display: "flex",
@@ -221,7 +221,7 @@ export const ProgressRingScene: React.FC<ProgressRingSceneProps> = ({
         <div
           style={{
             position: "absolute",
-            bottom: 500,
+            bottom: 450,
             left: 60,
             right: 60,
             textAlign: "center",
@@ -241,29 +241,35 @@ export const ProgressRingScene: React.FC<ProgressRingSceneProps> = ({
         </div>
       )}
 
-      {/* Footer - fixed at bottom */}
+      {/* Footer - black bar at bottom */}
       <div
         style={{
           position: "absolute",
-          bottom: 40,
-          left: 60,
-          right: 60,
-          paddingTop: 24,
-          borderTop: "1px solid #333",
-          textAlign: "center",
+          bottom: 0,
+          left: 0,
+          right: 0,
+          height: 280,
+          backgroundColor: "#000",
           opacity: footerOpacity,
         }}
       >
         <div
           style={{
-            color: "#737373",
-            fontSize: 18,
-            fontFamily: "Geomanist, sans-serif",
-            letterSpacing: "0.1em",
-            textTransform: "uppercase",
+            padding: "24px 60px",
+            borderTop: "1px solid #333",
           }}
         >
-          {source} • {date}
+          <div
+            style={{
+              color: "#a3a3a3",
+              fontSize: 18,
+              fontFamily: "Geomanist, sans-serif",
+              letterSpacing: "0.1em",
+              textTransform: "uppercase",
+            }}
+          >
+            {source} • {date}
+          </div>
         </div>
       </div>
     </AbsoluteFill>

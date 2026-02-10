@@ -27,42 +27,47 @@ const fontFace = `
 }
 `;
 
-export interface BarItem {
+export interface TimelineEvent {
+  year: string;
   label: string;
-  value: number;
+  description?: string;
   highlight?: boolean;
 }
 
-export interface VerticalBarSceneProps {
+export interface TimelineSceneProps {
+  label: string;
   title: string;
   subtitle?: string;
-  items: BarItem[];
-  unit?: string;
+  events: TimelineEvent[];
   date: string;
   source: string;
 }
 
-export const VerticalBarScene: React.FC<VerticalBarSceneProps> = ({
+export const TimelineScene: React.FC<TimelineSceneProps> = ({
+  label,
   title,
   subtitle,
-  items,
-  unit = "",
+  events,
   date,
   source,
 }) => {
   const frame = useCurrentFrame();
 
-  const headerOpacity = interpolate(frame, [0, 20], [0, 1], { extrapolateRight: "clamp" });
-  const barsOpacity = interpolate(frame, [10, 30], [0, 1], { extrapolateRight: "clamp" });
-  const footerOpacity = interpolate(frame, [30, 50], [0, 1], { extrapolateRight: "clamp" });
-
-  const maxValue = Math.max(...items.map((i) => i.value));
+  const headerOpacity = interpolate(frame, [0, 20], [0, 1], {
+    extrapolateRight: "clamp",
+  });
+  const timelineOpacity = interpolate(frame, [10, 30], [0, 1], {
+    extrapolateRight: "clamp",
+  });
+  const footerOpacity = interpolate(frame, [30, 50], [0, 1], {
+    extrapolateRight: "clamp",
+  });
 
   return (
     <AbsoluteFill style={{ backgroundColor: "#000" }}>
       <style>{fontFace}</style>
 
-      {/* Header - fixed at top */}
+      {/* Header */}
       <div
         style={{
           position: "absolute",
@@ -84,7 +89,7 @@ export const VerticalBarScene: React.FC<VerticalBarSceneProps> = ({
             marginBottom: 16,
           }}
         >
-          By The Numbers
+          {label}
         </div>
         <h2
           style={{
@@ -106,7 +111,7 @@ export const VerticalBarScene: React.FC<VerticalBarSceneProps> = ({
               color: "#a3a3a3",
               fontSize: 36,
               fontFamily: "Geomanist, sans-serif",
-              marginTop: 16,
+              marginTop: 24,
             }}
           >
             {subtitle}
@@ -114,95 +119,91 @@ export const VerticalBarScene: React.FC<VerticalBarSceneProps> = ({
         )}
       </div>
 
-      {/* Bars - centered */}
+      {/* Timeline */}
       <div
         style={{
           position: "absolute",
-          top: 300,
+          top: 580,
           left: 60,
           right: 60,
-          bottom: 500,
+          bottom: 350,
           display: "flex",
-          alignItems: "flex-end",
-          justifyContent: "center",
+          flexDirection: "column",
           gap: 48,
-          opacity: barsOpacity,
+          opacity: timelineOpacity,
         }}
       >
-        {items.map((item, index) => {
-          const heightPercent = (item.value / maxValue) * 100;
-          const barGrow = interpolate(frame, [15 + index * 5, 40 + index * 5], [0, heightPercent], {
-            extrapolateRight: "clamp",
-          });
+        {events.map((event, index) => {
+          const eventOpacity = interpolate(
+            frame,
+            [15 + index * 5, 25 + index * 5],
+            [0, 1],
+            { extrapolateRight: "clamp" }
+          );
 
           return (
             <div
               key={index}
               style={{
                 display: "flex",
-                flexDirection: "column",
                 alignItems: "center",
-                gap: 16,
-                flex: 1,
-                maxWidth: 240,
+                gap: 32,
+                opacity: eventOpacity,
               }}
             >
-              {/* Value */}
+              {/* Year */}
               <span
                 style={{
-                  color: item.highlight ? "#f59e0b" : "#d4d4d4",
-                  fontSize: 72,
+                  color: event.highlight ? "#f59e0b" : "#737373",
+                  fontSize: 64,
                   fontWeight: 700,
                   fontFamily: "Geomanist, sans-serif",
+                  width: 160,
                 }}
               >
-                {item.value.toLocaleString()}
-                {unit}
+                {event.year}
               </span>
 
-              {/* Bar */}
+              {/* Dot */}
               <div
                 style={{
-                  width: "100%",
-                  height: 600,
-                  display: "flex",
-                  alignItems: "flex-end",
+                  width: 36,
+                  height: 36,
+                  borderRadius: "50%",
+                  backgroundColor: event.highlight ? "#f59e0b" : "#404040",
                 }}
-              >
-                <div
-                  style={{
-                    width: "100%",
-                    height: `${barGrow}%`,
-                    backgroundColor: item.highlight ? "#f59e0b" : "#404040",
-                    borderTopLeftRadius: 12,
-                    borderTopRightRadius: 12,
-                  }}
-                />
-              </div>
+              />
 
-              {/* Label */}
-              <span
-                style={{
-                  color: item.highlight ? "#f59e0b" : "#d4d4d4",
-                  fontSize: 32,
-                  fontWeight: 700,
-                  fontFamily: "Geomanist, sans-serif",
-                  textAlign: "center",
-                  lineHeight: 1.2,
-                  height: 70,  // ← add this
-                  display: "flex",
-                  alignItems: "flex-start",
-                  justifyContent: "center",
-                }}
-              >
-                {item.label}
-              </span>
+              {/* Label + Description */}
+              <div style={{ display: "flex", alignItems: "baseline", gap: 16 }}>
+                <span
+                  style={{
+                    color: event.highlight ? "#f59e0b" : "#fff",
+                    fontSize: 72,
+                    fontWeight: 700,
+                    fontFamily: "Geomanist, sans-serif",
+                  }}
+                >
+                  {event.label}
+                </span>
+                {event.description && (
+                  <span
+                    style={{
+                      color: "#737373",
+                      fontSize: 52,
+                      fontFamily: "Geomanist, sans-serif",
+                    }}
+                  >
+                    {event.description}
+                  </span>
+                )}
+              </div>
             </div>
           );
         })}
       </div>
 
-      {/* Footer - black bar at bottom */}
+      {/* Footer */}
       <div
         style={{
           position: "absolute",

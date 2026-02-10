@@ -83,7 +83,7 @@ export const QuoteScene: React.FC<QuoteSceneProps> = ({
       <div
         style={{
           position: "absolute",
-          top: 80,
+          top: 250,
           left: 60,
           right: 60,
           opacity: headerOpacity,
@@ -110,7 +110,7 @@ export const QuoteScene: React.FC<QuoteSceneProps> = ({
           top: 200,
           left: 60,
           right: 60,
-          bottom: 250,
+          bottom: 150,
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
@@ -121,7 +121,7 @@ export const QuoteScene: React.FC<QuoteSceneProps> = ({
           style={{
             opacity: quoteOpacity,
             position: "relative",
-            marginBottom: 120,
+            marginBottom: 72,
           }}
         >
           {/* Decorative quotation mark */}
@@ -222,30 +222,35 @@ export const QuoteScene: React.FC<QuoteSceneProps> = ({
         </div>
       </div>
 
-      {/* Footer - fixed near bottom but above platform UI zone */}
+      {/* Footer - black bar at bottom */}
       <div
         style={{
           position: "absolute",
-          bottom: 40,
-          left: 60,
-          right: 60,
-          paddingTop: 24,
-          borderTop: "1px solid #333",
-          textAlign: "center",
+          bottom: 0,
+          left: 0,
+          right: 0,
+          height: 280,
+          backgroundColor: "#000",
           opacity: footerOpacity,
         }}
       >
         <div
           style={{
-            color: "#737373",
-            fontSize: 18,
-            fontFamily: "Geomanist, sans-serif",
-            fontWeight: 400,
-            textTransform: "uppercase",
-            letterSpacing: "0.05em",
+            padding: "24px 60px",
+            borderTop: "1px solid #333",
           }}
         >
-          {source} • {date}
+          <div
+            style={{
+              color: "#a3a3a3",
+              fontSize: 18,
+              fontFamily: "Geomanist, sans-serif",
+              letterSpacing: "0.1em",
+              textTransform: "uppercase",
+            }}
+          >
+            {source} • {date}
+          </div>
         </div>
       </div>
     </AbsoluteFill>

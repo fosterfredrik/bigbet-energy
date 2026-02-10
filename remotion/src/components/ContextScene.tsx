@@ -84,7 +84,7 @@ export const ContextScene: React.FC<ContextSceneProps> = ({
       <div
         style={{
           position: "absolute",
-          top: 80,
+          top: 250,
           left: 60,
           right: 60,
           opacity: headerOpacity,
@@ -125,7 +125,7 @@ export const ContextScene: React.FC<ContextSceneProps> = ({
           top: 20,
           left: 60,
           right: 60,
-          bottom: 220,
+          bottom:150,
           display: "flex",
           alignItems: "center",
           opacity: bodyOpacity,
@@ -146,30 +146,35 @@ export const ContextScene: React.FC<ContextSceneProps> = ({
         </p>
       </div>
 
-      {/* Footer - fixed at bottom */}
+      {/* Footer - black bar at bottom */}
       <div
         style={{
           position: "absolute",
-          bottom: 40,
-          left: 60,
-          right: 60,
-          paddingTop: 24,
-          borderTop: "1px solid #333",
-          textAlign: "center",
+          bottom: 0,
+          left: 0,
+          right: 0,
+          height: 280,
+          backgroundColor: "#000",
           opacity: footerOpacity,
         }}
       >
         <div
           style={{
-            color: "#737373",
-            fontSize: 18,
-            fontFamily: "Geomanist, sans-serif",
-            fontWeight: 400,
-            textTransform: "uppercase",
-            letterSpacing: "0.05em",
+            padding: "24px 60px",
+            borderTop: "1px solid #333",
           }}
         >
-          {source} • {date}
+          <div
+            style={{
+              color: "#a3a3a3",
+              fontSize: 18,
+              fontFamily: "Geomanist, sans-serif",
+              letterSpacing: "0.1em",
+              textTransform: "uppercase",
+            }}
+          >
+            {source} • {date}
+          </div>
         </div>
       </div>
     </AbsoluteFill>

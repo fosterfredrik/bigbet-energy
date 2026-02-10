@@ -1,0 +1,163 @@
+{
+  "slug": "best-ai-model-february-2026",
+  "title": "The AI Race",
+  "subtitle": "Altman's dig at Anthropic's lead in the trillion dollar AI race.",
+  "category": "Tech",
+  "date": "2026-02-10",
+  "thumbnail": "/images/ai-race/saltman.png",
+  "image": "/images/ai-race/hero-bg.png",
+  "videoSequence": [0, 2, 3, 4, 5, 7, 8, 9, 6, 10],
+  "blocks": [
+    {
+      "type": "OddsBar",
+      "props": {
+        "market": "Best AI Model — Feb 28",
+        "variant": "light",
+        "odds": [
+          { "label": "Anthropic", "value": 73, "highlight": true },
+          { "label": "Google", "value": 15 },
+          { "label": "OpenAI", "value": 9 }
+        ],
+        "portrait": "/images/ai-race/amodei.png",
+        "source": "Polymarket",
+        "date": "Feb 2026"
+      }
+    },
+    {
+      "type": "InteractiveCTA",
+      "props": {
+        "question": "Will Anthropic lead the AI race on Feb 28th?",
+        "marketOdds": 73,
+        "candidate": "Anthropic"
+      }
+    },
+    {
+      "type": "Context",
+      "props": {
+        "label": "The Scoreboard",
+        "title": "Claude Opus 4.6 is #1",
+        "body": "Anthropic's Claude Opus 4.6 leads the Chatbot Arena with a score of [[1504]]. Google's Gemini 3 Pro sits at [[1486]]. OpenAI isn't even in the top 5.",
+        "source": "LMArena",
+        "date": "Feb 2026"
+      }
+    },
+    {
+      "type": "Milestone",
+      "props": {
+        "label": "The Crash",
+        "title": "The SaaSpocalypse",
+        "subtitle": "Anthropic's Claude Cowork launch triggered a market rout. Investors panicked that AI agents would replace human software licenses.",
+        "stat": "$285B",
+        "statLabel": "Market Wipeout",
+        "portrait": "/images/ai-race/cowork.png",
+        "source": "Financial Times",
+        "date": "Feb 2026"
+      }
+    },
+    {
+      "type": "StatCard",
+      "props": {
+        "stat": "37.5%",
+        "statLabel": "Humanity's Last Exam",
+        "label": "Google's Secret Weapon",
+        "subtitle": "Gemini 3 Pro scored highest on the hardest AI test ever made. GPT-5 got 25%. Random guessing gets 25%.",
+        "portrait": "/images/ai-race/pichai.png",
+        "source": "Scale AI",
+        "date": "Feb 2026"
+      }
+    },
+    {
+      "type": "Gauge",
+      "props": {
+        "label": "The Comeback",
+        "title": "Google by June",
+        "subtitle": "Traders expect Google to overtake Anthropic by summer 2026.",
+        "value": 54,
+        "portrait": "/images/ai-race/google-logo.png",
+        "source": "Polymarket",
+        "date": "Feb 2026"
+      }
+    },
+    {
+      "type": "PreferenceCTA",
+      "props": {
+        "question": "What matters more?",
+        "options": ["bonusValue", "payoutSpeed"]
+      }
+    },
+    {
+      "type": "Quote",
+      "props": {
+        "quote": "More Texans use ChatGPT for free than total people use Claude in the U.S.",
+        "author": "Sam Altman",
+        "role": "CEO, OpenAI",
+        "portrait": "/images/ai-race/altman.png",
+        "source": "OpenAI",
+        "date": "Feb 2026"
+      }
+    },
+    {
+      "type": "TaleOfTape",
+      "props": {
+        "label": "Tale of the Tape",
+        "title": "The Matchup",
+        "leftName": "Anthropic",
+        "rightName": "OpenAI",
+        "rows": [
+          { "label": "Arena Score", "left": "1504", "right": "1434", "winner": "left" },
+          { "label": "Valuation", "left": "$350B", "right": "$500B", "winner": "right" },
+          { "label": "Enterprise Rev", "left": "85%", "right": "40%", "winner": "left" },
+          { "label": "Market Odds", "left": "73%", "right": "9%", "winner": "left" }
+        ],
+        "source": "Various",
+        "date": "Feb 2026"
+      }
+    },
+    {
+      "type": "ProgressRing",
+      "props": {
+        "category": "Revenue",
+        "label": "Enterprise First",
+        "subtitle": "Anthropic's revenue comes from enterprise clients, not consumers.",
+        "value": 85,
+        "portrait": "/images/ai-race/anthropic-logo.png",
+        "source": "Anthropic",
+        "date": "2026"
+      }
+    },
+    {
+      "type": "VerticalBar",
+      "props": {
+        "title": "Chatbot Arena Leaderboard",
+        "subtitle": "Arena Elo scores — February 2026",
+        "items": [
+          { "label": "Claude Opus 4.6", "value": 1504, "highlight": true },
+          { "label": "Gemini 3 Pro", "value": 1486 },
+          { "label": "Grok 4.1", "value": 1475 },
+          { "label": "Gemini 3 Flash", "value": 1472 }
+        ],
+        "source": "LMArena",
+        "date": "Feb 2026"
+      }
+    },
+    {
+      "type": "PreferenceCTA",
+      "props": {
+        "question": "What matters more?",
+        "options": ["oddsQuality", "appExperience"]
+      }
+    },
+    {
+      "type": "Sources",
+      "props": {
+        "items": [
+          { "label": "Prediction market — Polymarket, Feb 2026", "url": "https://polymarket.com" },
+          { "label": "Chatbot Arena — LMArena, Feb 2026", "url": "https://lmarena.ai" },
+          { "label": "Altman quotes — OpenAI, 2026", "url": "https://openai.com" },
+          { "label": "Amodei quotes — Anthropic, 2026", "url": "https://anthropic.com" },
+          { "label": "DeepSeek training costs — DeepSeek, 2025", "url": "https://deepseek.com" }
+        ]
+      }
+    }
+  ]
+}

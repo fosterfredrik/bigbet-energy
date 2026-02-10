@@ -1,0 +1,168 @@
+{
+  "slug": "moon-landing-2026",
+  "title": "Back to the Moon",
+  "subtitle": "53 years. 96 bags of poop. Still no return.",
+  "category": "Tech",
+  "date": "2026-02-10",
+  "thumbnail": "/images/moon/astronaut.png",
+  "image": "/images/moon/hero-bg.png",
+  "videoSequence": [0, 2, 3, 4, 5, 7, 8, 9, 6, 10],
+  "blocks": [
+    {
+      "type": "OddsBar",
+      "props": {
+        "market": "Moon Landing 2026",
+        "variant": "light",
+        "odds": [
+          { "label": "Artemis II flyby", "value": 78, "highlight": true },
+          { "label": "Human landing", "value": 8 },
+          { "label": "Doge-1 mission", "value": 5 }
+        ],
+        "portrait": "/images/moon/astronaut.png",
+        "source": "Polymarket",
+        "date": "Feb 2026"
+      }
+    },
+    {
+      "type": "InteractiveCTA",
+      "props": {
+        "question": "Will humans land on the Moon in 2026?",
+        "marketOdds": 8,
+        "candidate": "Moon Landing"
+      }
+    },
+    {
+      "type": "Context",
+      "props": {
+        "label": "The Streak",
+        "title": "53 Years and Counting",
+        "body": "[[12 people]] have walked on the Moon. All of them American. The last was Eugene Cernan in [[December 1972]]. Nobody has been back since.",
+        "source": "NASA",
+        "date": "1972"
+      }
+    },
+    {
+      "type": "Quote",
+      "props": {
+        "quote": "No, we're going straight to Mars. The Moon is a distraction.",
+        "author": "Elon Musk",
+        "role": "January 2025. One year before pivoting to the Moon.",
+        "portrait": "/images/moon/musk-quote.png",
+        "source": "X",
+        "date": "Jan 2025"
+      }
+    },
+    {
+      "type": "StatCard",
+      "props": {
+        "stat": "$257B",
+        "statLabel": "Apollo Cost (Adjusted)",
+        "label": "The Price of the Moon",
+        "subtitle": "Apollo cost $257 billion in today's money. Musk says Starship launches could cost $10 million each. We'll see.",
+        "portrait": "/images/moon/saturn-v.png",
+        "source": "NASA",
+        "date": "1960-1973"
+      }
+    },
+    {
+      "type": "Milestone",
+      "props": {
+        "label": "The Pivot",
+        "title": "Feb 9, 2026",
+        "subtitle": "Musk announced SpaceX is building a 'self-growing city' on the Moon. Mars pushed back 5-7 years. Posted right before the Super Bowl.",
+        "stat": "10 yrs",
+        "statLabel": "Moon City Timeline",
+        "portrait": "/images/moon/spacex.png",
+        "source": "X / SpaceX",
+        "date": "Feb 2026"
+      }
+    },
+    {
+      "type": "PreferenceCTA",
+      "props": {
+        "question": "What matters more?",
+        "options": ["bonusValue", "payoutSpeed"]
+      }
+    },
+    {
+      "type": "Timeline",
+      "props": {
+        "label": "Elon Time",
+        "title": "The Mars Promises",
+        "subtitle": "Every deadline missed",
+        "events": [
+          { "year": "2011", "label": "Mars by 2021", "description": "Red Dragon missions proposed" },
+          { "year": "2016", "label": "Mars by 2024", "description": "Humans on Mars goal set" },
+          { "year": "2024", "label": "Mars by 2026", "description": "Uncrewed Starship landing" },
+          { "year": "2025", "label": "Moon is a distraction", "description": "Musk dismisses lunar plans" },
+          { "year": "2026", "label": "Moon first actually", "description": "Full pivot to lunar city", "highlight": true }
+        ],
+        "source": "Various",
+        "date": "Feb 2026"
+      }
+    },
+    {
+      "type": "TaleOfTape",
+      "props": {
+        "label": "The New Space Race",
+        "title": "USA vs China",
+        "leftName": "NASA / SpaceX",
+        "rightName": "China",
+        "rows": [
+          { "label": "Target Year", "left": "2027", "right": "2030", "winner": "left" },
+          { "label": "Realistic Year", "left": "2028-29", "right": "2030", "winner": "draw" },
+          { "label": "Launches Required", "left": "10+", "right": "2", "winner": "right" },
+          { "label": "On Schedule", "left": "No", "right": "Yes", "winner": "right" }
+        ],
+        "source": "NASA / CNSA",
+        "date": "Feb 2026"
+      }
+    },
+    {
+      "type": "Gauge",
+      "props": {
+        "label": "The Legacy",
+        "title": "96 Bags of Poop",
+        "subtitle": "Probably every bag on the Moon is filled with human waste.",
+        "value": 100,
+        "portrait": "/images/moon/poop.png",
+        "source": "NASA",
+        "date": "1969-1972"
+      }
+    },
+    {
+      "type": "VerticalBar",
+      "props": {
+        "title": "Left on the Moon",
+        "subtitle": "What Apollo astronauts left behind",
+        "items": [
+          { "label": "Bags of poop", "value": 96, "highlight": true },
+          { "label": "Flags", "value": 6 },
+          { "label": "Rovers", "value": 3 },
+          { "label": "Golf balls", "value": 2 }
+        ],
+        "source": "NASA",
+        "date": "1969-1972"
+      }
+    },
+    {
+      "type": "PreferenceCTA",
+      "props": {
+        "question": "What matters more?",
+        "options": ["oddsQuality", "appExperience"]
+      }
+    },
+    {
+      "type": "Sources",
+      "props": {
+        "items": [
+          { "label": "Prediction markets — Polymarket, Feb 2026", "url": "https://polymarket.com" },
+          { "label": "SpaceX lunar pivot — X / SpaceX, Feb 2026", "url": "https://x.com/elonmusk" },
+          { "label": "Apollo program — NASA History, 1972", "url": "https://www.nasa.gov" },
+          { "label": "Artemis program — NASA, 2026", "url": "https://www.nasa.gov/artemis" },
+          { "label": "China lunar program — CNSA, 2026", "url": "https://www.cnsa.gov.cn" }
+        ]
+      }
+    }
+  ]
+}

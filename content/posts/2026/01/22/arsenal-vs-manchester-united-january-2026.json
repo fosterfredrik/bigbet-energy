@@ -6,6 +6,7 @@
   "date": "2026-01-22",
   "thumbnail": "/images/organisations/premier-league.png",
   "image": "/images/arsenal-united/hero-bg.png",
+  "videoSequence": [0, 7, 9, 8, 5, 4, 10, 3, 2],
   "blocks": [
     {
       "type": "OddsBar",
@@ -47,7 +48,7 @@
       "props": {
         "quote": "It was a bit of a calculated gamble. He's literally trained for two or three days in eight or nine weeks. I thought he was fantastic.",
         "author": "Michael Carrick",
-        "role": "Man United Interim Manager",
+        "role": "Man United Interim Manager about Maguire",
         "portrait": "/images/arsenal-united/carrick.png",
         "source": "Man United",
         "date": "Jan 2026"
@@ -56,12 +57,11 @@
     {
       "type": "VerticalBar",
       "props": {
-        "title": "Assist Kings",
+        "title": "Team Assist Kings",
         "subtitle": "Premier League assists this season",
         "items": [
           { "label": "Bruno Fernandes", "value": 9, "highlight": true },
-          { "label": "Bukayo Saka", "value": 8 },
-          { "label": "Martin Ødegaard", "value": 3 }
+          { "label": "Leandro Trossard", "value": 4 }
         ],
         "source": "Premier League",
         "date": "Jan 2026"
@@ -148,9 +148,9 @@
           { "year": "2013", "label": "Moyes", "description": "10 months" },
           { "year": "2014", "label": "Van Gaal", "description": "FA Cup" },
           { "year": "2016", "label": "Mourinho", "description": "Europa League" },
-          { "year": "2018", "label": "Solskjær" },
+          { "year": "2018", "label": "Solskjær", "description": "3 years" },
           { "year": "2021", "label": "Rangnick", "description": "Interim" },
-          { "year": "2022", "label": "Ten Hag" },
+          { "year": "2022", "label": "Ten Hag", "description": "Sacked" },
           { "year": "2024", "label": "Amorim", "description": "Sacked" },
           { "year": "2026", "label": "Carrick", "description": "Interim", "highlight": true }
         ],

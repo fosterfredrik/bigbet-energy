@@ -4,7 +4,6 @@ import {
   interpolate,
   useCurrentFrame,
   staticFile,
-  Img,
 } from "remotion";
 
 const fontFace = `
@@ -28,41 +27,49 @@ const fontFace = `
 }
 `;
 
-export interface StatCardSceneProps {
-  stat: string;
-  statLabel?: string;
+export interface TapeRow {
   label: string;
-  subtitle?: string;
-  date: string;
-  source: string;
-  portrait?: string;
-  quote?: string;
-  quoteAuthor?: string;
+  left: string | number;
+  right: string | number;
+  winner?: "left" | "right";
 }
 
-export const StatCardScene: React.FC<StatCardSceneProps> = ({
-  stat,
-  statLabel,
+export interface TaleOfTapeSceneProps {
+  label: string;
+  title: string;
+  leftName: string;
+  rightName: string;
+  rows: TapeRow[];
+  date: string;
+  source: string;
+}
+
+export const TaleOfTapeScene: React.FC<TaleOfTapeSceneProps> = ({
   label,
-  subtitle,
+  title,
+  leftName,
+  rightName,
+  rows,
   date,
   source,
-  portrait,
-  quote,
-  quoteAuthor,
 }) => {
   const frame = useCurrentFrame();
 
-  const headerOpacity = interpolate(frame, [0, 20], [0, 1], { extrapolateRight: "clamp" });
-  const contentOpacity = interpolate(frame, [10, 30], [0, 1], { extrapolateRight: "clamp" });
-  const footerOpacity = interpolate(frame, [30, 50], [0, 1], { extrapolateRight: "clamp" });
-  const portraitOpacity = interpolate(frame, [20, 40], [0, 1], { extrapolateRight: "clamp" });
+  const headerOpacity = interpolate(frame, [0, 20], [0, 1], {
+    extrapolateRight: "clamp",
+  });
+  const tableOpacity = interpolate(frame, [10, 30], [0, 1], {
+    extrapolateRight: "clamp",
+  });
+  const footerOpacity = interpolate(frame, [30, 50], [0, 1], {
+    extrapolateRight: "clamp",
+  });
 
   return (
     <AbsoluteFill style={{ backgroundColor: "#000" }}>
       <style>{fontFace}</style>
 
-      {/* Header - fixed at top */}
+      {/* Header */}
       <div
         style={{
           position: "absolute",
@@ -84,7 +91,7 @@ export const StatCardScene: React.FC<StatCardSceneProps> = ({
             marginBottom: 16,
           }}
         >
-          Market Stat
+          {label}
         </div>
         <h2
           style={{
@@ -98,123 +105,109 @@ export const StatCardScene: React.FC<StatCardSceneProps> = ({
             lineHeight: 1.1,
           }}
         >
-          {label}
+          {title}
         </h2>
-        {subtitle && (
-          <p
-            style={{
-              color: "#a3a3a3",
-              fontSize: 36,
-              fontFamily: "Geomanist, sans-serif",
-              marginTop: 32,
-            }}
-          >
-            {subtitle}
-          </p>
-        )}
       </div>
 
-      {/* Main Content - centered */}
+      {/* Table */}
       <div
         style={{
           position: "absolute",
-          top: 300,
+          top: 520,
           left: 60,
           right: 60,
-          bottom: 550,
+          bottom: 350,
           display: "flex",
           flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-          opacity: contentOpacity,
+          opacity: tableOpacity,
         }}
       >
-        {/* Stat */}
-        <div style={{ textAlign: "center", marginBottom: 48 }}>
-          <div
-            style={{
-              color: "#f59e0b",
-              fontSize: 280,
-              fontWeight: 900,
-              fontFamily: "Geomanist, sans-serif",
-              lineHeight: 1,
-            }}
-          >
-            {stat}
-          </div>
-          {statLabel && (
-            <div
-              style={{
-                color: "#f59e0b",
-                fontSize: 48,
-                fontWeight: 700,
-                fontFamily: "Geomanist, sans-serif",
-                letterSpacing: "0.1em",
-                textTransform: "uppercase",
-                marginTop: 16,
-              }}
-            >
-              {statLabel}
-            </div>
-          )}
-        </div>
-
-        {/* Quote */}
-        {quote && (
-          <div style={{ textAlign: "center", maxWidth: 800 }}>
-            <span
-              style={{
-                color: "#a3a3a3",
-                fontSize: 40,
-                fontWeight: 700,
-                fontFamily: "Geomanist, sans-serif",
-                fontStyle: "italic",
-                lineHeight: 1.3,
-              }}
-            >
-              "{quote}"
-            </span>
-            {quoteAuthor && (
-              <div
-                style={{
-                  color: "#737373",
-                  fontSize: 28,
-                  fontFamily: "Geomanist, sans-serif",
-                  marginTop: 20,
-                }}
-              >
-                — {quoteAuthor}
-              </div>
-            )}
-          </div>
-        )}
-      </div>
-
-      {/* Portrait - bottom left */}
-      {portrait && (
+        {/* Team names header */}
         <div
           style={{
-            position: "absolute",
-            bottom: 280,
-            left: 0,
-            width: 600,
-            height: 600,
-            opacity: 1,
+            display: "flex",
+            justifyContent: "space-between",
+            marginBottom: 32,
+            paddingBottom: 24,
+            borderBottom: "2px solid #333",
           }}
         >
-          <Img
-            src={staticFile(portrait)}
+          <span
             style={{
-              width: "100%",
-              height: "100%",
-              objectFit: "contain",
-              objectPosition: "bottom right",
+              color: "#f59e0b",
+              fontSize: 64,
+              fontWeight: 700,
+              fontFamily: "Geomanist, sans-serif",
+              textTransform: "uppercase",
             }}
-          />
+          >
+            {leftName}
+          </span>
+          <span
+            style={{
+              color: "#f59e0b",
+              fontSize: 64,
+              fontWeight: 700,
+              fontFamily: "Geomanist, sans-serif",
+              textTransform: "uppercase",
+            }}
+          >
+            {rightName}
+          </span>
         </div>
-      )}
 
-      {/* Footer - black bar at bottom */}
+        {/* Rows */}
+        {rows.map((row, index) => (
+          <div
+            key={index}
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+              paddingVertical: 16,
+              marginBottom: 32,
+            }}
+          >
+            <span
+              style={{
+                color: row.winner === "left" ? "#f59e0b" : "#a3a3a3",
+                fontSize: 72,
+                fontWeight: 700,
+                fontFamily: "Geomanist, sans-serif",
+                width: 200,
+              }}
+            >
+              {row.left}
+            </span>
+            <span
+              style={{
+                color: "#737373",
+                fontSize: 44,
+                fontWeight: 400,
+                fontFamily: "Geomanist, sans-serif",
+                textTransform: "uppercase",
+                letterSpacing: "0.1em",
+              }}
+            >
+              {row.label}
+            </span>
+            <span
+              style={{
+                color: row.winner === "right" ? "#f59e0b" : "#a3a3a3",
+                fontSize: 56,
+                fontWeight: 700,
+                fontFamily: "Geomanist, sans-serif",
+                width: 200,
+                textAlign: "right",
+              }}
+            >
+              {row.right}
+            </span>
+          </div>
+        ))}
+      </div>
+
+      {/* Footer */}
       <div
         style={{
           position: "absolute",
