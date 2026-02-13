@@ -4,28 +4,9 @@ import {
   interpolate,
   useCurrentFrame,
   staticFile,
+  Img,
 } from "remotion";
-
-const fontFace = `
-@font-face {
-  font-family: 'Geomanist';
-  src: url('${staticFile("fonts/Geomanist-Black.woff2")}') format('woff2');
-  font-weight: 900;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Geomanist';
-  src: url('${staticFile("fonts/Geomanist-Bold.woff2")}') format('woff2');
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Geomanist';
-  src: url('${staticFile("fonts/Geomanist-Regular.woff2")}') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-}
-`;
+import { theme, getFontFace } from "../theme";
 
 export interface BarItem {
   label: string;
@@ -38,8 +19,9 @@ export interface VerticalBarSceneProps {
   subtitle?: string;
   items: BarItem[];
   unit?: string;
-  date: string;
-  source: string;
+  date?: string;
+  source?: string;
+  isFirst?: boolean;
 }
 
 export const VerticalBarScene: React.FC<VerticalBarSceneProps> = ({
@@ -47,38 +29,38 @@ export const VerticalBarScene: React.FC<VerticalBarSceneProps> = ({
   subtitle,
   items,
   unit = "",
-  date,
-  source,
+  isFirst = false,
 }) => {
   const frame = useCurrentFrame();
+  const fontFace = getFontFace(staticFile);
 
-  const headerOpacity = interpolate(frame, [0, 20], [0, 1], { extrapolateRight: "clamp" });
-  const barsOpacity = interpolate(frame, [10, 30], [0, 1], { extrapolateRight: "clamp" });
-  const footerOpacity = interpolate(frame, [30, 50], [0, 1], { extrapolateRight: "clamp" });
+  const headerOpacity = isFirst ? 1 : interpolate(frame, [0, 20], [0, 1], { extrapolateRight: "clamp" });
+  const barsOpacity = isFirst ? 1 : interpolate(frame, [10, 30], [0, 1], { extrapolateRight: "clamp" });
+  const footerOpacity = isFirst ? 1 : interpolate(frame, [30, 50], [0, 1], { extrapolateRight: "clamp" });
 
   const maxValue = Math.max(...items.map((i) => i.value));
 
   return (
-    <AbsoluteFill style={{ backgroundColor: "#000" }}>
+    <AbsoluteFill style={{ backgroundColor: theme.colors.bgDark }}>
       <style>{fontFace}</style>
 
-      {/* Header - fixed at top */}
+      {/* Header */}
       <div
         style={{
           position: "absolute",
-          top: 250,
-          left: 60,
-          right: 60,
+          top: theme.sizes.headerTop,
+          left: theme.sizes.horizontalPadding,
+          right: theme.sizes.horizontalPadding,
           textAlign: "center",
           opacity: headerOpacity,
         }}
       >
         <div
           style={{
-            color: "#E5B94E",
-            fontSize: 32,
+            color: theme.colors.accent,
+            fontSize: theme.sizes.kickerSize,
             fontWeight: 700,
-            fontFamily: "Geomanist, sans-serif",
+            fontFamily: theme.fonts.primary,
             letterSpacing: "0.2em",
             textTransform: "uppercase",
             marginBottom: 16,
@@ -88,10 +70,10 @@ export const VerticalBarScene: React.FC<VerticalBarSceneProps> = ({
         </div>
         <h2
           style={{
-            color: "#fff",
-            fontSize: 72,
+            color: theme.colors.textPrimary,
+            fontSize: theme.sizes.titleSize,
             fontWeight: 700,
-            fontFamily: "Geomanist, sans-serif",
+            fontFamily: theme.fonts.primary,
             letterSpacing: "0.05em",
             textTransform: "uppercase",
             margin: 0,
@@ -103,9 +85,9 @@ export const VerticalBarScene: React.FC<VerticalBarSceneProps> = ({
         {subtitle && (
           <p
             style={{
-              color: "#a3a3a3",
-              fontSize: 36,
-              fontFamily: "Geomanist, sans-serif",
+              color: theme.colors.textSecondary,
+              fontSize: 42,
+              fontFamily: theme.fonts.primary,
               marginTop: 16,
             }}
           >
@@ -114,26 +96,28 @@ export const VerticalBarScene: React.FC<VerticalBarSceneProps> = ({
         )}
       </div>
 
-      {/* Bars - centered */}
+      {/* Bars */}
       <div
         style={{
           position: "absolute",
-          top: 300,
-          left: 60,
-          right: 60,
-          bottom: 500,
+          top: 380,
+          left: theme.sizes.horizontalPadding,
+          right: theme.sizes.horizontalPadding,
+          bottom: theme.sizes.footerHeight + 120,
           display: "flex",
           alignItems: "flex-end",
           justifyContent: "center",
-          gap: 48,
+          gap: 40,
           opacity: barsOpacity,
         }}
       >
         {items.map((item, index) => {
           const heightPercent = (item.value / maxValue) * 100;
-          const barGrow = interpolate(frame, [15 + index * 5, 40 + index * 5], [0, heightPercent], {
-            extrapolateRight: "clamp",
-          });
+          const barGrow = isFirst
+            ? heightPercent
+            : interpolate(frame, [15 + index * 5, 40 + index * 5], [0, heightPercent], {
+                extrapolateRight: "clamp",
+              });
 
           return (
             <div
@@ -142,18 +126,18 @@ export const VerticalBarScene: React.FC<VerticalBarSceneProps> = ({
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
-                gap: 16,
+                gap: 12,
                 flex: 1,
-                maxWidth: 240,
+                maxWidth: 200,
               }}
             >
               {/* Value */}
               <span
                 style={{
-                  color: item.highlight ? "#f59e0b" : "#d4d4d4",
+                  color: item.highlight ? theme.colors.accent : theme.colors.textSecondary,
                   fontSize: 72,
                   fontWeight: 700,
-                  fontFamily: "Geomanist, sans-serif",
+                  fontFamily: theme.fonts.primary,
                 }}
               >
                 {item.value.toLocaleString()}
@@ -173,9 +157,9 @@ export const VerticalBarScene: React.FC<VerticalBarSceneProps> = ({
                   style={{
                     width: "100%",
                     height: `${barGrow}%`,
-                    backgroundColor: item.highlight ? "#f59e0b" : "#404040",
-                    borderTopLeftRadius: 12,
-                    borderTopRightRadius: 12,
+                    backgroundColor: item.highlight ? theme.colors.accent : theme.colors.mutedBar,
+                    borderTopLeftRadius: 10,
+                    borderTopRightRadius: 10,
                   }}
                 />
               </div>
@@ -183,13 +167,13 @@ export const VerticalBarScene: React.FC<VerticalBarSceneProps> = ({
               {/* Label */}
               <span
                 style={{
-                  color: item.highlight ? "#f59e0b" : "#d4d4d4",
-                  fontSize: 32,
+                  color: item.highlight ? theme.colors.accent : theme.colors.textSecondary,
+                  fontSize: 42,
                   fontWeight: 700,
-                  fontFamily: "Geomanist, sans-serif",
+                  fontFamily: theme.fonts.primary,
                   textAlign: "center",
                   lineHeight: 1.2,
-                  height: 70,  // ← add this
+                  height: 60,
                   display: "flex",
                   alignItems: "flex-start",
                   justifyContent: "center",
@@ -202,36 +186,29 @@ export const VerticalBarScene: React.FC<VerticalBarSceneProps> = ({
         })}
       </div>
 
-      {/* Footer - black bar at bottom */}
+      {/* Footer */}
       <div
         style={{
           position: "absolute",
           bottom: 0,
           left: 0,
           right: 0,
-          height: 280,
-          backgroundColor: "#000",
+          height: theme.sizes.footerHeight,
+          backgroundColor: "#111111",
+          borderTop: `1px solid ${theme.colors.border}`,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
           opacity: footerOpacity,
         }}
       >
-        <div
+        <Img
+          src={staticFile("images/bbe-500x105.png")}
           style={{
-            padding: "24px 60px",
-            borderTop: "1px solid #333",
+            height: 60,
+            objectFit: "contain",
           }}
-        >
-          <div
-            style={{
-              color: "#a3a3a3",
-              fontSize: 18,
-              fontFamily: "Geomanist, sans-serif",
-              letterSpacing: "0.1em",
-              textTransform: "uppercase",
-            }}
-          >
-            {source} • {date}
-          </div>
-        </div>
+        />
       </div>
     </AbsoluteFill>
   );

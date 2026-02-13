@@ -6,27 +6,7 @@ import {
   staticFile,
   Img,
 } from "remotion";
-
-const fontFace = `
-@font-face {
-  font-family: 'Geomanist';
-  src: url('${staticFile("fonts/Geomanist-Black.woff2")}') format('woff2');
-  font-weight: 900;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Geomanist';
-  src: url('${staticFile("fonts/Geomanist-Bold.woff2")}') format('woff2');
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Geomanist';
-  src: url('${staticFile("fonts/Geomanist-Regular.woff2")}') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-}
-`;
+import { theme, getFontFace, getVariantColors } from "../theme";
 
 export interface OddsItem {
   label: string;
@@ -36,8 +16,8 @@ export interface OddsItem {
 
 export interface OddsBarSceneProps {
   market: string;
-  date: string;
-  source: string;
+  date?: string;
+  source?: string;
   odds: OddsItem[];
   variant?: "dark" | "light";
   portrait?: string;
@@ -46,14 +26,14 @@ export interface OddsBarSceneProps {
 
 export const OddsBarScene: React.FC<OddsBarSceneProps> = ({
   market,
-  date,
-  source,
   odds,
   variant = "dark",
   portrait,
   isFirst = false,
 }) => {
   const frame = useCurrentFrame();
+  const fontFace = getFontFace(staticFile);
+  const colors = getVariantColors(variant);
 
   const headerOpacity = isFirst ? 1 : interpolate(frame, [0, 20], [0, 1], {
     extrapolateRight: "clamp",
@@ -70,62 +50,39 @@ export const OddsBarScene: React.FC<OddsBarSceneProps> = ({
 
   const portraitScale = isFirst
     ? interpolate(frame, [30, 60], [1, 1.05], {
-      extrapolateRight: "clamp",
-      extrapolateLeft: "clamp",
-    })
+        extrapolateRight: "clamp",
+        extrapolateLeft: "clamp",
+      })
     : 1;
 
   const maxValue = Math.max(...odds.map((o) => o.value));
   const hasHighlight = odds.some((o) => o.highlight);
-  const isDark = variant === "dark";
 
   const gap = odds.length <= 3 ? 54 : 36;
   const barHeight = odds.length <= 3 ? 32 : 24;
   const valueFontSize = odds.length <= 3 ? 96 : 72;
   const labelFontSize = odds.length <= 3 ? 50 : 40;
 
-  const bg = isDark ? "#000" : "#f59e0b";
-  const headerKickerColor = isDark ? "#f59e0b" : "rgba(0,0,0,0.6)";
-  const headerTitleColor = isDark ? "#fff" : "#000";
-  const borderColor = isDark ? "#333" : "rgba(0,0,0,0.2)";
-  const footerTextColor = isDark ? "#737373" : "rgba(0,0,0,0.5)";
-  const barTrackColor = isDark ? "#171717" : "rgba(0,0,0,0.2)";
-
-  const labelColor = (highlight: boolean) => {
-    if (isDark) return highlight ? "#f59e0b" : "#a3a3a3";
-    return highlight ? "#000" : "rgba(0,0,0,0.5)";
-  };
-
-  const valueColor = (highlight: boolean) => {
-    if (isDark) return highlight ? "#fff" : "#525252";
-    return highlight ? "#000" : "rgba(0,0,0,0.4)";
-  };
-
-  const fillColor = (highlight: boolean) => {
-    if (isDark) return highlight ? "#f59e0b" : "#404040";
-    return highlight ? "#000" : "rgba(0,0,0,0.3)";
-  };
-
   return (
-    <AbsoluteFill style={{ backgroundColor: bg }}>
+    <AbsoluteFill style={{ backgroundColor: colors.bg }}>
       <style>{fontFace}</style>
 
-      {/* Header - fixed at top */}
+      {/* Header */}
       <div
         style={{
           position: "absolute",
-          top: 250,
-          left: 60,
-          right: 60,
+          top: theme.sizes.headerTop,
+          left: theme.sizes.horizontalPadding,
+          right: theme.sizes.horizontalPadding,
           opacity: headerOpacity,
         }}
       >
         <div
           style={{
-            color: headerKickerColor,
-            fontSize: 32,
+            color: colors.headerKicker,
+            fontSize: theme.sizes.kickerSize,
             fontWeight: 700,
-            fontFamily: "Geomanist, sans-serif",
+            fontFamily: theme.fonts.primary,
             letterSpacing: "0.2em",
             textTransform: "uppercase",
             marginBottom: 12,
@@ -136,10 +93,10 @@ export const OddsBarScene: React.FC<OddsBarSceneProps> = ({
 
         <h2
           style={{
-            color: headerTitleColor,
-            fontSize: 72,
+            color: colors.headerTitle,
+            fontSize: theme.sizes.titleSize,
             fontWeight: 700,
-            fontFamily: "Geomanist, sans-serif",
+            fontFamily: theme.fonts.primary,
             letterSpacing: "0.05em",
             textTransform: "uppercase",
             margin: 0,
@@ -150,14 +107,14 @@ export const OddsBarScene: React.FC<OddsBarSceneProps> = ({
         </h2>
       </div>
 
-      {/* Bars - centered in middle zone */}
+      {/* Bars */}
       <div
         style={{
           position: "absolute",
-          top: 120,
-          left: 60,
-          right: 60,
-          bottom: 500,
+          top: 60,
+          left: theme.sizes.horizontalPadding,
+          right: theme.sizes.horizontalPadding,
+          bottom: theme.sizes.footerHeight + 60,
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
@@ -170,12 +127,11 @@ export const OddsBarScene: React.FC<OddsBarSceneProps> = ({
           const barProgress = isFirst
             ? item.value
             : interpolate(frame, [15 + index * 5, 35 + index * 5], [0, item.value], {
-              extrapolateRight: "clamp",
-            });
+                extrapolateRight: "clamp",
+              });
 
           return (
             <div key={index}>
-              {/* Row */}
               <div
                 style={{
                   display: "flex",
@@ -187,10 +143,10 @@ export const OddsBarScene: React.FC<OddsBarSceneProps> = ({
               >
                 <span
                   style={{
-                    color: labelColor(isHighlight),
+                    color: isHighlight ? colors.labelHighlight : colors.labelMuted,
                     fontSize: labelFontSize,
                     fontWeight: 700,
-                    fontFamily: "Geomanist, sans-serif",
+                    fontFamily: theme.fonts.primary,
                     letterSpacing: "0.1em",
                     textTransform: "uppercase",
                   }}
@@ -200,10 +156,10 @@ export const OddsBarScene: React.FC<OddsBarSceneProps> = ({
 
                 <span
                   style={{
-                    color: valueColor(isHighlight),
+                    color: isHighlight ? colors.valueHighlight : colors.valueMuted,
                     fontSize: valueFontSize,
                     fontWeight: 700,
-                    fontFamily: "Geomanist, sans-serif",
+                    fontFamily: theme.fonts.primary,
                     lineHeight: 1,
                   }}
                 >
@@ -211,14 +167,13 @@ export const OddsBarScene: React.FC<OddsBarSceneProps> = ({
                 </span>
               </div>
 
-              {/* Track */}
               <div
                 style={{
                   width: "100%",
                   height: barHeight,
                   borderRadius: 999,
                   overflow: "hidden",
-                  backgroundColor: barTrackColor,
+                  backgroundColor: colors.barTrack,
                 }}
               >
                 <div
@@ -226,7 +181,7 @@ export const OddsBarScene: React.FC<OddsBarSceneProps> = ({
                     height: "100%",
                     width: `${barProgress}%`,
                     borderRadius: 999,
-                    backgroundColor: fillColor(isHighlight),
+                    backgroundColor: isHighlight ? colors.fillHighlight : colors.fillMuted,
                   }}
                 />
               </div>
@@ -235,47 +190,15 @@ export const OddsBarScene: React.FC<OddsBarSceneProps> = ({
         })}
       </div>
 
-      {/* Footer - black bar at bottom */}
-      <div
-        style={{
-          position: "absolute",
-          bottom: 0,
-          left: 0,
-          right: 0,
-          height: 280,
-          backgroundColor: "#000",
-          opacity: footerOpacity,
-        }}
-      >
-        <div
-          style={{
-            padding: "24px 60px",
-            borderTop: `1px solid ${borderColor}`,
-          }}
-        >
-          <div
-            style={{
-              color: "#a3a3a3",
-              fontSize: 18,
-              fontFamily: "Geomanist, sans-serif",
-              letterSpacing: "0.1em",
-              textTransform: "uppercase",
-            }}
-          >
-            {source} • {date}
-          </div>
-        </div>
-      </div>
-
-      {/* Portrait - rests on footer */}
+      {/* Portrait */}
       {portrait && (
         <div
           style={{
             position: "absolute",
             right: 0,
-            bottom: 280,
-            width: 600,
-            height: 600,
+            bottom: theme.sizes.footerHeight,
+            width: 400,
+            height: 400,
             opacity: portraitOpacity,
             transform: `scale(${portraitScale})`,
             transformOrigin: "bottom right",
@@ -293,6 +216,30 @@ export const OddsBarScene: React.FC<OddsBarSceneProps> = ({
         </div>
       )}
 
+      {/* Footer */}
+      <div
+        style={{
+          position: "absolute",
+          bottom: 0,
+          left: 0,
+          right: 0,
+          height: theme.sizes.footerHeight,
+          backgroundColor: "#111111",
+          borderTop: `1px solid ${theme.colors.border}`,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          opacity: footerOpacity,
+        }}
+      >
+        <Img
+          src={staticFile("images/bbe-500x105.png")}
+          style={{
+            height: 60,
+            objectFit: "contain",
+          }}
+        />
+      </div>
     </AbsoluteFill>
   );
 };

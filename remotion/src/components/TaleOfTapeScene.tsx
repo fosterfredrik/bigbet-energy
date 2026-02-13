@@ -4,34 +4,15 @@ import {
   interpolate,
   useCurrentFrame,
   staticFile,
+  Img,
 } from "remotion";
+import { theme, getFontFace } from "../theme";
 
-const fontFace = `
-@font-face {
-  font-family: 'Geomanist';
-  src: url('${staticFile("fonts/Geomanist-Black.woff2")}') format('woff2');
-  font-weight: 900;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Geomanist';
-  src: url('${staticFile("fonts/Geomanist-Bold.woff2")}') format('woff2');
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Geomanist';
-  src: url('${staticFile("fonts/Geomanist-Regular.woff2")}') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-}
-`;
-
-export interface TapeRow {
+export interface TaleOfTapeRow {
   label: string;
   left: string | number;
   right: string | number;
-  winner?: "left" | "right";
+  winner?: "left" | "right" | "draw";
 }
 
 export interface TaleOfTapeSceneProps {
@@ -39,9 +20,10 @@ export interface TaleOfTapeSceneProps {
   title: string;
   leftName: string;
   rightName: string;
-  rows: TapeRow[];
-  date: string;
-  source: string;
+  rows: TaleOfTapeRow[];
+  source?: string;
+  date?: string;
+  isFirst?: boolean;
 }
 
 export const TaleOfTapeScene: React.FC<TaleOfTapeSceneProps> = ({
@@ -50,55 +32,56 @@ export const TaleOfTapeScene: React.FC<TaleOfTapeSceneProps> = ({
   leftName,
   rightName,
   rows,
-  date,
-  source,
+  isFirst = false,
 }) => {
   const frame = useCurrentFrame();
+  const fontFace = getFontFace(staticFile);
 
-  const headerOpacity = interpolate(frame, [0, 20], [0, 1], {
+  const headerOpacity = isFirst ? 1 : interpolate(frame, [0, 20], [0, 1], {
     extrapolateRight: "clamp",
   });
-  const tableOpacity = interpolate(frame, [10, 30], [0, 1], {
+  const tableOpacity = isFirst ? 1 : interpolate(frame, [15, 35], [0, 1], {
     extrapolateRight: "clamp",
   });
-  const footerOpacity = interpolate(frame, [30, 50], [0, 1], {
+  const footerOpacity = isFirst ? 1 : interpolate(frame, [35, 50], [0, 1], {
     extrapolateRight: "clamp",
   });
 
   return (
-    <AbsoluteFill style={{ backgroundColor: "#000" }}>
+    <AbsoluteFill style={{ backgroundColor: theme.colors.bgDark }}>
       <style>{fontFace}</style>
 
       {/* Header */}
       <div
         style={{
           position: "absolute",
-          top: 250,
-          left: 60,
-          right: 60,
+          top: theme.sizes.headerTop,
+          left: theme.sizes.horizontalPadding,
+          right: theme.sizes.horizontalPadding,
           textAlign: "center",
           opacity: headerOpacity,
         }}
       >
         <div
           style={{
-            color: "#E5B94E",
-            fontSize: 32,
+            color: theme.colors.accent,
+            fontSize: theme.sizes.kickerSize,
             fontWeight: 700,
-            fontFamily: "Geomanist, sans-serif",
+            fontFamily: theme.fonts.primary,
             letterSpacing: "0.2em",
             textTransform: "uppercase",
-            marginBottom: 16,
+            marginBottom: 12,
           }}
         >
           {label}
         </div>
+
         <h2
           style={{
-            color: "#fff",
-            fontSize: 72,
+            color: theme.colors.textPrimary,
+            fontSize: theme.sizes.titleSize,
             fontWeight: 700,
-            fontFamily: "Geomanist, sans-serif",
+            fontFamily: theme.fonts.primary,
             letterSpacing: "0.05em",
             textTransform: "uppercase",
             margin: 0,
@@ -109,102 +92,121 @@ export const TaleOfTapeScene: React.FC<TaleOfTapeSceneProps> = ({
         </h2>
       </div>
 
-      {/* Table */}
+      {/* Team names header */}
       <div
         style={{
           position: "absolute",
-          top: 520,
-          left: 60,
-          right: 60,
-          bottom: 350,
+          top: 300,
+          left: theme.sizes.horizontalPadding,
+          right: theme.sizes.horizontalPadding,
           display: "flex",
-          flexDirection: "column",
+          justifyContent: "space-between",
           opacity: tableOpacity,
         }}
       >
-        {/* Team names header */}
         <div
           style={{
-            display: "flex",
-            justifyContent: "space-between",
-            marginBottom: 32,
-            paddingBottom: 24,
-            borderBottom: "2px solid #333",
+            color: theme.colors.accent,
+            fontSize: 52,
+            fontWeight: 700,
+            fontFamily: theme.fonts.primary,
+            textTransform: "uppercase",
+            letterSpacing: "0.1em",
           }}
         >
-          <span
-            style={{
-              color: "#f59e0b",
-              fontSize: 64,
-              fontWeight: 700,
-              fontFamily: "Geomanist, sans-serif",
-              textTransform: "uppercase",
-            }}
-          >
-            {leftName}
-          </span>
-          <span
-            style={{
-              color: "#f59e0b",
-              fontSize: 64,
-              fontWeight: 700,
-              fontFamily: "Geomanist, sans-serif",
-              textTransform: "uppercase",
-            }}
-          >
-            {rightName}
-          </span>
+          {leftName}
         </div>
+        <div
+          style={{
+            color: theme.colors.accent,
+            fontSize: 52,
+            fontWeight: 700,
+            fontFamily: theme.fonts.primary,
+            textTransform: "uppercase",
+            letterSpacing: "0.1em",
+          }}
+        >
+          {rightName}
+        </div>
+      </div>
 
-        {/* Rows */}
-        {rows.map((row, index) => (
-          <div
-            key={index}
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "center",
-              paddingVertical: 16,
-              marginBottom: 32,
-            }}
-          >
-            <span
+      {/* Rows */}
+      <div
+        style={{
+          position: "absolute",
+          top: 400,
+          left: theme.sizes.horizontalPadding,
+          right: theme.sizes.horizontalPadding,
+          bottom: theme.sizes.footerHeight + 40,
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          opacity: tableOpacity,
+        }}
+      >
+        {rows.map((row, index) => {
+          const rowOpacity = isFirst
+            ? 1
+            : interpolate(frame, [20 + index * 5, 35 + index * 5], [0, 1], {
+                extrapolateRight: "clamp",
+              });
+
+          return (
+            <div
+              key={index}
               style={{
-                color: row.winner === "left" ? "#f59e0b" : "#a3a3a3",
-                fontSize: 72,
-                fontWeight: 700,
-                fontFamily: "Geomanist, sans-serif",
-                width: 200,
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+                padding: "32px 0",
+                borderBottom: `1px solid ${theme.colors.border}`,
+                opacity: rowOpacity,
               }}
             >
-              {row.left}
-            </span>
-            <span
-              style={{
-                color: "#737373",
-                fontSize: 44,
-                fontWeight: 400,
-                fontFamily: "Geomanist, sans-serif",
-                textTransform: "uppercase",
-                letterSpacing: "0.1em",
-              }}
-            >
-              {row.label}
-            </span>
-            <span
-              style={{
-                color: row.winner === "right" ? "#f59e0b" : "#a3a3a3",
-                fontSize: 56,
-                fontWeight: 700,
-                fontFamily: "Geomanist, sans-serif",
-                width: 200,
-                textAlign: "right",
-              }}
-            >
-              {row.right}
-            </span>
-          </div>
-        ))}
+              {/* Left value */}
+              <div
+                style={{
+                  color: row.winner === "left" ? theme.colors.accent : theme.colors.textSecondary,
+                  fontSize: 64,
+                  fontWeight: 700,
+                  fontFamily: theme.fonts.primary,
+                  width: 200,
+                }}
+              >
+                {row.left}
+              </div>
+
+              {/* Label */}
+              <div
+                style={{
+                  color: theme.colors.textMuted,
+                  fontSize: 36,
+                  fontFamily: theme.fonts.primary,
+                  textTransform: "uppercase",
+                  letterSpacing: "0.1em",
+                  textAlign: "center",
+                  flex: 1,
+                }}
+              >
+                {row.label}
+              </div>
+
+              {/* Right value */}
+              <div
+                style={{
+                  color: row.winner === "right" ? theme.colors.accent : theme.colors.textSecondary,
+                  fontSize: 64,
+                  fontWeight: 700,
+                  fontFamily: theme.fonts.primary,
+                  width: 200,
+                  textAlign: "right",
+                }}
+              >
+                {row.right}
+              </div>
+            </div>
+          );
+        })}
       </div>
 
       {/* Footer */}
@@ -214,29 +216,22 @@ export const TaleOfTapeScene: React.FC<TaleOfTapeSceneProps> = ({
           bottom: 0,
           left: 0,
           right: 0,
-          height: 280,
-          backgroundColor: "#000",
+          height: theme.sizes.footerHeight,
+          backgroundColor: "#111111",
+          borderTop: `1px solid ${theme.colors.border}`,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
           opacity: footerOpacity,
         }}
       >
-        <div
+        <Img
+          src={staticFile("images/bbe-500x105.png")}
           style={{
-            padding: "24px 60px",
-            borderTop: "1px solid #333",
+            height: 60,
+            objectFit: "contain",
           }}
-        >
-          <div
-            style={{
-              color: "#a3a3a3",
-              fontSize: 18,
-              fontFamily: "Geomanist, sans-serif",
-              letterSpacing: "0.1em",
-              textTransform: "uppercase",
-            }}
-          >
-            {source} • {date}
-          </div>
-        </div>
+        />
       </div>
     </AbsoluteFill>
   );

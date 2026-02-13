@@ -4,28 +4,9 @@ import {
   interpolate,
   useCurrentFrame,
   staticFile,
+  Img,
 } from "remotion";
-
-const fontFace = `
-@font-face {
-  font-family: 'Geomanist';
-  src: url('${staticFile("fonts/Geomanist-Black.woff2")}') format('woff2');
-  font-weight: 900;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Geomanist';
-  src: url('${staticFile("fonts/Geomanist-Bold.woff2")}') format('woff2');
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Geomanist';
-  src: url('${staticFile("fonts/Geomanist-Regular.woff2")}') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-}
-`;
+import { theme, getFontFace } from "../theme";
 
 export interface TimelineEvent {
   year: string;
@@ -39,8 +20,9 @@ export interface TimelineSceneProps {
   title: string;
   subtitle?: string;
   events: TimelineEvent[];
-  date: string;
-  source: string;
+  source?: string;
+  date?: string;
+  isFirst?: boolean;
 }
 
 export const TimelineScene: React.FC<TimelineSceneProps> = ({
@@ -48,42 +30,42 @@ export const TimelineScene: React.FC<TimelineSceneProps> = ({
   title,
   subtitle,
   events,
-  date,
-  source,
+  isFirst = false,
 }) => {
   const frame = useCurrentFrame();
+  const fontFace = getFontFace(staticFile);
 
-  const headerOpacity = interpolate(frame, [0, 20], [0, 1], {
+  const headerOpacity = isFirst ? 1 : interpolate(frame, [0, 20], [0, 1], {
     extrapolateRight: "clamp",
   });
-  const timelineOpacity = interpolate(frame, [10, 30], [0, 1], {
+  const timelineOpacity = isFirst ? 1 : interpolate(frame, [10, 30], [0, 1], {
     extrapolateRight: "clamp",
   });
-  const footerOpacity = interpolate(frame, [30, 50], [0, 1], {
+  const footerOpacity = isFirst ? 1 : interpolate(frame, [30, 50], [0, 1], {
     extrapolateRight: "clamp",
   });
 
   return (
-    <AbsoluteFill style={{ backgroundColor: "#000" }}>
+    <AbsoluteFill style={{ backgroundColor: theme.colors.bgDark }}>
       <style>{fontFace}</style>
 
       {/* Header */}
       <div
         style={{
           position: "absolute",
-          top: 250,
-          left: 60,
-          right: 60,
+          top: theme.sizes.headerTop,
+          left: theme.sizes.horizontalPadding,
+          right: theme.sizes.horizontalPadding,
           textAlign: "center",
           opacity: headerOpacity,
         }}
       >
         <div
           style={{
-            color: "#E5B94E",
-            fontSize: 32,
+            color: theme.colors.accent,
+            fontSize: theme.sizes.kickerSize,
             fontWeight: 700,
-            fontFamily: "Geomanist, sans-serif",
+            fontFamily: theme.fonts.primary,
             letterSpacing: "0.2em",
             textTransform: "uppercase",
             marginBottom: 16,
@@ -93,10 +75,10 @@ export const TimelineScene: React.FC<TimelineSceneProps> = ({
         </div>
         <h2
           style={{
-            color: "#fff",
-            fontSize: 72,
+            color: theme.colors.textPrimary,
+            fontSize: theme.sizes.titleSize,
             fontWeight: 700,
-            fontFamily: "Geomanist, sans-serif",
+            fontFamily: theme.fonts.primary,
             letterSpacing: "0.05em",
             textTransform: "uppercase",
             margin: 0,
@@ -108,9 +90,9 @@ export const TimelineScene: React.FC<TimelineSceneProps> = ({
         {subtitle && (
           <p
             style={{
-              color: "#a3a3a3",
-              fontSize: 36,
-              fontFamily: "Geomanist, sans-serif",
+              color: theme.colors.textSecondary,
+              fontSize: 42,
+              fontFamily: theme.fonts.primary,
               marginTop: 24,
             }}
           >
@@ -119,27 +101,26 @@ export const TimelineScene: React.FC<TimelineSceneProps> = ({
         )}
       </div>
 
-      {/* Timeline */}
+      {/* Timeline - horizontal rows */}
       <div
         style={{
           position: "absolute",
-          top: 580,
-          left: 60,
-          right: 60,
-          bottom: 350,
+          top: 380,
+          left: theme.sizes.horizontalPadding,
+          right: theme.sizes.horizontalPadding,
+          bottom: theme.sizes.footerHeight + 40,
           display: "flex",
           flexDirection: "column",
-          gap: 48,
+          gap: 32,
           opacity: timelineOpacity,
         }}
       >
         {events.map((event, index) => {
-          const eventOpacity = interpolate(
-            frame,
-            [15 + index * 5, 25 + index * 5],
-            [0, 1],
-            { extrapolateRight: "clamp" }
-          );
+          const eventOpacity = isFirst
+            ? 1
+            : interpolate(frame, [15 + index * 5, 25 + index * 5], [0, 1], {
+                extrapolateRight: "clamp",
+              });
 
           return (
             <div
@@ -147,41 +128,32 @@ export const TimelineScene: React.FC<TimelineSceneProps> = ({
               style={{
                 display: "flex",
                 alignItems: "center",
-                gap: 32,
+                gap: 24,
                 opacity: eventOpacity,
               }}
             >
               {/* Year */}
               <span
                 style={{
-                  color: event.highlight ? "#f59e0b" : "#737373",
-                  fontSize: 64,
+                  color: event.highlight ? theme.colors.accent : theme.colors.textMuted,
+                  fontSize: 44,
                   fontWeight: 700,
-                  fontFamily: "Geomanist, sans-serif",
-                  width: 160,
+                  fontFamily: theme.fonts.primary,
+                  width: 130,
+                  flexShrink: 0,
                 }}
               >
                 {event.year}
               </span>
 
-              {/* Dot */}
-              <div
-                style={{
-                  width: 36,
-                  height: 36,
-                  borderRadius: "50%",
-                  backgroundColor: event.highlight ? "#f59e0b" : "#404040",
-                }}
-              />
-
               {/* Label + Description */}
               <div style={{ display: "flex", alignItems: "baseline", gap: 16 }}>
                 <span
                   style={{
-                    color: event.highlight ? "#f59e0b" : "#fff",
-                    fontSize: 72,
+                    color: event.highlight ? theme.colors.accent : theme.colors.textPrimary,
+                    fontSize: 48,
                     fontWeight: 700,
-                    fontFamily: "Geomanist, sans-serif",
+                    fontFamily: theme.fonts.primary,
                   }}
                 >
                   {event.label}
@@ -189,9 +161,9 @@ export const TimelineScene: React.FC<TimelineSceneProps> = ({
                 {event.description && (
                   <span
                     style={{
-                      color: "#737373",
-                      fontSize: 52,
-                      fontFamily: "Geomanist, sans-serif",
+                      color: theme.colors.textMuted,
+                      fontSize: 42,
+                      fontFamily: theme.fonts.primary,
                     }}
                   >
                     {event.description}
@@ -210,29 +182,22 @@ export const TimelineScene: React.FC<TimelineSceneProps> = ({
           bottom: 0,
           left: 0,
           right: 0,
-          height: 280,
-          backgroundColor: "#000",
+          height: theme.sizes.footerHeight,
+          backgroundColor: "#111111",
+          borderTop: `1px solid ${theme.colors.border}`,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
           opacity: footerOpacity,
         }}
       >
-        <div
+        <Img
+          src={staticFile("images/bbe-500x105.png")}
           style={{
-            padding: "24px 60px",
-            borderTop: "1px solid #333",
+            height: 60,
+            objectFit: "contain",
           }}
-        >
-          <div
-            style={{
-              color: "#a3a3a3",
-              fontSize: 18,
-              fontFamily: "Geomanist, sans-serif",
-              letterSpacing: "0.1em",
-              textTransform: "uppercase",
-            }}
-          >
-            {source} • {date}
-          </div>
-        </div>
+        />
       </div>
     </AbsoluteFill>
   );

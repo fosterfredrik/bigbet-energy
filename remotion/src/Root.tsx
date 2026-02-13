@@ -21,7 +21,7 @@ export const RemotionRoot = () => {
         durationInFrames={90}
         fps={30}
         width={1080}
-        height={1920}
+        height={1350}
         defaultProps={{
           quote: "We are going to do something on Greenland, whether they like it or not. I would like to make a deal the easy way but if we don't do it the easy way, we're going to do it the hard way.",
           author: "Donald Trump",
@@ -38,7 +38,7 @@ export const RemotionRoot = () => {
         durationInFrames={90}
         fps={30}
         width={1080}
-        height={1920}
+        height={1350}
         defaultProps={{
           label: "The Target",
           title: "57,000 People. 3x Texas.",
@@ -55,7 +55,7 @@ export const RemotionRoot = () => {
         durationInFrames={90}
         fps={30}
         width={1080}
-        height={1920}
+        height={1350}
         defaultProps={{
           category: "Public Opinion",
           label: "Greenlanders Say No",
@@ -73,7 +73,7 @@ export const RemotionRoot = () => {
         durationInFrames={90}
         fps={30}
         width={1080}
-        height={1920}
+        height={1350}
         defaultProps={{
           label: "The Wildcard",
           title: "Invasion Odds",
@@ -91,7 +91,7 @@ export const RemotionRoot = () => {
         durationInFrames={90}
         fps={30}
         width={1080}
-        height={1920}
+        height={1350}
         defaultProps={{
           stat: "1.5M",
           statLabel: "Tons of Rare Earths",
@@ -110,7 +110,7 @@ export const RemotionRoot = () => {
         durationInFrames={90}
         fps={30}
         width={1080}
-        height={1920}
+        height={1350}
         defaultProps={{
           title: "America's Shopping History",
           subtitle: "US territory purchases — and the one that got away",
@@ -131,7 +131,7 @@ export const RemotionRoot = () => {
         durationInFrames={90}
         fps={30}
         width={1080}
-        height={1920}
+        height={1350}
         defaultProps={{
           label: "Not The First Attempt",
           title: "Harry Truman",
@@ -151,7 +151,7 @@ export const RemotionRoot = () => {
         durationInFrames={90}
         fps={30}
         width={1080}
-        height={1920}
+        height={1350}
         defaultProps={{
           market: "Trump's Shopping List",
           variant: "light",
@@ -171,10 +171,10 @@ export const RemotionRoot = () => {
           key={post.id}
           id={post.id}
           component={PostVideo}
-          durationInFrames={(post.data.videoSequence?.length || 10) * 150}
+          durationInFrames={(post.data.videoSequence?.length || 10) * 450}
           fps={30}
           width={1080}
-          height={1920}
+          height={1350}
           defaultProps={{
             blocks: post.data.blocks,
             videoSequence: post.data.videoSequence,

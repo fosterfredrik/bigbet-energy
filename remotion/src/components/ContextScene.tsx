@@ -4,35 +4,17 @@ import {
   interpolate,
   useCurrentFrame,
   staticFile,
+  Img,
 } from "remotion";
-
-const fontFace = `
-@font-face {
-  font-family: 'Geomanist';
-  src: url('${staticFile("fonts/Geomanist-Black.woff2")}') format('woff2');
-  font-weight: 900;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Geomanist';
-  src: url('${staticFile("fonts/Geomanist-Bold.woff2")}') format('woff2');
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Geomanist';
-  src: url('${staticFile("fonts/Geomanist-Regular.woff2")}') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-}
-`;
+import { theme, getFontFace } from "../theme";
 
 export interface ContextSceneProps {
   label: string;
   title: string;
   body: string;
-  date: string;
-  source: string;
+  date?: string;
+  source?: string;
+  isFirst?: boolean;
 }
 
 export const ContextScene: React.FC<ContextSceneProps> = ({
@@ -41,16 +23,18 @@ export const ContextScene: React.FC<ContextSceneProps> = ({
   body,
   date,
   source,
+  isFirst = false,
 }) => {
   const frame = useCurrentFrame();
+  const fontFace = getFontFace(staticFile);
 
-  const headerOpacity = interpolate(frame, [0, 20], [0, 1], {
+  const headerOpacity = isFirst ? 1 : interpolate(frame, [0, 20], [0, 1], {
     extrapolateRight: "clamp",
   });
-  const bodyOpacity = interpolate(frame, [10, 30], [0, 1], {
+  const bodyOpacity = isFirst ? 1 : interpolate(frame, [10, 30], [0, 1], {
     extrapolateRight: "clamp",
   });
-  const footerOpacity = interpolate(frame, [30, 50], [0, 1], {
+  const footerOpacity = isFirst ? 1 : interpolate(frame, [30, 50], [0, 1], {
     extrapolateRight: "clamp",
   });
 
@@ -63,7 +47,7 @@ export const ContextScene: React.FC<ContextSceneProps> = ({
             key={index}
             style={{
               textDecoration: "underline",
-              textDecorationColor: "#f59e0b",
+              textDecorationColor: theme.colors.accent,
               textDecorationThickness: "4px",
               textUnderlineOffset: "6px",
             }}
@@ -77,38 +61,38 @@ export const ContextScene: React.FC<ContextSceneProps> = ({
   };
 
   return (
-    <AbsoluteFill style={{ backgroundColor: "#000" }}>
+    <AbsoluteFill style={{ backgroundColor: theme.colors.bgDark }}>
       <style>{fontFace}</style>
 
-      {/* Header - fixed at top */}
+      {/* Header */}
       <div
         style={{
           position: "absolute",
-          top: 250,
-          left: 60,
-          right: 60,
+          top: theme.sizes.headerTop,
+          left: theme.sizes.horizontalPadding,
+          right: theme.sizes.horizontalPadding,
           opacity: headerOpacity,
         }}
       >
         <div
           style={{
-            color: "#E5B94E",
-            fontSize: 32,
+            color: theme.colors.accent,
+            fontSize: theme.sizes.kickerSize,
             fontWeight: 700,
-            fontFamily: "Geomanist, sans-serif",
+            fontFamily: theme.fonts.primary,
             letterSpacing: "0.2em",
             textTransform: "uppercase",
-            marginBottom: 16,
+            marginBottom: 12,
           }}
         >
           {label}
         </div>
         <h2
           style={{
-            color: "#a3a3a3",
+            color: theme.colors.textSecondary,
             fontSize: 54,
             fontWeight: 700,
-            fontFamily: "Geomanist, sans-serif",
+            fontFamily: theme.fonts.primary,
             letterSpacing: "0.1em",
             textTransform: "uppercase",
             margin: 0,
@@ -118,14 +102,14 @@ export const ContextScene: React.FC<ContextSceneProps> = ({
         </h2>
       </div>
 
-      {/* Body - centered */}
+      {/* Body */}
       <div
         style={{
           position: "absolute",
           top: 20,
-          left: 60,
-          right: 60,
-          bottom:150,
+          left: theme.sizes.horizontalPadding,
+          right: theme.sizes.horizontalPadding,
+          bottom: theme.sizes.footerHeight + 20,
           display: "flex",
           alignItems: "center",
           opacity: bodyOpacity,
@@ -133,10 +117,10 @@ export const ContextScene: React.FC<ContextSceneProps> = ({
       >
         <p
           style={{
-            color: "#fff",
+            color: theme.colors.textPrimary,
             fontSize: 76,
             fontWeight: 700,
-            fontFamily: "Geomanist, sans-serif",
+            fontFamily: theme.fonts.primary,
             lineHeight: 1.25,
             margin: 0,
             maxWidth: 900,
@@ -146,36 +130,29 @@ export const ContextScene: React.FC<ContextSceneProps> = ({
         </p>
       </div>
 
-      {/* Footer - black bar at bottom */}
+      {/* Footer */}
       <div
         style={{
           position: "absolute",
           bottom: 0,
           left: 0,
           right: 0,
-          height: 280,
-          backgroundColor: "#000",
+          height: theme.sizes.footerHeight,
+          backgroundColor: "#111111",
+          borderTop: `1px solid ${theme.colors.border}`,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
           opacity: footerOpacity,
         }}
       >
-        <div
+        <Img
+          src={staticFile("images/bbe-500x105.png")}
           style={{
-            padding: "24px 60px",
-            borderTop: "1px solid #333",
+            height: 60,
+            objectFit: "contain",
           }}
-        >
-          <div
-            style={{
-              color: "#a3a3a3",
-              fontSize: 18,
-              fontFamily: "Geomanist, sans-serif",
-              letterSpacing: "0.1em",
-              textTransform: "uppercase",
-            }}
-          >
-            {source} • {date}
-          </div>
-        </div>
+        />
       </div>
     </AbsoluteFill>
   );

@@ -6,111 +6,64 @@ import {
   interpolate,
   useCurrentFrame,
 } from "remotion";
-
-const fontFace = `
-@font-face {
-  font-family: 'Geomanist';
-  src: url('${staticFile("fonts/Geomanist-Black.woff2")}') format('woff2');
-  font-weight: 900;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Geomanist';
-  src: url('${staticFile("fonts/Geomanist-Bold.woff2")}') format('woff2');
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Geomanist';
-  src: url('${staticFile("fonts/Geomanist-Regular.woff2")}') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-}
-`;
+import { theme, getFontFace } from "../theme";
 
 export interface QuoteSceneProps {
   quote: string;
   author: string;
   role?: string;
-  date: string;
-  source: string;
+  date?: string;
+  source?: string;
   portrait?: string;
+  isFirst?: boolean;
 }
 
 export const QuoteScene: React.FC<QuoteSceneProps> = ({
   quote,
   author,
   role,
-  date,
-  source,
   portrait,
+  isFirst = false,
 }) => {
   const frame = useCurrentFrame();
+  const fontFace = getFontFace(staticFile);
 
-  // Animation timeline
-  const quoteOpacity = interpolate(frame, [0, 15], [0, 1], {
+  const quoteOpacity = isFirst ? 1 : interpolate(frame, [0, 15], [0, 1], {
     extrapolateRight: "clamp",
   });
-  const portraitScale = interpolate(frame, [10, 30], [0.8, 1], {
+  const portraitScale = isFirst ? 1 : interpolate(frame, [10, 30], [0.8, 1], {
     extrapolateRight: "clamp",
   });
-  const portraitOpacity = interpolate(frame, [10, 25], [0, 1], {
+  const portraitOpacity = isFirst ? 1 : interpolate(frame, [10, 25], [0, 1], {
     extrapolateRight: "clamp",
   });
-  const authorOpacity = interpolate(frame, [30, 45], [0, 1], {
+  const authorOpacity = isFirst ? 1 : interpolate(frame, [30, 45], [0, 1], {
     extrapolateRight: "clamp",
   });
-  const authorY = interpolate(frame, [30, 45], [20, 0], {
+  const authorY = isFirst ? 0 : interpolate(frame, [30, 45], [20, 0], {
     extrapolateRight: "clamp",
   });
-  const roleOpacity = interpolate(frame, [40, 55], [0, 1], {
+  const roleOpacity = isFirst ? 1 : interpolate(frame, [40, 55], [0, 1], {
     extrapolateRight: "clamp",
   });
-  const footerOpacity = interpolate(frame, [50, 65], [0, 1], {
-    extrapolateRight: "clamp",
-  });
-  const headerOpacity = interpolate(frame, [55, 70], [0, 1], {
+  const footerOpacity = isFirst ? 1 : interpolate(frame, [50, 65], [0, 1], {
     extrapolateRight: "clamp",
   });
 
   const fontSize = quote.length < 80 ? 80 : quote.length < 150 ? 64 : 64;
 
   return (
-    <AbsoluteFill style={{ backgroundColor: "#000" }}>
+    <AbsoluteFill style={{ backgroundColor: theme.colors.bgDark }}>
       <style>{fontFace}</style>
 
-      {/* Header - Notable Quote - fixed at top */}
+      {/* Main content */}
       <div
         style={{
           position: "absolute",
-          top: 250,
-          left: 60,
-          right: 60,
-          opacity: headerOpacity,
-        }}
-      >
-        <div
-          style={{
-            color: "#E5B94E",
-            fontSize: 32,
-            fontFamily: "Geomanist, sans-serif",
-            fontWeight: 700,
-            textTransform: "uppercase",
-            letterSpacing: "0.1em",
-          }}
-        >
-          Notable Quote
-        </div>
-      </div>
-
-      {/* Main content - centered vertically in safe zone */}
-      <div
-        style={{
-          position: "absolute",
-          top: 200,
-          left: 60,
-          right: 60,
-          bottom: 150,
+          top: 60,
+          left: theme.sizes.horizontalPadding,
+          right: theme.sizes.horizontalPadding,
+          bottom: theme.sizes.footerHeight + 20,
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
@@ -121,17 +74,16 @@ export const QuoteScene: React.FC<QuoteSceneProps> = ({
           style={{
             opacity: quoteOpacity,
             position: "relative",
-            marginBottom: 72,
+            marginBottom: 48,
           }}
         >
-          {/* Decorative quotation mark */}
           <span
             style={{
               position: "absolute",
-              top: -100,
+              top: -80,
               left: -10,
-              fontSize: 180,
-              color: "rgba(245, 158, 11, 0.15)",
+              fontSize: 160,
+              color: `${theme.colors.accent}25`,
               fontFamily: "serif",
               lineHeight: 1,
               userSelect: "none",
@@ -141,9 +93,9 @@ export const QuoteScene: React.FC<QuoteSceneProps> = ({
           </span>
           <blockquote
             style={{
-              color: "#fff",
+              color: theme.colors.textPrimary,
               fontSize,
-              fontFamily: "Geomanist, sans-serif",
+              fontFamily: theme.fonts.primary,
               fontWeight: 700,
               lineHeight: 1.15,
               margin: 0,
@@ -153,7 +105,7 @@ export const QuoteScene: React.FC<QuoteSceneProps> = ({
           </blockquote>
         </div>
 
-        {/* Portrait - centered */}
+        {/* Portrait */}
         {portrait && (
           <div
             style={{
@@ -170,7 +122,7 @@ export const QuoteScene: React.FC<QuoteSceneProps> = ({
                 height: 500,
                 borderRadius: "50%",
                 overflow: "hidden",
-                border: "6px solid #f59e0b",
+                border: `6px solid ${theme.colors.accent}`,
               }}
             >
               <Img
@@ -186,7 +138,7 @@ export const QuoteScene: React.FC<QuoteSceneProps> = ({
           </div>
         )}
 
-        {/* Author - centered */}
+        {/* Author */}
         <div
           style={{
             textAlign: "center",
@@ -196,9 +148,9 @@ export const QuoteScene: React.FC<QuoteSceneProps> = ({
         >
           <div
             style={{
-              color: "#f59e0b",
-              fontSize: 56,
-              fontFamily: "Geomanist, sans-serif",
+              color: theme.colors.accent,
+              fontSize: 60,
+              fontFamily: theme.fonts.primary,
               fontWeight: 700,
             }}
           >
@@ -208,11 +160,11 @@ export const QuoteScene: React.FC<QuoteSceneProps> = ({
           {role && (
             <div
               style={{
-                color: "#a3a3a3",
-                fontSize: 36,
-                fontFamily: "Geomanist, sans-serif",
+                color: theme.colors.textSecondary,
+                fontSize: 42,
+                fontFamily: theme.fonts.primary,
                 fontWeight: 400,
-                marginTop: 16,
+                marginTop: 12,
                 opacity: roleOpacity,
               }}
             >
@@ -222,36 +174,29 @@ export const QuoteScene: React.FC<QuoteSceneProps> = ({
         </div>
       </div>
 
-      {/* Footer - black bar at bottom */}
+      {/* Footer */}
       <div
         style={{
           position: "absolute",
           bottom: 0,
           left: 0,
           right: 0,
-          height: 280,
-          backgroundColor: "#000",
+          height: theme.sizes.footerHeight,
+          backgroundColor: "#111111",
+          borderTop: `1px solid ${theme.colors.border}`,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
           opacity: footerOpacity,
         }}
       >
-        <div
+        <Img
+          src={staticFile("images/bbe-500x105.png")}
           style={{
-            padding: "24px 60px",
-            borderTop: "1px solid #333",
+            height: 60,
+            objectFit: "contain",
           }}
-        >
-          <div
-            style={{
-              color: "#a3a3a3",
-              fontSize: 18,
-              fontFamily: "Geomanist, sans-serif",
-              letterSpacing: "0.1em",
-              textTransform: "uppercase",
-            }}
-          >
-            {source} • {date}
-          </div>
-        </div>
+        />
       </div>
     </AbsoluteFill>
   );

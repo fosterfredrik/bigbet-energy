@@ -46,7 +46,7 @@
       "props": {
         "label": "The Crash",
         "title": "The SaaSpocalypse",
-        "subtitle": "Anthropic's Claude Cowork launch triggered a market rout. Investors panicked that AI agents would replace human software licenses.",
+        "subtitle": "Claude Cowork triggered investor panic, fearing AI agents would replace human software licenses.",
         "stat": "$285B",
         "statLabel": "Market Wipeout",
         "portrait": "/images/ai-race/cowork.png",
@@ -58,9 +58,9 @@
       "type": "StatCard",
       "props": {
         "stat": "37.5%",
-        "statLabel": "Humanity's Last Exam",
-        "label": "Google's Secret Weapon",
-        "subtitle": "Gemini 3 Pro scored highest on the hardest AI test ever made. GPT-5 got 25%. Random guessing gets 25%.",
+        "statLabel": "In hardest AI test ever",
+        "label": "Wicked smart",
+        "subtitle": "GPT-5 got 25%. Random guessing gets 25%.",
         "portrait": "/images/ai-race/pichai.png",
         "source": "Scale AI",
         "date": "Feb 2026"

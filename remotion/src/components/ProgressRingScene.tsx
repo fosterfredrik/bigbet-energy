@@ -6,93 +6,75 @@ import {
   staticFile,
   Img,
 } from "remotion";
-
-const fontFace = `
-@font-face {
-  font-family: 'Geomanist';
-  src: url('${staticFile("fonts/Geomanist-Black.woff2")}') format('woff2');
-  font-weight: 900;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Geomanist';
-  src: url('${staticFile("fonts/Geomanist-Bold.woff2")}') format('woff2');
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Geomanist';
-  src: url('${staticFile("fonts/Geomanist-Regular.woff2")}') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-}
-`;
+import { theme, getFontFace } from "../theme";
 
 export interface ProgressRingSceneProps {
-  label: string;
   category?: string;
-  value: number;
+  label: string;
   subtitle?: string;
-  date: string;
-  source: string;
+  value: number;
   portrait?: string;
+  source?: string;
+  date?: string;
+  isFirst?: boolean;
 }
 
 export const ProgressRingScene: React.FC<ProgressRingSceneProps> = ({
-  label,
   category = "Market Probability",
-  value,
+  label,
   subtitle,
-  date,
-  source,
+  value,
   portrait,
+  isFirst = false,
 }) => {
   const frame = useCurrentFrame();
+  const fontFace = getFontFace(staticFile);
 
-  const animatedValue = interpolate(frame, [0, 40], [0, value], {
+  const headerOpacity = isFirst ? 1 : interpolate(frame, [0, 20], [0, 1], {
     extrapolateRight: "clamp",
   });
-
-  const headerOpacity = interpolate(frame, [0, 20], [0, 1], {
+  const ringOpacity = isFirst ? 1 : interpolate(frame, [10, 30], [0, 1], {
     extrapolateRight: "clamp",
   });
-  const ringOpacity = interpolate(frame, [10, 30], [0, 1], {
-    extrapolateRight: "clamp",
-  });
-  const footerOpacity = interpolate(frame, [30, 50], [0, 1], {
+  const footerOpacity = isFirst ? 1 : interpolate(frame, [30, 50], [0, 1], {
     extrapolateRight: "clamp",
   });
 
-  // Ring dimensions - much bigger
-  const ringSize = 700;
+  const animatedValue = isFirst
+    ? value
+    : interpolate(frame, [0, 40], [0, value], {
+        extrapolateRight: "clamp",
+      });
+
+  // Ring dimensions
+  const ringSize = 500;
   const radius = ringSize / 2;
   const stroke = 20;
   const normalizedRadius = radius - stroke / 2;
   const circumference = normalizedRadius * 2 * Math.PI;
-  const strokeDashoffset =
-    circumference - (animatedValue / 100) * circumference;
+  const strokeDashoffset = circumference - (animatedValue / 100) * circumference;
 
   return (
-    <AbsoluteFill style={{ backgroundColor: "#000" }}>
+    <AbsoluteFill style={{ backgroundColor: theme.colors.bgDark }}>
       <style>{fontFace}</style>
 
-      {/* Header - fixed at top */}
+      {/* Header */}
       <div
         style={{
           position: "absolute",
-          top: 250,
-          left: 60,
-          right: 60,
+          top: theme.sizes.headerTop,
+          left: theme.sizes.horizontalPadding,
+          right: theme.sizes.horizontalPadding,
           textAlign: "center",
           opacity: headerOpacity,
         }}
       >
         <div
           style={{
-            color: "#E5B94E",
-            fontSize: 32,
+            color: theme.colors.accent,
+            fontSize: theme.sizes.kickerSize,
             fontWeight: 700,
-            fontFamily: "Geomanist, sans-serif",
+            fontFamily: theme.fonts.primary,
             letterSpacing: "0.2em",
             textTransform: "uppercase",
             marginBottom: 16,
@@ -102,10 +84,10 @@ export const ProgressRingScene: React.FC<ProgressRingSceneProps> = ({
         </div>
         <h2
           style={{
-            color: "#fff",
-            fontSize: 72,
+            color: theme.colors.textPrimary,
+            fontSize: theme.sizes.titleSize,
             fontWeight: 700,
-            fontFamily: "Geomanist, sans-serif",
+            fontFamily: theme.fonts.primary,
             letterSpacing: "0.05em",
             textTransform: "uppercase",
             margin: 0,
@@ -116,11 +98,11 @@ export const ProgressRingScene: React.FC<ProgressRingSceneProps> = ({
         </h2>
       </div>
 
-      {/* Ring - centered */}
+      {/* Ring + pill + subtitle */}
       <div
         style={{
           position: "absolute",
-          top: 500,
+          top: 310,
           left: 0,
           right: 0,
           display: "flex",
@@ -132,7 +114,7 @@ export const ProgressRingScene: React.FC<ProgressRingSceneProps> = ({
         <div style={{ position: "relative", width: ringSize, height: ringSize }}>
           <svg height={ringSize} width={ringSize} viewBox={`0 0 ${ringSize} ${ringSize}`}>
             <circle
-              stroke="#1a1a1a"
+              stroke={theme.colors.trackDark}
               fill="transparent"
               strokeWidth={stroke}
               r={normalizedRadius}
@@ -140,7 +122,7 @@ export const ProgressRingScene: React.FC<ProgressRingSceneProps> = ({
               cy={radius}
             />
             <circle
-              stroke="#f59e0b"
+              stroke={theme.colors.accent}
               fill="transparent"
               strokeWidth={stroke}
               strokeLinecap="round"
@@ -153,7 +135,6 @@ export const ProgressRingScene: React.FC<ProgressRingSceneProps> = ({
             />
           </svg>
 
-          {/* Center content - portrait or percentage */}
           <div
             style={{
               position: "absolute",
@@ -166,8 +147,8 @@ export const ProgressRingScene: React.FC<ProgressRingSceneProps> = ({
             {portrait ? (
               <div
                 style={{
-                  width: ringSize - 80,
-                  height: ringSize - 80,
+                  width: ringSize - 60,
+                  height: ringSize - 60,
                   borderRadius: "50%",
                   overflow: "hidden",
                 }}
@@ -185,10 +166,10 @@ export const ProgressRingScene: React.FC<ProgressRingSceneProps> = ({
             ) : (
               <span
                 style={{
-                  color: "#fff",
+                  color: theme.colors.textPrimary,
                   fontSize: 120,
                   fontWeight: 700,
-                  fontFamily: "Geomanist, sans-serif",
+                  fontFamily: theme.fonts.primary,
                 }}
               >
                 {Math.round(animatedValue)}%
@@ -197,80 +178,65 @@ export const ProgressRingScene: React.FC<ProgressRingSceneProps> = ({
           </div>
         </div>
 
-        {/* Percentage badge - shown when portrait is used */}
+        {/* Pill badge - only when portrait is used */}
         {portrait && (
           <div
             style={{
-              backgroundColor: "#f59e0b",
-              color: "#000",
+              backgroundColor: theme.colors.accent,
+              color: theme.colors.textDark,
               fontSize: 80,
               fontWeight: 700,
-              fontFamily: "Geomanist, sans-serif",
-              padding: "30px 60px",
+              fontFamily: theme.fonts.primary,
+              padding: "24px 56px",
               borderRadius: 999,
-              marginTop: 32,
+              marginTop: 28,
             }}
           >
             {Math.round(animatedValue)}%
           </div>
         )}
-      </div>
 
-      {/* Subtitle */}
-      {subtitle && (
-        <div
-          style={{
-            position: "absolute",
-            bottom: 450,
-            left: 60,
-            right: 60,
-            textAlign: "center",
-            opacity: ringOpacity,
-          }}
-        >
+        {/* Subtitle - flows after pill */}
+        {subtitle && (
           <p
             style={{
-              color: "#a3a3a3",
-              fontSize: 36,
-              fontFamily: "Geomanist, sans-serif",
+              color: theme.colors.textSecondary,
+              fontSize: 42,
+              fontFamily: theme.fonts.primary,
               margin: 0,
+              marginTop: 28,
+              textAlign: "center",
+              maxWidth: 800,
             }}
           >
             {subtitle}
           </p>
-        </div>
-      )}
+        )}
+      </div>
 
-      {/* Footer - black bar at bottom */}
+      {/* Footer */}
       <div
         style={{
           position: "absolute",
           bottom: 0,
           left: 0,
           right: 0,
-          height: 280,
-          backgroundColor: "#000",
+          height: theme.sizes.footerHeight,
+          backgroundColor: "#111111",
+          borderTop: `1px solid ${theme.colors.border}`,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
           opacity: footerOpacity,
         }}
       >
-        <div
+        <Img
+          src={staticFile("images/bbe-500x105.png")}
           style={{
-            padding: "24px 60px",
-            borderTop: "1px solid #333",
+            height: 60,
+            objectFit: "contain",
           }}
-        >
-          <div
-            style={{
-              color: "#a3a3a3",
-              fontSize: 18,
-              fontFamily: "Geomanist, sans-serif",
-              letterSpacing: "0.1em",
-              textTransform: "uppercase",
-            }}
-          >
-            {source} • {date}
-          </div>
-        </div>
+        />
       </div>
     </AbsoluteFill>
   );

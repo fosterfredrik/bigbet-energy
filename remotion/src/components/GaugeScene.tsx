@@ -4,37 +4,19 @@ import {
   interpolate,
   useCurrentFrame,
   staticFile,
+  Img,
 } from "remotion";
-
-const fontFace = `
-@font-face {
-  font-family: 'Geomanist';
-  src: url('${staticFile("fonts/Geomanist-Black.woff2")}') format('woff2');
-  font-weight: 900;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Geomanist';
-  src: url('${staticFile("fonts/Geomanist-Bold.woff2")}') format('woff2');
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Geomanist';
-  src: url('${staticFile("fonts/Geomanist-Regular.woff2")}') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-}
-`;
+import { theme, getFontFace } from "../theme";
 
 export interface GaugeSceneProps {
   label: string;
   title: string;
   subtitle?: string;
   value: number;
-  date: string;
-  source: string;
+  date?: string;
+  source?: string;
   portrait?: string;
+  isFirst?: boolean;
 }
 
 export const GaugeScene: React.FC<GaugeSceneProps> = ({
@@ -42,25 +24,27 @@ export const GaugeScene: React.FC<GaugeSceneProps> = ({
   title,
   subtitle,
   value,
-  date,
-  source,
   portrait,
+  isFirst = false,
 }) => {
   const frame = useCurrentFrame();
+  const fontFace = getFontFace(staticFile);
 
-  const animatedValue = interpolate(frame, [0, 40], [0, value], {
-    extrapolateRight: "clamp",
-  });
+  const animatedValue = isFirst
+    ? value
+    : interpolate(frame, [0, 40], [0, value], {
+        extrapolateRight: "clamp",
+      });
 
   const needleAngle = -90 + (animatedValue / 100) * 180;
 
-  const headerOpacity = interpolate(frame, [0, 20], [0, 1], {
+  const headerOpacity = isFirst ? 1 : interpolate(frame, [0, 20], [0, 1], {
     extrapolateRight: "clamp",
   });
-  const gaugeOpacity = interpolate(frame, [10, 30], [0, 1], {
+  const gaugeOpacity = isFirst ? 1 : interpolate(frame, [10, 30], [0, 1], {
     extrapolateRight: "clamp",
   });
-  const footerOpacity = interpolate(frame, [30, 50], [0, 1], {
+  const footerOpacity = isFirst ? 1 : interpolate(frame, [30, 50], [0, 1], {
     extrapolateRight: "clamp",
   });
 
@@ -68,33 +52,26 @@ export const GaugeScene: React.FC<GaugeSceneProps> = ({
   const strokeLength = (animatedValue / 100) * arcLength;
 
   return (
-    <AbsoluteFill
-      style={{
-        backgroundColor: "#000",
-        padding: 60,
-        display: "flex",
-        flexDirection: "column",
-      }}
-    >
+    <AbsoluteFill style={{ backgroundColor: theme.colors.bgDark }}>
       <style>{fontFace}</style>
 
-      {/* Header - fixed at top */}
+      {/* Header */}
       <div
         style={{
           position: "absolute",
-          top: 250,
-          left: 60,
-          right: 60,
+          top: theme.sizes.headerTop,
+          left: theme.sizes.horizontalPadding,
+          right: theme.sizes.horizontalPadding,
           textAlign: "center",
           opacity: headerOpacity,
         }}
       >
         <div
           style={{
-            color: "#E5B94E",
-            fontSize: 32,
+            color: theme.colors.accent,
+            fontSize: theme.sizes.kickerSize,
             fontWeight: 700,
-            fontFamily: "Geomanist, sans-serif",
+            fontFamily: theme.fonts.primary,
             letterSpacing: "0.2em",
             textTransform: "uppercase",
             marginBottom: 16,
@@ -104,10 +81,10 @@ export const GaugeScene: React.FC<GaugeSceneProps> = ({
         </div>
         <h2
           style={{
-            color: "#fff",
-            fontSize: 72,
+            color: theme.colors.textPrimary,
+            fontSize: theme.sizes.titleSize,
             fontWeight: 700,
-            fontFamily: "Geomanist, sans-serif",
+            fontFamily: theme.fonts.primary,
             letterSpacing: "0.05em",
             textTransform: "uppercase",
             margin: 0,
@@ -122,7 +99,7 @@ export const GaugeScene: React.FC<GaugeSceneProps> = ({
       <div
         style={{
           position: "absolute",
-          top: 500,
+          top: 260,
           left: 0,
           right: 0,
           display: "flex",
@@ -131,7 +108,7 @@ export const GaugeScene: React.FC<GaugeSceneProps> = ({
           opacity: gaugeOpacity,
         }}
       >
-        <div style={{ position: "relative", width: 875, height: 500 }}>
+        <div style={{ position: "relative", width: 1050, height: 600 }}>
           <svg viewBox="0 0 200 110" width="100%" height="100%">
             <defs>
               <clipPath id="gaugeClip">
@@ -154,14 +131,14 @@ export const GaugeScene: React.FC<GaugeSceneProps> = ({
             <path
               d="M 15 100 A 85 85 0 0 1 185 100"
               fill="none"
-              stroke="#1a1a1a"
+              stroke={theme.colors.trackDark}
               strokeWidth="10"
             />
 
             <path
               d="M 15 100 A 85 85 0 0 1 185 100"
               fill="none"
-              stroke="#f59e0b"
+              stroke={theme.colors.accent}
               strokeWidth="10"
               strokeLinecap="round"
               strokeDasharray={`${strokeLength} ${arcLength}`}
@@ -172,13 +149,13 @@ export const GaugeScene: React.FC<GaugeSceneProps> = ({
               y1="100"
               x2="100"
               y2="20"
-              stroke="#f59e0b"
+              stroke={theme.colors.accent}
               strokeWidth="4"
               strokeLinecap="round"
               transform={`rotate(${needleAngle} 100 100)`}
             />
 
-            <circle cx="100" cy="100" r="6" fill="#f59e0b" />
+            <circle cx="100" cy="100" r="6" fill={theme.colors.accent} />
           </svg>
         </div>
 
@@ -187,35 +164,35 @@ export const GaugeScene: React.FC<GaugeSceneProps> = ({
           style={{
             display: "flex",
             justifyContent: "space-between",
-            width: 875,
-            marginTop: 20,
+            width: 700,
+            marginTop: 16,
             padding: "0 16px",
           }}
         >
-          <span style={{ color: "#737373", fontSize: 40, fontFamily: "Geomanist, sans-serif" }}>0%</span>
+          <span style={{ color: theme.colors.textMuted, fontSize: 32, fontFamily: theme.fonts.primary }}>0%</span>
           <span
             style={{
-              color: "#f59e0b",
-              fontSize: 96,
+              color: theme.colors.accent,
+              fontSize: 80,
               fontWeight: 900,
-              fontFamily: "Geomanist, sans-serif",
+              fontFamily: theme.fonts.primary,
             }}
           >
             {Math.round(animatedValue)}%
           </span>
-          <span style={{ color: "#737373", fontSize: 40, fontFamily: "Geomanist, sans-serif" }}>100%</span>
+          <span style={{ color: theme.colors.textMuted, fontSize: 32, fontFamily: theme.fonts.primary }}>100%</span>
         </div>
 
         {/* Subtitle */}
         {subtitle && (
           <p
             style={{
-              color: "#a3a3a3",
-              fontSize: 36,
-              fontFamily: "Geomanist, sans-serif",
+              color: theme.colors.textSecondary,
+              fontSize: 42,
+              fontFamily: theme.fonts.primary,
               textAlign: "center",
-              maxWidth: 600,
-              marginTop: 64,
+              maxWidth: 900,
+              marginTop: 32,
             }}
           >
             {subtitle}
@@ -223,36 +200,29 @@ export const GaugeScene: React.FC<GaugeSceneProps> = ({
         )}
       </div>
 
-      {/* Footer - black bar at bottom */}
+      {/* Footer */}
       <div
         style={{
           position: "absolute",
           bottom: 0,
           left: 0,
           right: 0,
-          height: 280,
-          backgroundColor: "#000",
+          height: theme.sizes.footerHeight,
+          backgroundColor: "#111111",
+          borderTop: `1px solid ${theme.colors.border}`,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
           opacity: footerOpacity,
         }}
       >
-        <div
+        <Img
+          src={staticFile("images/bbe-500x105.png")}
           style={{
-            padding: "24px 60px",
-            borderTop: "1px solid #333",
+            height: 60,
+            objectFit: "contain",
           }}
-        >
-          <div
-            style={{
-              color: "#a3a3a3",
-              fontSize: 18,
-              fontFamily: "Geomanist, sans-serif",
-              letterSpacing: "0.1em",
-              textTransform: "uppercase",
-            }}
-          >
-            {source} • {date}
-          </div>
-        </div>
+        />
       </div>
     </AbsoluteFill>
   );

@@ -58,7 +58,7 @@
         "stat": "38,000",
         "statLabel": "Times Named",
         "label": "Trump in the Files",
-        "subtitle": "His name appears over 38,000 times. One document describes Epstein introducing him to a 14-year-old girl. Status: President.",
+        "subtitle": "One document describes Epstein introducing him to a 14-year-old girl.",
         "portrait": "/images/epstein/trump.png",
         "source": "Epstein Files",
         "date": "2026"
@@ -88,7 +88,7 @@
       "props": {
         "label": "The Night",
         "title": "August 10, 2019",
-        "subtitle": "10 of 11 cameras broken. Guards asleep. Cellmate transferred out the day before. A critical minute of footage missing.",
+        "subtitle": "10 of 11 cameras broken. Guards asleep. Critical minute of footage missing.",
         "stat": "10/11",
         "statLabel": "Cameras Not Recording",
         "portrait": "/images/epstein/cell.png",

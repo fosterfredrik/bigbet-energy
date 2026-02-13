@@ -8,25 +8,19 @@ import {
 } from "remotion";
 import { theme, getFontFace } from "../theme";
 
-export interface MilestoneSceneProps {
+export interface ProgressBarSceneProps {
   label: string;
-  title: string;
   subtitle?: string;
-  stat: string;
-  statLabel?: string;
-  portrait?: string;
+  value: number;
   source?: string;
   date?: string;
   isFirst?: boolean;
 }
 
-export const MilestoneScene: React.FC<MilestoneSceneProps> = ({
+export const ProgressBarScene: React.FC<ProgressBarSceneProps> = ({
   label,
-  title,
   subtitle,
-  stat,
-  statLabel,
-  portrait,
+  value,
   isFirst = false,
 }) => {
   const frame = useCurrentFrame();
@@ -35,19 +29,16 @@ export const MilestoneScene: React.FC<MilestoneSceneProps> = ({
   const headerOpacity = isFirst ? 1 : interpolate(frame, [0, 20], [0, 1], {
     extrapolateRight: "clamp",
   });
-  const statOpacity = isFirst ? 1 : interpolate(frame, [15, 40], [0, 1], {
+  const barOpacity = isFirst ? 1 : interpolate(frame, [10, 30], [0, 1], {
     extrapolateRight: "clamp",
   });
-  const footerOpacity = isFirst ? 1 : interpolate(frame, [35, 50], [0, 1], {
-    extrapolateRight: "clamp",
-  });
-  const portraitOpacity = isFirst ? 1 : interpolate(frame, [20, 45], [0, 1], {
+  const footerOpacity = isFirst ? 1 : interpolate(frame, [30, 50], [0, 1], {
     extrapolateRight: "clamp",
   });
 
-  const statScale = isFirst
-    ? 1
-    : interpolate(frame, [15, 40], [0.9, 1], {
+  const barProgress = isFirst
+    ? value
+    : interpolate(frame, [15, 50], [0, value], {
         extrapolateRight: "clamp",
       });
 
@@ -62,8 +53,8 @@ export const MilestoneScene: React.FC<MilestoneSceneProps> = ({
           top: theme.sizes.headerTop,
           left: theme.sizes.horizontalPadding,
           right: theme.sizes.horizontalPadding,
+          textAlign: "center",
           opacity: headerOpacity,
-          zIndex: 1,
         }}
       >
         <div
@@ -77,7 +68,7 @@ export const MilestoneScene: React.FC<MilestoneSceneProps> = ({
             marginBottom: 12,
           }}
         >
-          {label}
+          Progress
         </div>
 
         <h2
@@ -92,88 +83,73 @@ export const MilestoneScene: React.FC<MilestoneSceneProps> = ({
             lineHeight: 1.1,
           }}
         >
-          {title}
+          {label}
         </h2>
+      </div>
 
+      {/* Big percentage + bar */}
+      <div
+        style={{
+          position: "absolute",
+          top: 350,
+          left: theme.sizes.horizontalPadding,
+          right: theme.sizes.horizontalPadding,
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          opacity: barOpacity,
+        }}
+      >
+        {/* Percentage */}
+        <div
+          style={{
+            color: theme.colors.accent,
+            fontSize: 400,
+            fontWeight: 900,
+            fontFamily: theme.fonts.primary,
+            lineHeight: 1,
+            marginBottom: 40,
+          }}
+        >
+          {Math.round(barProgress)}%
+        </div>
+
+        {/* Bar track */}
+        <div
+          style={{
+            width: "100%",
+            height: 42,
+            borderRadius: 999,
+            overflow: "hidden",
+            backgroundColor: theme.colors.trackDark,
+          }}
+        >
+          <div
+            style={{
+              height: "100%",
+              width: `${barProgress}%`,
+              borderRadius: 999,
+              backgroundColor: theme.colors.accent,
+            }}
+          />
+        </div>
+
+        {/* Subtitle */}
         {subtitle && (
           <p
             style={{
               color: theme.colors.textSecondary,
               fontSize: 42,
               fontFamily: theme.fonts.primary,
-              marginTop: 20,
-              lineHeight: 1.4,
+              textAlign: "center",
+              marginTop: 48,
+              maxWidth: 800,
             }}
           >
             {subtitle}
           </p>
         )}
       </div>
-
-      {/* Big Stat */}
-      <div
-        style={{
-          position: "absolute",
-          top: 400,
-          left: 0,
-          right: 0,
-          textAlign: "center",
-          opacity: statOpacity,
-          transform: `scale(${statScale})`,
-          zIndex: 1,
-        }}
-      >
-        <div
-          style={{
-            color: theme.colors.accent,
-            fontSize: 360,
-            fontWeight: 900,
-            fontFamily: theme.fonts.primary,
-            lineHeight: 1,
-          }}
-        >
-          {stat}
-        </div>
-        {statLabel && (
-          <div
-            style={{
-              color: theme.colors.textSecondary,
-              fontSize: 60,
-              fontWeight: 700,
-              fontFamily: theme.fonts.primary,
-              letterSpacing: "0.15em",
-              textTransform: "uppercase",
-              marginTop: -10,
-            }}
-          >
-            {statLabel}
-          </div>
-        )}
-      </div>
-
-      {/* Portrait */}
-      {portrait && (
-        <div
-          style={{
-            position: "absolute",
-            left: 0,
-            bottom: theme.sizes.footerHeight,
-            width: 500,
-            height: 500,
-            opacity: portraitOpacity,
-          }}
-        >
-          <Img
-            src={staticFile(portrait)}
-            style={{
-              width: "100%",
-              height: "100%",
-              objectFit: "contain",
-              objectPosition: "bottom left",
-            }}
-          />
-        </div>
-      )}
 
       {/* Footer */}
       <div

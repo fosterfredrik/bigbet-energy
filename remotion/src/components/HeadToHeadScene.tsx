@@ -6,27 +6,7 @@ import {
   staticFile,
   Img,
 } from "remotion";
-
-const fontFace = `
-@font-face {
-  font-family: 'Geomanist';
-  src: url('${staticFile("fonts/Geomanist-Black.woff2")}') format('woff2');
-  font-weight: 900;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Geomanist';
-  src: url('${staticFile("fonts/Geomanist-Bold.woff2")}') format('woff2');
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Geomanist';
-  src: url('${staticFile("fonts/Geomanist-Regular.woff2")}') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-}
-`;
+import { theme, getFontFace } from "../theme";
 
 export interface Team {
   name: string;
@@ -41,8 +21,9 @@ export interface HeadToHeadSceneProps {
   leftTeam: Team;
   rightTeam: Team;
   draws: number;
-  date: string;
-  source: string;
+  date?: string;
+  source?: string;
+  isFirst?: boolean;
 }
 
 export const HeadToHeadScene: React.FC<HeadToHeadSceneProps> = ({
@@ -52,52 +33,58 @@ export const HeadToHeadScene: React.FC<HeadToHeadSceneProps> = ({
   leftTeam,
   rightTeam,
   draws,
-  date,
-  source,
+  isFirst = false,
 }) => {
   const frame = useCurrentFrame();
+  const fontFace = getFontFace(staticFile);
 
-  const headerOpacity = interpolate(frame, [0, 20], [0, 1], {
+  const headerOpacity = isFirst ? 1 : interpolate(frame, [0, 20], [0, 1], {
     extrapolateRight: "clamp",
   });
-  const teamsOpacity = interpolate(frame, [10, 30], [0, 1], {
+  const teamsOpacity = isFirst ? 1 : interpolate(frame, [10, 30], [0, 1], {
     extrapolateRight: "clamp",
   });
-  const footerOpacity = interpolate(frame, [30, 50], [0, 1], {
+  const footerOpacity = isFirst ? 1 : interpolate(frame, [30, 50], [0, 1], {
     extrapolateRight: "clamp",
   });
 
-  const leftWins = interpolate(frame, [20, 45], [0, leftTeam.wins], {
-    extrapolateRight: "clamp",
-  });
-  const rightWins = interpolate(frame, [20, 45], [0, rightTeam.wins], {
-    extrapolateRight: "clamp",
-  });
-  const drawsAnim = interpolate(frame, [20, 45], [0, draws], {
-    extrapolateRight: "clamp",
-  });
+  const leftWins = isFirst
+    ? leftTeam.wins
+    : interpolate(frame, [20, 45], [0, leftTeam.wins], {
+        extrapolateRight: "clamp",
+      });
+  const rightWins = isFirst
+    ? rightTeam.wins
+    : interpolate(frame, [20, 45], [0, rightTeam.wins], {
+        extrapolateRight: "clamp",
+      });
+  const drawsAnim = isFirst
+    ? draws
+    : interpolate(frame, [20, 45], [0, draws], {
+        extrapolateRight: "clamp",
+      });
 
   return (
-    <AbsoluteFill style={{ backgroundColor: "#000" }}>
+    <AbsoluteFill style={{ backgroundColor: theme.colors.bgDark }}>
       <style>{fontFace}</style>
 
       {/* Header */}
       <div
         style={{
           position: "absolute",
-          top: 250,
-          left: 60,
-          right: 60,
+          top: theme.sizes.headerTop,
+          left: theme.sizes.horizontalPadding,
+          right: theme.sizes.horizontalPadding,
           textAlign: "center",
           opacity: headerOpacity,
         }}
       >
         <div
           style={{
-            color: "#E5B94E",
-            fontSize: 32,
+            color: theme.colors.accent,
+            fontSize: theme.sizes.kickerSize,
             fontWeight: 700,
-            fontFamily: "Geomanist, sans-serif",
+            fontFamily: theme.fonts.primary,
             letterSpacing: "0.2em",
             textTransform: "uppercase",
             marginBottom: 16,
@@ -107,10 +94,10 @@ export const HeadToHeadScene: React.FC<HeadToHeadSceneProps> = ({
         </div>
         <h2
           style={{
-            color: "#fff",
-            fontSize: 72,
+            color: theme.colors.textPrimary,
+            fontSize: theme.sizes.titleSize,
             fontWeight: 700,
-            fontFamily: "Geomanist, sans-serif",
+            fontFamily: theme.fonts.primary,
             letterSpacing: "0.05em",
             textTransform: "uppercase",
             margin: 0,
@@ -122,10 +109,10 @@ export const HeadToHeadScene: React.FC<HeadToHeadSceneProps> = ({
         {subtitle && (
           <p
             style={{
-              color: "#a3a3a3",
-              fontSize: 36,
-              fontFamily: "Geomanist, sans-serif",
-              marginTop: 24,
+              color: theme.colors.textSecondary,
+              fontSize: 32,
+              fontFamily: theme.fonts.primary,
+              marginTop: 20,
             }}
           >
             {subtitle}
@@ -137,9 +124,9 @@ export const HeadToHeadScene: React.FC<HeadToHeadSceneProps> = ({
       <div
         style={{
           position: "absolute",
-          top: 600,
-          left: 60,
-          right: 60,
+          top: 380,
+          left: theme.sizes.horizontalPadding,
+          right: theme.sizes.horizontalPadding,
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
@@ -152,16 +139,16 @@ export const HeadToHeadScene: React.FC<HeadToHeadSceneProps> = ({
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            gap: 32,
+            gap: 24,
           }}
         >
           <div
             style={{
-              width: 360,
-              height: 360,
+              width: 300,
+              height: 300,
               borderRadius: "50%",
               overflow: "hidden",
-              backgroundColor: "#1a1a1a",
+              backgroundColor: theme.colors.trackDark,
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
@@ -178,10 +165,10 @@ export const HeadToHeadScene: React.FC<HeadToHeadSceneProps> = ({
           </div>
           <span
             style={{
-              color: "#fff",
-              fontSize: 48,
+              color: theme.colors.textPrimary,
+              fontSize: 40,
               fontWeight: 700,
-              fontFamily: "Geomanist, sans-serif",
+              fontFamily: theme.fonts.primary,
               textTransform: "uppercase",
             }}
           >
@@ -189,19 +176,19 @@ export const HeadToHeadScene: React.FC<HeadToHeadSceneProps> = ({
           </span>
           <span
             style={{
-              color: "#f59e0b",
-              fontSize: 140,
+              color: theme.colors.accent,
+              fontSize: 120,
               fontWeight: 900,
-              fontFamily: "Geomanist, sans-serif",
+              fontFamily: theme.fonts.primary,
             }}
           >
             {Math.round(leftWins)}
           </span>
           <span
             style={{
-              color: "#737373",
-              fontSize: 36,
-              fontFamily: "Geomanist, sans-serif",
+              color: theme.colors.textMuted,
+              fontSize: 28,
+              fontFamily: theme.fonts.primary,
               textTransform: "uppercase",
             }}
           >
@@ -220,19 +207,19 @@ export const HeadToHeadScene: React.FC<HeadToHeadSceneProps> = ({
         >
           <span
             style={{
-              color: "#a3a3a3",
-              fontSize: 120,
+              color: theme.colors.textSecondary,
+              fontSize: 100,
               fontWeight: 700,
-              fontFamily: "Geomanist, sans-serif",
+              fontFamily: theme.fonts.primary,
             }}
           >
             {Math.round(drawsAnim)}
           </span>
           <span
             style={{
-              color: "#737373",
-              fontSize: 36,
-              fontFamily: "Geomanist, sans-serif",
+              color: theme.colors.textMuted,
+              fontSize: 28,
+              fontFamily: theme.fonts.primary,
               textTransform: "uppercase",
             }}
           >
@@ -246,16 +233,16 @@ export const HeadToHeadScene: React.FC<HeadToHeadSceneProps> = ({
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            gap: 32,
+            gap: 24,
           }}
         >
           <div
             style={{
-              width: 360,
-              height: 360,
+              width: 300,
+              height: 300,
               borderRadius: "50%",
               overflow: "hidden",
-              backgroundColor: "#1a1a1a",
+              backgroundColor: theme.colors.trackDark,
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
@@ -272,10 +259,10 @@ export const HeadToHeadScene: React.FC<HeadToHeadSceneProps> = ({
           </div>
           <span
             style={{
-              color: "#fff",
-              fontSize: 48,
+              color: theme.colors.textPrimary,
+              fontSize: 40,
               fontWeight: 700,
-              fontFamily: "Geomanist, sans-serif",
+              fontFamily: theme.fonts.primary,
               textTransform: "uppercase",
             }}
           >
@@ -283,19 +270,19 @@ export const HeadToHeadScene: React.FC<HeadToHeadSceneProps> = ({
           </span>
           <span
             style={{
-              color: "#f59e0b",
-              fontSize: 140,
+              color: theme.colors.accent,
+              fontSize: 120,
               fontWeight: 900,
-              fontFamily: "Geomanist, sans-serif",
+              fontFamily: theme.fonts.primary,
             }}
           >
             {Math.round(rightWins)}
           </span>
           <span
             style={{
-              color: "#737373",
-              fontSize: 36,
-              fontFamily: "Geomanist, sans-serif",
+              color: theme.colors.textMuted,
+              fontSize: 28,
+              fontFamily: theme.fonts.primary,
               textTransform: "uppercase",
             }}
           >
@@ -311,29 +298,22 @@ export const HeadToHeadScene: React.FC<HeadToHeadSceneProps> = ({
           bottom: 0,
           left: 0,
           right: 0,
-          height: 280,
-          backgroundColor: "#000",
+          height: theme.sizes.footerHeight,
+          backgroundColor: "#111111",
+          borderTop: `1px solid ${theme.colors.border}`,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
           opacity: footerOpacity,
         }}
       >
-        <div
+        <Img
+          src={staticFile("images/bbe-500x105.png")}
           style={{
-            padding: "24px 60px",
-            borderTop: "1px solid #333",
+            height: 60,
+            objectFit: "contain",
           }}
-        >
-          <div
-            style={{
-              color: "#a3a3a3",
-              fontSize: 18,
-              fontFamily: "Geomanist, sans-serif",
-              letterSpacing: "0.1em",
-              textTransform: "uppercase",
-            }}
-          >
-            {source} • {date}
-          </div>
-        </div>
+        />
       </div>
     </AbsoluteFill>
   );

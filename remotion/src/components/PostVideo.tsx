@@ -4,6 +4,7 @@ import { Sequence } from "remotion";
 import { QuoteScene } from "../components/QuoteScene";
 import { ContextScene } from "../components/ContextScene";
 import { ProgressRingScene } from "../components/ProgressRingScene";
+import { ProgressBarScene } from "../components/ProgressBarScene";
 import { GaugeScene } from "../components/GaugeScene";
 import { StatCardScene } from "../components/StatCardScene";
 import { VerticalBarScene } from "../components/VerticalBarScene";
@@ -15,13 +16,14 @@ import { TimelineScene } from "../components/TimelineScene";
 
 export type PostVideoProps = {
   blocks: Array<{ type: string; props: any }>;
-  videoSequence?: number[];  // ← add this
+  videoSequence?: number[];
 };
 
 const sceneMap: Record<string, React.ComponentType<any>> = {
   Quote: QuoteScene,
   Context: ContextScene,
   ProgressRing: ProgressRingScene,
+  ProgressBar: ProgressBarScene,
   Gauge: GaugeScene,
   StatCard: StatCardScene,
   VerticalBar: VerticalBarScene,
@@ -36,7 +38,7 @@ const sceneMap: Record<string, React.ComponentType<any>> = {
 const SKIP = new Set(["InteractiveCTA", "PreferenceCTA", "Sources"]);
 
 export const PostVideo: React.FC<PostVideoProps> = ({ blocks, videoSequence }) => {
-  const DURATION = 150;
+  const DURATION = 420;
   let cursor = 0;
 
   // Reorder blocks if videoSequence provided
