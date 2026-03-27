@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="bg-gradient-to-br from-neutral-900 via-neutral-900 to-black border-t-4 border-amber-400 text-white">
       <div className="max-w-[1104px] mx-auto px-4 py-10">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
 
           {/* Column 1: Branding (Darker Box) */}
           <div className="bg-black/50 rounded-xl p-6">
@@ -106,7 +106,23 @@ export default function Footer() {
             </a>
           </nav>
 
-          {/* Column 3: Legal */}
+          {/* Column 3: Casino Guides */}
+          <nav>
+            <div className="font-bold text-white mb-4">Casino Guides</div>
+            <div className="flex flex-col space-y-2 text-sm text-neutral-400">
+              <Link href="/sverige" className="hover:text-amber-400 transition">
+                🇸🇪 Sverige
+              </Link>
+              <Link href="/uk" className="hover:text-amber-400 transition">
+                🇬🇧 United Kingdom
+              </Link>
+              <Link href="/brasil" className="hover:text-amber-400 transition">
+                🇧🇷 Brasil
+              </Link>
+            </div>
+          </nav>
+
+          {/* Column 4: Legal */}
           <nav>
             <div className="font-bold text-white mb-4">Legal</div>
             <div className="flex flex-col space-y-2 text-sm text-neutral-400">
