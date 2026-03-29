@@ -70,13 +70,10 @@ export default async function SverigeGuidePage({ params }: { params: { slug: str
                   ]
                 },
                 {
-                  "@type": "Service",
+                  "@type": "Product",
                   "@id": `https://bigbet.energy/${guide.country}/${guide.slug}#winner`,
                   "name": guide.winner.name,
                   "url": `https://${guide.winner.domain}`,
-                  "serviceType": "Online Casino",
-                  "areaServed": guide.country === 'sverige' ? 'SE' : guide.country === 'uk' ? 'GB' : 'BR',
-                  "provider": { "@id": "https://bigbet.energy/#organization" },
                   "description": guide.winner.whyItWins,
                   "award": `BigBet.Energy #1 val — ${guide.searchIntent}`,
                   "knowsAbout": guide.winner.badges,
@@ -87,7 +84,7 @@ export default async function SverigeGuidePage({ params }: { params: { slug: str
                   "@id": `https://bigbet.energy/${guide.country}/${guide.slug}#review`,
                   "itemReviewed": {
                     "@id": `https://bigbet.energy/${guide.country}/${guide.slug}#winner`,
-                    "@type": "Service",
+                    "@type": "Product",
                     "name": guide.winner.name
                   },
                   "reviewRating": {
@@ -101,7 +98,6 @@ export default async function SverigeGuidePage({ params }: { params: { slug: str
                   "datePublished": guide.searchMetadata.isoDate,
                   "reviewBody": `VINNARE (Verifierad ${guide.searchMetadata.verificationDate}): Efter att ha klassificerat ${guide.searchMetadata.totalAnalyzed} organiska Google-resultat för "${guide.keyword}" i Sverige är ${guide.winner.name} vårt förstaval. ${guide.winner.whyItWins} ${guide.verdict.summary}${guide.runnerUps?.length > 0 ? ` Runners-up: ${guide.runnerUps[0].name} (${guide.runnerUps[0].keyBenefit})${guide.runnerUps.length > 1 ? ` och ${guide.runnerUps[1].name} (${guide.runnerUps[1].keyBenefit})` : ''}.` : ''}`
                 },
-
                 {
                   "@type": "ItemList",
                   "@id": `https://bigbet.energy/${guide.country}/${guide.slug}#rankings`,
