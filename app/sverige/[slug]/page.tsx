@@ -85,7 +85,11 @@ export default async function SverigeGuidePage({ params }: { params: { slug: str
                 {
                   "@type": "Review",
                   "@id": `https://bigbet.energy/${guide.country}/${guide.slug}#review`,
-                  "itemReviewed": { "@id": `https://bigbet.energy/${guide.country}/${guide.slug}#winner` },
+                  "itemReviewed": {
+                    "@id": `https://bigbet.energy/${guide.country}/${guide.slug}#winner`,
+                    "@type": "Service",
+                    "name": guide.winner.name
+                  },
                   "reviewRating": {
                     "@type": "Rating",
                     "ratingValue": 5,
