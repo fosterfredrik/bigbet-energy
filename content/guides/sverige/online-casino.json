@@ -30,6 +30,10 @@
   },
   "winner": {
     "name": "Casumo",
+    "sameAs": [
+      "https://casumo.com/sv/",
+      "https://www.spelinspektionen.se/licens-o-tillstand/licensregister/?query=casumo&page=1"
+    ],
     "domain": "casumo.com",
     "affiliateUrl": "https://casumo.com/sv/",
     "affiliateLabel": "Spela på Casumo →",
