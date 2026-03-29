@@ -132,7 +132,7 @@ export default async function SverigeGuidePage({ params }: { params: { slug: str
                         "description": r.whyRunnerUp,
                         "aggregateRating": {
                           "@type": "AggregateRating",
-                          "ratingValue": i === 0 ? 4 : 3,
+                          "ratingValue": 4,
                           "bestRating": 5,
                           "worstRating": 1,
                           "reviewCount": 1

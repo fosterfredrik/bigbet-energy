@@ -142,7 +142,7 @@
   "theBubble": {
     "name": "Pop Casino",
     "domain": "popcasino.se",
-    "affiliateUrl": "",
+    "affiliateUrl": "https://popcasino.se/",
     "affiliateLabel": "Kolla in Pop Casino →",
     "googleRank": 0,
     "explanation": "Pop Casino innehar Spelinspektionen-licens och erbjuder en modern spelupplevelse med snabba uttag via Trustly. Trots starka produktkvaliteter saknas de helt i detta SERP — sannolikt på grund av svag domänauktoritet snarare än produktkvalitet.",
