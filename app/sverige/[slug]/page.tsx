@@ -46,8 +46,8 @@ export default async function SverigeGuidePage({ params }: { params: { slug: str
                   "@id": `https://bigbet.energy/${guide.country}/${guide.slug}#article`,
                   "headline": `${guide.searchIntent} — Oberoende analys av top 100 Google-resultat`,
                   "mainEntityOfPage": `https://bigbet.energy/${guide.country}/${guide.slug}`,
-                  "datePublished": guide.searchMetadata.dateAnalyzed,
-                  "dateModified": guide.searchMetadata.dateAnalyzed,
+                  "datePublished": guide.searchMetadata.isoDate,
+                  "dateModified": guide.searchMetadata.isoDate,
                   "inLanguage": guide.locale,
                   "author": { "@id": "https://bigbet.energy/#organization" },
                   "publisher": { "@id": "https://bigbet.energy/#organization" },
@@ -69,7 +69,6 @@ export default async function SverigeGuidePage({ params }: { params: { slug: str
                     guide.keyword
                   ]
                 },
-
                 {
                   "@type": "Organization",
                   "@id": `https://bigbet.energy/${guide.country}/${guide.slug}#winner`,
@@ -77,17 +76,20 @@ export default async function SverigeGuidePage({ params }: { params: { slug: str
                   "url": `https://${guide.winner.domain}`,
                   "description": guide.winner.whyItWins,
                   "award": `BigBet.Energy #1 val — ${guide.searchIntent}`,
-                  "knowsAbout": guide.winner.badges
+                  "knowsAbout": guide.winner.badges,
+                  "sameAs": [
+                    `https://${guide.winner.domain}`,
+                    "https://www.spelinspektionen.se/licensinnehavare/"
+                  ]
                 },
-
                 {
                   "@type": "Review",
                   "@id": `https://bigbet.energy/${guide.country}/${guide.slug}#review`,
                   "itemReviewed": { "@id": `https://bigbet.energy/${guide.country}/${guide.slug}#winner` },
                   "reviewRating": {
                     "@type": "Rating",
-                    "ratingValue": 1,
-                    "bestRating": 1,
+                    "ratingValue": 5,
+                    "bestRating": 5,
                     "worstRating": 1,
                     "ratingExplanation": `Vinnare utsedd efter granskning av ${guide.searchMetadata.totalAnalyzed} Google-resultat. Verifierad mot Spelinspektionens licensregister.`
                   },
@@ -155,6 +157,7 @@ export default async function SverigeGuidePage({ params }: { params: { slug: str
                 {
                   "@type": "Dataset",
                   "@id": `https://bigbet.energy/${guide.country}/${guide.slug}#serp-analysis`,
+                  "url": `https://bigbet.energy/${guide.country}/${guide.slug}#serp-analysis`,
                   "name": `SERP-analys: "${guide.keyword}" Sverige — Top ${guide.serpResults?.length || 0} resultat`,
                   "description": `Komplett klassificering av Google top ${guide.searchMetadata.totalAnalyzed} organiska resultat för "${guide.keyword}" i Sverige. Varje URL klassificerad som licensierad operatör, seriös affiliate, SEO-grab, tveksam affiliate eller olicensierad.`,
                   "datePublished": guide.searchMetadata.dateAnalyzed,
@@ -320,10 +323,17 @@ export default async function SverigeGuidePage({ params }: { params: { slug: str
               </span>
               <ul className="space-y-3 text-neutral-300">
                 {winner.materialEvidence.map((evidence: any, idx: number) => (
-                  <li key={idx} className="flex items-start gap-2">
+                  <li
+                    key={idx}
+                    className="flex items-start gap-2"
+                    data-evidence-id={`evidence-${idx + 1}`}
+                    data-source="editorial-review"
+                    data-verified={searchMetadata.isoDate}
+                    data-claim-type={evidence.title}
+                  >
                     <span className="text-amber-400 font-bold text-lg mt-0.5">✓</span>
                     <span>
-                      <strong className="text-white">{evidence.title}:</strong> {evidence.description}
+                      <strong>{evidence.title}:</strong> {evidence.description}
                     </span>
                   </li>
                 ))}
@@ -609,7 +619,11 @@ export default async function SverigeGuidePage({ params }: { params: { slug: str
           </div>
         </section>
 
-        <WallOfReceipts results={guide.serpResults} type={guide.type} />
+        <WallOfReceipts
+          results={guide.serpResults}
+          type={guide.type}
+          serpHealth={guide.serpHealth}
+        />
 
         {/* People Should Also Ask */}
         {guide.peopleShouldAlsoAsk && guide.peopleShouldAlsoAsk.length > 0 && (

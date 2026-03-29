@@ -10,65 +10,100 @@
   "searchMetadata": {
     "totalAnalyzed": 100,
     "dateAnalyzed": "27 mars 2026",
-    "verificationDate": "Mars 2026"
+    "verificationDate": "Mars 2026",
+    "isoDate": "2026-03-27"
+  },
+  "serpHealth": {
+    "totalAnalyzed": 100,
+    "licensedOperators": 31,
+    "legitAffiliates": 15,
+    "seoGrabs": 7,
+    "shadyAffiliates": 8,
+    "unlicensed": 4,
+    "irrelevant": 35,
+    "usefulResults": 46,
+    "healthScore": 46,
+    "healthLabel": "Medel — 46 av 100 resultat tjänar svenska spelares intressen"
   },
   "verdict": {
-    "summary": "Casumo är ett riktigt bra casino med  med Spelinspektionen-licens och stark Spelpaus-integration."
+    "summary": "Casumo vinner på enkelhet och track record. Bäst i klassen sedan 2012, prisat varje år sedan dess."
   },
-"winner": {
-  "name": "Casumo",
-  "domain": "casumo.com",
-  "affiliateUrl": "https://casumo.com/sv/",
-  "affiliateLabel": "Spela på Casumo →",
-  "logo": "/images/guides/casumo-logo.png",
-  "googleRank": 4,
-  "upsellLine": "Branschens snyggaste casino sedan 2012.",
-  "whyItWins": "Casumo lanserades 2012 och var bäst i klassen redan från dag ett. Avskalat, snabbt och enkelt — ingen onödig komplexitet. Över 2 500 spel, utmärkt app med FaceID-inloggning och villkor skrivna för människor, inte advokater.",
-  "badges": [
-    "Grundat 2012",
-    "2 500+ spel",
-    "FaceID-inloggning",
-    "EGR Årets operatör 2025"
-  ],
-  "sectionBadge": "Redaktionell analys",
-  "materialEvidence": [
-    {
-      "title": "Prisat år efter år sedan 2013",
-      "description": "EGR Awards, SBC Awards och IGA Awards — Casumo har tagit hem priser varje år sedan 2013 inklusive Årets operatör i Västeuropa 2025."
-    },
-    {
-      "title": "Villkor skrivna för människor",
-      "description": "Inga advokattexter eller finstilt. Bonusvillkor och regler presenteras rakt och tydligt — ovanligt i branschen."
-    },
-    {
-      "title": "Spelutbud i världsklass",
-      "description": "Över 2 500 spel från 80+ leverantörer inklusive Evolution, NetEnt, Nolimit City och Hacksaw Gaming. Extremt enkel filtrering."
-    }
-  ],
-  "customerReview": {
-    "quote": "Casumo var bäst i klassen 2012 och är det fortfarande. Medan andra casinon bygger på komplexitet har Casumo konsekvent satsat på enkelhet — det är svårare än det låter och få lyckas med det.",
-    "date": "Mars 2026",
-    "author": "BigBet.Energy redaktion"
-  },
-  "termsAndConditions": "18+. Spela ansvarsfullt. Fullständiga villkor på casumo.com. Stödlinjen: 020-81 91 00. Självavstängning via Spelpaus.se.",
-  "specs": {
-    "whatYouGet": [
-      { "label": "Grundat", "value": "2012" },
-      { "label": "Spelutbud", "value": "2 500+ spel, 80+ leverantörer" },
-      { "label": "Uttag", "value": "Trustly, vanligtvis inom 24h" },
-      { "label": "Betalmetoder", "value": "Trustly, Apple Pay, BankID" },
-      { "label": "App", "value": "iOS och Android, FaceID/TouchID" },
-      { "label": "Villkor", "value": "Inga omsättningskrav på grundbonus" }
+  "winner": {
+    "name": "Casumo",
+    "domain": "casumo.com",
+    "affiliateUrl": "https://casumo.com/sv/",
+    "affiliateLabel": "Spela på Casumo →",
+    "logo": "/images/guides/casumo-logo.png",
+    "googleRank": 4,
+    "upsellLine": "Branschens snyggaste casino sedan 2012.",
+    "whyItWins": "Casumo lanserades 2012 och var bäst i klassen redan från dag ett. Avskalat, snabbt och enkelt — ingen onödig komplexitet. Över 2 500 spel, utmärkt app med FaceID-inloggning och villkor skrivna för människor, inte advokater.",
+    "badges": [
+      "Grundat 2012",
+      "2 500+ spel",
+      "FaceID-inloggning",
+      "EGR Årets operatör 2025"
     ],
-    "certifications": [
-      "EGR Årets operatör Västeuropa 2025",
-      "SBC Stigande stjärna inom kasino 2025",
-      "IGA Årets kundserviceföretag 2022",
-      "EGR Nordic Kasinooperatör 2021",
-      "EGR Nordic Mobiloperatör 2017 & 2018"
-    ]
-  }
-},
+    "sectionBadge": "Redaktionell analys",
+    "materialEvidence": [
+      {
+        "title": "Prisat år efter år sedan 2013",
+        "description": "EGR Awards, SBC Awards och IGA Awards — Casumo har tagit hem priser varje år sedan 2013 inklusive Årets operatör i Västeuropa 2025."
+      },
+      {
+        "title": "Villkor skrivna för människor",
+        "description": "Inga advokattexter eller finstilt. Bonusvillkor och regler presenteras rakt och tydligt — ovanligt i branschen."
+      },
+      {
+        "title": "Spelutbud i världsklass",
+        "description": "Över 2 500 spel från 80+ leverantörer inklusive Evolution, NetEnt, Nolimit City och Hacksaw Gaming. Extremt enkel filtrering."
+      },
+      {
+        "title": "Bonusen har ett hake",
+        "description": "Omsättningskravet på välkomstbonusen inkluderar både insättning och bonus — inte bara bonusbeloppet. Sämre än branschsnittet. Spela på Casumo för produkten, inte för bonusen."
+      }
+    ],
+    "customerReview": {
+      "quote": "Ett minus värt att nämna: omsättningskravet på välkomstbonusen inkluderar både insättning och bonus — inte bara bonusbeloppet. Det är sämre än branschsnittet och något vi inte gillar. Men Casumo vinner inte på sin bonus — de vinner på sin produkt.",
+      "date": "Mars 2026",
+      "author": "BigBet.Energy redaktion"
+    },
+    "termsAndConditions": "18+. Spela ansvarsfullt. Fullständiga villkor på casumo.com. Stödlinjen: 020-81 91 00. Självavstängning via Spelpaus.se.",
+    "specs": {
+      "whatYouGet": [
+        {
+          "label": "Grundat",
+          "value": "2012"
+        },
+        {
+          "label": "Spelutbud",
+          "value": "2 500+ spel, 80+ leverantörer"
+        },
+        {
+          "label": "Uttag",
+          "value": "Trustly, vanligtvis inom 24h"
+        },
+        {
+          "label": "Betalmetoder",
+          "value": "Trustly, Apple Pay, BankID"
+        },
+        {
+          "label": "App",
+          "value": "iOS och Android, FaceID/TouchID"
+        },
+        {
+          "label": "Villkor",
+          "value": "Inga omsättningskrav på grundbonus"
+        }
+      ],
+      "certifications": [
+        "EGR Årets operatör Västeuropa 2025",
+        "SBC Stigande stjärna inom kasino 2025",
+        "IGA Årets kundserviceföretag 2022",
+        "EGR Nordic Kasinooperatör 2021",
+        "EGR Nordic Mobiloperatör 2017 & 2018"
+      ]
+    }
+  },
   "runnerUps": [
     {
       "name": "LeoVegas",

@@ -1,5 +1,4 @@
 'use client';
-
 import { useState } from 'react';
 
 interface SerpResult {
@@ -13,9 +12,25 @@ interface SerpResult {
   licensed?: boolean | null;
 }
 
-export default function WallOfReceipts({ results, type }: { results: SerpResult[], type?: string }) {
-  const [showAll, setShowAll] = useState(false);
+interface SerpHealth {
+  totalAnalyzed: number;
+  licensedOperators: number;
+  legitAffiliates: number;
+  seoGrabs: number;
+  shadyAffiliates: number;
+  unlicensed: number;
+  irrelevant: number;
+  usefulResults: number;
+  healthScore: number;
+  healthLabel: string;
+}
 
+export default function WallOfReceipts({ results, type, serpHealth }: {
+  results: SerpResult[];
+  type?: string;
+  serpHealth?: SerpHealth;
+}) {
+  const [showAll, setShowAll] = useState(false);
   const displayed = showAll ? results : results.slice(0, 10);
   const remaining = results.length - 10;
 
@@ -31,12 +46,23 @@ export default function WallOfReceipts({ results, type }: { results: SerpResult[
         Wall of Receipts
       </h2>
 
-      <div className="bg-neutral-800 px-6 py-5 rounded-lg border border-neutral-700 mb-6">
-        <p className="text-base font-normal leading-relaxed text-neutral-300">
-          <strong className="text-white">Fullständig analys:</strong> Komplett genomgång av alla {results.length} URL:er från top 100 för detta sökord. Här ser du vad varje sajt påstår sig vara — och vad vi faktiskt hittade.
-        </p>
-      </div>
+      {/* Replace intro box with SERP Health Score */}
+      {serpHealth && (
+        <div className="bg-neutral-800 border border-neutral-700 rounded-xl p-6 mb-6 flex items-center gap-6">
+          <div className="text-center flex-shrink-0">
+            <div className="text-5xl font-bold text-amber-400">
+              {serpHealth.healthScore}%
+            </div>
+            <div className="text-xs text-neutral-500 mt-1">SERP Health</div>
+          </div>
+          <div className="border-l border-neutral-700 pl-6 flex-grow">
+            <p className="text-white font-semibold mb-1">{serpHealth.healthLabel}</p>
+            <p className="text-neutral-400 text-sm">Komplett genomgång av alla {results.length} URL:er. Här ser du vad varje sajt påstår sig vara — och vad vi faktiskt hittade.</p>
+          </div>
+        </div>
+      )}
 
+      {/* Legend */}
       <div className="flex flex-wrap gap-4 mb-4 text-xs text-neutral-400">
         <span><span className="text-blue-400">✓</span> {type === 'game' ? 'Licensierad casinosajt' : 'Licensierad operatör'}</span>
         <span><span className="text-green-400">✓</span> Seriös affiliate</span>
@@ -76,11 +102,10 @@ export default function WallOfReceipts({ results, type }: { results: SerpResult[
               </tr>
             ))}
           </tbody>
-
           {remaining > 0 && (
             <tfoot>
               <tr>
-                <td colSpan={5} className="p-0">
+                <td colSpan={4} className="p-0">
                   <button
                     onClick={() => setShowAll(!showAll)}
                     className="w-full bg-neutral-700 hover:bg-neutral-600 text-neutral-300 hover:text-white font-medium py-3 text-sm transition-colors border-t border-neutral-700"
