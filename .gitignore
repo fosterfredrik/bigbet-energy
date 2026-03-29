@@ -43,3 +43,4 @@ app/[slug]_BACKUP_*/
 migrate_products.py
 remotion/node_modules/
 remotion/out/
+scripts/
