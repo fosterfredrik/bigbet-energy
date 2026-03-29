@@ -122,10 +122,10 @@ export default async function SverigeGuidePage({ params }: { params: { slug: str
                       }
                     },
                     ...(guide.runnerUps?.map((r: any, i: number) => ({
-                      "@type": "Product",
+                      "@type": "ListItem",
                       "position": i + 2,
                       "item": {
-                        "@type": "Organization",
+                        "@type": "Product",
                         "name": r.name,
                         "url": r.affiliateUrl,
                         "description": r.whyRunnerUp
