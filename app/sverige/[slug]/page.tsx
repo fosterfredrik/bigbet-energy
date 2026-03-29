@@ -77,7 +77,15 @@ export default async function SverigeGuidePage({ params }: { params: { slug: str
                   "description": guide.winner.whyItWins,
                   "award": `BigBet.Energy #1 val — ${guide.searchIntent}`,
                   "knowsAbout": guide.winner.badges,
-                  "sameAs": guide.winner.sameAs || [`https://${guide.winner.domain}`]
+                  "sameAs": guide.winner.sameAs || [`https://${guide.winner.domain}`],
+                  "aggregateRating": {
+                    "@type": "AggregateRating",
+                    "ratingValue": 5,
+                    "bestRating": 5,
+                    "worstRating": 1,
+                    "reviewCount": 1,
+                    "ratingExplanation": `Redaktionellt betyg baserat på granskning av ${guide.searchMetadata.totalAnalyzed} Google-resultat`
+                  }
                 },
                 {
                   "@type": "Review",
