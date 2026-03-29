@@ -327,13 +327,24 @@ export default async function SverigeGuidePage({ params }: { params: { slug: str
                     key={idx}
                     className="flex items-start gap-2"
                     data-evidence-id={`evidence-${idx + 1}`}
-                    data-source="editorial-review"
+                    data-source={evidence.externalUrl ? evidence.externalUrl : "editorial-review"}
                     data-verified={searchMetadata.isoDate}
                     data-claim-type={evidence.title}
+                    data-dataset-row={evidence.serpRow ?? undefined}
                   >
                     <span className="text-amber-400 font-bold text-lg mt-0.5">✓</span>
                     <span>
                       <strong>{evidence.title}:</strong> {evidence.description}
+                      {evidence.externalUrl && (
+
+                        <a href={evidence.externalUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="ml-2 text-amber-400 hover:text-amber-300 text-xs transition"
+                        >
+                          {evidence.externalLabel || "Verifiera →"}
+                        </a>
+                      )}
                     </span>
                   </li>
                 ))}

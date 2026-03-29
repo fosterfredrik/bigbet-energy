@@ -60,6 +60,13 @@
       {
         "title": "Bonusen har ett hake",
         "description": "Omsättningskravet på välkomstbonusen inkluderar både insättning och bonus — inte bara bonusbeloppet. Sämre än branschsnittet. Spela på Casumo för produkten, inte för bonusen."
+      },
+      {
+        "title": "Licensiering verifierad",
+        "description": "Casumo innehar aktiv Spelinspektionen-licens sedan 2019. Verifierbart direkt på spelinspektionen.se.",
+        "externalUrl": "https://www.spelinspektionen.se/licens-o-tillstand/licensregister/?query=casumo&page=1",
+        "externalLabel": "Verifiera på Spelinspektionen →",
+        "serpRow": 4
       }
     ],
     "customerReview": {
