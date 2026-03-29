@@ -82,7 +82,8 @@ export default async function SverigeGuidePage({ params }: { params: { slug: str
                     "@type": "AggregateRating",
                     "ratingValue": 5,
                     "bestRating": 5,
-                    "worstRating": 1
+                    "worstRating": 1,
+                    "reviewCount": 1
                   }
                 },
                 {
@@ -128,7 +129,14 @@ export default async function SverigeGuidePage({ params }: { params: { slug: str
                         "@type": "Product",
                         "name": r.name,
                         "url": r.affiliateUrl,
-                        "description": r.whyRunnerUp
+                        "description": r.whyRunnerUp,
+                        "aggregateRating": {
+                          "@type": "AggregateRating",
+                          "ratingValue": i === 0 ? 4 : 3,
+                          "bestRating": 5,
+                          "worstRating": 1,
+                          "reviewCount": 1
+                        }
                       }
                     })) || [])
                   ]
