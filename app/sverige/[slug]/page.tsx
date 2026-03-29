@@ -82,9 +82,7 @@ export default async function SverigeGuidePage({ params }: { params: { slug: str
                     "@type": "AggregateRating",
                     "ratingValue": 5,
                     "bestRating": 5,
-                    "worstRating": 1,
-                    "reviewCount": 1,
-                    "ratingExplanation": `Redaktionellt betyg baserat på granskning av ${guide.searchMetadata.totalAnalyzed} Google-resultat`
+                    "worstRating": 1
                   }
                 },
                 {
@@ -124,7 +122,7 @@ export default async function SverigeGuidePage({ params }: { params: { slug: str
                       }
                     },
                     ...(guide.runnerUps?.map((r: any, i: number) => ({
-                      "@type": "ListItem",
+                      "@type": "Product",
                       "position": i + 2,
                       "item": {
                         "@type": "Organization",
@@ -361,7 +359,7 @@ export default async function SverigeGuidePage({ params }: { params: { slug: str
 
             <div className="bg-neutral-800 rounded-lg shadow-sm p-6 border border-neutral-700">
               <div className="flex items-center gap-2 mb-3">
-                <span className="bg-neutral-700 text-neutral-300 px-3 py-1 rounded-lg text-xs font-medium">
+                <span className="bg-neutral-700 text-neutral-300 px-3 py-1 rounded-lg text-sm font-medium inline-block">
                   Redaktionell kommentar
                 </span>
                 <div className="flex gap-0.5">
@@ -470,7 +468,7 @@ export default async function SverigeGuidePage({ params }: { params: { slug: str
                     </div>
 
                     {/* Description */}
-                    <p className="text-neutral-300 mb-6 flex-grow text-sm leading-relaxed">
+                    <p className="text-neutral-300 mb-6 flex-grow text-base leading-relaxed">
                       {runnerUp.whyRunnerUp}
                     </p>
 
@@ -483,6 +481,30 @@ export default async function SverigeGuidePage({ params }: { params: { slug: str
                     >
                       {runnerUp.affiliateLabel}
                     </a>
+                    {/* Responsible gambling row */}
+                    <div className="flex items-center justify-center gap-3 mt-3 flex-wrap">
+                      <span className="text-neutral-500 text-xs">18+</span>
+                      <span className="text-neutral-700">·</span>
+                      <a href="https://stodlinjen.se" target="_blank" rel="noopener noreferrer" className="text-neutral-500 hover:text-neutral-400 text-xs transition">Stödlinjen.se</a>
+                      <span className="text-neutral-700">·</span>
+                      <a href="https://spelpaus.se" target="_blank" rel="noopener noreferrer" className="text-neutral-500 hover:text-neutral-400 text-xs transition">Spelpaus.se</a>
+                      {runnerUp.termsAndConditions && (
+                        <>
+                          <span className="text-neutral-700">·</span>
+                          <details className="inline">
+                            <summary className="text-neutral-500 text-xs cursor-pointer hover:text-neutral-400 transition list-none inline-flex items-center gap-1">
+                              <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                              </svg>
+                              Visa villkor
+                            </summary>
+                            <p className="text-neutral-500 text-xs leading-relaxed mt-2 text-center">
+                              {runnerUp.termsAndConditions}
+                            </p>
+                          </details>
+                        </>
+                      )}
+                    </div>
                   </div>
                 </div>
               ))}
@@ -501,10 +523,14 @@ export default async function SverigeGuidePage({ params }: { params: { slug: str
           >
             <div className="border-2 border-neutral-700 rounded-lg overflow-hidden bg-neutral-800">
               <div className="p-6">
+                {/* Header row */}
                 <div className="flex items-start justify-between mb-3 flex-wrap gap-2">
-                  <span className="bg-neutral-700 text-neutral-300 px-3 py-1.5 rounded-lg text-xs font-bold">
-                    The Bubble
-                  </span>
+                  <div className="flex items-center gap-2">
+                    <span className="bg-neutral-700 text-neutral-300 px-3 py-1.5 rounded-lg text-xs font-bold">
+                      The Bubble
+                    </span>
+                    <span className="text-neutral-600 text-xs">Google #{guide.theBubble.googleRank}</span>
+                  </div>
                   <span className="text-xs text-neutral-500 italic">
                     Manuellt tillagd av redaktionen
                   </span>
@@ -514,32 +540,52 @@ export default async function SverigeGuidePage({ params }: { params: { slug: str
                   {guide.theBubble.name}
                 </h3>
 
-                <p className="text-neutral-300 text-sm mb-4 leading-relaxed">
+                <p className="text-neutral-300 text-base mb-4 leading-relaxed">
                   {guide.theBubble.explanation}
                 </p>
 
                 <ul className="space-y-2 mb-6">
                   {guide.theBubble.evidence?.map((item: string, i: number) => (
-                    <li key={i} className="text-xs text-neutral-400 flex items-start gap-2">
+                    <li key={i} className="text-sm text-neutral-400 flex items-start gap-2">
                       <span className="text-amber-400 mt-0.5">✓</span>
                       <span>{item}</span>
                     </li>
                   ))}
                 </ul>
 
-                <div className="flex items-center justify-between flex-wrap gap-4">
-                  <span className="text-neutral-500 text-xs">
-                    Google-position: #{guide.theBubble.googleRank}
-                  </span>
+                {/* Bottom row — CTA left, responsible gambling right */}
+                <div className="flex items-center justify-between flex-wrap gap-3">
 
-                  <a
-                    href={guide.theBubble.affiliateUrl}
+                  <a href={guide.theBubble.affiliateUrl}
                     target="_blank"
                     rel="noopener noreferrer sponsored"
                     className="inline-block bg-neutral-900 border-2 border-amber-400 text-amber-400 hover:bg-neutral-700 font-bold px-6 py-3 rounded-lg transition-colors text-center text-sm"
                   >
                     {guide.theBubble.affiliateLabel}
                   </a>
+                  <div className="flex items-center gap-3 flex-wrap">
+                    <span className="text-neutral-500 text-xs">18+</span>
+                    <span className="text-neutral-700">·</span>
+                    <a href="https://stodlinjen.se" target="_blank" rel="noopener noreferrer" className="text-neutral-500 hover:text-neutral-400 text-xs transition">Stödlinjen.se</a>
+                    <span className="text-neutral-700">·</span>
+                    <a href="https://spelpaus.se" target="_blank" rel="noopener noreferrer" className="text-neutral-500 hover:text-neutral-400 text-xs transition">Spelpaus.se</a>
+                    {guide.theBubble.termsAndConditions && (
+                      <>
+                        <span className="text-neutral-700">·</span>
+                        <details className="inline">
+                          <summary className="text-neutral-500 text-xs cursor-pointer hover:text-neutral-400 transition list-none inline-flex items-center gap-1">
+                            <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                            </svg>
+                            Visa villkor
+                          </summary>
+                          <p className="text-neutral-500 text-xs leading-relaxed mt-2 text-center">
+                            {guide.theBubble.termsAndConditions}
+                          </p>
+                        </details>
+                      </>
+                    )}
+                  </div>
                 </div>
               </div>
             </div>
@@ -616,7 +662,7 @@ export default async function SverigeGuidePage({ params }: { params: { slug: str
             <div className="space-y-10">
               {guide.methodology.steps.map((step: any) => (
                 <div key={step.num} className="relative pl-14">
-                  <div className="absolute left-0 w-8 h-8 rounded-full bg-amber-400 text-black flex items-center justify-center font-bold text-sm">
+                  <div className="absolute left-0 w-8 h-8 rounded-full bg-amber-400 text-black flex items-center justify-center font-bold text-basesm">
                     {step.num}
                   </div>
                   <div>

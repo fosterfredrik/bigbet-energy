@@ -53,17 +53,17 @@ export default function WallOfReceipts({ results, type, serpHealth }: {
             <div className="text-5xl font-bold text-amber-400">
               {serpHealth.healthScore}%
             </div>
-            <div className="text-xs text-neutral-500 mt-1">SERP Health</div>
+            <div className="text-sm text-neutral-500 mt-1">SERP Health</div>
           </div>
           <div className="border-l border-neutral-700 pl-6 flex-grow">
             <p className="text-white font-semibold mb-1">{serpHealth.healthLabel}</p>
-            <p className="text-neutral-400 text-sm">Komplett genomgång av alla {results.length} URL:er. Här ser du vad varje sajt påstår sig vara — och vad vi faktiskt hittade.</p>
+            <p className="text-neutral-400 text-base">Komplett genomgång av alla {results.length} URL:er. Här ser du vad varje sajt påstår sig vara — och vad vi faktiskt hittade.</p>
           </div>
         </div>
       )}
 
       {/* Legend */}
-      <div className="flex flex-wrap gap-4 mb-4 text-xs text-neutral-400">
+      <div className="flex flex-wrap gap-4 mb-4 text-sm text-neutral-400">
         <span><span className="text-blue-400">✓</span> {type === 'game' ? 'Licensierad casinosajt' : 'Licensierad operatör'}</span>
         <span><span className="text-green-400">✓</span> Seriös affiliate</span>
         <span><span className="text-amber-400">⚠</span> SEO-grab</span>
