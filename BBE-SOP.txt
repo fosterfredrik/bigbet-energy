@@ -1,0 +1,248 @@
+BBE CONTENT PRODUCTION SOP
+bigbet.energy — Article Production Workflow
+Last updated: April 2026
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+FOLDER STRUCTURE
+
+scripts/
+  tools/                          ← python scripts, never edit during workflow
+    bbe_serp_batch_paged.py
+    bbe_serp_bluelinks_paged1.py
+    bbe_transform_v1.py
+  serp/
+    sv/                           ← Sverige SERP CSVs
+    br/                           ← Brasil SERP CSVs
+  articles/
+    [slug]/                       ← one folder per article
+      02_httpstatus.csv
+      03_picks_rankings.txt
+      04_prompt.txt
+      05_notebooklm_output.txt
+      06_[slug].json
+
+content/
+  guides/
+    sverige/                      ← production JSON files
+    brasil/
+
+keywords/                         ← ahrefs exports when needed
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+MARKET CONFIG REFERENCE
+
+Sverige
+  REGULATOR: Spelinspektionen
+  LICENSE_CHECK_URL: spelinspektionen.se
+  RESPONSIBLE_GAMBLING: Spelpaus
+  HELPLINE: Stödlinjen 020-81 91 00
+
+Brasil
+  REGULATOR: SIGAD/Ministério da Fazenda
+  LICENSE_CHECK_URL: gov.br
+  RESPONSIBLE_GAMBLING: Jogo Responsável
+  HELPLINE: CVV 188
+
+UK
+  REGULATOR: UK Gambling Commission
+  LICENSE_CHECK_URL: gamblingcommission.gov.uk
+  RESPONSIBLE_GAMBLING: GamStop
+  HELPLINE: GamCare 0808 8020 133
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+STEP 1 — KEYWORD RESEARCH
+No local files. Research in Google Docs.
+Decide: keyword, market, search intent, type (operator or game).
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+STEP 2 — SERP FETCH
+Run from: scripts/tools/
+
+Single keyword:
+  python3 bbe_serp_bluelinks_paged1.py "keyword" sv
+
+Batch (all keywords for a market):
+  python3 bbe_serp_batch_paged.py sv
+  python3 bbe_serp_batch_paged.py br
+
+Output saves automatically to: scripts/serp/[market]/[keyword]_[market]_[date].csv
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+STEP 3 — REDIRECT CHECK
+Goal: resolve final URLs for winner + runners-up picks.
+Catch geo-blocks, redirects to wrong domains.
+
+1. Connect ProtonVPN → Sweden (or Brasil for BR articles)
+2. Open httpstatus.io
+3. Paste the URLs you are considering for winner + runners-up
+4. Uncheck canonical domain check
+5. Run check
+6. Export CSV
+7. Save to: scripts/articles/[slug]/02_httpstatus.csv
+8. Note any geo-blocks or cross-domain redirects
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+STEP 4 — PICKS + RANKINGS FILE
+Create: scripts/articles/[slug]/03_picks_rankings.txt
+
+Format exactly like this:
+
+  MY PICKS
+
+  winner https://[resolved-url] (rank [N] or "not in list")
+  runner up 1 https://[resolved-url] (rank [N] or "not in list")
+  runner up 2 https://[resolved-url] (rank [N] or "not in list")
+
+  Ranking & URLS
+
+  1   https://url1
+  2   https://url2
+  3   https://url3
+  ...
+  100 https://url100
+
+Use the resolved URLs from the httpstatus check for your picks.
+Use the URLs from the DataForSEO CSV for the ranked list.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+STEP 5 — PROMPT
+Create: scripts/articles/[slug]/04_prompt.txt
+
+Fill in this template:
+
+---
+KEYWORD: [exact keyword lowercase]
+MARKET: [Sverige / Brasil / UK]
+LANGUAGE: [Swedish / Portuguese / English]
+REGULATOR: [from market config above]
+LICENSE_CHECK_URL: [from market config above]
+RESPONSIBLE_GAMBLING_SYSTEM: [from market config above]
+HELPLINE: [from market config above]
+SEARCH_INTENT: [one sentence — what the user wants]
+TOTAL_URLS: 100
+
+My picks and the full ranked URL list are in the uploaded file
+03_picks_rankings.txt. Use that for winner, runners-up, and all
+Google ranks. Do not change my picks.
+
+You are helping build an independent editorial guide for
+"[KEYWORD]" targeting [MARKET] users. The search intent is:
+[SEARCH_INTENT]. I have provided the top 100 organic Google
+results ranked #1 to #100 in the uploaded file.
+
+For the winner and each runner-up provide:
+2-3 sentence argument for why this operator is a strong choice
+for [MARKET] players. Focus on: [REGULATOR] license,
+[RESPONSIBLE_GAMBLING_SYSTEM] integration, withdrawal speed,
+bonus transparency, payment methods, ownership transparency.
+Factual only, no adjectives.
+3-4 materialEvidence items. The last one should be an honest
+negative — a real weakness. One factual verifiable claim each.
+
+For the winner also provide:
+- upsellLine: max 12 words, punchy
+- customerReview quote: 1-2 sentences as senior industry expert,
+  factual, no hype
+
+For each runner-up also provide:
+- keyBenefit: max 6 words, single strongest feature
+
+SERP CLASSIFICATION
+Classify every URL using these categories:
+licensed-operator: Licensed by [REGULATOR], targets [MARKET] players
+legit-affiliate: Legitimate affiliate, transparent ownership,
+  promotes licensed operators only
+seo-grab: Large site monetizing domain authority without genuine
+  [MARKET] expertise
+shady-affiliate: Unknown ownership, no transparency
+unlicensed: Not licensed by [REGULATOR], targets [MARKET] players
+irrelevant: Does not match search intent
+
+For each URL provide:
+Google rank / Domain / Site name / Verdict
+Commentary: one sentence, factual, no adjectives.
+
+FAILURE CARDS
+Identify the 3 sites most harmful or deceptive to [MARKET] players.
+For each: Domain / Site name / Google rank
+Badge: 2-3 word label (max 20 chars)
+2-3 sentence explanation. Factual, specific.
+
+METHODOLOGY
+List 5-7 ranking criteria. Comma-separated.
+Step 3 title and text: how you classified each URL (2-3 sentences)
+Step 4 title and text: how you ranked relevant results (2-3 sentences)
+
+OUTPUT FORMAT
+Plain structured text. No JSON. Sort SERP RESULTS by rank #1-100.
+Structure: WINNER / RUNNER-UP 2 / RUNNER-UP 3 / RANKING CRITERIA /
+SERP RESULTS / FAILURE CARDS / METHODOLOGY STEPS
+---
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+STEP 6+7 — NOTEBOOKLM
+1. Open NotebookLM → New notebook
+2. Add sources → Add websites → paste all 100 URLs from
+   03_picks_rankings.txt (ranked list section only, one per line)
+3. Add sources → Upload → upload 03_picks_rankings.txt
+4. Paste the prompt from 04_prompt.txt into the chat
+5. Wait for output
+6. Copy full output
+7. Save to: scripts/articles/[slug]/05_notebooklm_output.txt
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+STEP 8 — TRANSFORM
+Run from: scripts/tools/
+
+  XAI_API_KEY=your-key python3 bbe_transform_v1.py \
+    ../articles/[slug]/05_notebooklm_output.txt [slug]
+
+Output: [slug].json in scripts/tools/
+Move it:
+  mv [slug].json ../articles/[slug]/06_[slug].json
+  cp ../articles/[slug]/06_[slug].json \
+    ../../content/guides/[country]/[slug].json
+
+Then check validation output. Fix any errors before deploying.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+STEP 9 — EXPERT LAYER (manual)
+Before deploying, review and improve:
+- Rewrite copy if it sounds generic
+- Verify winner/runner-up facts are accurate
+- Fill in real affiliate URLs (replace https://[domain] placeholders)
+- Add operator logos to public/images/guides/
+- Review failure cards — are they the right 3?
+- Curate peopleShouldAlsoAsk — replace generic questions
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+STEP 10 — DEPLOY
+  cd ~/Documents/XR-20 FarSight/bigbet-energy
+  git add .
+  git commit -m "add [slug] article"
+  git push
+
+Vercel auto-deploys on push to main.
+Check live at: https://bigbet.energy/sverige/[slug]
+Run Google Rich Results Test on live URL.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+COMMON VALIDATION ERRORS
+
+h1 wrong year → Grok used wrong date. Fix manually in JSON.
+badge > 20 chars → Shorten badge text in JSON.
+missing affiliate URLs → Replace https://[domain] with real URLs.
+runnerUp googleRank: 0 → Normal if operator not in top 100.
+methodology steps 1+2 have text → Delete text, leave as "".

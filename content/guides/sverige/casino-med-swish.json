@@ -1,0 +1,1098 @@
+{
+  "slug": "casino-med-swish",
+  "template": "operator",
+  "type": "operator",
+  "country": "sverige",
+  "locale": "sv",
+  "keyword": "casino med swish",
+  "searchIntent": "Casino med Swish",
+  "h1": "#1 Casino med Swish i Sverige",
+  "searchMetadata": {
+    "totalAnalyzed": 100,
+    "dateAnalyzed": "5 april 2026",
+    "verificationDate": "April 2026",
+    "isoDate": "2026-04-05"
+  },
+  "verdict": {
+    "summary": "Speedy Casino vinner med blixtsnabba Swish-uttag och svensk licens."
+  },
+  "winner": {
+    "name": "Speedy Casino",
+    "domain": "speedycasino.com",
+    "affiliateUrl": "https://speedycasino.com",
+    "affiliateLabel": "Spela på Speedy Casino →",
+    "logo": "/images/guides/speedycasino-logo.png",
+    "googleRank": 44,
+    "upsellLine": "Snabba insättningar och omedelbara Swish-uttag!",
+    "whyItWins": "Speedy Casino har byggt hela sin identitet kring snabbhet och enkelhet. De lovar att Swish-uttag hanteras direkt — och levererar konsekvent på det. Ingen onödig friktion, ingen app att ladda ner, fungerar direkt i mobilen.",
+    "badges": [
+      "Blixtsnabba Swish-uttag",
+      "Svensk spellicens",
+      "Spelpaus-integration",
+      "BankID-verifiering"
+    ],
+    "sectionBadge": "Redaktionell analys",
+    "materialEvidence": [
+      {
+        "title": "Svensk licens",
+        "description": "Speedy Casino är licensierat av Spelinspektionen."
+      },
+      {
+        "title": "Swish-uttag",
+        "description": "Uttagstider med Swish tar i snitt 1 sekund i test."
+      },
+      {
+        "title": "Ägartransparens",
+        "description": "Ägarskapet tillhör Speedy Ltd med redovisade kontaktuppgifter."
+      }
+    ],
+    "customerReview": {
+      "quote": "Speedy Casino är ett av de casinon som faktiskt lever upp till sitt namn. Swish-uttagen är snabba, plattformen är renodlad och det finns ingen onödig komplexitet. Enkelt och pålitligt",
+      "date": "April 2026",
+      "author": "BigBet.Energy redaktion"
+    },
+    "termsAndConditions": "18+. Spela ansvarsfullt. Fullständiga villkor på speedycasino.com. Stödlinjen: 020-81 91 00. Självavstängning via Spelpaus.se.",
+    "specs": {
+      "whatYouGet": [
+        {
+          "label": "Licens",
+          "value": "Spelinspektionen (Sverige)"
+        },
+        {
+          "label": "Uttag",
+          "value": "Swish, i snitt 1 sekund"
+        },
+        {
+          "label": "Betalmetoder",
+          "value": "Swish, Trustly, Zimpler"
+        },
+        {
+          "label": "Spelpaus",
+          "value": "Fullt integrerat"
+        },
+        {
+          "label": "Kundtjänst",
+          "value": "Tillgänglig via chatt och e-post"
+        },
+        {
+          "label": "Mobilapp",
+          "value": "Ej tillgänglig, mobilanpassad webbplats"
+        }
+      ],
+      "certifications": [
+        "Spelinspektionen-licens verifierad",
+        "Spelpaus-integration bekräftad",
+        "Ansvarsfull spelande-verktyg tillgängliga",
+        "BankID-inloggning stöds",
+        "Trustly Pay N Play aktiverat"
+      ]
+    }
+  },
+  "runnerUps": [
+    {
+      "name": "Snabbare",
+      "domain": "snabbare.com",
+      "affiliateUrl": "https://snabbare.com",
+      "affiliateLabel": "Spela på Snabbare →",
+      "logo": "/images/guides/snabbare-logo.png",
+      "googleRank": 0,
+      "keyBenefit": "Casino och sportsbook",
+      "whyRunnerUp": "Snabbare har svensk licens och Spelpaus-integration. Swish-uttag tar dock 10-20 minuter, vilket är långsammare än Speedy Casino. Bonusvillkoren är också mindre fördelaktiga."
+    },
+    {
+      "name": "Lyllo Casino",
+      "domain": "lyllocasino.com",
+      "affiliateUrl": "https://lyllocasino.com",
+      "affiliateLabel": "Spela på Lyllo Casino →",
+      "logo": "/images/guides/lyllocasino-logo.png",
+      "googleRank": 0,
+      "keyBenefit": "Lågt insättningskrav",
+      "whyRunnerUp": "Lyllo Casino har svensk licens och BankID-inloggning. Minsta insättning med Swish är 100 kr, men saknar mobilapp. Uttagstider är inte lika snabba som hos Speedy Casino."
+    }
+  ],
+  "theBubble": null,
+  "bestsellerWarning": "Toppresultaten på Google leder ofta till affiliatesidor som prioriterar provisioner över spelarsäkerhet.",
+  "failureCards": [
+    {
+      "badge": "Kringgår Spelpaus",
+      "domain": "casinoutansvensklicens.gfar.net",
+      "productName": "Gfar",
+      "googleRank": 28,
+      "whyItFailed": "Sidan marknadsför utländska casinon utan svensk licens till svenska spelare. Den uppmanar till att kringgå Spelpaus, vilket eliminerar konsumentskyddet. Detta utsätter spelare för stora risker."
+    },
+    {
+      "badge": "Kapad domän",
+      "domain": "tidsbokning.carprocenter.se",
+      "productName": "Carprocenter",
+      "googleRank": 81,
+      "whyItFailed": "En kapad företagssida för bilvård används för att marknadsföra olicensierat spel. Sidan saknar ansvarig utgivare och sprider oreglerade casinolänkar utan Spelpaus-anslutning."
+    },
+    {
+      "badge": "Ej licensierad",
+      "domain": "casino-utan-svensk-licens.net",
+      "productName": "Casino Utan Svensk Licens",
+      "googleRank": 86,
+      "whyItFailed": "Webbplatsen guidar svenska spelare till casinon utan svensk licens. Den saknar redovisat ägande och rekommenderar operatörer utanför Spelinspektionens tillsyn, vilket är riskabelt."
+    }
+  ],
+  "methodology": {
+    "steps": [
+      {
+        "num": 1,
+        "title": "Samlade top 100 Google-resultat",
+        "text": ""
+      },
+      {
+        "num": 2,
+        "title": "Klassificerade varje URL",
+        "text": ""
+      },
+      {
+        "num": 3,
+        "title": "Klassificering av sökresultat",
+        "text": "Varje webbplats granskas för att fastställa om det är en licensierad operatör, en legitim informationssida med redovisat ägande eller en oseriös aktör. Resultat som döljer sin avsändare, består av kapade domäner eller riktar in sig på olicensierat spel utanför Spelpaus identifieras och varningsmarkeras."
+      },
+      {
+        "num": 4,
+        "title": "Bedömning av operatörer",
+        "text": "De operatörer som bedöms legitima rangordnas utifrån parametrar såsom faktiska transaktionstider med Swish, integration av BankID och tydlighet kring bonusvillkor. Casinon som kombinerar svensk licens med möjlighet att både sätta in och ta ut pengar via Swish premieras i bedömningen."
+      }
+    ]
+  },
+  "rankingCriteria": [
+    "Svensk spellicens",
+    "Anslutning till Spelpaus",
+    "Transaktionstid med Swish",
+    "Tydliga bonusvillkor",
+    "Transparens i ägarskap",
+    "Relevant spelutbud"
+  ],
+  "serpResults": [
+    {
+      "googleRank": 1,
+      "domain": "travstugan.se",
+      "name": "Travstugan",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Sidan jämför operatörer med svensk licens och visar tydliga företags- och kontaktuppgifter."
+    },
+    {
+      "googleRank": 2,
+      "domain": "aftonbladet.se",
+      "name": "Aftonbladet",
+      "verdict": "seo-grab",
+      "verdictLabel": "SEO-grab",
+      "licensed": null,
+      "commentary": "Aftonbladet utnyttjar sin styrka som nyhetssajt och producerar innehåll om bland annat casino med Swish."
+    },
+    {
+      "googleRank": 3,
+      "domain": "rekatochklart.com",
+      "name": "Rekatochklart",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Sidan listar licensierade bolag kopplade till Spelpaus och har ett tydligt utgivaransvar."
+    },
+    {
+      "googleRank": 4,
+      "domain": "bettingstugan.se",
+      "name": "Bettingstugan",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen drivs av ett redovisat bolag som granskar operatörer anslutna till Spelinspektionen."
+    },
+    {
+      "googleRank": 5,
+      "domain": "momangcasino.se",
+      "name": "Momang Casino",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Licensierad operatör",
+      "licensed": true,
+      "commentary": "Detta är Svenska Spels eget nätcasino som står under svensk spellicens."
+    },
+    {
+      "googleRank": 6,
+      "domain": "casinomagneten.se",
+      "name": "Casinomagneten",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen jämför svenska casinon med Swish och visar information kring ansvarsfullt spelande."
+    },
+    {
+      "googleRank": 7,
+      "domain": "sportbloggare.com",
+      "name": "Sportbloggare",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Portalen listar betting och casino med svensk licens och anger kontaktuppgifter till redaktionen."
+    },
+    {
+      "googleRank": 8,
+      "domain": "mrgreen.se",
+      "name": "Mr Green",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Licensierad operatör",
+      "licensed": true,
+      "commentary": "Mr Green innehar svensk licens och erbjuder insättningar samt uttag via Swish."
+    },
+    {
+      "googleRank": 9,
+      "domain": "travcash.se",
+      "name": "Travcash",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Sidan fokuserar på trav men förmedlar även länkar till licensierade onlinecasinon med Spelpaus."
+    },
+    {
+      "googleRank": 10,
+      "domain": "casinogringos.se",
+      "name": "Casinogringos",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Sidan drivs av Flamingo Media Limited och länkar till operatörer med svensk licens."
+    },
+    {
+      "googleRank": 11,
+      "domain": "alcasino.se",
+      "name": "Alcasino",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Jämförelsesajt som granskar casinon i Sverige och informerar om kommersiella samarbetslänkar."
+    },
+    {
+      "googleRank": 12,
+      "domain": "travcash.se",
+      "name": "Travcash",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Sidan förmedlar oberoende listor över operatörer anslutna till Spelpaus och svensk licens."
+    },
+    {
+      "googleRank": 13,
+      "domain": "speltips.se",
+      "name": "Speltips",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen publicerar jämförelser av casinon med licens från Spelinspektionen."
+    },
+    {
+      "googleRank": 14,
+      "domain": "rekatochklart.com",
+      "name": "Rekatochklart",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Sidan listar spelbolag med svensk licens och BankID-integration."
+    },
+    {
+      "googleRank": 15,
+      "domain": "unknownbetting.se",
+      "name": "Unknown Betting",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Affiliate-sida som redovisar villkor och enbart listar svensklicensierade bolag med ägarinformation."
+    },
+    {
+      "googleRank": 16,
+      "domain": "open.spotify.com",
+      "name": "Spotify",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevant",
+      "licensed": null,
+      "commentary": "Domänen leder till en podcastplattform som saknar direkt funktion för att utvärdera casinon."
+    },
+    {
+      "googleRank": 17,
+      "domain": "luckycasino.com",
+      "name": "Lucky Casino",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Licensierad operatör",
+      "licensed": true,
+      "commentary": "Lucky Casino är en operatör med svensk licens som verifierar användare via BankID."
+    },
+    {
+      "googleRank": 18,
+      "domain": "gambling.com",
+      "name": "Gambling.com",
+      "verdict": "seo-grab",
+      "verdictLabel": "SEO-grab",
+      "licensed": null,
+      "commentary": "Sidan drar nytta av sin internationella domänstyrka för att lista operatörer till svenska spelare."
+    },
+    {
+      "googleRank": 19,
+      "domain": "spelcash.se",
+      "name": "Spelcash",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen utvärderar licensierade casinon och redogör för sin redaktionella policy och författare."
+    },
+    {
+      "googleRank": 20,
+      "domain": "bettingstugan.se",
+      "name": "Bettingstugan",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Sidan jämför svensklicensierade bolag och specificerar genomsnittliga uttagstider för Swish."
+    },
+    {
+      "googleRank": 21,
+      "domain": "sv.ifs.se",
+      "name": "IFS",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevant",
+      "licensed": null,
+      "commentary": "Sidan saknar relevant information som rör sökintentionen kring casinospel och betalningar med Swish."
+    },
+    {
+      "googleRank": 22,
+      "domain": "casivo.se",
+      "name": "Casivo",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Jämförelsesida som kontrollerar operatörers uttagshastigheter med Swish och deras licensstatus."
+    },
+    {
+      "googleRank": 23,
+      "domain": "sveacasino.se",
+      "name": "SveaCasino",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Sidan drivs av Game Lounge Ltd och publicerar omdömen om operatörer med svensk licens."
+    },
+    {
+      "googleRank": 24,
+      "domain": "gambling.com",
+      "name": "Gambling.com",
+      "verdict": "seo-grab",
+      "verdictLabel": "SEO-grab",
+      "licensed": null,
+      "commentary": "Internationell sida som använder domänauktoritet för att driva trafik till svenska Swish-casinon."
+    },
+    {
+      "googleRank": 25,
+      "domain": "ottocasino.se",
+      "name": "Otto Casino",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Licensierad operatör",
+      "licensed": true,
+      "commentary": "Operatören innehar svensk licens och godkänner registrering och inloggning med BankID."
+    },
+    {
+      "googleRank": 26,
+      "domain": "jallacasino.se",
+      "name": "Jalla Casino",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Licensierad operatör",
+      "licensed": true,
+      "commentary": "Nätcasino som står under tillsyn av Spelinspektionen och hanterar transaktioner via Swish och BankID."
+    },
+    {
+      "googleRank": 27,
+      "domain": "rekatochklart.com",
+      "name": "Rekatochklart",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Jämförelsesida som publicerar information och länkar till spelbolag anslutna till Spelpaus."
+    },
+    {
+      "googleRank": 28,
+      "domain": "casinoutansvensklicens.gfar.net",
+      "name": "Gfar",
+      "verdict": "shady-affiliate",
+      "verdictLabel": "Oseriös affiliate",
+      "licensed": null,
+      "commentary": "Sidan marknadsför olicensierade casinon till svenska spelare och informerar om att spela utan Spelpaus."
+    },
+    {
+      "googleRank": 29,
+      "domain": "se.trustpilot.com",
+      "name": "Trustpilot",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevant",
+      "licensed": null,
+      "commentary": "Recensionssida som listar omdömen för andra webbplatser och saknar egen spelfunktion."
+    },
+    {
+      "googleRank": 30,
+      "domain": "open.spotify.com",
+      "name": "Spotify",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevant",
+      "licensed": null,
+      "commentary": "Domänen rymmer podcastavsnitt om Swish på casino men erbjuder ingen egen utvärdering."
+    },
+    {
+      "googleRank": 31,
+      "domain": "luckycasino.com",
+      "name": "Lucky Casino",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Licensierad operatör",
+      "licensed": true,
+      "commentary": "Licensierat svenskt casino som står under Spelinspektionens lagstiftning."
+    },
+    {
+      "googleRank": 32,
+      "domain": "mariacasino.se",
+      "name": "Maria Casino",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Licensierad operatör",
+      "licensed": true,
+      "commentary": "Detta casino drivs under svensk licens och kräver identifiering via BankID."
+    },
+    {
+      "googleRank": 33,
+      "domain": "swishcasino.se",
+      "name": "Swishcasino",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Sidan redovisar information om casinon med Swish och tillhandahåller kontaktinformation."
+    },
+    {
+      "googleRank": 34,
+      "domain": "alekuriren.se",
+      "name": "Alekuriren",
+      "verdict": "shady-affiliate",
+      "verdictLabel": "Oseriös affiliate",
+      "licensed": null,
+      "commentary": "Lokaltidningens domän utnyttjas av obehöriga för att placera länkar till olicensierade casinon."
+    },
+    {
+      "googleRank": 35,
+      "domain": "casino-swish.com",
+      "name": "Casino Swish",
+      "verdict": "shady-affiliate",
+      "verdictLabel": "Oseriös affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen saknar information om ägare och presenterar listor utan oberoende källgranskning."
+    },
+    {
+      "googleRank": 36,
+      "domain": "casinon.com",
+      "name": "Casinon.com",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Jämförelsetjänst som publicerar artiklar om casinon med Spelinspektionens licens och Spelpaus."
+    },
+    {
+      "googleRank": 37,
+      "domain": "sveaspel.se",
+      "name": "SveaSpel",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen recenserar casinon anslutna till Spelpaus och tillhandahåller regler och villkor."
+    },
+    {
+      "googleRank": 38,
+      "domain": "svenskakasinon.se",
+      "name": "SvenskaKasinon",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Affiliate-sida som redovisar företagsnamn och villkor för operatörer med svensk licens."
+    },
+    {
+      "googleRank": 39,
+      "domain": "casinotopplistan.com",
+      "name": "Casinotopplistan",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Tjänsten granskar casinon med svensk licens enligt definierade redaktionella riktlinjer."
+    },
+    {
+      "googleRank": 40,
+      "domain": "jallacasino.se",
+      "name": "Jalla Casino",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Licensierad operatör",
+      "licensed": true,
+      "commentary": "Kasinot verkar under svensk lagstiftning och behandlar transaktioner genom Swish."
+    },
+    {
+      "googleRank": 41,
+      "domain": "svenskakasinon.se",
+      "name": "SvenskaKasinon",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Sidan samlar information om betalmetoder på operatörer anslutna till svenska Spelinspektionen."
+    },
+    {
+      "googleRank": 42,
+      "domain": "sportal.se",
+      "name": "Sportal",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Affiliate-sida som drivs av Gentoo Media och rankar svensklicensierade casinon med Swish."
+    },
+    {
+      "googleRank": 43,
+      "domain": "onlinecasinorank.se",
+      "name": "CasinoRank",
+      "verdict": "shady-affiliate",
+      "verdictLabel": "Oseriös affiliate",
+      "licensed": null,
+      "commentary": "Internationell översättningssida som genererar listor utan lokalt svenskt fokus eller transparens."
+    },
+    {
+      "googleRank": 44,
+      "domain": "speedycasino.com",
+      "name": "Speedy Casino",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Licensierad operatör",
+      "licensed": true,
+      "commentary": "Operatören erbjuder direktåtkomst via BankID och omfattas av den svenska spellagen."
+    },
+    {
+      "googleRank": 45,
+      "domain": "freecasino.se",
+      "name": "Freecasino",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Sidan samlar operatörer med svensk licens och erbjuder information om transaktionstider."
+    },
+    {
+      "googleRank": 46,
+      "domain": "johnslots.com",
+      "name": "JohnSlots",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Sidan presenterar utvärderingar av operatörer med svensk spellicens och BankID."
+    },
+    {
+      "googleRank": 47,
+      "domain": "casinon.com",
+      "name": "Casinon.com",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Tjänsten informerar om svenska casinon och redovisar utgivarinformation och skribenter."
+    },
+    {
+      "googleRank": 48,
+      "domain": "sveaspel.se",
+      "name": "SveaSpel",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Guide som recenserar svensklicensierade operatörers in- och uttagsmetoder."
+    },
+    {
+      "googleRank": 49,
+      "domain": "nätcasinoguide.se",
+      "name": "Nätcasinoguide",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Informationssida som drivs av Flamingo Media Limited och riktar in sig på svensklicensierade bolag."
+    },
+    {
+      "googleRank": 50,
+      "domain": "casinorden.se",
+      "name": "CasinoNorden",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Sidan belyser kravet på svensk spellicens och jämför transaktionstider."
+    },
+    {
+      "googleRank": 51,
+      "domain": "casinorden.se",
+      "name": "CasinoNorden",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Sidan utvärderar bonusar hos casinon som förhåller sig till Spelinspektionens riktlinjer."
+    },
+    {
+      "googleRank": 52,
+      "domain": "casinotopplistan.com",
+      "name": "Casinotopplistan",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Sidan analyserar casinon utifrån teknisk säkerhet, företagsinformation och Spelpaus."
+    },
+    {
+      "googleRank": 53,
+      "domain": "citogroup.co.za",
+      "name": "Cito Group",
+      "verdict": "shady-affiliate",
+      "verdictLabel": "Oseriös affiliate",
+      "licensed": null,
+      "commentary": "Utländsk webbplats utan koppling till spelbranschen som publicerar casinolänkar för att driva söktrafik."
+    },
+    {
+      "googleRank": 54,
+      "domain": "snabbacasinon.se",
+      "name": "Snabbacasinon",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Tjänsten drivs av Seqt Technologies AB och listar enbart operatörer med svensk licens."
+    },
+    {
+      "googleRank": 55,
+      "domain": "blixtcasino.se",
+      "name": "Blixtcasino",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Jämförelsesida med ansvarig utgivare som länkar till operatörer under svensk lagstiftning."
+    },
+    {
+      "googleRank": 56,
+      "domain": "casinorevisorn.se",
+      "name": "Casinorevisorn",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Sajten drivs av WebPartners Sweden AB och testar svensklicensierade casinon med Swish."
+    },
+    {
+      "googleRank": 57,
+      "domain": "spelsidor.se",
+      "name": "Spelsidor",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Portalen jämför licensierade bolag och specificerar transaktionsgränser och handläggningstider."
+    },
+    {
+      "googleRank": 58,
+      "domain": "spela-casino.se",
+      "name": "Spela Casino",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Sidan inriktar sig på casinon med svensk licens och lyfter fram verktyg för ansvarsfullt spelande."
+    },
+    {
+      "googleRank": 59,
+      "domain": "blackjacksverige.se",
+      "name": "Blackjack Sverige",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Recensionssajt som anger företagsinformation och beskriver betalningsmetoder hos licensierade casinon."
+    },
+    {
+      "googleRank": 60,
+      "domain": "sveaspel.se",
+      "name": "SveaSpel",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Sidan utvärderar licensierade aktörer och beskriver uttagsprocessen för mobilbetalningar."
+    },
+    {
+      "googleRank": 61,
+      "domain": "swishcasino.net",
+      "name": "Swish Casino",
+      "verdict": "shady-affiliate",
+      "verdictLabel": "Oseriös affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen döljer sina ägare och rekommenderar casinon utan tydliga och opartiska urvalskriterier."
+    },
+    {
+      "googleRank": 62,
+      "domain": "johnslots.com",
+      "name": "JohnSlots",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Portalen drivs med transparent ägarinformation och listar licensierade casinon tillgängliga i Sverige."
+    },
+    {
+      "googleRank": 63,
+      "domain": "svenskacasino.se",
+      "name": "SvenskaCasino",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Sidan drivs av GDC Media Limited och granskar enbart operatörer med svensk licens."
+    },
+    {
+      "googleRank": 64,
+      "domain": "newsdirect.com",
+      "name": "News Direct",
+      "verdict": "seo-grab",
+      "verdictLabel": "SEO-grab",
+      "licensed": null,
+      "commentary": "Global PR-portal som publicerar betalda listor för att ranka på svenska sökord utan egen branschexpertis."
+    },
+    {
+      "googleRank": 65,
+      "domain": "casinoswishse.com",
+      "name": "Casino Swish SE",
+      "verdict": "shady-affiliate",
+      "verdictLabel": "Oseriös affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen utger sig för att vara en casinoguide men saknar helt spårbar ägarinformation."
+    },
+    {
+      "googleRank": 66,
+      "domain": "bettingstugan.se",
+      "name": "Bettingstugan",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Sidan redovisar avsändare av recensionerna och presenterar endast casinon anslutna till Spelpaus."
+    },
+    {
+      "googleRank": 67,
+      "domain": "casino-med-svensk-licens.net",
+      "name": "Casino Med Svensk Licens",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Informationssajt som specifikt fokuserar på operatörer anslutna till Spelinspektionen och tillhandahåller kontaktvägar."
+    },
+    {
+      "googleRank": 68,
+      "domain": "kasino-erbjudande.se",
+      "name": "Kasino Erbjudande",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Sidan drivs av företaget PERSSON TECH OÜ och jämför svensklicensierade operatörer."
+    },
+    {
+      "googleRank": 69,
+      "domain": "alekuriren.se",
+      "name": "Alekuriren",
+      "verdict": "shady-affiliate",
+      "verdictLabel": "Oseriös affiliate",
+      "licensed": null,
+      "commentary": "Lokaltidning som publicerar okontrollerade länkar till olicensierade casinon på en underkatalog."
+    },
+    {
+      "googleRank": 70,
+      "domain": "casino.casinodjungel.se",
+      "name": "Casinodjungel",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Portalen ägs av Askeo Media AB och tillhandahåller villkorsinformation om lagliga casinon."
+    },
+    {
+      "googleRank": 71,
+      "domain": "casinotorget.se",
+      "name": "Casinotorget",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Casinoguide som redovisar regler för bonusar och tillämpar en standard kring svensk licens."
+    },
+    {
+      "googleRank": 72,
+      "domain": "cigarrmagasinet.se",
+      "name": "Cigarrmagasinet",
+      "verdict": "shady-affiliate",
+      "verdictLabel": "Oseriös affiliate",
+      "licensed": null,
+      "commentary": "Ursprunglig tidningsdomän som numera används till att placera casinolänkar orelaterat till webbplatsens syfte."
+    },
+    {
+      "googleRank": 73,
+      "domain": "casinea.se",
+      "name": "Casinea",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Sidan uppger ägandeskap och testar uttagstider för operatörer under svensk lag."
+    },
+    {
+      "googleRank": 74,
+      "domain": "adamsky.se",
+      "name": "Adamsky",
+      "verdict": "shady-affiliate",
+      "verdictLabel": "Oseriös affiliate",
+      "licensed": null,
+      "commentary": "En orelaterad domän som har fyllts med affiliatelänkar och tabeller över olika casinon."
+    },
+    {
+      "googleRank": 75,
+      "domain": "kasino-erbjudande.se",
+      "name": "Kasino Erbjudande",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen publicerar information från ett redovisat företag som listar Spelpaus-anslutna casinon."
+    },
+    {
+      "googleRank": 76,
+      "domain": "spela-casino.se",
+      "name": "Spela Casino",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Sidan utvärderar casinon med Swish och tillämpar svensk konsumentlagstiftning kring spelande."
+    },
+    {
+      "googleRank": 77,
+      "domain": "slotodyssey.com",
+      "name": "Slot Odyssey",
+      "verdict": "shady-affiliate",
+      "verdictLabel": "Oseriös affiliate",
+      "licensed": null,
+      "commentary": "Utländsk webbplats utan tydligt utgivaransvar som presenterar massproducerade listor för svenska spelare."
+    },
+    {
+      "googleRank": 78,
+      "domain": "casinosverige.nu",
+      "name": "Casino Sverige",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Sidan uppger kontaktinformation och redovisar listor över operatörer med svensk licens och Swish."
+    },
+    {
+      "googleRank": 79,
+      "domain": "casinobonus.se",
+      "name": "Casinobonus",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen publicerar licensierade bolag och sammanfattar villkoren för tillgängliga bonusar."
+    },
+    {
+      "googleRank": 80,
+      "domain": "svenskaonlinecasino.info",
+      "name": "Svenska Online Casino",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Sidan presenterar sina författare och listar operatörer med licens från Spelinspektionen."
+    },
+    {
+      "googleRank": 81,
+      "domain": "tidsbokning.carprocenter.se",
+      "name": "Carprocenter",
+      "verdict": "shady-affiliate",
+      "verdictLabel": "Oseriös affiliate",
+      "licensed": null,
+      "commentary": "Kapad svensk webbadress som missbrukas för att exponera besökare för olicensierade spelsajter."
+    },
+    {
+      "googleRank": 82,
+      "domain": "mrwager.se",
+      "name": "MrWager",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Tjänsten drivs av Jansrud Marketing och lyfter enbart operatörer anslutna till svenska Spelpaus."
+    },
+    {
+      "googleRank": 83,
+      "domain": "tidningen.se",
+      "name": "Tidningen",
+      "verdict": "seo-grab",
+      "verdictLabel": "SEO-grab",
+      "licensed": null,
+      "commentary": "Domän med lokalt och irrelevant nyhetsfokus som lägger ut sponsrade länkar till olicensierade operatörer."
+    },
+    {
+      "googleRank": 84,
+      "domain": "casinopro.se",
+      "name": "Casinopro",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Tjänsten ägs av Raketech Group och utvärderar operatörer med svensk spellicens."
+    },
+    {
+      "googleRank": 85,
+      "domain": "swishcasino.se",
+      "name": "Swishcasino",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Sidan ägs av en enskild redaktion med kontaktuppgifter och granskar Swish-betalningar på casinon."
+    },
+    {
+      "googleRank": 86,
+      "domain": "casino-utan-svensk-licens.net",
+      "name": "Casino Utan Svensk Licens",
+      "verdict": "shady-affiliate",
+      "verdictLabel": "Oseriös affiliate",
+      "licensed": null,
+      "commentary": "Sidan saknar redovisat ägande och marknadsför aktivt spelbolag utanför den svenska regleringen."
+    },
+    {
+      "googleRank": 87,
+      "domain": "casinor.com",
+      "name": "Casinor",
+      "verdict": "shady-affiliate",
+      "verdictLabel": "Oseriös affiliate",
+      "licensed": null,
+      "commentary": "Affiliatesida som riktar sig till flera marknader men undanhåller ägar- och företagsinformation från besökaren."
+    },
+    {
+      "googleRank": 88,
+      "domain": "casinokung.se",
+      "name": "Casinokung",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen utvärderar operatörer utifrån licensstatus och publicerar sin integritetspolicy."
+    },
+    {
+      "googleRank": 89,
+      "domain": "travcash.se",
+      "name": "Travcash",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Sidan publicerar travfokus och länkningar till svensklicensierade bettingsidor."
+    },
+    {
+      "googleRank": 90,
+      "domain": "nätcasinot.net",
+      "name": "Nätcasinot",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Sidan redovisar kontaktinformation och utvärderar transaktionshastigheter hos operatörer anslutna till Spelpaus."
+    },
+    {
+      "googleRank": 91,
+      "domain": "swish-casino.se",
+      "name": "Swish Casino",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Sidan informerar om operatörer som uppfyller svensk spellag och presenterar sin kontaktinformation."
+    },
+    {
+      "googleRank": 92,
+      "domain": "bangtheshoe.com",
+      "name": "Bang the Shoe",
+      "verdict": "shady-affiliate",
+      "verdictLabel": "Oseriös affiliate",
+      "licensed": null,
+      "commentary": "Sidan utnyttjar en orelaterad domän för att sprida listor med affiliatelänkar till olicensierade casinon."
+    },
+    {
+      "googleRank": 93,
+      "domain": "casinonsvenska.eu",
+      "name": "Casinon Svenska",
+      "verdict": "shady-affiliate",
+      "verdictLabel": "Oseriös affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen tillhandahåller tvivelaktiga recensioner utan en ansvarig eller tydlig utgivare bakom materialet."
+    },
+    {
+      "googleRank": 94,
+      "domain": "mobilcasino.global",
+      "name": "Mobilcasino Global",
+      "verdict": "shady-affiliate",
+      "verdictLabel": "Oseriös affiliate",
+      "licensed": null,
+      "commentary": "Sidan förmedlar föråldrad och inkomplett information kring operatörer och undanhåller ägardata."
+    },
+    {
+      "googleRank": 95,
+      "domain": "500casino.se",
+      "name": "500 Casino",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Sidan listar enbart svensklicensierade operatörer och anger öppen kontaktinformation till redaktionen."
+    },
+    {
+      "googleRank": 96,
+      "domain": "bossebonus.se",
+      "name": "Bossebonus",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Jämförelsesida som länkar till spelbolag granskade av Spelinspektionen med företagsansvar."
+    },
+    {
+      "googleRank": 97,
+      "domain": "tidsbokning.carprocenter.se",
+      "name": "Carprocenter",
+      "verdict": "shady-affiliate",
+      "verdictLabel": "Oseriös affiliate",
+      "licensed": null,
+      "commentary": "Ett kapad bokningsdomän som utnyttjas för att rangordna casinolänkar i sökmotorerna."
+    },
+    {
+      "googleRank": 98,
+      "domain": "spelbolagmedsvensklicens.se",
+      "name": "Spelbolag Med Svensk Licens",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Informationssajt som granskar operatörer med fokus på lagstiftning, konsumentskydd och BankID."
+    },
+    {
+      "googleRank": 99,
+      "domain": "sportbloggare.com",
+      "name": "Sportbloggare",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Sidan recenserar och rankar operatörer utifrån licensstatus och anslutning till Spelpaus."
+    },
+    {
+      "googleRank": 100,
+      "domain": "casino-med-snabba-uttag.se",
+      "name": "Casino Med Snabba Uttag",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen granskar transaktionstider och ställer krav på att samtliga listade aktörer är licensierade."
+    }
+  ],
+  "peopleShouldAlsoAsk": [
+    {
+      "question": "Räknas Swish-insättningar mot omsättningskrav på bonusar?",
+      "answer": "Beror på casinot — läs villkoren noga. Vissa operatörer exkluderar Swish-insättningar från bonusberättigande, vilket kan påverka om du kan ta ut en bonus."
+    },
+    {
+      "question": "Vad händer om ett Swish-uttag fastnar?",
+      "answer": "Kontakta casinots support med ditt transaktions-ID. De flesta licensierade bolag löser det inom 24 timmar — Spelinspektionen ställer krav på rimliga handläggningstider."
+    },
+    {
+      "question": "Kan jag sätta en daglig gräns för Swish-insättningar på casinon?",
+      "answer": "Ja, alla Spelinspektionen-licensierade casinon är skyldiga att erbjuda insättningsgränser. Du sätter dem direkt i kontoinställningarna — de träder i kraft omedelbart."
+    },
+    {
+      "question": "Varför kräver casinon BankID när Swish redan är kopplat till mitt personnummer?",
+      "answer": "BankID och Swish är separata system. BankID används för identitetsverifiering enligt penningtvättslagen, Swish enbart för själva betalningen — de fyller olika juridiska funktioner."
+    },
+    {
+      "question": "Kan jag använda Swish på casino om jag är registrerad på Spelpaus?",
+      "answer": "Nej. Spelpaus blockerar åtkomst till alla licensierade casinon oavsett betalningsmetod — det är en total avstängning, inte per betalningsväg."
+    }
+  ],
+  "finalCTA": {
+    "headline": "Vårt förstaval",
+    "text": "Speedy Casino har byggt hela sin profil kring snabbhet — och håller vad de lovar. Swish-uttag hanteras direkt, plattformen krånglar inte."
+  }
+}

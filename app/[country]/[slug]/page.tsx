@@ -3,11 +3,11 @@ import path from 'path';
 import { notFound } from 'next/navigation';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
-import WallOfReceipts from '../components/WallOfReceipts';
+import WallOfReceipts from '../../components/WallOfReceipts';
 
-async function getGuide(slug: string) {
+async function getGuide(country: string, slug: string) {
   try {
-    const fp = path.join(process.cwd(), 'content', 'guides', 'sverige', `${slug}.json`);
+    const fp = path.join(process.cwd(), 'content', 'guides', country, `${slug}.json`);
     return JSON.parse(await fs.readFile(fp, 'utf-8'));
   } catch {
     return null;
@@ -21,10 +21,11 @@ const VERDICT: Record<string, { bg: string; text: string; border: string; dot: s
   'shady-affiliate': { bg: 'bg-orange-950', text: 'text-orange-400', border: 'border-orange-800', dot: 'bg-orange-400' },
   'unlicensed': { bg: 'bg-red-950', text: 'text-red-400', border: 'border-red-800', dot: 'bg-red-400' },
   'irrelevant': { bg: 'bg-neutral-900', text: 'text-neutral-500', border: 'border-neutral-800', dot: 'bg-neutral-500' },
+  'authority': { bg: 'bg-neutral-800', text: 'text-neutral-400', border: 'border-neutral-600', dot: 'bg-neutral-400' },
 };
 
-export default async function SverigeGuidePage({ params }: { params: { slug: string } }) {
-  const guide = await getGuide(params.slug);
+export default async function GuidePagePage({ params }: { params: { slug: string; country: string } }) {
+  const guide = await getGuide(params.country, params.slug);
   if (!guide) notFound();
 
   const { winner, verdict, searchMetadata, serpResults } = guide;
@@ -679,9 +680,9 @@ export default async function SverigeGuidePage({ params }: { params: { slug: str
                     </h3>
                     <p className="text-neutral-400 leading-relaxed">
                       {step.num === 1
-                        ? `Vi hämtade de ${guide.serpResults.length} första organiska resultaten för "${guide.keyword}" i ${guide.country === 'sverige' ? 'Sverige' : guide.country} via Ahrefs. Alla URL:er inkluderades oavsett relevans.`
+                        ? `Vi hämtade de ${guide.serpResults.length} första organiska resultaten för "${guide.keyword}" i ${guide.country === 'sverige' ? 'Sverige' : guide.country} via DataForSEO. Alla URL:er inkluderades oavsett relevans.`
                         : step.num === 2
-                          ? `Varje URL klassificerades baserat på följande kriterier: ${guide.rankingCriteria.join(', ')}. Denna screening narrowade fältet till de mest relevanta kandidaterna för "${guide.keyword}".`
+                          ? `Varje URL klassificerades manuellt utifrån licensstatus, betalningslösningar och ägargenomsynlighet. Det separerade de seriösa aktörerna från resten.`
                           : step.text
                       }
                     </p>

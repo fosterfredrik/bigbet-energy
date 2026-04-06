@@ -102,7 +102,7 @@ export default async function HomePage() {
                 {posts.slice(0, 3).map((post) => (
                   <Link
                     key={post.slug}
-                    href={`/${post.date.replace(/-/g, '/')}/${post.slug}`}
+                    href={`/stories/${post.date.replace(/-/g, '/')}/${post.slug}`}
                     className="group flex items-center bg-black hover:bg-neutral-900 rounded-lg overflow-hidden border border-neutral-800 hover:border-amber-400 transition-colors"
                   >
                     {/* Square Thumbnail */}

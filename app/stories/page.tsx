@@ -151,7 +151,7 @@ export default async function StoriesPage({
             {filteredPosts.map((post) => (
               <Link
                 key={post.slug}
-                href={`/${post.date.replace(/-/g, '/')}/${post.slug}`}
+                href={`/stories/${post.date.replace(/-/g, '/')}/${post.slug}`}
                 className="group relative aspect-square rounded-xl overflow-hidden border border-neutral-800 hover:border-amber-400 transition-all"
               >
                 <div

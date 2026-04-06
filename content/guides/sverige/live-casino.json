@@ -1,0 +1,1098 @@
+{
+  "slug": "live-casino",
+  "template": "operator",
+  "type": "operator",
+  "country": "sverige",
+  "locale": "sv",
+  "keyword": "live casino",
+  "searchIntent": "Live Casino",
+  "h1": "#1 Live Casino i Sverige 2026",
+  "searchMetadata": {
+    "totalAnalyzed": 100,
+    "dateAnalyzed": "6 april 2026",
+    "verificationDate": "April 2026",
+    "isoDate": "2026-04-06"
+  },
+  "verdict": {
+    "summary": "LeoVegas vinner med branschens bästa live casino-utbud och exklusiva studios med svenska dealers."
+  },
+  "winner": {
+    "name": "LeoVegas",
+    "domain": "leovegas.com",
+    "affiliateUrl": "https://leovegas.com",
+    "affiliateLabel": "Spela på LeoVegas →",
+    "logo": "/images/guides/leovegas-logo.png",
+    "googleRank": 5,
+    "upsellLine": "Exklusiva studios, svenska dealers, störst utbud.",
+    "whyItWins": "LeoVegas har ett av marknadens bredaste live casino-utbud och tar det ett steg längre med LeoVegas Exclusive — dedikerade studios byggda i samarbete med Evolution, med dealers som är specialtränade för LeoVegas spelare. Svensktalande dealers, egna bord dygnet runt och en mobilapp som faktiskt levererar live casino utan kompromisser.",
+    "badges": [
+      "Svensktalande dealers",
+      "Swish-uttag",
+      "Spelpaus-integration",
+      "BankID-inloggning"
+    ],
+    "sectionBadge": "Redaktionell analys",
+    "materialEvidence": [
+      {
+        "title": "LeoVegas Exclusive",
+        "description": "Dedikerade live casino-studios i samarbete med Evolution — egna bord, egna dealers, tillgängliga enbart för LeoVegas spelare."
+      },
+      {
+        "title": "Svensktalande dealers",
+        "description": "Dealers vid LeoVegas Exclusive-borden är specialtränade för att representera varumärket och kommunicerar på svenska."
+      },
+      {
+        "title": "Betalningsmetoder",
+        "description": "Insättningar och uttag via Swish och Trustly — snabbt och utan krångel."
+      }
+    ],
+    "customerReview": {
+      "quote": "LeoVegas Exclusive är det tydligaste exemplet på ett spelbolag som investerar på riktigt i live casino-upplevelsen. Egna studios, egna dealers, eget uttryck — det är inte bara ett flöde från Evolution som alla andra. För den som spelar live casino regelbundet märks skillnaden direkt.",
+      "date": "April 2026",
+      "author": "BigBet.Energy redaktion"
+    },
+    "termsAndConditions": "18+. Spela ansvarsfullt. Fullständiga villkor på leovegas.com. Stödlinjen: 020-81 91 00. Självavstängning via Spelpaus.se.",
+    "specs": {
+      "whatYouGet": [
+        {
+          "label": "Licens",
+          "value": "Spelinspektionen (Sverige)"
+        },
+        {
+          "label": "Uttag",
+          "value": "Swish och Trustly"
+        },
+        {
+          "label": "Betalmetoder",
+          "value": "Swish, Trustly"
+        },
+        {
+          "label": "Spelpaus",
+          "value": "Fullt integrerat"
+        },
+        {
+          "label": "Kundtjänst",
+          "value": "Tillgänglig dygnet runt"
+        },
+        {
+          "label": "Mobilapp",
+          "value": "Ja, för iOS och Android"
+        }
+      ],
+      "certifications": [
+        "Spelinspektionen-licens verifierad",
+        "Spelpaus-integration bekräftad",
+        "Ansvarsfull spelande-verktyg tillgängliga",
+        "BankID-inloggning stöds",
+        "Trustly Pay N Play aktiverat"
+      ]
+    }
+  },
+  "runnerUps": [
+    {
+      "name": "Unibet",
+      "domain": "unibet.se",
+      "affiliateUrl": "https://unibet.se",
+      "affiliateLabel": "Spela på Unibet →",
+      "logo": "/images/guides/unibet-logo.png",
+      "googleRank": 1,
+      "keyBenefit": "Enormt utbud med egna studios.",
+      "whyRunnerUp": "Unibet är LeoVegas närmaste konkurrent på live casino — enormt spelutbud, egna brandade studios och svensktalande dealers. Ligger ett snäpp bakom LeoVegas Exclusive i premiumkänsla, men för den som vill ha maximalt antal bord att välja mellan är Unibet ett starkt alternativ."
+    },
+    {
+      "name": "Mr Green",
+      "domain": "mrgreen.se",
+      "affiliateUrl": "https://mrgreen.se",
+      "affiliateLabel": "Spela på Mr Green →",
+      "logo": "/images/guides/mrgreen-logo.png",
+      "googleRank": 4,
+      "keyBenefit": "Snygga studios, renodlad känsla.",
+      "whyRunnerUp": "Mr Green har ett smalare utbud än LeoVegas och Unibet och färre svenska dealers, men kompenserar med en av marknadens snyggaste sajter och genomtänkta studio-estetik. Passar den som värdesätter design och känsla över volym."
+    }
+  ],
+  "theBubble": null,
+  "bestsellerWarning": "Toppresultaten på Google inkluderar ofta affiliatesidor som saknar transparens och prioriterar provision över spelarskydd.",
+  "failureCards": [
+    {
+      "badge": "Kringgår Spelpaus",
+      "domain": "casinoutlandska.hgs-kok.se",
+      "productName": "Utländska Casino",
+      "googleRank": 89,
+      "whyItFailed": "Webbplatsen marknadsför casinon utan licens från Spelinspektionen för att locka till oreglerat spel. Innehållet uppmanar till att undvika Spelpaus och saknar konsumentskydd för svenska spelare."
+    },
+    {
+      "badge": "Dold ägarstruktur",
+      "domain": "esperanto.nu",
+      "productName": "Esperanto",
+      "googleRank": 71,
+      "whyItFailed": "Domänen tillhör en språkförening men används för casinolänkar utan reklammarkering. Verksamheten saknar kontaktuppgifter och ägarna är dolda för besökare, vilket skapar osäkerhet."
+    },
+    {
+      "badge": "Kapat innehåll",
+      "domain": "clarasolamorales.com",
+      "productName": "Clara Sola-Morales",
+      "googleRank": 61,
+      "whyItFailed": "Domänen var en arkitektstudio men fylls nu med casinolänkar i orelaterad kontext. Sajten saknar transparens och redaktionella rutiner, vilket vilseleder svenska spelare."
+    }
+  ],
+  "methodology": {
+    "steps": [
+      {
+        "num": 1,
+        "title": "Samlade top 100 Google-resultat",
+        "text": ""
+      },
+      {
+        "num": 2,
+        "title": "Klassificerade varje URL",
+        "text": ""
+      },
+      {
+        "num": 3,
+        "title": "Klassificering av sökresultat",
+        "text": "Samtliga webbplatser i sökresultaten granskades manuellt för att fastställa licensstatus, transpar/ transparens och syfte. Domänerna sorterades i kategorier baserat på förekomst av licens från Spelinspektionen, ägarinformation och publicering av marknadsföringslänkar."
+      },
+      {
+        "num": 4,
+        "title": "Ranking av relevanta resultat",
+        "text": "Plattformar med licens från Spelinspektionen prioriterades i rankningen baserat på redovisning av ägarfakta, integration av Spelpaus och utbud av bordsspel med dealers. Aktörer med BankID-inloggning och transaktioner via Swish premierades med placering i topplistan."
+      }
+    ]
+  },
+  "rankingCriteria": [
+    "Licens från Spelinspektionen",
+    "Anslutning till Spelpaus",
+    "Uttag via Swish eller Trustly",
+    "Omsättningskrav för live casino",
+    "Utbud av bord med dealers",
+    "Transparens av ägarstruktur"
+  ],
+  "serpResults": [
+    {
+      "googleRank": 1,
+      "domain": "unibet.se",
+      "name": "Unibet",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Licensierad operatör",
+      "licensed": true,
+      "commentary": "Operatören innehar licens från Spelinspektionen och tillhandahåller inloggning med BankID."
+    },
+    {
+      "googleRank": 2,
+      "domain": "spela.svenskaspel.se",
+      "name": "Svenska Spel",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Licensierad operatör",
+      "licensed": true,
+      "commentary": "Spelbolaget agerar under licens och integrerar Spelpaus."
+    },
+    {
+      "googleRank": 3,
+      "domain": "expekt.se",
+      "name": "Expekt",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Licensierad operatör",
+      "licensed": true,
+      "commentary": "Casinot har licens och erbjuder transaktioner via Swish."
+    },
+    {
+      "googleRank": 4,
+      "domain": "mrgreen.se",
+      "name": "Mr Green",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Licensierad operatör",
+      "licensed": true,
+      "commentary": "Operatören driver verksamhet med Spelinspektionens licens och Spelpaus."
+    },
+    {
+      "googleRank": 5,
+      "domain": "leovegas.com",
+      "name": "LeoVegas",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Licensierad operatör",
+      "licensed": true,
+      "commentary": "Verksamheten regleras av licens och sajten tillhandahåller bord med dealers."
+    },
+    {
+      "googleRank": 6,
+      "domain": "hajper.com",
+      "name": "Hajper",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Licensierad operatör",
+      "licensed": true,
+      "commentary": "Operatören innehar licens och använder Pay N Play-teknik."
+    },
+    {
+      "googleRank": 7,
+      "domain": "jallacasino.se",
+      "name": "Jalla Casino",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Licensierad operatör",
+      "licensed": true,
+      "commentary": "Casinot har licens från Spelinspektionen och integrerar Spelpaus."
+    },
+    {
+      "googleRank": 8,
+      "domain": "atg.se",
+      "name": "ATG",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Licensierad operatör",
+      "licensed": true,
+      "commentary": "Operatören drivs under licens med krav på BankID."
+    },
+    {
+      "googleRank": 9,
+      "domain": "luckycasino.com",
+      "name": "Lucky Casino",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Licensierad operatör",
+      "licensed": true,
+      "commentary": "Spelbolaget har licens och hanterar insättningar via Trustly."
+    },
+    {
+      "googleRank": 10,
+      "domain": "travcash.se",
+      "name": "Travcash",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Sidan drivs av ett bolag som listar operatörer med licens."
+    },
+    {
+      "googleRank": 11,
+      "domain": "casinostugan.com",
+      "name": "Casinostugan",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Licensierad operatör",
+      "licensed": true,
+      "commentary": "Casinot innehar licens och redovisar sina ägarförhållanden."
+    },
+    {
+      "googleRank": 12,
+      "domain": "atg.se",
+      "name": "ATG",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Licensierad operatör",
+      "licensed": true,
+      "commentary": "Sidan tillhör en operatör med licens och BankID-inloggning."
+    },
+    {
+      "googleRank": 13,
+      "domain": "paf.se",
+      "name": "Paf",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Licensierad operatör",
+      "licensed": true,
+      "commentary": "Operatören har licens och överskottet går till välgörenhet."
+    },
+    {
+      "googleRank": 14,
+      "domain": "gogocasino.com",
+      "name": "GoGo Casino",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Licensierad operatör",
+      "licensed": true,
+      "commentary": "Casinot drivs med licens och erbjuder registrering via BankID."
+    },
+    {
+      "googleRank": 15,
+      "domain": "mariacasino.se",
+      "name": "Maria Casino",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Licensierad operatör",
+      "licensed": true,
+      "commentary": "Operatören innehar licens och tillhandahåller verktyg för insättningsgränser."
+    },
+    {
+      "googleRank": 16,
+      "domain": "nordicbet.com",
+      "name": "NordicBet",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Licensierad operatör",
+      "licensed": true,
+      "commentary": "Verksamheten är licensierad av Spelinspektionen med integration av Spelpaus."
+    },
+    {
+      "googleRank": 17,
+      "domain": "snabbare.com",
+      "name": "Snabbare",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Licensierad operatör",
+      "licensed": true,
+      "commentary": "Casinot drivs under licens med uttag via Trustly."
+    },
+    {
+      "googleRank": 18,
+      "domain": "momangcasino.se",
+      "name": "Momang Casino",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Licensierad operatör",
+      "licensed": true,
+      "commentary": "Spelbolaget Svenska Spel driver denna sajt med licens från Spelinspektionen."
+    },
+    {
+      "googleRank": 19,
+      "domain": "pokerstars.se",
+      "name": "PokerStars",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Licensierad operatör",
+      "licensed": true,
+      "commentary": "Sidan opererar med licens och är ansluten till Spelpaus."
+    },
+    {
+      "googleRank": 20,
+      "domain": "casinogringos.se",
+      "name": "Casinogringos",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen tillhör ett affiliatebolag som redovisar ägaruppgifter."
+    },
+    {
+      "googleRank": 21,
+      "domain": "betmgm.se",
+      "name": "BetMGM",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Licensierad operatör",
+      "licensed": true,
+      "commentary": "Operatören har licens och sänder livespel från landbaserade casinon."
+    },
+    {
+      "googleRank": 22,
+      "domain": "storspelare.se",
+      "name": "Storspelare",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Licensierad operatör",
+      "licensed": true,
+      "commentary": "Casinot regleras av Spelinspektionen och erbjuder Spelpaus-integration."
+    },
+    {
+      "googleRank": 23,
+      "domain": "casinogringos.se",
+      "name": "Casinogringos",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Affiliatesidan publicerar information om operatörer med licens."
+    },
+    {
+      "googleRank": 24,
+      "domain": "888casino.se",
+      "name": "888 Casino",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Licensierad operatör",
+      "licensed": true,
+      "commentary": "Sidan innehar spellicens och har sektioner för hantering av spelkontroll."
+    },
+    {
+      "googleRank": 25,
+      "domain": "lyllocasino.com",
+      "name": "Lyllo Casino",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Licensierad operatör",
+      "licensed": true,
+      "commentary": "Casinot driver sin verksamhet med licens och accepterar Swish."
+    },
+    {
+      "googleRank": 26,
+      "domain": "bethard.com",
+      "name": "Bethard",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Licensierad operatör",
+      "licensed": true,
+      "commentary": "Operatören har licens från Spelinspektionen och BankID-krav."
+    },
+    {
+      "googleRank": 27,
+      "domain": "betsafe.com",
+      "name": "Betsafe",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Licensierad operatör",
+      "licensed": true,
+      "commentary": "Sajten är licensierad och redovisar ägarinformation."
+    },
+    {
+      "googleRank": 28,
+      "domain": "casumo.com",
+      "name": "Casumo",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Licensierad operatör",
+      "licensed": true,
+      "commentary": "Casinot innehar licens och är kopplat till Spelpaus."
+    },
+    {
+      "googleRank": 29,
+      "domain": "casinomagneten.se",
+      "name": "Casinomagneten",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen jämför operatörer med licens och visar ägandeuppgifter."
+    },
+    {
+      "googleRank": 30,
+      "domain": "paf.se",
+      "name": "Paf",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Licensierad operatör",
+      "licensed": true,
+      "commentary": "Sidan drivs av en operatör med licens och system för spelarskydd."
+    },
+    {
+      "googleRank": 31,
+      "domain": "cherry.com",
+      "name": "Cherry Casino",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Licensierad operatör",
+      "licensed": true,
+      "commentary": "Operatören har licens och erbjuder spel till personer i Sverige."
+    },
+    {
+      "googleRank": 32,
+      "domain": "comeon.com",
+      "name": "ComeOn",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Licensierad operatör",
+      "licensed": true,
+      "commentary": "Casinot innehar licens från Spelinspektionen och stödjer Spelpaus."
+    },
+    {
+      "googleRank": 33,
+      "domain": "happycasino.se",
+      "name": "Happy Casino",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Licensierad operatör",
+      "licensed": true,
+      "commentary": "Verksamheten regleras av Spelinspektionen och hanterar uttag med Trustly."
+    },
+    {
+      "googleRank": 34,
+      "domain": "spelklubben.se",
+      "name": "Spelklubben",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Licensierad operatör",
+      "licensed": true,
+      "commentary": "Casinot driver sin plattform med licens och integrerad Spelpaus."
+    },
+    {
+      "googleRank": 35,
+      "domain": "interwetten.se",
+      "name": "Interwetten",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Licensierad operatör",
+      "licensed": true,
+      "commentary": "Operatören har licens och redovisar ägarstruktur."
+    },
+    {
+      "googleRank": 36,
+      "domain": "travcash.se",
+      "name": "Travcash",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Sidan marknadsför bolag med licens och redovisar kontaktuppgifter."
+    },
+    {
+      "googleRank": 37,
+      "domain": "ninjacasino.se",
+      "name": "Ninja Casino",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Licensierad operatör",
+      "licensed": true,
+      "commentary": "Sidan innehar licens och tillämpar inloggning via BankID."
+    },
+    {
+      "googleRank": 38,
+      "domain": "casinofeber.se",
+      "name": "Casinofeber",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Affiliatesidan recenserar operatörer med licens från Spelinspektionen."
+    },
+    {
+      "googleRank": 39,
+      "domain": "coolbet.com",
+      "name": "Coolbet",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Licensierad operatör",
+      "licensed": true,
+      "commentary": "Operatören är licensierad och länkar till Stödlinjen."
+    },
+    {
+      "googleRank": 40,
+      "domain": "storspelare.se",
+      "name": "Storspelare",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Licensierad operatör",
+      "licensed": true,
+      "commentary": "Sidan agerar under Spelinspektionens tillsyn med Spelpaus."
+    },
+    {
+      "googleRank": 41,
+      "domain": "casinofeber.se",
+      "name": "Casinofeber",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen listar casinon med licens och redovisar sitt ägande."
+    },
+    {
+      "googleRank": 42,
+      "domain": "ninjacasino.se",
+      "name": "Ninja Casino",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Licensierad operatör",
+      "licensed": true,
+      "commentary": "Operatören driver verksamhet under licens med BankID-inloggning."
+    },
+    {
+      "googleRank": 43,
+      "domain": "momangcasino.se",
+      "name": "Momang Casino",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Licensierad operatör",
+      "licensed": true,
+      "commentary": "Casinot har licens via Svenska Spel."
+    },
+    {
+      "googleRank": 44,
+      "domain": "gambling.com",
+      "name": "Gambling.com",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Affiliatebolaget jämför operatörer med licens."
+    },
+    {
+      "googleRank": 45,
+      "domain": "spelklubben.se",
+      "name": "Spelklubben",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Licensierad operatör",
+      "licensed": true,
+      "commentary": "Sidan innehar licens och erbjuder integration med Spelpaus."
+    },
+    {
+      "googleRank": 46,
+      "domain": "interwetten.se",
+      "name": "Interwetten",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Licensierad operatör",
+      "licensed": true,
+      "commentary": "Casinot drivs med licens."
+    },
+    {
+      "googleRank": 47,
+      "domain": "livech.com",
+      "name": "Live! Casino & Hotel",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevant",
+      "licensed": null,
+      "commentary": "Webbplatsen tillhör ett casino i USA och kräver positionering i USA."
+    },
+    {
+      "googleRank": 48,
+      "domain": "apps.apple.com",
+      "name": "App Store",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevant",
+      "licensed": null,
+      "commentary": "Sidan är en länk till en applikation i butiken."
+    },
+    {
+      "googleRank": 49,
+      "domain": "betsson.com",
+      "name": "Betsson",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Licensierad operatör",
+      "licensed": true,
+      "commentary": "Operatören har licens och tillhandahåller insättningsgränser."
+    },
+    {
+      "googleRank": 50,
+      "domain": "playnow.com",
+      "name": "PlayNow",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevant",
+      "licensed": null,
+      "commentary": "Webbplatsen drivs av en aktör i Kanada och saknar licens från Spelinspektionen."
+    },
+    {
+      "googleRank": 51,
+      "domain": "luckycasino.com",
+      "name": "Lucky Casino",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Licensierad operatör",
+      "licensed": true,
+      "commentary": "Casinot har licens från Spelinspektionen och erbjuder Spelpaus."
+    },
+    {
+      "googleRank": 52,
+      "domain": "cardplayer.com",
+      "name": "Card Player",
+      "verdict": "shady-affiliate",
+      "verdictLabel": "Misstänkt affiliate",
+      "licensed": null,
+      "commentary": "Sajten listar upp sajter som marknadsför casinon utan licens. Riktar sig till svenska spelare men hänvisar dem bort från det reglerade systemet."
+    },
+    {
+      "googleRank": 53,
+      "domain": "atg.se",
+      "name": "ATG",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Licensierad operatör",
+      "licensed": true,
+      "commentary": "Sidan drivs under licens och tillämpar inloggning via BankID."
+    },
+    {
+      "googleRank": 54,
+      "domain": "betmgm.se",
+      "name": "BetMGM",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Licensierad operatör",
+      "licensed": true,
+      "commentary": "Operatören har licens och sänder livespel via varumärket MGM."
+    },
+    {
+      "googleRank": 55,
+      "domain": "spela.svenskaspel.se",
+      "name": "Svenska Spel",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Licensierad operatör",
+      "licensed": true,
+      "commentary": "Casinot drivs av staten under licens med Spelpaus."
+    },
+    {
+      "googleRank": 56,
+      "domain": "leovegas.com",
+      "name": "LeoVegas",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Licensierad operatör",
+      "licensed": true,
+      "commentary": "Sidan innehar licens och hanterar transaktioner via Swish."
+    },
+    {
+      "googleRank": 57,
+      "domain": "casino.betfair.com",
+      "name": "Betfair",
+      "verdict": "unlicensed",
+      "verdictLabel": "Olicensierad",
+      "licensed": false,
+      "commentary": "Denna domänversion saknar inloggning via BankID och licens."
+    },
+    {
+      "googleRank": 58,
+      "domain": "spelapoker.se",
+      "name": "Spela Poker",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Sidan drivs som en affiliate och rekommenderar casinon med licens."
+    },
+    {
+      "googleRank": 59,
+      "domain": "unibet.se",
+      "name": "Unibet",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Licensierad operatör",
+      "licensed": true,
+      "commentary": "Casinot regleras av Spelinspektionen och är anslutet till Spelpaus."
+    },
+    {
+      "googleRank": 60,
+      "domain": "nordicbet.com",
+      "name": "NordicBet",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Licensierad operatör",
+      "licensed": true,
+      "commentary": "Sidan drivs av ett bolag med licens och redovisad ägarstruktur."
+    },
+    {
+      "googleRank": 61,
+      "domain": "clarasolamorales.com",
+      "name": "Clara Sola-Morales",
+      "verdict": "shady-affiliate",
+      "verdictLabel": "Misstänkt affiliate",
+      "licensed": null,
+      "commentary": "Sidan tillhör en arkitektbyrå men publicerar casinorelaterat innehåll utan transparens."
+    },
+    {
+      "googleRank": 62,
+      "domain": "livecasino.se.net",
+      "name": "Livecasino.se.net",
+      "verdict": "shady-affiliate",
+      "verdictLabel": "Misstänkt affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen saknar information om ägande och publicerar länkar till casinon."
+    },
+    {
+      "googleRank": 63,
+      "domain": "cherry.com",
+      "name": "Cherry Casino",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Licensierad operatör",
+      "licensed": true,
+      "commentary": "Operatören innehar licens och integrerar verktyg för gränssättning av tid."
+    },
+    {
+      "googleRank": 64,
+      "domain": "storspelare.se",
+      "name": "Storspelare",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Licensierad operatör",
+      "licensed": true,
+      "commentary": "Casinot har spellicens och erbjuder verifiering med BankID."
+    },
+    {
+      "googleRank": 65,
+      "domain": "kungsbackaposten.se",
+      "name": "Kungsbacka-Posten",
+      "verdict": "seo-grab",
+      "verdictLabel": "SEO-grab",
+      "licensed": null,
+      "commentary": "Nyhetssajten hyr ut utrymme för casinolänkar utan expertis i ämnet."
+    },
+    {
+      "googleRank": 66,
+      "domain": "evolution.com",
+      "name": "Evolution",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevant",
+      "licensed": null,
+      "commentary": "Webbplatsen tillhör en leverantör av mjukvara för spel."
+    },
+    {
+      "googleRank": 67,
+      "domain": "pokersidan.se",
+      "name": "Pokersidan",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Sidan informerar om casinon med licens och visar ägaruppgifter."
+    },
+    {
+      "googleRank": 68,
+      "domain": "leovegas.com",
+      "name": "LeoVegas",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Licensierad operatör",
+      "licensed": true,
+      "commentary": "Operatören har licens från Spelinspektionen och redovisar bolagsinformation."
+    },
+    {
+      "googleRank": 69,
+      "domain": "casumo.com",
+      "name": "Casumo",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Licensierad operatör",
+      "licensed": true,
+      "commentary": "Sidan drivs med licens och erbjuder Spelpaus."
+    },
+    {
+      "googleRank": 70,
+      "domain": "sveacasino.se",
+      "name": "SveaCasino",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Affiliatesajten listar casinon med licens och redovisar sina ägare."
+    },
+    {
+      "googleRank": 71,
+      "domain": "esperanto.nu",
+      "name": "Esperanto",
+      "verdict": "shady-affiliate",
+      "verdictLabel": "Misstänkt affiliate",
+      "licensed": null,
+      "commentary": "Domänen tillhör en språkförening men sprider casinolänkar."
+    },
+    {
+      "googleRank": 72,
+      "domain": "expekt.se",
+      "name": "Expekt",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Licensierad operatör",
+      "licensed": true,
+      "commentary": "Casinot regleras av Spelinspektionen och har Spelpaus."
+    },
+    {
+      "googleRank": 73,
+      "domain": "grosvenorcasinos.com",
+      "name": "Grosvenor Casinos",
+      "verdict": "unlicensed",
+      "verdictLabel": "Olicensierad",
+      "licensed": false,
+      "commentary": "Casinot saknar licens från Spelinspektionen."
+    },
+    {
+      "googleRank": 74,
+      "domain": "betonline.ag",
+      "name": "BetOnline",
+      "verdict": "unlicensed",
+      "verdictLabel": "Olicensierad",
+      "licensed": false,
+      "commentary": "Webbplatsen opererar utanför licenssystemet och saknar BankID-inloggning."
+    },
+    {
+      "googleRank": 75,
+      "domain": "klirr.com",
+      "name": "Klirr",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Licensierad operatör",
+      "licensed": true,
+      "commentary": "Operatören har licens och tillämpar insättningsgränser."
+    },
+    {
+      "googleRank": 76,
+      "domain": "livecasino.com.se",
+      "name": "Livecasino.com.se",
+      "verdict": "shady-affiliate",
+      "verdictLabel": "Misstänkt affiliate",
+      "licensed": null,
+      "commentary": "Sidan döljer sina ägare och bedriver verksamhet utan kontaktuppgifter."
+    },
+    {
+      "googleRank": 77,
+      "domain": "aftonbladet.se",
+      "name": "Aftonbladet",
+      "verdict": "seo-grab",
+      "verdictLabel": "SEO-manipulation",
+      "licensed": null,
+      "commentary": "Nyhetsdomänens auktoritet utnyttjas för att ranka spelrelaterat innehåll — inte redaktionell journalistik."
+    },
+    {
+      "googleRank": 78,
+      "domain": "supersportbet.com",
+      "name": "Supersportbet",
+      "verdict": "unlicensed",
+      "verdictLabel": "Olicensierad",
+      "licensed": false,
+      "commentary": "Sidan saknar licens och erbjuder inte insättningar i kronor."
+    },
+    {
+      "googleRank": 79,
+      "domain": "casinoguide.se",
+      "name": "CasinoGuide",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen drivs av ett bolag som recenserar casinon med licens."
+    },
+    {
+      "googleRank": 80,
+      "domain": "skyvegas.com",
+      "name": "Sky Vegas",
+      "verdict": "unlicensed",
+      "verdictLabel": "Olicensierad",
+      "licensed": false,
+      "commentary": "Casinot saknar licens och Spelpaus."
+    },
+    {
+      "googleRank": 81,
+      "domain": "casinoguide.se",
+      "name": "CasinoGuide",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Affiliatesidan rekommenderar operatörer med licens från Spelinspektionen."
+    },
+    {
+      "googleRank": 82,
+      "domain": "skyvegas.com",
+      "name": "Sky Vegas",
+      "verdict": "unlicensed",
+      "verdictLabel": "Olicensierad",
+      "licensed": false,
+      "commentary": "Sidan opererar utan licens."
+    },
+    {
+      "googleRank": 83,
+      "domain": "games.paddypower.com",
+      "name": "Paddy Power",
+      "verdict": "unlicensed",
+      "verdictLabel": "Olicensierad",
+      "licensed": false,
+      "commentary": "Spelbolaget saknar licens från Spelinspektionen."
+    },
+    {
+      "googleRank": 84,
+      "domain": "xn--ntcasinoguide-bfb.se",
+      "name": "Nätcasinoguide.se",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen anger sina kontaktuppgifter och recenserar casinon med licens."
+    },
+    {
+      "googleRank": 85,
+      "domain": "goodluckmate.com",
+      "name": "GoodLuckMate",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Affiliatesidan redovisar ägaruppgifter och länkar till casinon med licens."
+    },
+    {
+      "googleRank": 86,
+      "domain": "ladbrokes.com",
+      "name": "Ladbrokes",
+      "verdict": "unlicensed",
+      "verdictLabel": "Olicensierad",
+      "licensed": false,
+      "commentary": "Operatören saknar licens och Spelpaus."
+    },
+    {
+      "googleRank": 87,
+      "domain": "spela.svenskaspel.se",
+      "name": "Svenska Spel",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Licensierad operatör",
+      "licensed": true,
+      "commentary": "Sidan drivs av staten med licens från Spelinspektionen."
+    },
+    {
+      "googleRank": 88,
+      "domain": "livecasino.com.se",
+      "name": "Livecasino.com.se",
+      "verdict": "shady-affiliate",
+      "verdictLabel": "Misstänkt affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen bedriver marknadsföring av casinon utan ägarinformation."
+    },
+    {
+      "googleRank": 89,
+      "domain": "casinoutlandska.hgs-kok.se",
+      "name": "Utländska Casino",
+      "verdict": "shady-affiliate",
+      "verdictLabel": "Misstänkt affiliate",
+      "licensed": null,
+      "commentary": "Sidan uppmanar till spel utanför licenssystemet."
+    },
+    {
+      "googleRank": 90,
+      "domain": "vegas.williamhill.com",
+      "name": "William Hill Vegas",
+      "verdict": "unlicensed",
+      "verdictLabel": "Olicensierad",
+      "licensed": false,
+      "commentary": "Denna domän saknar licens och BankID-inloggning."
+    },
+    {
+      "googleRank": 91,
+      "domain": "skyvegas.com",
+      "name": "Sky Vegas",
+      "verdict": "unlicensed",
+      "verdictLabel": "Olicensierad",
+      "licensed": false,
+      "commentary": "Casinot saknar licens och länkar till Stödlinjen."
+    },
+    {
+      "googleRank": 92,
+      "domain": "casinopolis.se",
+      "name": "Casinopolis",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Sidan visar ägaruppgifter och marknadsför casinon med licens."
+    },
+    {
+      "googleRank": 93,
+      "domain": "lordping.se",
+      "name": "Lord Ping",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Licensierad operatör",
+      "licensed": true,
+      "commentary": "Casinot har licens och integrerar Spelpaus."
+    },
+    {
+      "googleRank": 94,
+      "domain": "spelcash.se",
+      "name": "Spelcash",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Sidan informerar om casinon med licens och redovisar kontaktuppgifter."
+    },
+    {
+      "googleRank": 95,
+      "domain": "betinia.se",
+      "name": "Betinia",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Licensierad operatör",
+      "licensed": true,
+      "commentary": "Operatören regleras av Spelinspektionen och erbjuder betalningar via Swish."
+    },
+    {
+      "googleRank": 96,
+      "domain": "888casino.se",
+      "name": "888 Casino",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Licensierad operatör",
+      "licensed": true,
+      "commentary": "Casinot agerar under licens och tillämpar Spelpaus."
+    },
+    {
+      "googleRank": 97,
+      "domain": "spelacasinos.com",
+      "name": "Spela Casinos",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Affiliatesajten informerar om casinon med licens."
+    },
+    {
+      "googleRank": 98,
+      "domain": "pa.playlive.com",
+      "name": "PlayLive!",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevant",
+      "licensed": null,
+      "commentary": "Webbplatsen riktar sig till spelare i USA och saknar licens från Spelinspektionen."
+    },
+    {
+      "googleRank": 99,
+      "domain": "sverigelivecasino.se",
+      "name": "Sverige Live Casino",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Sidan jämför casinon med licens och visar kontaktuppgifter."
+    },
+    {
+      "googleRank": 100,
+      "domain": "svenskcasino.se",
+      "name": "Svenskcasino",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen bedriver verksamhet med fokus på operatörer med licens."
+    }
+  ],
+  "peopleShouldAlsoAsk": [
+    {
+      "question": "Vad är skillnaden mellan ett vanligt online casino och live casino?",
+      "answer": "I ett vanligt online casino styrs spelen av en slumpgenerator (RNG). I live casino sitter en riktig dealer vid ett fysiskt bord och streamas i realtid — du ser varje kort och varje snurr hända live, inte via animation."
+    },
+    {
+      "question": "Är oddsen sämre i live casino än i RNG-spel?",
+      "answer": "Husminuset är generellt jämförbart, men kan skilja sig per bordsvariant. Live blackjack med bra regler kan faktiskt ha lägre husminimum än många slotmaskiner. Det beror mer på spelvariant än på om det är live eller RNG."
+    },
+    {
+      "question": "Vad innebär det att ett casino har 'exklusiva' live bord?",
+      "answer": "Exklusiva bord är dedikerade till ett specifikt casino och tillgängliga enbart för deras spelare. LeoVegas Exclusive är ett exempel — egna studios, egna dealers, eget varumärke på bordet. Det är inte bara ett delat flöde från Evolution som alla andra casinon delar."
+    },
+    {
+      "question": "Kan jag prova live casino utan att sätta in pengar?",
+      "answer": "Nej. Live casino kräver alltid riktiga insatser — du spelar mot en riktig dealer i realtid och det finns ingen gratisversion. Vissa casinon erbjuder bonus som kan användas på live casino, men kontrollera villkoren noga."
+    },
+    {
+      "question": "Hur stabil internetuppkoppling behöver jag för live casino?",
+      "answer": "En vanlig 4G-uppkoppling räcker för de flesta live casino-spel. HD-streaming kräver mer bandbredd — har du svag signal kan du ofta sänka videokvaliteten direkt i spelet utan att det påverkar spelfunktionen."
+    }
+  ],
+  "finalCTA": {
+    "headline": "Vårt förstaval",
+    "text": "LeoVegas Exclusive är unikt på den svenska marknaden — egna studios, egna dealers, en live casino-upplevelse som faktiskt skiljer sig från resten."
+  }
+}

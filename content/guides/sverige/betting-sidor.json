@@ -1,0 +1,1098 @@
+{
+  "slug": "betting-sidor",
+  "template": "operator",
+  "type": "operator",
+  "country": "sverige",
+  "locale": "sv",
+  "keyword": "betting sidor",
+  "searchIntent": "Betting Sidor",
+  "h1": "#1 Betting Sidor i Sverige 2026",
+  "searchMetadata": {
+    "totalAnalyzed": 100,
+    "dateAnalyzed": "5 april 2026",
+    "verificationDate": "April 2026",
+    "isoDate": "2026-04-05"
+  },
+  "verdict": {
+    "summary": "Sveriges mest etablerade bettingsida — har precis allt för svenska spelare."
+  },
+  "winner": {
+    "name": "Betsson",
+    "domain": "betsson.com",
+    "affiliateUrl": "https://betsson.com",
+    "affiliateLabel": "Spela på Betsson →",
+    "logo": "/images/guides/betsson-logo.png",
+    "googleRank": 85,
+    "upsellLine": "Sveriges mest etablerade bettingsida — med allt och lite till.",
+    "whyItWins": "Betsson är en av pionjärerna som formade den svenska och europeiska bettingmarknaden. Otroligt stort utbud av både pre-match och liveodds, stark täckning av svensk sport och internationell bredd.",
+    "badges": [
+      "Spelinspektionen-licens",
+      "Spelpaus-integration",
+      "Swish-betalningar",
+      "BankID-inloggning"
+    ],
+    "sectionBadge": "Redaktionell analys",
+    "materialEvidence": [
+      {
+        "title": "Licensstatus",
+        "description": "Betsson har licens från Spelinspektionen till 2028."
+      },
+      {
+        "title": "Betalningsmetoder",
+        "description": "Swish och Trustly är enklast och snabbast, men de har långt fler metoder som kort och e-plånböcker."
+      },
+      {
+        "title": "Säkerhet",
+        "description": "BankID krävs vid inloggning och registrering."
+      }
+    ],
+    "customerReview": {
+      "quote": "Betsson är en av de bolag som faktiskt byggde den svenska bettingmarknaden. Oddsdjupet är svårt att matcha — bred svensk sport, stark internationell täckning, och en plattform som inte krånglar. Betalningsvalen är också ovanligt generösa för en licensierad svensk sida.",
+      "date": "April 2026",
+      "author": "BigBet.Energy redaktion"
+    },
+    "termsAndConditions": "18+. Spela ansvarsfullt. Fullständiga villkor på betsson.com. Stödlinjen: 020-81 91 00. Självavstängning via Spelpaus.se.",
+    "specs": {
+      "whatYouGet": [
+        {
+          "label": "Licens",
+          "value": "Spelinspektionen (Sverige)"
+        },
+        {
+          "label": "Uttag",
+          "value": "Snabbast: Swish och Trustly"
+        },
+        {
+          "label": "Betalmetoder",
+          "value": "Swish, Trustly, VISA, Apple Pay, Google Pay, Skrill, Neteller, Paysafecard"
+        },
+        {
+          "label": "Spelpaus",
+          "value": "Fullt integrerat"
+        },
+        {
+          "label": "Kundtjänst",
+          "value": "Tillgänglig dygnet runt"
+        },
+        {
+          "label": "Mobilapp",
+          "value": "Ja, för iOS och Android"
+        }
+      ],
+      "certifications": [
+        "Spelinspektionen-licens verifierad",
+        "Spelpaus-integration bekräftad",
+        "Ansvarsfull spelande-verktyg tillgängliga",
+        "BankID-inloggning stöds",
+        "Trustly Pay N Play aktiverat"
+      ]
+    }
+  },
+  "runnerUps": [
+    {
+      "name": "Bet365",
+      "domain": "bet365.com",
+      "affiliateUrl": "https://bet365.com",
+      "affiliateLabel": "Spela på Bet365 →",
+      "logo": "/images/guides/bet365-logo.png",
+      "googleRank": 0,
+      "keyBenefit": "Videoströmmar av sport.",
+      "whyRunnerUp": "Bet365 är förmodligen världens mest kända bettingsida och har ett oslagbart live-utbud med videoströmmar direkt i plattformen. Tappar ett snäpp mot Betsson på den svenska marknaden främst för att Swish saknas för uttag."
+    },
+    {
+      "name": "Paf",
+      "domain": "paf.se",
+      "affiliateUrl": "https://paf.se",
+      "affiliateLabel": "Spela på Paf →",
+      "logo": "/images/guides/paf-logo.png",
+      "googleRank": 10,
+      "keyBenefit": "Intäkter till samhällsnytta.",
+      "whyRunnerUp": "Paf skiljer sig från mängden — överskottet går till samhällsnytta, inte aktieägare. Bra på svensk sport, men oddsdjupet på internationella marknader når inte riktigt Betsson eller Bet365."
+    }
+  ],
+  "theBubble": null,
+  "bestsellerWarning": "Många toppresultat på Google listar spelbolag utan licens och saknar Spelpaus-integration.",
+  "failureCards": [
+    {
+      "badge": "Främjar spel utan licens",
+      "domain": "casinonutansvensklicens.br.com",
+      "productName": "Casinon Utan Svensk Licens",
+      "googleRank": 24,
+      "whyItFailed": "Marknadsför spelbolag utan licens från Spelinspektionen. Besökare instrueras att spela hos operatörer utan Spelpaus, vilket äventyrar konsumentskyddet för svenska spelare."
+    },
+    {
+      "badge": "Saknar konsumentskyd",
+      "domain": "utländskabettingsidor.se",
+      "productName": "Utländska Bettingsidor",
+      "googleRank": 30,
+      "whyItFailed": "Domänen listar endast bettingsidor utan licens från Spelinspektionen. Operatörerna saknar Spelpaus-anslutning, vilket utsätter svenska spelare för risker utan skyddsnät."
+    },
+    {
+      "badge": "Kringgår Spelpaus",
+      "domain": "cardplayer.com",
+      "productName": "Card Player",
+      "googleRank": 26,
+      "whyItFailed": "Tråkigt att gamla pokermagasinet Card Player har lagt upp guider för betting utan licens. Deras domän har hög auktoritet så de rankar bra trots att deras innehåll är skadligt för svenska spelare."
+    }
+  ],
+  "methodology": {
+    "steps": [
+      {
+        "num": 1,
+        "title": "Samlade top 100 Google-resultat",
+        "text": ""
+      },
+      {
+        "num": 2,
+        "title": "Klassificerade varje URL",
+        "text": ""
+      },
+      {
+        "num": 3,
+        "title": "Klassificering av sökresultat",
+        "text": "Varje webbplats utvärderas utifrån sin licensstatus hos Spelinspektionen och integration av Spelpaus. Domäner som länkar till operatörer utan licens markeras som avvikelser från sökintentionen."
+      },
+      {
+        "num": 4,
+        "title": "Rankning av sökresultat",
+        "text": "Operatörerna rangeras baserat på betalningsmetoder som Swish och krav på BankID. Information om ägarförhållanden och licensnummer granskas för placering."
+      }
+    ]
+  },
+  "rankingCriteria": [
+    "Spellicens från Spelinspektionen",
+    "Anslutning till Spelpaus",
+    "Redovisning av ägande",
+    "Integration av BankID",
+    "Uttag via Swish",
+    "Funktioner för cash out"
+  ],
+  "serpResults": [
+    {
+      "googleRank": 1,
+      "domain": "rekatochklart.com",
+      "name": "Rekatochklart",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen tillhandahåller en förteckning över spelbolag med licens från Spelinspektionen."
+    },
+    {
+      "googleRank": 2,
+      "domain": "bettingsidor.se",
+      "name": "Bettingsidor.se",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen tillhandahåller en förteckning över spelbolag med licens från Spelinspektionen."
+    },
+    {
+      "googleRank": 3,
+      "domain": "bettingstugan.se",
+      "name": "Bettingstugan",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen tillhandahåller en förteckning över spelbolag med licens från Spelinspektionen."
+    },
+    {
+      "googleRank": 4,
+      "domain": "speltips.se",
+      "name": "Speltips.se",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen tillhandahåller en förteckning över spelbolag med licens från Spelinspektionen."
+    },
+    {
+      "googleRank": 5,
+      "domain": "sportbloggare.com",
+      "name": "Sportbloggare",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen tillhandahåller en förteckning över spelbolag med licens från Spelinspektionen."
+    },
+    {
+      "googleRank": 6,
+      "domain": "betting.se",
+      "name": "Betting.se",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen tillhandahåller en förteckning över spelbolag med licens från Spelinspektionen."
+    },
+    {
+      "googleRank": 7,
+      "domain": "1x2.se",
+      "name": "1x2",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen tillhandahåller en förteckning över spelbolag med licens från Spelinspektionen."
+    },
+    {
+      "googleRank": 8,
+      "domain": "bettingbladet.se",
+      "name": "Bettingbladet",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen tillhandahåller en förteckning över spelbolag med licens från Spelinspektionen."
+    },
+    {
+      "googleRank": 9,
+      "domain": "tvmatchen.nu",
+      "name": "TVmatchen",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen tillhandahåller en förteckning över spelbolag med licens från Spelinspektionen."
+    },
+    {
+      "googleRank": 10,
+      "domain": "paf.se",
+      "name": "Paf",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Licensierad operatör",
+      "licensed": true,
+      "commentary": "Spelbolaget opererar med licens från Spelinspektionen och tillhandahåller funktioner för Spelpaus."
+    },
+    {
+      "googleRank": 11,
+      "domain": "unibet.se",
+      "name": "Unibet",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Licensierad operatör",
+      "licensed": true,
+      "commentary": "Spelbolaget opererar med licens från Spelinspektionen och tillhandahåller funktioner för Spelpaus."
+    },
+    {
+      "googleRank": 12,
+      "domain": "unknownbetting.se",
+      "name": "Unknown Betting",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen tillhandahåller en förteckning över spelbolag med licens från Spelinspektionen."
+    },
+    {
+      "googleRank": 13,
+      "domain": "travstugan.se",
+      "name": "Travstugan",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen tillhandahåller en förteckning över spelbolag med licens från Spelinspektionen."
+    },
+    {
+      "googleRank": 14,
+      "domain": "hajper.com",
+      "name": "Hajper",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Licensierad operatör",
+      "licensed": true,
+      "commentary": "Spelbolaget opererar med licens från Spelinspektionen och tillhandahåller funktioner för Spelpaus."
+    },
+    {
+      "googleRank": 15,
+      "domain": "bettingsidor.se",
+      "name": "Bettingsidor.se",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen tillhandahåller en förteckning över spelbolag med licens från Spelinspektionen."
+    },
+    {
+      "googleRank": 16,
+      "domain": "bettingstugan.se",
+      "name": "Bettingstugan",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen tillhandahåller en förteckning över spelbolag med licens från Spelinspektionen."
+    },
+    {
+      "googleRank": 17,
+      "domain": "bethard.com",
+      "name": "Bethard",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Licensierad operatör",
+      "licensed": true,
+      "commentary": "Spelbolaget opererar med licens från Spelinspektionen och tillhandahåller funktioner för Spelpaus."
+    },
+    {
+      "googleRank": 18,
+      "domain": "rekatochklart.com",
+      "name": "Rekatochklart",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen tillhandahåller en förteckning över spelbolag med licens från Spelinspektionen."
+    },
+    {
+      "googleRank": 19,
+      "domain": "travnet.se",
+      "name": "Travnet",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen tillhandahåller en förteckning över spelbolag med licens från Spelinspektionen."
+    },
+    {
+      "googleRank": 20,
+      "domain": "alcasino.se",
+      "name": "Alcasino",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen tillhandahåller en förteckning över spelbolag med licens från Spelinspektionen."
+    },
+    {
+      "googleRank": 21,
+      "domain": "bettingsidor.org",
+      "name": "Bettingsidor.org",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen tillhandahåller en förteckning över spelbolag med licens från Spelinspektionen."
+    },
+    {
+      "googleRank": 22,
+      "domain": "bethard.com",
+      "name": "Bethard",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Licensierad operatör",
+      "licensed": true,
+      "commentary": "Spelbolaget opererar med licens från Spelinspektionen och tillhandahåller funktioner för Spelpaus."
+    },
+    {
+      "googleRank": 23,
+      "domain": "gamblingcabin.se",
+      "name": "Gambling Cabin",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen tillhandahåller en förteckning över spelbolag med licens från Spelinspektionen."
+    },
+    {
+      "googleRank": 24,
+      "domain": "casinonutansvensklicens.br.com",
+      "name": "Casinon Utan Svensk Licens",
+      "verdict": "shady-affiliate",
+      "verdictLabel": "Misstänkt affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen saknar företagsinformation och instruerar läsaren att spela hos aktörer utan licens från Spelinspektionen."
+    },
+    {
+      "googleRank": 25,
+      "domain": "svenskaspel.se",
+      "name": "Svenska Spel",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Licensierad operatör",
+      "licensed": true,
+      "commentary": "Spelbolaget opererar med licens från Spelinspektionen och tillhandahåller funktioner för Spelpaus."
+    },
+    {
+      "googleRank": 26,
+      "domain": "cardplayer.com",
+      "name": "Card Player",
+      "verdict": "shady-affiliate",
+      "verdictLabel": "Misstänkt affiliate",
+      "licensed": null,
+      "commentary": "Sajten har en svensk sektion som listar och recenserar bettingbolag utan licens från Spelinspektionen. Riktar sig till svenska spelare men hänvisar dem bort från det reglerade systemet."
+    },
+    {
+      "googleRank": 27,
+      "domain": "bastabettingsidor.se",
+      "name": "Bästa Bettingsidor",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen tillhandahåller en förteckning över spelbolag med licens från Spelinspektionen."
+    },
+    {
+      "googleRank": 28,
+      "domain": "svenskabettingsidor.com",
+      "name": "Svenska Bettingsidor",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen tillhandahåller en förteckning över spelbolag med licens från Spelinspektionen."
+    },
+    {
+      "googleRank": 29,
+      "domain": "1x2.se",
+      "name": "1x2",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen tillhandahåller en förteckning över spelbolag med licens från Spelinspektionen."
+    },
+    {
+      "googleRank": 30,
+      "domain": "utländskabettingsidor.se",
+      "name": "Utländska Bettingsidor",
+      "verdict": "shady-affiliate",
+      "verdictLabel": "Misstänkt affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen saknar företagsinformation och instruerar läsaren att spela hos aktörer utan licens från Spelinspektionen."
+    },
+    {
+      "googleRank": 31,
+      "domain": "casino-utan-svensk-licens.uk.com",
+      "name": "Casino Utan Svensk Licens",
+      "verdict": "shady-affiliate",
+      "verdictLabel": "Misstänkt affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen saknar företagsinformation och instruerar läsaren att spela hos aktörer utan licens från Spelinspektionen."
+    },
+    {
+      "googleRank": 32,
+      "domain": "bettingsidor.se",
+      "name": "Bettingsidor.se",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen tillhandahåller en förteckning över spelbolag med licens från Spelinspektionen."
+    },
+    {
+      "googleRank": 33,
+      "domain": "bettingstugan.se",
+      "name": "Bettingstugan",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen tillhandahåller en förteckning över spelbolag med licens från Spelinspektionen."
+    },
+    {
+      "googleRank": 34,
+      "domain": "cardplayer.com",
+      "name": "Card Player",
+      "verdict": "shady-affiliate",
+      "verdictLabel": "Misstänkt affiliate",
+      "licensed": null,
+      "commentary": "Sajten har en svensk sektion som listar och recenserar bettingbolag utan licens från Spelinspektionen. Riktar sig till svenska spelare men hänvisar dem bort från det reglerade systemet."
+    },
+    {
+      "googleRank": 35,
+      "domain": "casinoguide.se",
+      "name": "Casino Guide",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen tillhandahåller en förteckning över spelbolag med licens från Spelinspektionen."
+    },
+    {
+      "googleRank": 36,
+      "domain": "casinonutansvensklicens.br.com",
+      "name": "Casinon Utan Svensk Licens",
+      "verdict": "shady-affiliate",
+      "verdictLabel": "Misstänkt affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen saknar företagsinformation och instruerar läsaren att spela hos aktörer utan licens från Spelinspektionen."
+    },
+    {
+      "googleRank": 37,
+      "domain": "gameshub.com",
+      "name": "Gameshub",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen tillhandahåller en förteckning över spelbolag med licens från Spelinspektionen."
+    },
+    {
+      "googleRank": 38,
+      "domain": "speltips.se",
+      "name": "Speltips.se",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen tillhandahåller en förteckning över spelbolag med licens från Spelinspektionen."
+    },
+    {
+      "googleRank": 39,
+      "domain": "sportbloggare.com",
+      "name": "Sportbloggare",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen tillhandahåller en förteckning över spelbolag med licens från Spelinspektionen."
+    },
+    {
+      "googleRank": 40,
+      "domain": "betting.com",
+      "name": "Betting.com",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen tillhandahåller en förteckning över spelbolag med licens från Spelinspektionen."
+    },
+    {
+      "googleRank": 41,
+      "domain": "snabbare.com",
+      "name": "Snabbare",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Licensierad operatör",
+      "licensed": true,
+      "commentary": "Spelbolaget opererar med licens från Spelinspektionen och tillhandahåller funktioner för Spelpaus."
+    },
+    {
+      "googleRank": 42,
+      "domain": "bedrageri.info",
+      "name": "Bedrageri.info",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen tillhandahåller en förteckning över spelbolag med licens från Spelinspektionen."
+    },
+    {
+      "googleRank": 43,
+      "domain": "rekatochklart.com",
+      "name": "Rekatochklart",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen tillhandahåller en förteckning över spelbolag med licens från Spelinspektionen."
+    },
+    {
+      "googleRank": 44,
+      "domain": "bettingstugan.se",
+      "name": "Bettingstugan",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen tillhandahåller en förteckning över spelbolag med licens från Spelinspektionen."
+    },
+    {
+      "googleRank": 45,
+      "domain": "speltips.se",
+      "name": "Speltips.se",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen tillhandahåller en förteckning över spelbolag med licens från Spelinspektionen."
+    },
+    {
+      "googleRank": 46,
+      "domain": "bettingsidor.se",
+      "name": "Bettingsidor.se",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen tillhandahåller en förteckning över spelbolag med licens från Spelinspektionen."
+    },
+    {
+      "googleRank": 47,
+      "domain": "sportbloggare.com",
+      "name": "Sportbloggare",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen tillhandahåller en förteckning över spelbolag med licens från Spelinspektionen."
+    },
+    {
+      "googleRank": 48,
+      "domain": "oddsbonusaridag.se",
+      "name": "Oddsbonusar Idag",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen tillhandahåller en förteckning över spelbolag med licens från Spelinspektionen."
+    },
+    {
+      "googleRank": 49,
+      "domain": "casino.hmpdacc.org",
+      "name": "HMPDACC",
+      "verdict": "shady-affiliate",
+      "verdictLabel": "Misstänkt affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen saknar företagsinformation och instruerar läsaren att spela hos aktörer utan licens från Spelinspektionen."
+    },
+    {
+      "googleRank": 50,
+      "domain": "fotboll.com",
+      "name": "Fotboll.com",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen tillhandahåller en förteckning över spelbolag med licens från Spelinspektionen."
+    },
+    {
+      "googleRank": 51,
+      "domain": "rekatochklart.com",
+      "name": "Rekatochklart",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen tillhandahåller en förteckning över spelbolag med licens från Spelinspektionen."
+    },
+    {
+      "googleRank": 52,
+      "domain": "speltips.se",
+      "name": "Speltips.se",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen tillhandahåller en förteckning över spelbolag med licens från Spelinspektionen."
+    },
+    {
+      "googleRank": 53,
+      "domain": "bettingstugan.se",
+      "name": "Bettingstugan",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen tillhandahåller en förteckning över spelbolag med licens från Spelinspektionen."
+    },
+    {
+      "googleRank": 54,
+      "domain": "betting.se",
+      "name": "Betting.se",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen tillhandahåller en förteckning över spelbolag med licens från Spelinspektionen."
+    },
+    {
+      "googleRank": 55,
+      "domain": "1x2.se",
+      "name": "1x2",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen tillhandahåller en förteckning över spelbolag med licens från Spelinspektionen."
+    },
+    {
+      "googleRank": 56,
+      "domain": "sportbloggare.com",
+      "name": "Sportbloggare",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen tillhandahåller en förteckning över spelbolag med licens från Spelinspektionen."
+    },
+    {
+      "googleRank": 57,
+      "domain": "casivo.se",
+      "name": "Casivo",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen tillhandahåller en förteckning över spelbolag med licens från Spelinspektionen."
+    },
+    {
+      "googleRank": 58,
+      "domain": "casinoutlandska.hgs-kok.se",
+      "name": "Casino Utländska",
+      "verdict": "shady-affiliate",
+      "verdictLabel": "Misstänkt affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen saknar företagsinformation och instruerar läsaren att spela hos aktörer utan licens från Spelinspektionen."
+    },
+    {
+      "googleRank": 59,
+      "domain": "pokerstrategy.com",
+      "name": "PokerStrategy",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen tillhandahåller en förteckning över spelbolag med licens från Spelinspektionen."
+    },
+    {
+      "googleRank": 60,
+      "domain": "gambling.com",
+      "name": "Gambling.com",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen tillhandahåller en förteckning över spelbolag med licens från Spelinspektionen."
+    },
+    {
+      "googleRank": 61,
+      "domain": "spela.svenskaspel.se",
+      "name": "Svenska Spel",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Licensierad operatör",
+      "licensed": true,
+      "commentary": "Spelbolaget opererar med licens från Spelinspektionen och tillhandahåller funktioner för Spelpaus."
+    },
+    {
+      "googleRank": 62,
+      "domain": "smz.se",
+      "name": "SMZ",
+      "verdict": "shady-affiliate",
+      "verdictLabel": "Misstänkt affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen saknar företagsinformation och instruerar läsaren att spela hos aktörer utan licens från Spelinspektionen."
+    },
+    {
+      "googleRank": 63,
+      "domain": "rekatochklart.com",
+      "name": "Rekatochklart",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen tillhandahåller en förteckning över spelbolag med licens från Spelinspektionen."
+    },
+    {
+      "googleRank": 64,
+      "domain": "sillyseason.se",
+      "name": "Silly Season",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen tillhandahåller en förteckning över spelbolag med licens från Spelinspektionen."
+    },
+    {
+      "googleRank": 65,
+      "domain": "unibet.se",
+      "name": "Unibet",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Licensierad operatör",
+      "licensed": true,
+      "commentary": "Spelbolaget opererar med licens från Spelinspektionen och tillhandahåller funktioner för Spelpaus."
+    },
+    {
+      "googleRank": 66,
+      "domain": "betting.com",
+      "name": "Betting.com",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen tillhandahåller en förteckning över spelbolag med licens från Spelinspektionen."
+    },
+    {
+      "googleRank": 67,
+      "domain": "snabbare.com",
+      "name": "Snabbare",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Licensierad operatör",
+      "licensed": true,
+      "commentary": "Spelbolaget opererar med licens från Spelinspektionen och tillhandahåller funktioner för Spelpaus."
+    },
+    {
+      "googleRank": 68,
+      "domain": "oddsonline.se",
+      "name": "Odds Online",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen tillhandahåller en förteckning över spelbolag med licens från Spelinspektionen."
+    },
+    {
+      "googleRank": 69,
+      "domain": "speltipsar.se",
+      "name": "Speltipsar",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen tillhandahåller en förteckning över spelbolag med licens från Spelinspektionen."
+    },
+    {
+      "googleRank": 70,
+      "domain": "tipsarenan.se",
+      "name": "Tipsarenan",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen tillhandahåller en förteckning över spelbolag med licens från Spelinspektionen."
+    },
+    {
+      "googleRank": 71,
+      "domain": "cardplayer.com",
+      "name": "Card Player",
+      "verdict": "shady-affiliate",
+      "verdictLabel": "Misstänkt affiliate",
+      "licensed": null,
+      "commentary": "Sajten har en svensk sektion som listar och recenserar bettingbolag utan licens från Spelinspektionen. Riktar sig till svenska spelare men hänvisar dem bort från det reglerade systemet."
+    },
+    {
+      "googleRank": 72,
+      "domain": "bankid.com",
+      "name": "BankID",
+      "verdict": "authority",
+      "verdictLabel": "Myndighet",
+      "licensed": null,
+      "commentary": "BankID är en teknisk infrastrukturtjänst för identifiering — inte ett spelbolag eller en affiliate."
+    },
+    {
+      "googleRank": 73,
+      "domain": "oddsonline.se",
+      "name": "Odds Online",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen tillhandahåller en förteckning över spelbolag med licens från Spelinspektionen."
+    },
+    {
+      "googleRank": 74,
+      "domain": "avanza.se",
+      "name": "Avanza",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevant",
+      "licensed": null,
+      "commentary": "Innehållet på webbplatsen behandlar inte spelbolag."
+    },
+    {
+      "googleRank": 75,
+      "domain": "speltipsar.se",
+      "name": "Speltipsar",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen tillhandahåller en förteckning över spelbolag med licens från Spelinspektionen."
+    },
+    {
+      "googleRank": 76,
+      "domain": "gameshub.com",
+      "name": "Gameshub",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen tillhandahåller en förteckning över spelbolag med licens från Spelinspektionen."
+    },
+    {
+      "googleRank": 77,
+      "domain": "casinoutlandska.hgs-kok.se",
+      "name": "Casino Utländska",
+      "verdict": "shady-affiliate",
+      "verdictLabel": "Misstänkt affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen saknar företagsinformation och instruerar läsaren att spela hos aktörer utan licens från Spelinspektionen."
+    },
+    {
+      "googleRank": 78,
+      "domain": "frankfred.com",
+      "name": "Frank & Fred",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Licensierad operatör",
+      "licensed": true,
+      "commentary": "Spelbolaget opererar med licens från Spelinspektionen och tillhandahåller funktioner för Spelpaus."
+    },
+    {
+      "googleRank": 79,
+      "domain": "speltips.se",
+      "name": "Speltips.se",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen tillhandahåller en förteckning över spelbolag med licens från Spelinspektionen."
+    },
+    {
+      "googleRank": 80,
+      "domain": "sportbloggare.com",
+      "name": "Sportbloggare",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen tillhandahåller en förteckning över spelbolag med licens från Spelinspektionen."
+    },
+    {
+      "googleRank": 81,
+      "domain": "xn--ntcasinoguide-bfb.se",
+      "name": "Nätcasinoguide",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen tillhandahåller en förteckning över spelbolag med licens från Spelinspektionen."
+    },
+    {
+      "googleRank": 82,
+      "domain": "svenskabet.se",
+      "name": "SvenskaBet",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen tillhandahåller en förteckning över spelbolag med licens från Spelinspektionen."
+    },
+    {
+      "googleRank": 83,
+      "domain": "spelbolag.com",
+      "name": "Spelbolag",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen tillhandahåller en förteckning över spelbolag med licens från Spelinspektionen."
+    },
+    {
+      "googleRank": 84,
+      "domain": "frankfred.com",
+      "name": "Frank & Fred",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Licensierad operatör",
+      "licensed": true,
+      "commentary": "Spelbolaget opererar med licens från Spelinspektionen och tillhandahåller funktioner för Spelpaus."
+    },
+    {
+      "googleRank": 85,
+      "domain": "betsson.com",
+      "name": "Betsson",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Licensierad operatör",
+      "licensed": true,
+      "commentary": "Spelbolaget opererar med licens från Spelinspektionen och tillhandahåller funktioner för Spelpaus."
+    },
+    {
+      "googleRank": 86,
+      "domain": "speltips.se",
+      "name": "Speltips.se",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen tillhandahåller en förteckning över spelbolag med licens från Spelinspektionen."
+    },
+    {
+      "googleRank": 87,
+      "domain": "aftonbladet.se",
+      "name": "Aftonbladet",
+      "verdict": "seo-grab",
+      "verdictLabel": "SEO-manipulation",
+      "licensed": null,
+      "commentary": "Domänen publicerar marknadsföringsmaterial med länkar till spelbolag."
+    },
+    {
+      "googleRank": 88,
+      "domain": "bettingstugan.se",
+      "name": "Bettingstugan",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen tillhandahåller en förteckning över spelbolag med licens från Spelinspektionen."
+    },
+    {
+      "googleRank": 89,
+      "domain": "sportbloggare.com",
+      "name": "Sportbloggare",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen tillhandahåller en förteckning över spelbolag med licens från Spelinspektionen."
+    },
+    {
+      "googleRank": 90,
+      "domain": "braspelbolag.com",
+      "name": "Bra Spelbolag",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen tillhandahåller en förteckning över spelbolag med licens från Spelinspektionen."
+    },
+    {
+      "googleRank": 91,
+      "domain": "svenskabet.se",
+      "name": "SvenskaBet",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen tillhandahåller en förteckning över spelbolag med licens från Spelinspektionen."
+    },
+    {
+      "googleRank": 92,
+      "domain": "cherry.se",
+      "name": "Cherry",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevant",
+      "licensed": null,
+      "commentary": "Innehållet på webbplatsen behandlar inte spelbolag."
+    },
+    {
+      "googleRank": 93,
+      "domain": "lottoland.se",
+      "name": "Lottoland",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Licensierad operatör",
+      "licensed": true,
+      "commentary": "Spelbolaget opererar med licens från Spelinspektionen och tillhandahåller funktioner för Spelpaus."
+    },
+    {
+      "googleRank": 94,
+      "domain": "oddspointer.com",
+      "name": "Oddspointer",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen tillhandahåller en förteckning över spelbolag med licens från Spelinspektionen."
+    },
+    {
+      "googleRank": 95,
+      "domain": "spela.svenskaspel.se",
+      "name": "Svenska Spel",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Licensierad operatör",
+      "licensed": true,
+      "commentary": "Spelbolaget opererar med licens från Spelinspektionen och tillhandahåller funktioner för Spelpaus."
+    },
+    {
+      "googleRank": 96,
+      "domain": "speltips.se",
+      "name": "Speltips.se",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen tillhandahåller en förteckning över spelbolag med licens från Spelinspektionen."
+    },
+    {
+      "googleRank": 97,
+      "domain": "frankfred.com",
+      "name": "Frank & Fred",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Licensierad operatör",
+      "licensed": true,
+      "commentary": "Spelbolaget opererar med licens från Spelinspektionen och tillhandahåller funktioner för Spelpaus."
+    },
+    {
+      "googleRank": 98,
+      "domain": "betting.se",
+      "name": "Betting.se",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen tillhandahåller en förteckning över spelbolag med licens från Spelinspektionen."
+    },
+    {
+      "googleRank": 99,
+      "domain": "magasinetkonkret.se",
+      "name": "Magasinet Konkret",
+      "verdict": "seo-grab",
+      "verdictLabel": "SEO-manipulation",
+      "licensed": null,
+      "commentary": "Domänen publicerar marknadsföringsmaterial med länkar till spelbolag."
+    },
+    {
+      "googleRank": 100,
+      "domain": "sportlobby.se",
+      "name": "Sportlobby",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Legitim affiliate",
+      "licensed": null,
+      "commentary": "Webbplatsen tillhandahåller en förteckning över spelbolag med licens från Spelinspektionen."
+    }
+  ],
+  "peopleShouldAlsoAsk": [
+    {
+      "question": "Vad händer med mina pengar om en bettingsida förlorar sin licens?",
+      "answer": "Inlånade medel hos Spelinspektionen-licensierade bolag är skyddade separat från rörelsekapitalet."
+    },
+    {
+      "question": "Varför är oddsen ibland sämre på svenska licensierade sidor?",
+      "answer": "Spelskatt på 18% belastar operatören och kan påverka marginaler jämfört med offshore-bolag."
+    },
+    {
+      "question": "Kan jag ha konton på flera bettingsidor samtidigt?",
+      "answer": "Ja, men Spelpaus stänger av dig från alla licensierade sidor på en gång — du väljer inte per sida."
+    },
+    {
+      "question": "Räknas bettingbonusar som inkomst i Sverige?",
+      "answer": "Vinster från licensierade bolag är skattefria i Sverige — bonusar som omsätts och tas ut som vinst också."
+    },
+    {
+      "question": "Hur snabbt måste ett uttag behandlas enligt svensk lag?",
+      "answer": "Spelinspektionen ställer krav på rimliga handläggningstider — de flesta licensierade bolag hanterar Swish-uttag inom minuter."
+    }
+  ],
+  "finalCTA": {
+    "headline": "Vårt förstaval",
+    "text": "Betsson byggde den svenska bettingmarknaden och håller fortfarande högsta nivå. Bredast oddsutbud, snabbast betalningar, och en plattform som faktiskt fungerar."
+  }
+}

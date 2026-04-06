@@ -70,6 +70,7 @@ export default function WallOfReceipts({ results, type, serpHealth }: {
         <span><span className="text-orange-400">⚠</span> Tveksam affiliate</span>
         <span><span className="text-red-400">✗</span> Ej licensierad</span>
         <span><span className="text-neutral-500">—</span> Irrelevant</span>
+        <span><span className="text-neutral-400">⊕</span> Myndighet</span>
       </div>
 
       <div className="overflow-x-auto bg-neutral-800 border border-neutral-700 rounded-lg">
@@ -97,6 +98,7 @@ export default function WallOfReceipts({ results, type, serpHealth }: {
                   {item.verdict === 'shady-affiliate' && <span className="text-orange-400 text-lg">⚠</span>}
                   {item.verdict === 'unlicensed' && <span className="text-red-400 text-lg">✗</span>}
                   {item.verdict === 'irrelevant' && <span className="text-neutral-500 text-lg">—</span>}
+                  {item.verdict === 'authority' && <span className="text-neutral-400 text-lg">⊕</span>}
                 </td>
                 <td className="p-3 text-neutral-400 text-xs">{item.commentary}</td>
               </tr>
