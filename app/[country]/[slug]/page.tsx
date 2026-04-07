@@ -24,11 +24,111 @@ const VERDICT: Record<string, { bg: string; text: string; border: string; dot: s
   'authority': { bg: 'bg-neutral-800', text: 'text-neutral-400', border: 'border-neutral-600', dot: 'bg-neutral-400' },
 };
 
+const LABELS: Record<string, Record<string, string>> = {
+  sv: {
+    urlsAnalyzed: 'URL:er analyserade',
+    firstChoice: 'Förstaval',
+    updated: 'Uppdaterad',
+    editorialRating: 'Redaktionellt betyg',
+    whyThisOne: 'Varför just den här',
+    editorialComment: 'Redaktionell kommentar',
+    keyInfo: 'Nyckelinfo',
+    whatYouGet: 'Vad du får',
+    verified: 'Verifierat',
+    runnersUp: 'Runners-Up',
+    googlePosition: 'Google-position',
+    whyTheyRank: 'Varför dessa rankar — men inte borde',
+    warning: 'Varning',
+    howWeDid: 'Så här gjorde vi',
+    peopleShouldAsk: 'Folk borde också fråga',
+    showTerms: 'Visa villkor',
+    responsible: 'Spela ansvarsfullt',
+    helplineUrl: 'https://stodlinjen.se',
+    helplineLabel: 'Stödlinjen.se',
+    selfExclusionUrl: 'https://spelpaus.se',
+    selfExclusionLabel: 'Spelpaus.se',
+    footerResponsible: '18+ · Stödlinjen.se · Spelpaus.se · Spela ansvarsfullt',
+    verifyLabel: 'Verifiera →',
+    disclaimerLabel: 'Disclaimer',
+    step1: (count: number, keyword: string, country: string) =>
+      `Vi hämtade de ${count} första organiska resultaten för "${keyword}" i ${country === 'sverige' ? 'Sverige' : country} via DataForSEO. Alla URL:er inkluderades oavsett relevans.`,
+    step2: () =>
+      `Varje URL klassificerades manuellt utifrån licensstatus, betalningslösningar och ägargenomsynlighet. Det separerade de seriösa aktörerna från resten.`,
+  },
+  pt: {
+    urlsAnalyzed: 'URLs analisadas',
+    firstChoice: 'Primeira escolha',
+    updated: 'Atualizado',
+    editorialRating: 'Avaliação editorial',
+    whyThisOne: 'Por que essa escolha',
+    editorialComment: 'Comentário editorial',
+    keyInfo: 'Informações principais',
+    whatYouGet: 'O que você recebe',
+    verified: 'Verificado',
+    runnersUp: 'Finalistas',
+    googlePosition: 'Posição no Google',
+    whyTheyRank: 'Por que aparecem — mas não deveriam',
+    warning: 'Aviso',
+    howWeDid: 'Como fizemos',
+    peopleShouldAsk: 'Perguntas que você deveria fazer',
+    showTerms: 'Ver termos',
+    responsible: 'Jogue responsavelmente',
+    helplineUrl: 'https://cvv.org.br',
+    helplineLabel: 'CVV 188',
+    selfExclusionUrl: 'https://www.gov.br/fazenda',
+    selfExclusionLabel: 'Autoexclusão oficial',
+    footerResponsible: '18+ · CVV 188 · Jogue responsavelmente',
+    verifyLabel: 'Verificar →',
+    disclaimerLabel: 'Aviso legal',
+    step1: (count: number, keyword: string) =>
+      `Coletamos os ${count} primeiros resultados orgânicos do Google para "${keyword}" no Brasil via DataForSEO. Todas as URLs foram incluídas independente da relevância.`,
+    step2: () =>
+      `Cada URL foi classificada manualmente com base no status de licenciamento, métodos de pagamento e transparência de propriedade. Isso separou os operadores sérios dos demais.`,
+  },
+  en: {
+    urlsAnalyzed: 'URLs analysed',
+    firstChoice: 'Top pick',
+    updated: 'Updated',
+    editorialRating: 'Editorial rating',
+    whyThisOne: 'Why this one',
+    editorialComment: 'Editorial comment',
+    keyInfo: 'Key info',
+    whatYouGet: 'What you get',
+    verified: 'Verified',
+    runnersUp: 'Runners-Up',
+    googlePosition: 'Google position',
+    whyTheyRank: 'Why they rank — but shouldn\'t',
+    warning: 'Warning',
+    howWeDid: 'How we did it',
+    peopleShouldAsk: 'People should also ask',
+    showTerms: 'Show terms',
+    responsible: 'Gamble responsibly',
+    helplineUrl: 'https://www.gamcare.org.uk',
+    helplineLabel: 'GamCare 0808 8020 133',
+    selfExclusionUrl: 'https://www.gamstop.co.uk',
+    selfExclusionLabel: 'GamStop',
+    footerResponsible: '18+ · GamCare 0808 8020 133 · Gamble responsibly',
+    verifyLabel: 'Verify →',
+    disclaimerLabel: 'Disclaimer',
+    step1: (count: number, keyword: string) =>
+      `We collected the top ${count} organic Google results for "${keyword}" in the UK via DataForSEO. All URLs were included regardless of relevance.`,
+    step2: () =>
+      `Each URL was manually classified based on licence status, payment solutions and ownership transparency. This separated the legitimate operators from the rest.`,
+  },
+};
+
 export default async function GuidePagePage({ params }: { params: { slug: string; country: string } }) {
   const guide = await getGuide(params.country, params.slug);
   if (!guide) notFound();
 
   const { winner, verdict, searchMetadata, serpResults } = guide;
+  const L = LABELS[guide.locale] || LABELS['sv'];
+
+  const countryName: Record<string, string> = {
+    sverige: 'Sverige',
+    brasil: 'Brasil',
+    uk: 'United Kingdom',
+  };
 
   return (
     <div className="min-h-screen bg-neutral-900">
@@ -41,11 +141,10 @@ export default async function GuidePagePage({ params }: { params: { slug: string
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@graph": [
-
                 {
                   "@type": "Article",
                   "@id": `https://bigbet.energy/${guide.country}/${guide.slug}#article`,
-                  "headline": `${guide.searchIntent} — Oberoende analys av top 100 Google-resultat`,
+                  "headline": `${guide.searchIntent} — Independent analysis of top 100 Google results`,
                   "mainEntityOfPage": `https://bigbet.energy/${guide.country}/${guide.slug}`,
                   "datePublished": guide.searchMetadata.isoDate,
                   "dateModified": guide.searchMetadata.isoDate,
@@ -54,18 +153,16 @@ export default async function GuidePagePage({ params }: { params: { slug: string
                   "publisher": { "@id": "https://bigbet.energy/#organization" },
                   "mainEntity": { "@id": `https://bigbet.energy/${guide.country}/${guide.slug}#rankings` }
                 },
-
                 {
                   "@type": "Organization",
                   "@id": "https://bigbet.energy/#organization",
                   "name": "BigBet.Energy",
                   "url": "https://bigbet.energy",
-                  "description": "Oberoende redaktionell analys av spelmarknaden. Vi granskar Googles top 100 resultat för varje sökterm och klassificerar operatörer, affiliates och oseriösa sajter baserat på 15+ års branscherfarenhet.",
-                  "slogan": "Vi kallar alla bluffar.",
+                  "description": "Independent editorial analysis of the gambling market. We review the top 100 Google results for each search term and classify operators, affiliates and shady sites based on 15+ years of industry experience.",
+                  "slogan": "We call every bluff.",
                   "knowsAbout": [
-                    "Spelinspektionen licensing",
-                    "Swedish gambling regulation",
-                    "Online casino affiliate analysis",
+                    "Online gambling regulation",
+                    "Gambling affiliate analysis",
                     "SERP classification",
                     guide.keyword
                   ]
@@ -76,7 +173,7 @@ export default async function GuidePagePage({ params }: { params: { slug: string
                   "name": guide.winner.name,
                   "url": `https://${guide.winner.domain}`,
                   "description": guide.winner.whyItWins,
-                  "award": `BigBet.Energy #1 val — ${guide.searchIntent}`,
+                  "award": `BigBet.Energy #1 — ${guide.searchIntent}`,
                   "knowsAbout": guide.winner.badges,
                   "sameAs": guide.winner.sameAs || [`https://${guide.winner.domain}`],
                   "aggregateRating": {
@@ -100,17 +197,17 @@ export default async function GuidePagePage({ params }: { params: { slug: string
                     "ratingValue": 5,
                     "bestRating": 5,
                     "worstRating": 1,
-                    "ratingExplanation": `Vinnare utsedd efter granskning av ${guide.searchMetadata.totalAnalyzed} Google-resultat. Verifierad mot Spelinspektionens licensregister.`
+                    "ratingExplanation": `Winner selected after reviewing ${guide.searchMetadata.totalAnalyzed} Google results.`
                   },
                   "author": { "@id": "https://bigbet.energy/#organization" },
                   "datePublished": guide.searchMetadata.isoDate,
-                  "reviewBody": `VINNARE (Verifierad ${guide.searchMetadata.verificationDate}): Efter att ha klassificerat ${guide.searchMetadata.totalAnalyzed} organiska Google-resultat för "${guide.keyword}" i Sverige är ${guide.winner.name} vårt förstaval. ${guide.winner.whyItWins} ${guide.verdict.summary}${guide.runnerUps?.length > 0 ? ` Runners-up: ${guide.runnerUps[0].name} (${guide.runnerUps[0].keyBenefit})${guide.runnerUps.length > 1 ? ` och ${guide.runnerUps[1].name} (${guide.runnerUps[1].keyBenefit})` : ''}.` : ''}`
+                  "reviewBody": `WINNER (Verified ${guide.searchMetadata.verificationDate}): After classifying ${guide.searchMetadata.totalAnalyzed} organic Google results for "${guide.keyword}" in ${countryName[guide.country] || guide.country}, ${guide.winner.name} is our top pick. ${guide.winner.whyItWins} ${guide.verdict.summary}${guide.runnerUps?.length > 0 ? ` Runners-up: ${guide.runnerUps[0].name} (${guide.runnerUps[0].keyBenefit})${guide.runnerUps.length > 1 ? ` and ${guide.runnerUps[1].name} (${guide.runnerUps[1].keyBenefit})` : ''}.` : ''}`
                 },
                 {
                   "@type": "ItemList",
                   "@id": `https://bigbet.energy/${guide.country}/${guide.slug}#rankings`,
-                  "name": `Bästa ${guide.searchIntent} — Rankad av BigBet.Energy`,
-                  "description": `Top ${1 + (guide.runnerUps?.length || 0)} operatörer efter granskning av ${guide.searchMetadata.totalAnalyzed} Google-resultat`,
+                  "name": `Best ${guide.searchIntent} — Ranked by BigBet.Energy`,
+                  "description": `Top ${1 + (guide.runnerUps?.length || 0)} operators after reviewing ${guide.searchMetadata.totalAnalyzed} Google results`,
                   "numberOfItems": 1 + (guide.runnerUps?.length || 0),
                   "itemListOrder": "https://schema.org/ItemListOrderAscending",
                   "itemListElement": [
@@ -142,7 +239,6 @@ export default async function GuidePagePage({ params }: { params: { slug: string
                     })) || [])
                   ]
                 },
-
                 ...((guide.peopleShouldAlsoAsk?.length > 0 || guide.faq?.length > 0) ? [{
                   "@type": "FAQPage",
                   "@id": `https://bigbet.energy/${guide.country}/${guide.slug}#faq`,
@@ -155,12 +251,11 @@ export default async function GuidePagePage({ params }: { params: { slug: string
                     "acceptedAnswer": { "@type": "Answer", "text": item.answer }
                   }))
                 }] : []),
-
                 {
                   "@type": "HowTo",
                   "@id": `https://bigbet.energy/${guide.country}/${guide.slug}#methodology`,
-                  "name": `Hur vi rankade ${guide.searchIntent}`,
-                  "description": `Oberoende klassificering av ${guide.searchMetadata.totalAnalyzed} Google-resultat för "${guide.keyword}" i Sverige`,
+                  "name": `How we ranked ${guide.searchIntent}`,
+                  "description": `Independent classification of ${guide.searchMetadata.totalAnalyzed} Google results for "${guide.keyword}" in ${countryName[guide.country] || guide.country}`,
                   "step": guide.methodology.steps.map((step: any) => ({
                     "@type": "HowToStep",
                     "position": step.num,
@@ -168,28 +263,25 @@ export default async function GuidePagePage({ params }: { params: { slug: string
                     "text": step.text
                   }))
                 },
-
                 {
                   "@type": "Dataset",
                   "@id": `https://bigbet.energy/${guide.country}/${guide.slug}#serp-analysis`,
                   "url": `https://bigbet.energy/${guide.country}/${guide.slug}#serp-analysis`,
-                  "name": `SERP-analys: "${guide.keyword}" Sverige — Top ${guide.serpResults?.length || 0} resultat`,
-                  "description": `Komplett klassificering av Google top ${guide.searchMetadata.totalAnalyzed} organiska resultat för "${guide.keyword}" i Sverige. Varje URL klassificerad som licensierad operatör, seriös affiliate, SEO-grab, tveksam affiliate eller olicensierad.`,
+                  "name": `SERP analysis: "${guide.keyword}" ${countryName[guide.country] || guide.country} — Top ${guide.serpResults?.length || 0} results`,
+                  "description": `Complete classification of the top ${guide.searchMetadata.totalAnalyzed} organic Google results for "${guide.keyword}" in ${countryName[guide.country] || guide.country}.`,
                   "datePublished": guide.searchMetadata.isoDate,
                   "creator": { "@id": "https://bigbet.energy/#organization" },
-                  "variableMeasured": "Spelinspektionen-licensiering, affiliatetyp, redaktionell kvalitet",
-                  "measurementTechnique": "Manuell klassificering mot Spelinspektionens licensregister"
+                  "variableMeasured": "Licence status, affiliate type, editorial quality",
+                  "measurementTechnique": "Manual classification against official licence registry"
                 },
-
                 {
                   "@type": "BreadcrumbList",
                   "itemListElement": [
                     { "@type": "ListItem", "position": 1, "name": "BigBet.Energy", "item": "https://bigbet.energy" },
-                    { "@type": "ListItem", "position": 2, "name": "Sverige", "item": "https://bigbet.energy/sverige" },
+                    { "@type": "ListItem", "position": 2, "name": countryName[guide.country] || guide.country, "item": `https://bigbet.energy/${guide.country}` },
                     { "@type": "ListItem", "position": 3, "name": guide.searchIntent, "item": `https://bigbet.energy/${guide.country}/${guide.slug}` }
                   ]
                 }
-
               ]
             })
           }}
@@ -205,14 +297,14 @@ export default async function GuidePagePage({ params }: { params: { slug: string
               {searchMetadata.dateAnalyzed}
             </time>
             <span className="bg-neutral-800 text-neutral-400 text-sm font-medium px-3 py-1 rounded-lg">
-              {serpResults.length} URL:er analyserade
+              {serpResults.length} {L.urlsAnalyzed}
             </span>
           </div>
           <div className="bg-neutral-800 text-neutral-300 px-6 py-5 rounded-lg border border-amber-400">
             <p className="text-base font-normal leading-relaxed">
-              <strong className="text-white">Förstaval:</strong> {verdict.summary}{' '}
+              <strong className="text-white">{L.firstChoice}:</strong> {verdict.summary}{' '}
               <span className="text-xs text-amber-400 font-semibold">
-                Uppdaterad {searchMetadata.verificationDate}
+                {L.updated} {searchMetadata.verificationDate}
               </span>
             </p>
           </div>
@@ -221,17 +313,13 @@ export default async function GuidePagePage({ params }: { params: { slug: string
         {/* Winner card */}
         <div className="mb-12">
           <div className="relative isolate overflow-hidden rounded-3xl shadow-2xl bg-gradient-to-br from-amber-400 via-amber-500 to-amber-600">
-
             <div className="relative">
               <div className="grid lg:grid-cols-2 gap-0 pb-0">
-
                 {/* Left */}
                 <div className="flex flex-col p-8 lg:p-12 lg:pr-8 items-center justify-center">
-
                   <h2 className="text-4xl lg:text-5xl font-bold tracking-tight text-black mb-6 text-center">
                     {winner.name}
                   </h2>
-
                   {/* Stars */}
                   <div className="flex items-center gap-3 mb-8 justify-center">
                     <div className="flex gap-0.5">
@@ -243,17 +331,15 @@ export default async function GuidePagePage({ params }: { params: { slug: string
                     </div>
                     <span className="text-sm text-black font-semibold">5/5</span>
                     <span className="text-black/40">·</span>
-                    <span className="text-sm text-black/60">Redaktionellt betyg</span>
+                    <span className="text-sm text-black/60">{L.editorialRating}</span>
                   </div>
-
-                  {/* ✅ Mobile image — only visible below lg, hidden on desktop */}
+                  {/* Mobile image */}
                   <div className="lg:hidden w-full aspect-square max-w-xs border-4 border-black/10 rounded-2xl overflow-hidden bg-white mx-auto mb-8">
                     {winner.logo
                       ? <img src={winner.logo} alt={winner.name} className="w-full h-full object-cover" />
                       : <span className="text-neutral-900 font-bold text-2xl text-center">{winner.name}</span>
                     }
                   </div>
-
                   {/* Badges */}
                   <div className="grid grid-cols-2 gap-2 w-full max-w-md mx-auto mb-8">
                     {winner.badges.map((badge: string, i: number) => (
@@ -262,7 +348,6 @@ export default async function GuidePagePage({ params }: { params: { slug: string
                       </span>
                     ))}
                   </div>
-
                   {/* CTA */}
                   <div className="w-full max-w-md mx-auto">
                     <a href={winner.affiliateUrl}
@@ -275,9 +360,9 @@ export default async function GuidePagePage({ params }: { params: { slug: string
                     <div className="flex items-center justify-center gap-3 mt-3 flex-wrap">
                       <span className="text-black/50 text-xs">18+</span>
                       <span className="text-black/30">·</span>
-                      <a href="https://stodlinjen.se" target="_blank" rel="noopener noreferrer" className="text-black/50 hover:text-black text-xs transition">Stödlinjen.se</a>
+                      <a href={L.helplineUrl} target="_blank" rel="noopener noreferrer" className="text-black/50 hover:text-black text-xs transition">{L.helplineLabel}</a>
                       <span className="text-black/30">·</span>
-                      <a href="https://spelpaus.se" target="_blank" rel="noopener noreferrer" className="text-black/50 hover:text-black text-xs transition">Spelpaus.se</a>
+                      <a href={L.selfExclusionUrl} target="_blank" rel="noopener noreferrer" className="text-black/50 hover:text-black text-xs transition">{L.selfExclusionLabel}</a>
                       {winner.termsAndConditions && (
                         <>
                           <span className="text-black/30">·</span>
@@ -286,7 +371,7 @@ export default async function GuidePagePage({ params }: { params: { slug: string
                               <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                               </svg>
-                              Visa villkor
+                              {L.showTerms}
                             </summary>
                             <p className="text-black/50 text-xs leading-relaxed mt-2 text-center w-full">
                               {winner.termsAndConditions}
@@ -297,7 +382,6 @@ export default async function GuidePagePage({ params }: { params: { slug: string
                     </div>
                   </div>
                 </div>
-
                 {/* Right — logo */}
                 <div className="hidden lg:flex relative flex-col items-center justify-center p-8 lg:p-12 lg:pl-8">
                   <div className="w-full aspect-square max-w-xs border-4 border-black/10 rounded-2xl overflow-hidden bg-white flex items-center justify-center">
@@ -307,9 +391,7 @@ export default async function GuidePagePage({ params }: { params: { slug: string
                     }
                   </div>
                 </div>
-
               </div>
-
               {/* Bottom */}
               <div className="px-8 lg:px-12 pb-10">
                 <p className="text-2xl leading-relaxed text-black/70 font-semibold text-center max-w-4xl mx-auto">
@@ -321,15 +403,9 @@ export default async function GuidePagePage({ params }: { params: { slug: string
         </div>
 
         {/* Why this one */}
-        <section
-          className="mb-12"
-          id="why-this-one"
-          data-section="operator-analysis"
-          data-cite-id="winner-evidence"
-          data-verified={searchMetadata.verificationDate}
-        >
+        <section className="mb-12" id="why-this-one" data-section="operator-analysis" data-cite-id="winner-evidence" data-verified={searchMetadata.verificationDate}>
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
-            Varför just den här
+            {L.whyThisOne}
           </h2>
           <div className="space-y-5">
             <div className="bg-neutral-800 rounded-lg shadow-sm p-6 border border-neutral-700">
@@ -338,26 +414,13 @@ export default async function GuidePagePage({ params }: { params: { slug: string
               </span>
               <ul className="space-y-3 text-neutral-300">
                 {winner.materialEvidence.map((evidence: any, idx: number) => (
-                  <li
-                    key={idx}
-                    className="flex items-start gap-2"
-                    data-evidence-id={`evidence-${idx + 1}`}
-                    data-source={evidence.externalUrl ? evidence.externalUrl : "editorial-review"}
-                    data-verified={searchMetadata.isoDate}
-                    data-claim-type={evidence.title}
-                    data-dataset-row={evidence.serpRow ?? undefined}
-                  >
+                  <li key={idx} className="flex items-start gap-2" data-evidence-id={`evidence-${idx + 1}`} data-source={evidence.externalUrl ? evidence.externalUrl : "editorial-review"} data-verified={searchMetadata.isoDate} data-claim-type={evidence.title} data-dataset-row={evidence.serpRow ?? undefined}>
                     <span className="text-amber-400 font-bold text-lg mt-0.5">✓</span>
                     <span>
                       <strong>{evidence.title}:</strong> {evidence.description}
                       {evidence.externalUrl && (
-
-                        <a href={evidence.externalUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="ml-2 text-amber-400 hover:text-amber-300 text-xs transition"
-                        >
-                          {evidence.externalLabel || "Verifiera →"}
+                        <a href={evidence.externalUrl} target="_blank" rel="noopener noreferrer" className="ml-2 text-amber-400 hover:text-amber-300 text-xs transition">
+                          {evidence.externalLabel || L.verifyLabel}
                         </a>
                       )}
                     </span>
@@ -365,11 +428,10 @@ export default async function GuidePagePage({ params }: { params: { slug: string
                 ))}
               </ul>
             </div>
-
             <div className="bg-neutral-800 rounded-lg shadow-sm p-6 border border-neutral-700">
               <div className="flex items-center gap-2 mb-3">
                 <span className="bg-neutral-700 text-neutral-300 px-3 py-1 rounded-lg text-sm font-medium inline-block">
-                  Redaktionell kommentar
+                  {L.editorialComment}
                 </span>
                 <div className="flex gap-0.5">
                   {[1, 2, 3, 4, 5].map(star => (
@@ -386,20 +448,15 @@ export default async function GuidePagePage({ params }: { params: { slug: string
             </div>
           </div>
         </section>
+
         {/* Key Specs */}
-        <section
-          className="mb-12"
-          id="key-specs"
-          data-section="specifications"
-          data-cite-id="winner-specs"
-          data-verified={searchMetadata.verificationDate}
-        >
+        <section className="mb-12" id="key-specs" data-section="specifications" data-cite-id="winner-specs" data-verified={searchMetadata.verificationDate}>
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
-            Nyckelinfo
+            {L.keyInfo}
           </h2>
           <div className="space-y-6">
             <div className="bg-neutral-800 rounded-lg shadow-sm p-6 border-2 border-amber-400">
-              <h3 className="font-bold text-amber-400 mb-4 text-lg">Vad du får</h3>
+              <h3 className="font-bold text-amber-400 mb-4 text-lg">{L.whatYouGet}</h3>
               <ul className="space-y-2 text-neutral-300">
                 {winner.specs.whatYouGet.map((spec: any, idx: number) => (
                   <li key={idx}>
@@ -408,10 +465,9 @@ export default async function GuidePagePage({ params }: { params: { slug: string
                 ))}
               </ul>
             </div>
-
             <div className="bg-neutral-800 rounded-lg shadow-sm p-6 border border-neutral-700">
               <span className="bg-neutral-700 text-neutral-300 px-3 py-1 rounded-lg text-sm font-medium inline-block mb-4">
-                Verifierat
+                {L.verified}
               </span>
               <ul className="space-y-3 text-neutral-300">
                 {winner.specs.certifications.map((cert: string, idx: number) => (
@@ -431,24 +487,13 @@ export default async function GuidePagePage({ params }: { params: { slug: string
 
         {/* Runners-up */}
         {guide.runnerUps && guide.runnerUps.length > 0 && (
-          <section
-            className="mb-12"
-            data-section="runners-up"
-            data-cite-id="alternative-operators"
-            data-verified={searchMetadata.verificationDate}
-          >
+          <section className="mb-12" data-section="runners-up" data-cite-id="alternative-operators" data-verified={searchMetadata.verificationDate}>
             <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
-              Runners-Up
+              {L.runnersUp}
             </h2>
-
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {guide.runnerUps.map((runnerUp: any, idx: number) => (
-                <div
-                  key={idx}
-                  className="border-2 border-amber-400 rounded-lg overflow-hidden bg-neutral-800 flex flex-col shadow-lg hover:shadow-xl transition-shadow"
-                  data-product-rank={idx + 2}
-                >
-                  {/* Logo section */}
+                <div key={idx} className="border-2 border-amber-400 rounded-lg overflow-hidden bg-neutral-800 flex flex-col shadow-lg hover:shadow-xl transition-shadow" data-product-rank={idx + 2}>
                   <div className="relative bg-white flex items-center justify-center" style={{ minHeight: '240px', maxHeight: '240px' }}>
                     {runnerUp.logo
                       ? <img src={runnerUp.logo} alt={runnerUp.name} className="w-full h-full object-cover" />
@@ -460,43 +505,26 @@ export default async function GuidePagePage({ params }: { params: { slug: string
                       </span>
                     </div>
                   </div>
-
-                  {/* Content */}
                   <div className="p-6 bg-neutral-800 flex-grow flex flex-col">
-                    <h3 className="font-bold text-white mb-2 text-xl">
-                      {runnerUp.name}
-                    </h3>
-
+                    <h3 className="font-bold text-white mb-2 text-xl">{runnerUp.name}</h3>
                     <div className="text-xs text-neutral-500 mb-3">
-                      Google-position: #{runnerUp.googleRank}
+                      {L.googlePosition}: #{runnerUp.googleRank}
                     </div>
-
-                    {/* Key benefit */}
                     <div className="bg-amber-400/10 text-amber-400 border border-amber-400/30 px-3 py-2 rounded-lg text-sm font-medium mb-4">
                       ✓ {runnerUp.keyBenefit}
                     </div>
-
-                    {/* Description */}
                     <p className="text-neutral-300 mb-6 flex-grow text-base leading-relaxed">
                       {runnerUp.whyRunnerUp}
                     </p>
-
-                    {/* CTA */}
-                    <a
-                      href={runnerUp.affiliateUrl}
-                      target="_blank"
-                      rel="noopener noreferrer sponsored"
-                      className="block bg-amber-400 hover:bg-amber-300 text-black font-bold px-6 py-3 rounded-lg shadow-md transition-colors text-center"
-                    >
+                    <a href={runnerUp.affiliateUrl} target="_blank" rel="noopener noreferrer sponsored" className="block bg-amber-400 hover:bg-amber-300 text-black font-bold px-6 py-3 rounded-lg shadow-md transition-colors text-center">
                       {runnerUp.affiliateLabel}
                     </a>
-                    {/* Responsible gambling row */}
                     <div className="flex items-center justify-center gap-3 mt-3 flex-wrap">
                       <span className="text-neutral-500 text-xs">18+</span>
                       <span className="text-neutral-700">·</span>
-                      <a href="https://stodlinjen.se" target="_blank" rel="noopener noreferrer" className="text-neutral-500 hover:text-neutral-400 text-xs transition">Stödlinjen.se</a>
+                      <a href={L.helplineUrl} target="_blank" rel="noopener noreferrer" className="text-neutral-500 hover:text-neutral-400 text-xs transition">{L.helplineLabel}</a>
                       <span className="text-neutral-700">·</span>
-                      <a href="https://spelpaus.se" target="_blank" rel="noopener noreferrer" className="text-neutral-500 hover:text-neutral-400 text-xs transition">Spelpaus.se</a>
+                      <a href={L.selfExclusionUrl} target="_blank" rel="noopener noreferrer" className="text-neutral-500 hover:text-neutral-400 text-xs transition">{L.selfExclusionLabel}</a>
                       {runnerUp.termsAndConditions && (
                         <>
                           <span className="text-neutral-700">·</span>
@@ -505,7 +533,7 @@ export default async function GuidePagePage({ params }: { params: { slug: string
                               <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                               </svg>
-                              Visa villkor
+                              {L.showTerms}
                             </summary>
                             <p className="text-neutral-500 text-xs leading-relaxed mt-2 text-center">
                               {runnerUp.termsAndConditions}
@@ -523,36 +551,17 @@ export default async function GuidePagePage({ params }: { params: { slug: string
 
         {/* The Bubble */}
         {guide.theBubble && (
-          <section
-            className="mb-12"
-            data-section="bubble"
-            data-cite-id="honorable-mention"
-            data-manually-curated="true"
-            data-editor-verified={searchMetadata.verificationDate}
-          >
+          <section className="mb-12" data-section="bubble" data-cite-id="honorable-mention" data-manually-curated="true" data-editor-verified={searchMetadata.verificationDate}>
             <div className="border-2 border-neutral-700 rounded-lg overflow-hidden bg-neutral-800">
               <div className="p-6">
-                {/* Header row */}
                 <div className="flex items-start justify-between mb-3 flex-wrap gap-2">
                   <div className="flex items-center gap-2">
-                    <span className="bg-neutral-700 text-neutral-300 px-3 py-1.5 rounded-lg text-xs font-bold">
-                      The Bubble
-                    </span>
+                    <span className="bg-neutral-700 text-neutral-300 px-3 py-1.5 rounded-lg text-xs font-bold">The Bubble</span>
                     <span className="text-neutral-600 text-xs">Google #{guide.theBubble.googleRank}</span>
                   </div>
-                  <span className="text-xs text-neutral-500 italic">
-                    Manuellt tillagd av redaktionen
-                  </span>
                 </div>
-
-                <h3 className="font-bold text-white text-lg mb-3">
-                  {guide.theBubble.name}
-                </h3>
-
-                <p className="text-neutral-300 text-base mb-4 leading-relaxed">
-                  {guide.theBubble.explanation}
-                </p>
-
+                <h3 className="font-bold text-white text-lg mb-3">{guide.theBubble.name}</h3>
+                <p className="text-neutral-300 text-base mb-4 leading-relaxed">{guide.theBubble.explanation}</p>
                 <ul className="space-y-2 mb-6">
                   {guide.theBubble.evidence?.map((item: string, i: number) => (
                     <li key={i} className="text-sm text-neutral-400 flex items-start gap-2">
@@ -561,39 +570,16 @@ export default async function GuidePagePage({ params }: { params: { slug: string
                     </li>
                   ))}
                 </ul>
-
-                {/* Bottom row — CTA left, responsible gambling right */}
                 <div className="flex items-center justify-between flex-wrap gap-3">
-
-                  <a href={guide.theBubble.affiliateUrl}
-                    target="_blank"
-                    rel="noopener noreferrer sponsored"
-                    className="inline-block bg-neutral-900 border-2 border-amber-400 text-amber-400 hover:bg-neutral-700 font-bold px-6 py-3 rounded-lg transition-colors text-center text-sm"
-                  >
+                  <a href={guide.theBubble.affiliateUrl} target="_blank" rel="noopener noreferrer sponsored" className="inline-block bg-neutral-900 border-2 border-amber-400 text-amber-400 hover:bg-neutral-700 font-bold px-6 py-3 rounded-lg transition-colors text-center text-sm">
                     {guide.theBubble.affiliateLabel}
                   </a>
                   <div className="flex items-center gap-3 flex-wrap">
                     <span className="text-neutral-500 text-xs">18+</span>
                     <span className="text-neutral-700">·</span>
-                    <a href="https://stodlinjen.se" target="_blank" rel="noopener noreferrer" className="text-neutral-500 hover:text-neutral-400 text-xs transition">Stödlinjen.se</a>
+                    <a href={L.helplineUrl} target="_blank" rel="noopener noreferrer" className="text-neutral-500 hover:text-neutral-400 text-xs transition">{L.helplineLabel}</a>
                     <span className="text-neutral-700">·</span>
-                    <a href="https://spelpaus.se" target="_blank" rel="noopener noreferrer" className="text-neutral-500 hover:text-neutral-400 text-xs transition">Spelpaus.se</a>
-                    {guide.theBubble.termsAndConditions && (
-                      <>
-                        <span className="text-neutral-700">·</span>
-                        <details className="inline">
-                          <summary className="text-neutral-500 text-xs cursor-pointer hover:text-neutral-400 transition list-none inline-flex items-center gap-1">
-                            <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                            </svg>
-                            Visa villkor
-                          </summary>
-                          <p className="text-neutral-500 text-xs leading-relaxed mt-2 text-center">
-                            {guide.theBubble.termsAndConditions}
-                          </p>
-                        </details>
-                      </>
-                    )}
+                    <a href={L.selfExclusionUrl} target="_blank" rel="noopener noreferrer" className="text-neutral-500 hover:text-neutral-400 text-xs transition">{L.selfExclusionLabel}</a>
                   </div>
                 </div>
               </div>
@@ -603,31 +589,18 @@ export default async function GuidePagePage({ params }: { params: { slug: string
 
         {/* Why they failed */}
         {guide.failureCards && guide.failureCards.length > 0 && (
-          <section
-            className="mb-12"
-            id="why-they-failed"
-            data-section="failures"
-            data-cite-id="disqualified-sites"
-            data-failure-count={guide.failureCards.length}
-            data-verified={searchMetadata.verificationDate}
-          >
+          <section className="mb-12" id="why-they-failed" data-section="failures" data-cite-id="disqualified-sites" data-failure-count={guide.failureCards.length} data-verified={searchMetadata.verificationDate}>
             <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
-              Varför dessa rankar — men inte borde
+              {L.whyTheyRank}
             </h2>
             <div className="p-5 mb-6 text-base text-red-300 rounded-lg bg-red-950 border border-red-800" role="alert">
               <p className="font-normal leading-relaxed">
-                <strong className="text-red-200">Varning.</strong> {guide.bestsellerWarning}
+                <strong className="text-red-200">{L.warning}.</strong> {guide.bestsellerWarning}
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {guide.failureCards.slice(0, 3).map((card: any, idx: number) => (
-                <div
-                  key={idx}
-                  className="border-2 border-red-800 rounded-lg overflow-hidden bg-neutral-800 flex flex-col"
-                  data-failure-type={card.badge}
-                  data-cite-id={`failure-${idx + 1}`}
-                >
-                  {/* Domain display */}
+                <div key={idx} className="border-2 border-red-800 rounded-lg overflow-hidden bg-neutral-800 flex flex-col" data-failure-type={card.badge} data-cite-id={`failure-${idx + 1}`}>
                   <div className="relative w-full bg-neutral-900 flex items-center justify-center p-8" style={{ minHeight: '140px' }}>
                     <span className="text-neutral-400 font-mono text-sm text-center break-all">{card.domain}</span>
                     <div className="absolute top-4 left-4">
@@ -636,18 +609,12 @@ export default async function GuidePagePage({ params }: { params: { slug: string
                       </span>
                     </div>
                   </div>
-
-                  {/* Content */}
                   <div className="p-5 bg-neutral-800 flex-grow flex flex-col">
                     <span className="bg-red-950 text-red-400 border border-red-800 px-3 py-1 rounded-lg text-xs font-medium inline-block mb-3">
                       {card.badge}
                     </span>
-                    <h3 className="font-bold text-white mb-2 text-base">
-                      {card.productName}
-                    </h3>
-                    <p className="text-neutral-400 text-sm mb-4 flex-grow leading-relaxed">
-                      {card.whyItFailed}
-                    </p>
+                    <h3 className="font-bold text-white mb-2 text-base">{card.productName}</h3>
+                    <p className="text-neutral-400 text-sm mb-4 flex-grow leading-relaxed">{card.whyItFailed}</p>
                   </div>
                 </div>
               ))}
@@ -656,15 +623,9 @@ export default async function GuidePagePage({ params }: { params: { slug: string
         )}
 
         {/* Methodology */}
-        <section
-          className="mb-12"
-          id="methodology"
-          data-section="methodology"
-          data-cite-id="verification-process"
-          data-products-analyzed={guide.serpResults.length}
-        >
+        <section className="mb-12" id="methodology" data-section="methodology" data-cite-id="verification-process" data-products-analyzed={guide.serpResults.length}>
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-8">
-            Så här gjorde vi
+            {L.howWeDid}
           </h2>
           <div className="relative">
             <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-neutral-700" />
@@ -675,14 +636,12 @@ export default async function GuidePagePage({ params }: { params: { slug: string
                     {step.num}
                   </div>
                   <div>
-                    <h3 className="font-bold text-white text-lg mb-2">
-                      {step.title}
-                    </h3>
+                    <h3 className="font-bold text-white text-lg mb-2">{step.title}</h3>
                     <p className="text-neutral-400 leading-relaxed">
                       {step.num === 1
-                        ? `Vi hämtade de ${guide.serpResults.length} första organiska resultaten för "${guide.keyword}" i ${guide.country === 'sverige' ? 'Sverige' : guide.country} via DataForSEO. Alla URL:er inkluderades oavsett relevans.`
+                        ? L.step1(guide.serpResults.length, guide.keyword, guide.country)
                         : step.num === 2
-                          ? `Varje URL klassificerades manuellt utifrån licensstatus, betalningslösningar och ägargenomsynlighet. Det separerade de seriösa aktörerna från resten.`
+                          ? L.step2()
                           : step.text
                       }
                     </p>
@@ -697,23 +656,20 @@ export default async function GuidePagePage({ params }: { params: { slug: string
           results={guide.serpResults}
           type={guide.type}
           serpHealth={guide.serpHealth}
+          locale={guide.locale}
         />
 
         {/* People Should Also Ask */}
         {guide.peopleShouldAlsoAsk && guide.peopleShouldAlsoAsk.length > 0 && (
           <section className="mb-12" id="people-should-also-ask" data-section="people-should-also-ask" data-cite-id="people-should-also-ask">
             <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
-              Folk borde ocks fråga
+              {L.peopleShouldAsk}
             </h2>
             <div className="space-y-6">
               {guide.peopleShouldAlsoAsk.map((item: any, idx: number) => (
                 <div key={idx} className="bg-neutral-800 rounded-xl p-6 border border-neutral-700">
-                  <h3 className="text-lg font-semibold text-white mb-3">
-                    {item.question}
-                  </h3>
-                  <p className="text-neutral-300 leading-relaxed">
-                    {item.answer}
-                  </p>
+                  <h3 className="text-lg font-semibold text-white mb-3">{item.question}</h3>
+                  <p className="text-neutral-300 leading-relaxed">{item.answer}</p>
                 </div>
               ))}
             </div>
@@ -728,15 +684,10 @@ export default async function GuidePagePage({ params }: { params: { slug: string
               <p className="text-neutral-300 mb-8 max-w-2xl mx-auto text-lg leading-relaxed">
                 {guide.finalCTA.text}
               </p>
-
-              <a href={winner.affiliateUrl}
-                target="_blank"
-                rel="noopener noreferrer sponsored"
-                className="inline-block bg-amber-400 hover:bg-amber-300 text-black font-bold px-8 py-4 text-lg rounded-full shadow-lg transition-colors"
-              >
+              <a href={winner.affiliateUrl} target="_blank" rel="noopener noreferrer sponsored" className="inline-block bg-amber-400 hover:bg-amber-300 text-black font-bold px-8 py-4 text-lg rounded-full shadow-lg transition-colors">
                 {winner.affiliateLabel}
               </a>
-              <p className="text-xs text-neutral-600 mt-5">18+ · Stödlinjen.se · Spelpaus.se · Spela ansvarsfullt</p>
+              <p className="text-xs text-neutral-600 mt-5">{L.footerResponsible}</p>
             </div>
           </section>
         )}
@@ -746,20 +697,20 @@ export default async function GuidePagePage({ params }: { params: { slug: string
           const disclaimerText: Record<string, string> = {
             sv: `Denna analys är baserad på granskning av Googles top ${guide.serpResults.length} organiska resultat för "${guide.keyword}" i Sverige samt 15+ års erfarenhet inom gamblingindustrin. Affiliatelänkar tillkommer enbart till Spelinspektionen-licensierade operatörer. Spela ansvarsfullt. 18+. Stödlinjen: 020-81 91 00.`,
             en: `This analysis is based on a review of the top ${guide.serpResults.length} organic Google results for "${guide.keyword}" in the UK, plus 15+ years of industry experience. Affiliate links are only provided to licensed operators. Gamble responsibly. 18+. GamCare: 0808 8020 133.`,
-            pt: `Esta análise é baseada na revisão dos top ${guide.serpResults.length} resultados orgânicos do Google para "${guide.keyword}" no Brasil, com mais de 15 anos de experiência no setor. Links de afiliados apenas para operadores licenciados. Jogue com responsabilidade. 18+.`,
-          }
+            pt: `Esta análise é baseada na revisão dos top ${guide.serpResults.length} resultados orgânicos do Google para "${guide.keyword}" no Brasil, com mais de 15 anos de experiência no setor. Links de afiliados apenas para operadores licenciados pelo SPA/Ministério da Fazenda. Jogue com responsabilidade. 18+. CVV: 188.`,
+          };
           return (
             <section className="p-6 bg-neutral-800 rounded-lg border border-neutral-700 mb-8">
               <p className="text-sm text-neutral-500 leading-relaxed">
-                <strong className="text-neutral-400">Disclaimer:</strong>{' '}
+              <strong className="text-neutral-400">{L.disclaimerLabel}:</strong>{' '}
                 {disclaimerText[guide.locale] || disclaimerText['en']}
               </p>
             </section>
-          )
+          );
         })()}
 
-      </main >
+      </main>
       <Footer />
-    </div >
+    </div>
   );
 }

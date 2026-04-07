@@ -43,15 +43,20 @@ const COUNTRY_CONFIG: Record<string, {
     name: 'Brasil',
     title: 'Casino & Apostas no Brasil',
     description: 'Guias editoriais independentes. Analisamos o que realmente aparece no Google para cada termo de busca — e explicamos por que os resultados nem sempre são o que parecem. Sem incentivos ocultos. Sem posicionamento pago.',
-    editorialNote: 'Estes guias são baseados em 15+ anos de experiência no setor de jogos. Analisamos os 100 primeiros resultados do Google para cada termo, classificamos cada URL e explicamos o que deveria estar lá — e o que não deveria. Links de afiliados apenas para operadores licenciados pelo SIGAD/Ministério da Fazenda.',
+    editorialNote: 'Estes guias são baseados em 15+ anos de experiência no setor de jogos. Analisamos os 100 primeiros resultados do Google para cada termo, classificamos cada URL e explicamos o que deveria estar lá — e o que não deveria. Links de afiliados apenas para operadores licenciados pelo SPA/Ministério da Fazenda.',
     guides: [
       {
         category: 'Casino',
-        items: [],
+        items: [
+          { slug: 'cassino-online', label: 'Cassino Online' },
+          { slug: 'cassino-ao-vivo', label: 'Cassino ao Vivo' },
+        ],
       },
       {
         category: 'Apostas',
-        items: [],
+        items: [
+          { slug: 'apostas-esportivas', label: 'Apostas Esportivas' },
+        ],
       },
     ],
   },

@@ -1,0 +1,1102 @@
+{
+  "slug": "cassino-online",
+  "template": "operator",
+  "type": "operator",
+  "country": "brasil",
+  "locale": "pt",
+  "keyword": "cassino online",
+  "searchIntent": "Cassino Online",
+  "h1": "#1 Cassino Online no Brasil",
+  "searchMetadata": {
+    "totalAnalyzed": 100,
+    "dateAnalyzed": "7 abril 2026",
+    "verificationDate": "Abril 2026",
+    "isoDate": "2026-04-07"
+  },
+  "verdict": {
+    "summary": "Betsson vence pela licença federal e catálogo extenso com transparência de RTP."
+  },
+  "winner": {
+    "name": "Betsson",
+    "domain": "betsson.bet.br",
+    "affiliateUrl": "https://betsson.bet.br",
+    "affiliateLabel": "Jogar na Betsson →",
+    "logo": "/images/guides/betsson-logo.png",
+    "googleRank": 4,
+    "upsellLine": "Catálogo premium europeu com RTP transparente.",
+    "whyItWins": "Betsson tem uma das maiores bibliotecas de slots do Brasil — NetEnt, Microgaming, Play'n GO e dezenas de outros provedores. Conhecido por jogos com RTP elevado e transparência nos critérios de seleção. Melhor escolha para jogadores que entendem e valorizam qualidade e profundidade de catálogo.",
+    "badges": [
+      "Licença SPA/MF Nº 371",
+      "4.900 Jogos Disponíveis",
+      "Pagamentos via Pix",
+      "RTP Transparente"
+    ],
+    "sectionBadge": "Análise Editorial",
+    "materialEvidence": [
+      {
+        "title": "Licença Federal",
+        "description": "Operação autorizada pelo Ministério da Fazenda sob Portaria SPA/MF Nº 371."
+      },
+      {
+        "title": "Catálogo Extenso",
+        "description": "Biblioteca com 4.900 jogos de cassino, incluindo slots e mesas ao vivo."
+      },
+      {
+        "title": "Pagamentos Rápidos",
+        "description": "Depósitos e saques processados via Pix com eficiência."
+      },
+      {
+        "title": "Menos localizado",
+        "description": "Interface e marketing com menor adaptação ao mercado brasileiro em comparação com Betano — Pix pode depender de intermediários."
+      }
+    ],
+    "customerReview": {
+      "quote": "Betsson tem uma das maiores bibliotecas de slots do Brasil — NetEnt, Microgaming, Play'n GO e dezenas de outros provedores. Conhecido por jogos com RTP elevado e transparência nos critérios de seleção. Melhor escolha para jogadores que entendem e valorizam qualidade e profundidade de catálogo.",
+      "date": "Abril 2026",
+      "author": "BigBet.Energy Redação"
+    },
+    "termsAndConditions": "18+. Jogue responsavelmente. Termos completos em betsson.bet.br. Linha de apoio: 0800-891-9835. Autoexclusão via sistema oficial.",
+    "specs": {
+      "whatYouGet": [
+        {
+          "label": "Licença",
+          "value": "SPA/MF Nº 371 (Brasil)"
+        },
+        {
+          "label": "Saques",
+          "value": "Via Pix, a partir de R$5"
+        },
+        {
+          "label": "Métodos de Pagamento",
+          "value": "Pix, carteiras digitais"
+        },
+        {
+          "label": "Autoexclusão",
+          "value": "Totalmente integrado"
+        },
+        {
+          "label": "Suporte",
+          "value": "Chat ao vivo 24/7"
+        },
+        {
+          "label": "App Móvel",
+          "value": "Disponível para Android e iOS"
+        }
+      ],
+      "certifications": [
+        "Licença SPA verificada",
+        "Integração Sigap confirmada",
+        "Ferramentas de jogo responsável disponíveis",
+        "Pagamentos Pix suportados",
+        "Transparência de RTP garantida"
+      ]
+    }
+  },
+  "runnerUps": [
+    {
+      "name": "Betano",
+      "domain": "betano.bet.br",
+      "affiliateUrl": "https://betano.bet.br",
+      "affiliateLabel": "Jogar na Betano →",
+      "logo": "/images/guides/betano-logo.png",
+      "googleRank": 34,
+      "keyBenefit": "UX brasileira e Pix.",
+      "whyRunnerUp": "Betano tem licença SPA/MF Nº 246 e oferece mesas ao vivo com dealers em português. Porém, ferramentas promocionais instáveis e menor catálogo a colocam atrás da Betsson. Ainda é uma ótima opção mobile."
+    },
+    {
+      "name": "Stake",
+      "domain": "stake.bet.br",
+      "affiliateUrl": "https://stake.bet.br",
+      "affiliateLabel": "Jogar na Stake →",
+      "logo": "/images/guides/stake-logo.png",
+      "googleRank": 38,
+      "keyBenefit": "Jogos exclusivos Stake.",
+      "whyRunnerUp": "Stake opera com licença SPA/MF Nº 263 e tem jogos originais exclusivos. No entanto, o suporte ao cliente é menos acessível devido a formulários prévios, ficando atrás da Betsson em experiência geral."
+    }
+  ],
+  "theBubble": null,
+  "bestsellerWarning": "Resultados do Google enganam brasileiros com links de afiliados obscuros em domínios governamentais.",
+  "failureCards": [
+    {
+      "badge": "Fraude Governamental",
+      "domain": "portal.mec.gov.br",
+      "productName": "Ministério da Educação",
+      "googleRank": 12,
+      "whyItFailed": "Subdiretórios /Recomendados/ do Ministério da Educação aparecem 6 vezes no top 100 com links para cassinos online. Ranks 12, 22, 37, 53, 70 e 99 seguem o mesmo padrão — o domínio educacional mais abusado da SERP brasileira de cassino."
+    },
+    {
+      "badge": "Fraude Ministerial",
+      "domain": "linhasdecuidado.saude.gov.br",
+      "productName": "Ministério da Saúde",
+      "googleRank": 96,
+      "whyItFailed": "Subdiretórios do portal Linhas de Cuidado do Ministério da Saúde hospedam páginas de cassino online em /app/melhores-sites-de-cassino-online.html. Um serviço de saúde pública explorado para promover gambling — o caso mais chocante desta SERP."
+    },
+    {
+      "badge": "Abuso Governamental",
+      "domain": "blog.mds.gov.br",
+      "productName": "Ministério do Desenvolvimento Social",
+      "googleRank": 10,
+      "whyItFailed": "Subdiretórios /Recomendados/ do Ministério do Desenvolvimento Social hospedam páginas de cassino online com depósito via Pix. Aparece nos ranks 10, 43 e 75 — padrão sistemático de exploração do domínio de um órgão de proteção social."
+    }
+  ],
+  "methodology": {
+    "steps": [
+      {
+        "num": 1,
+        "title": "Coletamos top 100 resultados do Google",
+        "text": ""
+      },
+      {
+        "num": 2,
+        "title": "Classificamos cada URL",
+        "text": ""
+      },
+      {
+        "num": 3,
+        "title": "Classificação da SERP",
+        "text": "Cada URL dos 100 primeiros resultados orgânicos foi analisada e categorizada com base no status da licença, transparência e intenção de busca. O objetivo foi separar operadores licenciados e afiliados legítimos de sites exploratórios ou ilegais."
+      },
+      {
+        "num": 4,
+        "title": "Ranqueamento de Resultados Relevantes",
+        "text": "Os operadores licenciados foram classificados de acordo com a qualidade da experiência do usuário, profundidade do catálogo e métricas financeiras. Sites sem o domínio .bet.br foram penalizados por não oferecerem as proteções legais da legislação brasileira."
+      }
+    ]
+  },
+  "rankingCriteria": [
+    "Licença federal da SPA ativa",
+    "Integração com o sistema Sigap",
+    "Transparência de propriedade corporativa",
+    "Profundidade do catálogo de jogos",
+    "Rapidez de saques via Pix",
+    "Presença de ferramentas de jogo responsável"
+  ],
+  "serpResults": [
+    {
+      "googleRank": 1,
+      "domain": "casino-online.cursocaradafoto.net",
+      "name": "Cursocaradafoto Casino",
+      "verdict": "shady-affiliate",
+      "verdictLabel": "Afiliado Suspeito",
+      "licensed": null,
+      "commentary": "O domínio não possui transparência de propriedade e mascara a sua finalidade real para classificar links de cassino."
+    },
+    {
+      "googleRank": 2,
+      "domain": "cassinosbrasil.eu.com",
+      "name": "Cassinos Brasil",
+      "verdict": "shady-affiliate",
+      "verdictLabel": "Afiliado Suspeito",
+      "licensed": null,
+      "commentary": "O site oculta informações corporativas de propriedade e não segue padrões editoriais de afiliados."
+    },
+    {
+      "googleRank": 3,
+      "domain": "gazetadopovo.com.br",
+      "name": "Gazeta do Povo",
+      "verdict": "seo-grab",
+      "verdictLabel": "Captura SEO",
+      "licensed": null,
+      "commentary": "O portal de notícias monetiza o tráfego orgânico de buscas por meio de links de cassinos sem oferecer conhecimento especializado."
+    },
+    {
+      "googleRank": 4,
+      "domain": "betsson.com",
+      "name": "Betsson",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador Licenciado",
+      "licensed": true,
+      "commentary": "A operadora possui licença da SPA, mas o jogador necessita acessar o domínio betsson.bet.br para contar com proteção legal."
+    },
+    {
+      "googleRank": 5,
+      "domain": "casino.netbet.com",
+      "name": "Netbet",
+      "verdict": "unlicensed",
+      "verdictLabel": "Não Licenciado",
+      "licensed": false,
+      "commentary": "A operadora aceita jogadores brasileiros sem utilizar um domínio .bet.br licenciado pela SPA."
+    },
+    {
+      "googleRank": 6,
+      "domain": "lance.com.br",
+      "name": "Lance!",
+      "verdict": "seo-grab",
+      "verdictLabel": "Captura SEO",
+      "licensed": null,
+      "commentary": "O portal esportivo utiliza a sua autoridade de domínio para promover links de cassino."
+    },
+    {
+      "googleRank": 7,
+      "domain": "casino.org",
+      "name": "Casino.org",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Afiliado Legítimo",
+      "licensed": null,
+      "commentary": "O site declara a sua propriedade de forma transparente e fornece análises educacionais para jogadores."
+    },
+    {
+      "googleRank": 8,
+      "domain": "kto.bet.br",
+      "name": "KTO",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador Licenciado",
+      "licensed": true,
+      "commentary": "A operadora atua com licença da SPA no domínio oficial .bet.br e possui integração com o Sigap."
+    },
+    {
+      "googleRank": 9,
+      "domain": "casino.betfair.bet.br",
+      "name": "Betfair",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador Licenciado",
+      "licensed": true,
+      "commentary": "A plataforma opera legalmente no Brasil sob licença federal da SPA e utiliza o domínio .bet.br exigido."
+    },
+    {
+      "googleRank": 10,
+      "domain": "blog.mds.gov.br",
+      "name": "Ministério do Desenvolvimento Social",
+      "verdict": "shady-affiliate",
+      "verdictLabel": "Afiliado Suspeito",
+      "licensed": null,
+      "commentary": "O domínio governamental foi explorado para hospedar links de afiliados de cassino e viola diretrizes de segurança."
+    },
+    {
+      "googleRank": 11,
+      "domain": "umdoisesportes.com.br",
+      "name": "UmDois Esportes",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Afiliado Legítimo",
+      "licensed": null,
+      "commentary": "A página divulga operadores licenciados e declara a sua identidade corporativa de forma transparente."
+    },
+    {
+      "googleRank": 12,
+      "domain": "portal.mec.gov.br",
+      "name": "Ministério da Educação",
+      "verdict": "shady-affiliate",
+      "verdictLabel": "Afiliado Suspeito",
+      "licensed": null,
+      "commentary": "O domínio governamental foi explorado para promover links de cassino e não apresenta utilidade para a busca."
+    },
+    {
+      "googleRank": 13,
+      "domain": "olhardigital.com.br",
+      "name": "Olhar Digital",
+      "verdict": "seo-grab",
+      "verdictLabel": "Captura SEO",
+      "licensed": null,
+      "commentary": "O portal de tecnologia foca na monetização do domínio sem possuir experiência técnica no setor de jogos."
+    },
+    {
+      "googleRank": 14,
+      "domain": "betway.com",
+      "name": "Betway",
+      "verdict": "unlicensed",
+      "verdictLabel": "Não Licenciado",
+      "licensed": false,
+      "commentary": "A operadora aceita tráfego brasileiro sem possuir um domínio .bet.br licenciado pela SPA."
+    },
+    {
+      "googleRank": 15,
+      "domain": "kto.bet.br",
+      "name": "KTO",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador Licenciado",
+      "licensed": true,
+      "commentary": "A empresa atua no domínio .bet.br e possui licença de operação confirmada pela SPA."
+    },
+    {
+      "googleRank": 16,
+      "domain": "youtube.com",
+      "name": "YouTube",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "A plataforma de vídeos não responde à intenção do usuário de encontrar um operador de cassino online."
+    },
+    {
+      "googleRank": 17,
+      "domain": "placar.com.br",
+      "name": "Placar",
+      "verdict": "seo-grab",
+      "verdictLabel": "Captura SEO",
+      "licensed": null,
+      "commentary": "O veículo de mídia esportiva explora palavras-chave de cassino para monetizar o ranqueamento nos buscadores."
+    },
+    {
+      "googleRank": 18,
+      "domain": "casino.netbet.com",
+      "name": "Netbet",
+      "verdict": "unlicensed",
+      "verdictLabel": "Não Licenciado",
+      "licensed": false,
+      "commentary": "A plataforma mira usuários do Brasil operando sob um domínio internacional sem regulamentação da SPA."
+    },
+    {
+      "googleRank": 19,
+      "domain": "brasil247.com",
+      "name": "Brasil 247",
+      "verdict": "seo-grab",
+      "verdictLabel": "Captura SEO",
+      "licensed": null,
+      "commentary": "O site de notícias utiliza espaços em seu domínio para divulgar links patrocinados de cassino."
+    },
+    {
+      "googleRank": 20,
+      "domain": "gazetaesportiva.com",
+      "name": "Gazeta Esportiva",
+      "verdict": "seo-grab",
+      "verdictLabel": "Captura SEO",
+      "licensed": null,
+      "commentary": "O portal esportivo ranqueia para cassinos com a finalidade de gerar receita de afiliados."
+    },
+    {
+      "googleRank": 21,
+      "domain": "umdoisesportes.com.br",
+      "name": "UmDois Esportes",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Afiliado Legítimo",
+      "licensed": null,
+      "commentary": "A plataforma atua com transparência e promove apenas cassinos voltados para o mercado regulado."
+    },
+    {
+      "googleRank": 22,
+      "domain": "portal.mec.gov.br",
+      "name": "Ministério da Educação",
+      "verdict": "shady-affiliate",
+      "verdictLabel": "Afiliado Suspeito",
+      "licensed": null,
+      "commentary": "O site do governo federal sofreu uso indevido para publicar links ilegítimos de cassinos online."
+    },
+    {
+      "googleRank": 23,
+      "domain": "brasil247.com",
+      "name": "Brasil 247",
+      "verdict": "seo-grab",
+      "verdictLabel": "Captura SEO",
+      "licensed": null,
+      "commentary": "A página monetiza a sua força em buscas orgânicas através de conteúdo de afiliação."
+    },
+    {
+      "googleRank": 24,
+      "domain": "lista.mercadolivre.com.br",
+      "name": "Mercado Livre",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "O marketplace de produtos não atende à necessidade de jogadores em busca de uma plataforma de apostas."
+    },
+    {
+      "googleRank": 25,
+      "domain": "em.com.br",
+      "name": "Estado de Minas",
+      "verdict": "seo-grab",
+      "verdictLabel": "Captura SEO",
+      "licensed": null,
+      "commentary": "O veículo de imprensa ranqueia páginas de cassinos para aproveitar a autoridade do seu domínio principal."
+    },
+    {
+      "googleRank": 26,
+      "domain": "terra.com.br",
+      "name": "Terra",
+      "verdict": "seo-grab",
+      "verdictLabel": "Captura SEO",
+      "licensed": null,
+      "commentary": "O portal de notícias foca em resultados de SEO para rentabilizar listas de casas de apostas e cassinos."
+    },
+    {
+      "googleRank": 27,
+      "domain": "novibet.bet.br",
+      "name": "Novibet",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador Licenciado",
+      "licensed": true,
+      "commentary": "A operadora atua de forma legal no Brasil no domínio .bet.br com a aprovação da SPA."
+    },
+    {
+      "googleRank": 28,
+      "domain": "softswiss.com",
+      "name": "Softswiss",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "A empresa fornece tecnologia de software B2B para o setor e não aceita jogadores finais."
+    },
+    {
+      "googleRank": 29,
+      "domain": "play.google.com",
+      "name": "Google Play Store",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "A loja de aplicativos não é uma operadora de apostas com licença no país."
+    },
+    {
+      "googleRank": 30,
+      "domain": "netflu.com.br",
+      "name": "Netflu",
+      "verdict": "seo-grab",
+      "verdictLabel": "Captura SEO",
+      "licensed": null,
+      "commentary": "O blog esportivo publica conteúdo sobre cassino apenas para lucrar com programas de parcerias."
+    },
+    {
+      "googleRank": 31,
+      "domain": "gazetadopovo.com.br",
+      "name": "Gazeta do Povo",
+      "verdict": "seo-grab",
+      "verdictLabel": "Captura SEO",
+      "licensed": null,
+      "commentary": "O veículo de notícias cria guias de cassino visando captação de usuários para links de afiliação."
+    },
+    {
+      "googleRank": 32,
+      "domain": "youtube.com",
+      "name": "YouTube",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "O diretório de vídeos não corresponde ao que o usuário procura ao pesquisar por um cassino online."
+    },
+    {
+      "googleRank": 33,
+      "domain": "livescore.com",
+      "name": "LiveScore",
+      "verdict": "seo-grab",
+      "verdictLabel": "Captura SEO",
+      "licensed": null,
+      "commentary": "A plataforma de placares esportivos rentabiliza a sua audiência exibindo links de cassinos."
+    },
+    {
+      "googleRank": 34,
+      "domain": "betano.bet.br",
+      "name": "Betano",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador Licenciado",
+      "licensed": true,
+      "commentary": "A plataforma possui licença da SPA e opera dentro dos padrões exigidos com o domínio .bet.br."
+    },
+    {
+      "googleRank": 35,
+      "domain": "pokerstars.com",
+      "name": "PokerStars",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador licenciado",
+      "licensed": true,
+      "commentary": "PokerStars possui licença SPA federal no Brasil. Esta URL usa domínio .com — verifique o domínio .bet.br para proteção legal completa."
+    },
+    {
+      "googleRank": 36,
+      "domain": "leon.bet",
+      "name": "Leon",
+      "verdict": "unlicensed",
+      "verdictLabel": "Não Licenciado",
+      "licensed": false,
+      "commentary": "A operadora permite jogadores do Brasil mas atua fora do domínio .bet.br e do sistema oficial Sigap."
+    },
+    {
+      "googleRank": 37,
+      "domain": "portal.mec.gov.br",
+      "name": "Ministério da Educação",
+      "verdict": "shady-affiliate",
+      "verdictLabel": "Afiliado Suspeito",
+      "licensed": null,
+      "commentary": "O domínio governamental foi explorado indevidamente para subir nos buscadores com termos de cassino."
+    },
+    {
+      "googleRank": 38,
+      "domain": "stake.com",
+      "name": "Stake",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador Licenciado",
+      "licensed": true,
+      "commentary": "A operadora possui licença da SPA, mas o jogador necessita acessar o domínio stake.bet.br para contar com proteção legal."
+    },
+    {
+      "googleRank": 39,
+      "domain": "cnnbrasil.com.br",
+      "name": "CNN Brasil",
+      "verdict": "seo-grab",
+      "verdictLabel": "Captura SEO",
+      "licensed": null,
+      "commentary": "A página do portal jornalístico busca gerar receita listando plataformas de cassinos online."
+    },
+    {
+      "googleRank": 40,
+      "domain": "casino.com",
+      "name": "Casino.com",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Afiliado Legítimo",
+      "licensed": null,
+      "commentary": "A plataforma avalia cassinos online com transparência sobre os seus critérios de afiliação."
+    },
+    {
+      "googleRank": 41,
+      "domain": "metropoles.com",
+      "name": "Metrópoles",
+      "verdict": "seo-grab",
+      "verdictLabel": "Captura SEO",
+      "licensed": null,
+      "commentary": "O portal de notícias publica listas de cassinos online sem apresentar autoridade editorial no assunto de apostas."
+    },
+    {
+      "googleRank": 42,
+      "domain": "brasil247.com",
+      "name": "Brasil 247",
+      "verdict": "seo-grab",
+      "verdictLabel": "Captura SEO",
+      "licensed": null,
+      "commentary": "A plataforma explora o ranqueamento do Google para direcionar o tráfego para empresas de cassino parceiras."
+    },
+    {
+      "googleRank": 43,
+      "domain": "blog.mds.gov.br",
+      "name": "Ministério do Desenvolvimento Social",
+      "verdict": "shady-affiliate",
+      "verdictLabel": "Afiliado Suspeito",
+      "licensed": null,
+      "commentary": "O domínio de estado brasileiro foi manipulado para incluir artigos promocionais de jogos de azar."
+    },
+    {
+      "googleRank": 44,
+      "domain": "play.google.com",
+      "name": "Google Play Store",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "A loja digital não permite apostas com dinheiro real diretamente do seu domínio."
+    },
+    {
+      "googleRank": 45,
+      "domain": "softswiss.com",
+      "name": "Softswiss",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "O site oferece soluções e plataformas B2B e não atende diretamente usuários buscando jogar."
+    },
+    {
+      "googleRank": 46,
+      "domain": "youtube.com",
+      "name": "YouTube",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "O site fornece apenas hospedagem de vídeos e não possui utilidade para a intenção de aposta do usuário."
+    },
+    {
+      "googleRank": 47,
+      "domain": "superbet.bet.br",
+      "name": "Superbet",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador Licenciado",
+      "licensed": true,
+      "commentary": "A operadora está em conformidade com as regras federais e atua sob o domínio .bet.br oficial."
+    },
+    {
+      "googleRank": 48,
+      "domain": "umdoisesportes.com.br",
+      "name": "UmDois Esportes",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Afiliado Legítimo",
+      "licensed": null,
+      "commentary": "O portal opera de forma transparente e publica guias com informações factuais sobre operadores do mercado."
+    },
+    {
+      "googleRank": 49,
+      "domain": "reclameaqui.com.br",
+      "name": "Reclame Aqui",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "O portal atua como mediador de conflitos de consumo e não é um cassino ou site de afiliação."
+    },
+    {
+      "googleRank": 50,
+      "domain": "casinoonlineportugues.it.com",
+      "name": "Casino Online Português",
+      "verdict": "shady-affiliate",
+      "verdictLabel": "Afiliado Suspeito",
+      "licensed": null,
+      "commentary": "O domínio oculta a identidade corporativa dos proprietários e não possui políticas claras de avaliação."
+    },
+    {
+      "googleRank": 51,
+      "domain": "youtube.com",
+      "name": "YouTube",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "A página não responde à necessidade de encontrar um operador de cassino online."
+    },
+    {
+      "googleRank": 52,
+      "domain": "casinoonlineportugues.it.com",
+      "name": "Casino Online Português",
+      "verdict": "shady-affiliate",
+      "verdictLabel": "Afiliado Suspeito",
+      "licensed": null,
+      "commentary": "O afiliado atua em um subdomínio genérico sem indicar propriedade corporativa ou métricas editoriais."
+    },
+    {
+      "googleRank": 53,
+      "domain": "portal.mec.gov.br",
+      "name": "Ministério da Educação",
+      "verdict": "shady-affiliate",
+      "verdictLabel": "Afiliado Suspeito",
+      "licensed": null,
+      "commentary": "O site governamental apresenta páginas invasivas geradas para manipulação de SEO no setor de apostas."
+    },
+    {
+      "googleRank": 54,
+      "domain": "casinosnobrasil.com.br",
+      "name": "Casinos no Brasil",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Afiliado Legítimo",
+      "licensed": null,
+      "commentary": "O portal de afiliados publica o nome dos autores e mantém uma postura editorial transparente."
+    },
+    {
+      "googleRank": 55,
+      "domain": "cassino.bet.br",
+      "name": "Cassino.bet.br",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador Licenciado",
+      "licensed": true,
+      "commentary": "A empresa atua de forma legal com o domínio .bet.br requerido e segue as determinações da SPA."
+    },
+    {
+      "googleRank": 56,
+      "domain": "portalfns.saude.gov.br",
+      "name": "Fundo Nacional de Saúde",
+      "verdict": "shady-affiliate",
+      "verdictLabel": "Afiliado Suspeito",
+      "licensed": null,
+      "commentary": "O domínio do Ministério da Saúde foi subvertido para focar em publicidade não autorizada de cassinos."
+    },
+    {
+      "googleRank": 57,
+      "domain": "betano.bet.br",
+      "name": "Betano",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador Licenciado",
+      "licensed": true,
+      "commentary": "A operadora detém o licenciamento federal adequado e opera sob as normas vigentes com o domínio .bet.br."
+    },
+    {
+      "googleRank": 58,
+      "domain": "gazetadopovo.com.br",
+      "name": "Gazeta do Povo",
+      "verdict": "seo-grab",
+      "verdictLabel": "Captura SEO",
+      "licensed": null,
+      "commentary": "O grande site de notícias rankeia o termo para receber comissões de marketing de afiliados."
+    },
+    {
+      "googleRank": 59,
+      "domain": "youtube.com",
+      "name": "YouTube",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "O diretório de mídia não se qualifica como uma plataforma regulamentada para jogos de azar."
+    },
+    {
+      "googleRank": 60,
+      "domain": "jovempan.com.br",
+      "name": "Jovem Pan",
+      "verdict": "seo-grab",
+      "verdictLabel": "Captura SEO",
+      "licensed": null,
+      "commentary": "A empresa de comunicação tira vantagem do tamanho do domínio para faturar com aquisição de usuários de apostas."
+    },
+    {
+      "googleRank": 61,
+      "domain": "jovempan.com.br",
+      "name": "Jovem Pan",
+      "verdict": "seo-grab",
+      "verdictLabel": "Captura SEO",
+      "licensed": null,
+      "commentary": "O site direciona o seu tráfego de busca para casas de apostas por meio de acordos de comissão."
+    },
+    {
+      "googleRank": 62,
+      "domain": "gazetadopovo.com.br",
+      "name": "Gazeta do Povo",
+      "verdict": "seo-grab",
+      "verdictLabel": "Captura SEO",
+      "licensed": null,
+      "commentary": "O veículo aproveita a força de SEO para atuar no mercado de afiliação em páginas exclusivas."
+    },
+    {
+      "googleRank": 63,
+      "domain": "gambling.com",
+      "name": "Gambling.com",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Afiliado Legítimo",
+      "licensed": null,
+      "commentary": "A página exibe a equipe editorial e foca na regulamentação e educação dos usuários do mercado brasileiro."
+    },
+    {
+      "googleRank": 64,
+      "domain": "sistemas.pocodasantas.rs.gov.br",
+      "name": "Prefeitura Poço das Antas",
+      "verdict": "shady-affiliate",
+      "verdictLabel": "Afiliado Suspeito",
+      "licensed": null,
+      "commentary": "A infraestrutura de tecnologia municipal foi explorada para indexar conteúdo afiliado de jogos de azar."
+    },
+    {
+      "googleRank": 65,
+      "domain": "em.com.br",
+      "name": "Estado de Minas",
+      "verdict": "seo-grab",
+      "verdictLabel": "Captura SEO",
+      "licensed": null,
+      "commentary": "O site estadual de notícias cria avaliações de operadores para extrair valor financeiro das buscas por cassino."
+    },
+    {
+      "googleRank": 66,
+      "domain": "youtube.com",
+      "name": "YouTube",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "A URL leva a uma plataforma de vídeos que não fornece acesso direto a jogos de cassino com dinheiro."
+    },
+    {
+      "googleRank": 67,
+      "domain": "casino.org",
+      "name": "Casino.org",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Afiliado Legítimo",
+      "licensed": null,
+      "commentary": "O portal detalha a operação corporativa e publica revisões sobre o status de regulamentação das marcas."
+    },
+    {
+      "googleRank": 68,
+      "domain": "observador.pt",
+      "name": "Observador",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "O portal concentra as informações no mercado português e não atende aos usuários residentes no Brasil."
+    },
+    {
+      "googleRank": 69,
+      "domain": "lista.mercadolivre.com.br",
+      "name": "Mercado Livre",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "A página de comércio eletrônico não tem autorização ou ambiente para atividades de aposta em cassino."
+    },
+    {
+      "googleRank": 70,
+      "domain": "portal.mec.gov.br",
+      "name": "Ministério da Educação",
+      "verdict": "shady-affiliate",
+      "verdictLabel": "Afiliado Suspeito",
+      "licensed": null,
+      "commentary": "O endereço do Estado possui diretórios invadidos que divulgam cassinos com comissionamento irregular."
+    },
+    {
+      "googleRank": 71,
+      "domain": "oddschecker.com",
+      "name": "Oddschecker",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Afiliado Legítimo",
+      "licensed": null,
+      "commentary": "O site de comparação informa a sua política editorial e direciona os jogadores para cassinos regulados."
+    },
+    {
+      "googleRank": 72,
+      "domain": "cassino.bet.br",
+      "name": "Cassino.bet.br",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador Licenciado",
+      "licensed": true,
+      "commentary": "A operadora cumpre as legislações vigentes portando o domínio .bet.br e possui licenciamento federal."
+    },
+    {
+      "googleRank": 73,
+      "domain": "cassinosbrazil.com.br",
+      "name": "Cassinos Brazil",
+      "verdict": "shady-affiliate",
+      "verdictLabel": "Afiliado Suspeito",
+      "licensed": null,
+      "commentary": "A página não informa a razão social dos administradores e atua sem padrões editoriais comprováveis."
+    },
+    {
+      "googleRank": 74,
+      "domain": "youtube.com",
+      "name": "YouTube",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "O site hospeda conteúdo audiovisual e falha em resolver o problema do usuário por jogos online."
+    },
+    {
+      "googleRank": 75,
+      "domain": "blog.mds.gov.br",
+      "name": "Ministério do Desenvolvimento Social",
+      "verdict": "shady-affiliate",
+      "verdictLabel": "Afiliado Suspeito",
+      "licensed": null,
+      "commentary": "A plataforma do governo foi parasitada por terceiros para indexar textos voltados à captação de afiliados."
+    },
+    {
+      "googleRank": 76,
+      "domain": "casino.com.br",
+      "name": "Casino.com.br",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Afiliado Legítimo",
+      "licensed": null,
+      "commentary": "O site identifica claramente os propósitos da afiliação e fornece análises sobre licenças de operação."
+    },
+    {
+      "googleRank": 77,
+      "domain": "cassinosonline.com",
+      "name": "Cassinos Online",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Afiliado Legítimo",
+      "licensed": null,
+      "commentary": "A página atua de modo legítimo apresentando a autoria e os dados das publicações para os leitores."
+    },
+    {
+      "googleRank": 78,
+      "domain": "passaporteuniversitario.marica.rj.gov.br",
+      "name": "Prefeitura de Maricá",
+      "verdict": "shady-affiliate",
+      "verdictLabel": "Afiliado Suspeito",
+      "licensed": null,
+      "commentary": "O domínio da prefeitura local sofre manipulação de SEO para impulsionar operadores ilegais nos resultados."
+    },
+    {
+      "googleRank": 79,
+      "domain": "gazetadopovo.com.br",
+      "name": "Gazeta do Povo",
+      "verdict": "seo-grab",
+      "verdictLabel": "Captura SEO",
+      "licensed": null,
+      "commentary": "O portal destina diretórios para resenhar operadoras e absorver os acessos orgânicos do Google."
+    },
+    {
+      "googleRank": 80,
+      "domain": "lance.com.br",
+      "name": "Lance!",
+      "verdict": "seo-grab",
+      "verdictLabel": "Captura SEO",
+      "licensed": null,
+      "commentary": "O veículo jornalístico usa o seu peso na busca do Google para direcionar o usuário a sistemas de afiliados."
+    },
+    {
+      "googleRank": 81,
+      "domain": "gazetadopovo.com.br",
+      "name": "Gazeta do Povo",
+      "verdict": "seo-grab",
+      "verdictLabel": "Captura SEO",
+      "licensed": null,
+      "commentary": "O site generalista rentabiliza o seu acesso oferecendo listas de sites de apostas online."
+    },
+    {
+      "googleRank": 82,
+      "domain": "cassinoonline.bet",
+      "name": "Cassino Online Bet",
+      "verdict": "shady-affiliate",
+      "verdictLabel": "Afiliado Suspeito",
+      "licensed": null,
+      "commentary": "A plataforma apresenta recomendações de cassino e não divulga os dados legais do mantenedor do site."
+    },
+    {
+      "googleRank": 83,
+      "domain": "casinoonline.com",
+      "name": "Casino Online",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Afiliado Legítimo",
+      "licensed": null,
+      "commentary": "O domínio explicita os termos de afiliação e trabalha para orientar os jogadores em plataformas licenciadas."
+    },
+    {
+      "googleRank": 84,
+      "domain": "gambling.com",
+      "name": "Gambling.com",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Afiliado Legítimo",
+      "licensed": null,
+      "commentary": "A página apresenta um modelo transparente de operação voltado a educar jogadores de jogos de azar e cassino."
+    },
+    {
+      "googleRank": 85,
+      "domain": "casino.org",
+      "name": "Casino.org",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Afiliado Legítimo",
+      "licensed": null,
+      "commentary": "A marca apresenta autoria comprovada nos artigos de ranqueamento e análises de cassinos regulamentados."
+    },
+    {
+      "googleRank": 86,
+      "domain": "sistemas.westfalia.rs.gov.br",
+      "name": "Prefeitura de Westfalia",
+      "verdict": "shady-affiliate",
+      "verdictLabel": "Afiliado Suspeito",
+      "licensed": null,
+      "commentary": "O domínio do município apresenta artigos fraudulentos postados por terceiros para captar jogadores em cassinos."
+    },
+    {
+      "googleRank": 87,
+      "domain": "metropoles.com",
+      "name": "Metrópoles",
+      "verdict": "seo-grab",
+      "verdictLabel": "Captura SEO",
+      "licensed": null,
+      "commentary": "O jornal digital adota práticas de afiliação criando conteúdo superficial para indexar na SERP de cassino."
+    },
+    {
+      "googleRank": 88,
+      "domain": "cassinos24.com.br",
+      "name": "Cassinos24",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Afiliado Legítimo",
+      "licensed": null,
+      "commentary": "O site detalha o seu sistema de resenhas e informa explicitamente a finalidade de publicidade de afiliação."
+    },
+    {
+      "googleRank": 89,
+      "domain": "camarabugre.mg.gov.br",
+      "name": "Câmara Municipal de Bugre",
+      "verdict": "shady-affiliate",
+      "verdictLabel": "Afiliado Suspeito",
+      "licensed": null,
+      "commentary": "A URL do governo local promove links e cadastros para provedores de afiliação atuando em abuso de SEO."
+    },
+    {
+      "googleRank": 90,
+      "domain": "betsson.com",
+      "name": "Betsson",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador Licenciado",
+      "licensed": true,
+      "commentary": "A operadora detém a licença da SPA, mas o jogador necessita acessar o domínio betsson.bet.br para proteção legal."
+    },
+    {
+      "googleRank": 91,
+      "domain": "cassinos-online.com",
+      "name": "Cassinos Online",
+      "verdict": "shady-affiliate",
+      "verdictLabel": "Afiliado Suspeito",
+      "licensed": null,
+      "commentary": "A página possui critérios desconhecidos de análise e não apresenta contato ou identificação de propriedade."
+    },
+    {
+      "googleRank": 92,
+      "domain": "youtube.com",
+      "name": "YouTube",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "O domínio não possui licença da SPA nem oferece jogos integrados para apostas com dinheiro."
+    },
+    {
+      "googleRank": 93,
+      "domain": "pt.casino.guru",
+      "name": "Casino Guru",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Afiliado Legítimo",
+      "licensed": null,
+      "commentary": "A plataforma conta com um fórum público e políticas claras de revisão de sites e suporte a jogadores."
+    },
+    {
+      "googleRank": 94,
+      "domain": "brasilcasinos.com.br",
+      "name": "Brasil Casinos",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Afiliado Legítimo",
+      "licensed": null,
+      "commentary": "A empresa opera com transparência divulgando a sua equipe editorial responsável pelo ranqueamento de cassinos."
+    },
+    {
+      "googleRank": 95,
+      "domain": "poupancajovem.educacao.mg.gov.br",
+      "name": "Secretaria da Educação MG",
+      "verdict": "shady-affiliate",
+      "verdictLabel": "Afiliado Suspeito",
+      "licensed": null,
+      "commentary": "O portal governamental divulga programas de cassino e apostas ferindo as normas de operação da web."
+    },
+    {
+      "googleRank": 96,
+      "domain": "linhasdecuidado.saude.gov.br",
+      "name": "Ministério da Saúde",
+      "verdict": "shady-affiliate",
+      "verdictLabel": "Afiliado Suspeito",
+      "licensed": null,
+      "commentary": "O domínio do estado sofreu ataque para abrigar páginas promocionais com intenção de afiliação de cassino."
+    },
+    {
+      "googleRank": 97,
+      "domain": "play.google.com",
+      "name": "Google Play Store",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "A URL não oferece acesso direto a um provedor regulamentado para usuários de cassino do Brasil."
+    },
+    {
+      "googleRank": 98,
+      "domain": "camararesplendor.mg.gov.br",
+      "name": "Câmara Municipal de Resplendor",
+      "verdict": "shady-affiliate",
+      "verdictLabel": "Afiliado Suspeito",
+      "licensed": null,
+      "commentary": "O domínio da câmara municipal hospeda páginas ocultas criadas exclusivamente para classificar termos de cassino."
+    },
+    {
+      "googleRank": 99,
+      "domain": "portal.mec.gov.br",
+      "name": "Ministério da Educação",
+      "verdict": "shady-affiliate",
+      "verdictLabel": "Afiliado Suspeito",
+      "licensed": null,
+      "commentary": "O site do governo segue explorado para posicionar em termos de alto volume para rede de afiliados de apostas."
+    },
+    {
+      "googleRank": 100,
+      "domain": "casino.netbet.com",
+      "name": "Netbet",
+      "verdict": "unlicensed",
+      "verdictLabel": "Não Licenciado",
+      "licensed": false,
+      "commentary": "O operador promove jogos em um ambiente sem o domínio .bet.br determinado pelas regras da SPA."
+    }
+  ],
+  "peopleShouldAlsoAsk": [
+  {
+    "question": "Como verifico se um cassino online tem licença federal no Brasil?",
+    "answer": "Verifique se o domínio termina em .bet.br — esse é o domínio exclusivo para operadores licenciados pela SPA. Você também pode consultar a lista oficial de operadores autorizados em gov.br/fazenda. Sites sem .bet.br não têm licença federal, independente do que afirmem."
+  },
+  {
+    "question": "O que é RTP e por que importa na escolha de um slot?",
+    "answer": "RTP (Return to Player) é a porcentagem teórica de retorno ao jogador ao longo de milhões de rodadas. Um slot com 96% RTP retorna em média R$96 por R$100 apostados a longo prazo. A diferença entre 94% e 97% é significativa — prefira plataformas que publicam os RTPs dos jogos."
+  },
+  {
+    "question": "Os meus ganhos em cassino online são tributados no Brasil?",
+    "answer": "Sim. Ganhos acima de R$ 2.824 são tributados em 15% de imposto de renda retido na fonte pelo operador licenciado. Diferente de países como a Suécia onde os ganhos são isentos — no Brasil o fisco participa de cada saque relevante."
+  },
+  {
+    "question": "Stake.com e stake.bet.br são a mesma coisa?",
+    "answer": "Não exatamente. stake.bet.br é o domínio licenciado pela SPA para operar legalmente no Brasil — operado pela Stake Brazil Ltda com licença PORTARIA SPA/MF Nº 263. stake.com é o domínio internacional. Para proteção legal como jogador brasileiro, acesse sempre stake.bet.br."
+  },
+  {
+    "question": "Por que tantos sites governamentais aparecem recomendando cassinos?",
+    "answer": "É abuso de domínio — subdiretórios de sites .gov.br são hackeados ou mal administrados e preenchidos com links de afiliados de cassino para explorar a autoridade de domínio nos buscadores. Não tem nenhuma relação com o governo brasileiro. Nunca confie em recomendações de cassino em domínio .gov.br."
+  }
+],
+  "finalCTA": {
+    "headline": "Nossa Primeiro Escolha",
+    "text": "Betsson é a escolha ideal com licença federal e catálogo vasto. Jogue com segurança e transparência de RTP agora."
+  }
+}

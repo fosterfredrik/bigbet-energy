@@ -25,14 +25,82 @@ interface SerpHealth {
   healthLabel: string;
 }
 
-export default function WallOfReceipts({ results, type, serpHealth }: {
+const WOR_LABELS: Record<string, {
+  licensedOperator: string;
+  licensedGame: string;
+  legitAffiliate: string;
+  seoGrab: string;
+  shadyAffiliate: string;
+  unlicensed: string;
+  irrelevant: string;
+  authority: string;
+  site: string;
+  status: string;
+  comment: string;
+  serpIntro: string;
+  showMore: (n: number) => string;
+  showLess: string;
+}> = {
+  sv: {
+    licensedOperator: 'Licensierad operatör',
+    licensedGame: 'Licensierad casinosajt',
+    legitAffiliate: 'Seriös affiliate',
+    seoGrab: 'SEO-grab',
+    shadyAffiliate: 'Tveksam affiliate',
+    unlicensed: 'Ej licensierad',
+    irrelevant: 'Irrelevant',
+    authority: 'Myndighet',
+    site: 'Sajt',
+    status: 'Status',
+    comment: 'Kommentar',
+    serpIntro: (count: number) => `Komplett genomgång av alla ${count} URL:er. Här ser du vad varje sajt påstår sig vara — och vad vi faktiskt hittade.`,
+    showMore: (n: number) => `Visa ${n} till ▼`,
+    showLess: 'Visa färre ▲',
+  },
+  pt: {
+    licensedOperator: 'Operador licenciado',
+    licensedGame: 'Cassino licenciado',
+    legitAffiliate: 'Afiliado legítimo',
+    seoGrab: 'Captura SEO',
+    shadyAffiliate: 'Afiliado suspeito',
+    unlicensed: 'Não licenciado',
+    irrelevant: 'Irrelevante',
+    authority: 'Autoridade',
+    site: 'Site',
+    status: 'Status',
+    comment: 'Comentário',
+    serpIntro: (count: number) => `Análise completa de todas as ${count} URLs. Veja o que cada site afirma ser — e o que realmente encontramos.`,
+    showMore: (n: number) => `Ver mais ${n} ▼`,
+    showLess: 'Ver menos ▲',
+  },
+  en: {
+    licensedOperator: 'Licensed operator',
+    licensedGame: 'Licensed casino',
+    legitAffiliate: 'Legit affiliate',
+    seoGrab: 'SEO grab',
+    shadyAffiliate: 'Shady affiliate',
+    unlicensed: 'Unlicensed',
+    irrelevant: 'Irrelevant',
+    authority: 'Authority',
+    site: 'Site',
+    status: 'Status',
+    comment: 'Comment',
+    serpIntro: (count: number) => `Complete review of all ${count} URLs. See what each site claims to be — and what we actually found.`,
+    showMore: (n: number) => `Show ${n} more ▼`,
+    showLess: 'Show less ▲',
+  },
+};
+
+export default function WallOfReceipts({ results, type, serpHealth, locale = 'sv' }: {
   results: SerpResult[];
   type?: string;
   serpHealth?: SerpHealth;
+  locale?: string;
 }) {
   const [showAll, setShowAll] = useState(false);
   const displayed = showAll ? results : results.slice(0, 10);
   const remaining = results.length - 10;
+  const L = WOR_LABELS[locale] || WOR_LABELS['sv'];
 
   return (
     <section
@@ -46,7 +114,6 @@ export default function WallOfReceipts({ results, type, serpHealth }: {
         Wall of Receipts
       </h2>
 
-      {/* Replace intro box with SERP Health Score */}
       {serpHealth && (
         <div className="bg-neutral-800 border border-neutral-700 rounded-xl p-6 mb-6 flex items-center gap-6">
           <div className="text-center flex-shrink-0">
@@ -57,20 +124,20 @@ export default function WallOfReceipts({ results, type, serpHealth }: {
           </div>
           <div className="border-l border-neutral-700 pl-6 flex-grow">
             <p className="text-white font-semibold mb-1">{serpHealth.healthLabel}</p>
-            <p className="text-neutral-400 text-base">Komplett genomgång av alla {results.length} URL:er. Här ser du vad varje sajt påstår sig vara — och vad vi faktiskt hittade.</p>
+            <p className="text-neutral-400 text-base">{L.serpIntro(results.length)}</p>
           </div>
         </div>
       )}
 
       {/* Legend */}
       <div className="flex flex-wrap gap-4 mb-4 text-sm text-neutral-400">
-        <span><span className="text-blue-400">✓</span> {type === 'game' ? 'Licensierad casinosajt' : 'Licensierad operatör'}</span>
-        <span><span className="text-green-400">✓</span> Seriös affiliate</span>
-        <span><span className="text-amber-400">⚠</span> SEO-grab</span>
-        <span><span className="text-orange-400">⚠</span> Tveksam affiliate</span>
-        <span><span className="text-red-400">✗</span> Ej licensierad</span>
-        <span><span className="text-neutral-500">—</span> Irrelevant</span>
-        <span><span className="text-neutral-400">⊕</span> Myndighet</span>
+        <span><span className="text-blue-400">✓</span> {type === 'game' ? L.licensedGame : L.licensedOperator}</span>
+        <span><span className="text-green-400">✓</span> {L.legitAffiliate}</span>
+        <span><span className="text-amber-400">⚠</span> {L.seoGrab}</span>
+        <span><span className="text-orange-400">⚠</span> {L.shadyAffiliate}</span>
+        <span><span className="text-red-400">✗</span> {L.unlicensed}</span>
+        <span><span className="text-neutral-500">—</span> {L.irrelevant}</span>
+        <span><span className="text-neutral-400">⊕</span> {L.authority}</span>
       </div>
 
       <div className="overflow-x-auto bg-neutral-800 border border-neutral-700 rounded-lg">
@@ -78,9 +145,9 @@ export default function WallOfReceipts({ results, type, serpHealth }: {
           <thead className="bg-neutral-900 border-b border-neutral-700">
             <tr>
               <th className="text-left p-3 font-semibold text-neutral-300">G#</th>
-              <th className="text-left p-3 font-semibold text-neutral-300">Sajt</th>
-              <th className="text-center p-3 font-semibold text-neutral-300 w-24">Status</th>
-              <th className="text-left p-3 font-semibold text-neutral-300">Kommentar</th>
+              <th className="text-left p-3 font-semibold text-neutral-300">{L.site}</th>
+              <th className="text-center p-3 font-semibold text-neutral-300 w-24">{L.status}</th>
+              <th className="text-left p-3 font-semibold text-neutral-300">{L.comment}</th>
             </tr>
           </thead>
           <tbody>
@@ -112,7 +179,7 @@ export default function WallOfReceipts({ results, type, serpHealth }: {
                     onClick={() => setShowAll(!showAll)}
                     className="w-full bg-neutral-700 hover:bg-neutral-600 text-neutral-300 hover:text-white font-medium py-3 text-sm transition-colors border-t border-neutral-700"
                   >
-                    {showAll ? 'Visa färre ▲' : `Visa ${remaining} till ▼`}
+                    {showAll ? L.showLess : L.showMore(remaining)}
                   </button>
                 </td>
               </tr>

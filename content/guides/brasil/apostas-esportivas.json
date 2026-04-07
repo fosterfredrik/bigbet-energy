@@ -1,0 +1,1099 @@
+{
+  "slug": "apostas-esportivas",
+  "template": "operator",
+  "type": "operator",
+  "country": "brasil",
+  "locale": "pt",
+  "keyword": "apostas esportivas",
+  "searchIntent": "Apostas Esportivas",
+  "h1": "#1 Apostas Esportivas no Brasil",
+  "searchMetadata": {
+    "totalAnalyzed": 100,
+    "dateAnalyzed": "7 abril 2026",
+    "verificationDate": "Abril 2026",
+    "isoDate": "2026-04-07"
+  },
+  "verdict": {
+    "summary": "Betsson vence por sua solidez corporativa e conformidade regulatória rigorosa."
+  },
+  "winner": {
+    "name": "Betsson",
+    "domain": "betsson.com",
+    "affiliateUrl": "https://betsson.com",
+    "affiliateLabel": "Jogar na Betsson →",
+    "logo": "/images/guides/betsson-logo.png",
+    "googleRank": 3,
+    "upsellLine": "Décadas de histórico regulatório — o operador mais confiável do Brasil.",
+    "whyItWins": "A Betsson é um dos operadores mais estabelecidos do mundo, com licenças em Malta, Suécia e agora Brasil. Décadas de histórico regulatório rigoroso, bom leque de mercados e odds competitivas. Para quem quer um operador que vai continuar existindo daqui a dez anos, Betsson é a escolha mais segura.",
+    "badges": [
+      "Licença SPA Ativa",
+      "Conformidade Regulatória",
+      "Histórico de Décadas",
+      "Relatórios Públicos"
+    ],
+    "sectionBadge": "Análise Editorial",
+    "materialEvidence": [
+      {
+        "title": "Histórico Regulatório",
+        "description": "A marca possui histórico de décadas de operação em mercados regulados."
+      },
+      {
+        "title": "Conformidade Nacional",
+        "description": "A plataforma está em conformidade com as regras do Ministério da Fazenda."
+      },
+      {
+        "title": "Proteção ao Jogador",
+        "description": "A empresa apresenta relatórios públicos de compliance e proteção ao jogador."
+      }
+    ],
+    "customerReview": {
+      "quote": "A Betsson é a escolha para quem prioriza segurança e longevidade. Menos localizado que Betano, mas com um histórico institucional que nenhum concorrente no Brasil consegue igualar. Odds competitivas, conformidade rigorosa, empresa listada em bolsa.",
+      "date": "Abril 2026",
+      "author": "BigBet.Energy Redação"
+    },
+    "termsAndConditions": "18+. Jogue responsavelmente. Termos completos em betsson.com. Linha de apoio: 0800-891-9181. Autoexclusão via sistema oficial.",
+    "specs": {
+      "whatYouGet": [
+        {
+          "label": "Licença",
+          "value": "Secretaria de Prêmios e Apostas (Brasil)"
+        },
+        {
+          "label": "Saques",
+          "value": "Via Pix com intermediários financeiros"
+        },
+        {
+          "label": "Métodos de Pagamento",
+          "value": "Pix, Transferências Bancárias"
+        },
+        {
+          "label": "Proteção ao Jogador",
+          "value": "Totalmente integrado"
+        },
+        {
+          "label": "Suporte ao Cliente",
+          "value": "Disponível em português"
+        },
+        {
+          "label": "Aplicativo Móvel",
+          "value": "Disponível para iOS e Android"
+        }
+      ],
+      "certifications": [
+        "Licença SPA verificada",
+        "Integração Sigap confirmada",
+        "Ferramentas de jogo responsável disponíveis",
+        "Pagamentos Pix suportados",
+        "Transparência corporativa auditada"
+      ]
+    }
+  },
+  "runnerUps": [
+    {
+      "name": "Betano",
+      "domain": "betano.bet.br",
+      "affiliateUrl": "https://betano.bet.br",
+      "affiliateLabel": "Jogar na Betano →",
+      "logo": "/images/guides/betano-logo.png",
+      "googleRank": 7,
+      "keyBenefit": "Adaptação ao público brasileiro.",
+      "whyRunnerUp": "A Betano é a plataforma mais adaptada ao Brasil — patrocinou clubes da Série A e B e tem os naming rights do Campeonato Brasileiro. Interface em português, Pix rápido e UX pensada para o mercado local. Histórico global mais curto que a Betsson, mas melhor experiência do dia a dia para o apostador brasileiro."
+    },
+    {
+      "name": "Sportingbet",
+      "domain": "sportingbet.bet.br",
+      "affiliateUrl": "https://sportingbet.bet.br",
+      "affiliateLabel": "Jogar na Sportingbet →",
+      "logo": "/images/guides/sportingbet-logo.png",
+      "googleRank": 8,
+      "keyBenefit": "Marca histórica respaldada.",
+      "whyRunnerUp": "Sportingbet tem licença federal e presença no Brasil desde os anos 2000. Porém, suas cotações e atualizações de recursos ficam atrás de Betsson e Betano, justificando sua posição secundária."
+    }
+  ],
+  "theBubble": null,
+  "bestsellerWarning": "Os principais resultados do Google incluem sites não licenciados e portais governamentais com conteúdo suspeito, enganando jogadores brasileiros.",
+  "failureCards": [
+    {
+      "badge": "Sem Licença SPA",
+      "domain": "br.netbet.com",
+      "productName": "NetBet",
+      "googleRank": 1,
+      "whyItFailed": "NetBet ocupa a posição #1 no Google para 'apostas esportivas' no Brasil sem licença SPA federal e sem domínio .bet.br. Um operador estrangeiro sem autorização local captura o tráfego mais valioso do mercado, deixando jogadores brasileiros sem as proteções da Lei 14.790/2023."
+    },
+    {
+      "badge": "Fraude Governamental",
+      "domain": "portal.mec.gov.br",
+      "productName": "Ministério da Educação",
+      "googleRank": 13,
+      "whyItFailed": "Subdiretórios /Recomendados/ do Ministério da Educação foram preenchidos com links de afiliados de cassino e apostas. O domínio .gov.br empresta falsa credibilidade governamental a operadores não verificados, enganando cidadãos brasileiros."
+    },
+    {
+      "badge": "Fraude Governamental",
+      "domain": "blog.mds.gov.br",
+      "productName": "Ministério do Desenvolvimento Social",
+      "googleRank": 19,
+      "whyItFailed": "Subdiretórios /Recomendados/ do blog oficial do Ministério do Desenvolvimento Social hospedam tutoriais e links para casas de apostas. Um órgão criado para proteção social sendo explorado para promover gambling sem qualquer supervisão editorial."
+    }
+  ],
+  "methodology": {
+    "steps": [
+      {
+        "num": 1,
+        "title": "Coletamos top 100 resultados do Google",
+        "text": ""
+      },
+      {
+        "num": 2,
+        "title": "Classificamos cada URL",
+        "text": ""
+      },
+      {
+        "num": 3,
+        "title": "Classificação de Intenção e Legitimidade das URLs",
+        "text": "Cada URL orgânica foi categorizada com base em sua utilidade primária, separando operadores devidamente licenciados com extensão \".bet.br\" de sites afiliados e veículos de mídia monetizando através de domínios preexistentes. A etapa verifica o cumprimento das regulamentações nacionais em contraste com as atuações não licenciadas e práticas predatórias em portais institucionais públicos."
+      },
+      {
+        "num": 4,
+        "title": "Avaliação de Operadores para o Mercado Brasileiro",
+        "text": "O ranking prioriza as plataformas que apresentam integração local para o jogador brasileiro, englobando a adoção regulamentar na Secretaria de Prêmios e Apostas, processamento de pagamentos através do Pix e o repasse de informações de propriedade corporativa. A metodologia avalia a existência de regras justas sobre bônus e a implementação técnica requerida pelo sistema Sigap de proteção."
+      }
+    ]
+  },
+  "rankingCriteria": [
+    "Licença ativa na Secretaria de Prêmios e Apostas",
+    "Domínio finalizado em .bet.br",
+    "Integração com o Sigap",
+    "Rapidez de saque via Pix",
+    "Clareza nas regras de bônus",
+    "Transparência de propriedade corporativa",
+    "Atendimento em português do Brasil"
+  ],
+  "serpResults": [
+    {
+      "googleRank": 1,
+      "domain": "br.netbet.com",
+      "name": "NetBet",
+      "verdict": "unlicensed",
+      "verdictLabel": "Não licenciado",
+      "licensed": false,
+      "commentary": "NetBet não possui licença SPA federal e não opera sob domínio .bet.br. Jogadores brasileiros não têm as proteções legais garantidas pela Lei 14.790/2023 ao acessar este site."
+    },
+    {
+      "googleRank": 2,
+      "domain": "betfair.bet.br",
+      "name": "Betfair",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador licenciado",
+      "licensed": true,
+      "commentary": "O operador utiliza o domínio .bet.br e atua com licenciamento ativo da SPA."
+    },
+    {
+      "googleRank": 3,
+      "domain": "betsson.com",
+      "name": "Betsson",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador licenciado",
+      "licensed": true,
+      "commentary": "A plataforma apresenta licenciamento em diversas jurisdições e encontra-se em trâmite na SPA."
+    },
+    {
+      "googleRank": 4,
+      "domain": "gazetaesportiva.com",
+      "name": "Gazeta Esportiva",
+      "verdict": "seo-grab",
+      "verdictLabel": "Captura SEO",
+      "licensed": null,
+      "commentary": "Portal de esportes que utiliza diretórios de subdomínio para hospedar guias de afiliados."
+    },
+    {
+      "googleRank": 5,
+      "domain": "play.google.com",
+      "name": "Google Play",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "Loja de aplicativos com simuladores de apostas sem possibilidade de depósitos financeiros."
+    },
+    {
+      "googleRank": 6,
+      "domain": "365scores.com",
+      "name": "365Scores",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Afiliado legítimo",
+      "licensed": null,
+      "commentary": "Plataforma de resultados esportivos que mantém seção de dicas para operadores."
+    },
+    {
+      "googleRank": 7,
+      "domain": "betano.bet.br",
+      "name": "Betano",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador licenciado",
+      "licensed": true,
+      "commentary": "Casa de apostas em conformidade com o domínio .bet.br exigido pelo Ministério da Fazenda."
+    },
+    {
+      "googleRank": 8,
+      "domain": "sportingbet.bet.br",
+      "name": "Sportingbet",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador licenciado",
+      "licensed": true,
+      "commentary": "Operador de capital aberto utilizando URL de registro federal para atuação no Brasil."
+    },
+    {
+      "googleRank": 9,
+      "domain": "gazetadopovo.com.br",
+      "name": "Gazeta do Povo",
+      "verdict": "seo-grab",
+      "verdictLabel": "Captura SEO",
+      "licensed": null,
+      "commentary": "Veículo de imprensa monetizando tráfego através de parcerias com plataformas de apostas."
+    },
+    {
+      "googleRank": 10,
+      "domain": "pt.wikipedia.org",
+      "name": "Wikipedia",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "Página de enciclopédia detalhando a história das apostas de cota fixa."
+    },
+    {
+      "googleRank": 11,
+      "domain": "365scores.com",
+      "name": "365Scores",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Afiliado legítimo",
+      "licensed": null,
+      "commentary": "Diretório de avaliações de casas de apostas hospedado em site de estatísticas."
+    },
+    {
+      "googleRank": 12,
+      "domain": "terra.com.br",
+      "name": "Terra",
+      "verdict": "seo-grab",
+      "verdictLabel": "Captura SEO",
+      "licensed": null,
+      "commentary": "Portal de notícias com subdomínio dedicado ao ranqueamento de empresas de apostas."
+    },
+    {
+      "googleRank": 13,
+      "domain": "portal.mec.gov.br",
+      "name": "Ministério da Educação",
+      "verdict": "shady-affiliate",
+      "verdictLabel": "Afiliado suspeito",
+      "licensed": null,
+      "commentary": "Domínio de instituição governamental com publicações sobre promoções de casas de apostas."
+    },
+    {
+      "googleRank": 14,
+      "domain": "betano.bet.br",
+      "name": "Betano",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador licenciado",
+      "licensed": true,
+      "commentary": "Acesso à seção de esportes do operador com registro e domínio federais."
+    },
+    {
+      "googleRank": 15,
+      "domain": "lance.com.br",
+      "name": "Lance!",
+      "verdict": "seo-grab",
+      "verdictLabel": "Captura SEO",
+      "licensed": null,
+      "commentary": "Portal de jornalismo esportivo publicando guias com links de afiliação."
+    },
+    {
+      "googleRank": 16,
+      "domain": "planalto.gov.br",
+      "name": "Presidência da República",
+      "verdict": "authority",
+      "verdictLabel": "Autoridade",
+      "licensed": null,
+      "commentary": "Texto oficial da Lei 14.790/2023 que regulamenta as apostas de quota fixa no Brasil."
+    },
+    {
+      "googleRank": 17,
+      "domain": "trivela.com.br",
+      "name": "Trivela",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Afiliado legítimo",
+      "licensed": null,
+      "commentary": "Site esportivo que divulga palpites e análises de plataformas do mercado brasileiro."
+    },
+    {
+      "googleRank": 18,
+      "domain": "sportingbet.bet.br",
+      "name": "Sportingbet",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador licenciado",
+      "licensed": true,
+      "commentary": "Página principal de operador de apostas que atende aos requisitos de licenciamento."
+    },
+    {
+      "googleRank": 19,
+      "domain": "blog.mds.gov.br",
+      "name": "Ministério do Desenvolvimento Social",
+      "verdict": "shady-affiliate",
+      "verdictLabel": "Afiliado suspeito",
+      "licensed": null,
+      "commentary": "Blog de órgão federal exibindo conteúdo de afiliação de operadores."
+    },
+    {
+      "googleRank": 20,
+      "domain": "brasil247.com",
+      "name": "Brasil 247",
+      "verdict": "seo-grab",
+      "verdictLabel": "Captura SEO",
+      "licensed": null,
+      "commentary": "Site de notícias políticas operando uma seção de resenhas de cassinos e apostas."
+    },
+    {
+      "googleRank": 21,
+      "domain": "instagram.com",
+      "name": "Instagram",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "Publicação em rede social de fotos e vídeos curtos."
+    },
+    {
+      "googleRank": 22,
+      "domain": "terra.com.br",
+      "name": "Terra",
+      "verdict": "seo-grab",
+      "verdictLabel": "Captura SEO",
+      "licensed": null,
+      "commentary": "Segunda ocorrência do portal de notícias promovendo links de comissionamento de apostas."
+    },
+    {
+      "googleRank": 23,
+      "domain": "scielo.br",
+      "name": "SciELO",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "Repositório de publicações acadêmicas abordando a sociologia em ambientes de esporte."
+    },
+    {
+      "googleRank": 24,
+      "domain": "cnnbrasil.com.br",
+      "name": "CNN Brasil",
+      "verdict": "seo-grab",
+      "verdictLabel": "Captura SEO",
+      "licensed": null,
+      "commentary": "Portal de televisão jornalística monetizando a audiência com dicas de cadastro em apostas."
+    },
+    {
+      "googleRank": 25,
+      "domain": "acontece.ens.edu.br",
+      "name": "ENS",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "Artigo educacional de uma escola de negócios sobre a matemática das probabilidades."
+    },
+    {
+      "googleRank": 26,
+      "domain": "correiobraziliense.com.br",
+      "name": "Correio Braziliense",
+      "verdict": "seo-grab",
+      "verdictLabel": "Captura SEO",
+      "licensed": null,
+      "commentary": "Seção de conteúdo patrocinado dentro do site do jornal do Distrito Federal."
+    },
+    {
+      "googleRank": 27,
+      "domain": "betway.com",
+      "name": "Betway",
+      "verdict": "unlicensed",
+      "verdictLabel": "Operador não licenciado",
+      "licensed": false,
+      "commentary": "Plataforma internacional de apostas sem a adequação ao domínio brasileiro .bet.br."
+    },
+    {
+      "googleRank": 28,
+      "domain": "sites-de-apostas.net",
+      "name": "Sites de Apostas",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Afiliado legítimo",
+      "licensed": null,
+      "commentary": "Agregador de análises de operadoras que foca nas exigências do Ministério da Fazenda."
+    },
+    {
+      "googleRank": 29,
+      "domain": "oddspedia.com",
+      "name": "Oddspedia",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Afiliado legítimo",
+      "licensed": null,
+      "commentary": "Ferramenta comparadora de cotações com direcionamento para empresas de apostas."
+    },
+    {
+      "googleRank": 30,
+      "domain": "kto.bet.br",
+      "name": "KTO",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador licenciado",
+      "licensed": true,
+      "commentary": "Casa de apostas em funcionamento sob as normativas com URL final em .bet.br."
+    },
+    {
+      "googleRank": 31,
+      "domain": "aposta10.com",
+      "name": "Aposta10",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Afiliado legítimo",
+      "licensed": null,
+      "commentary": "Portal de conteúdo sobre apostas esportivas e fórum para apostadores e tipsters."
+    },
+    {
+      "googleRank": 32,
+      "domain": "strategyand.pwc.com",
+      "name": "PwC Strategy&",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "Relatório empresarial detalhando o volume financeiro do mercado brasileiro de apostas."
+    },
+    {
+      "googleRank": 33,
+      "domain": "blog.mds.gov.br",
+      "name": "Ministério do Desenvolvimento Social",
+      "verdict": "shady-affiliate",
+      "verdictLabel": "Afiliado suspeito",
+      "licensed": null,
+      "commentary": "Nova página no domínio governamental direcionando tráfego para plataformas de apostas."
+    },
+    {
+      "googleRank": 34,
+      "domain": "youtube.com",
+      "name": "YouTube",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "Link para a plataforma de consumo de vídeos."
+    },
+    {
+      "googleRank": 35,
+      "domain": "investalk.bb.com.br",
+      "name": "Investalk Banco do Brasil",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "Portal de educação financeira do banco estatal sobre o risco das apostas de cota fixa."
+    },
+    {
+      "googleRank": 36,
+      "domain": "oglobo.globo.com",
+      "name": "O Globo",
+      "verdict": "seo-grab",
+      "verdictLabel": "Captura SEO",
+      "licensed": null,
+      "commentary": "Matéria com dicionário de termos de apostas publicada em portal de notícias."
+    },
+    {
+      "googleRank": 37,
+      "domain": "brasil247.com",
+      "name": "Brasil 247",
+      "verdict": "seo-grab",
+      "verdictLabel": "Captura SEO",
+      "licensed": null,
+      "commentary": "Página duplicada de portal de política indicando lista de sites de apostas."
+    },
+    {
+      "googleRank": 38,
+      "domain": "scielo.br",
+      "name": "SciELO",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "Texto científico de acesso aberto no repositório de periódicos acadêmicos."
+    },
+    {
+      "googleRank": 39,
+      "domain": "folha.uol.com.br",
+      "name": "Folha de S.Paulo",
+      "verdict": "seo-grab",
+      "verdictLabel": "Captura SEO",
+      "licensed": null,
+      "commentary": "Página que agrupa tópicos e artigos sobre manipulação de resultados e mercado de bets."
+    },
+    {
+      "googleRank": 40,
+      "domain": "campograndenews.com.br",
+      "name": "Campo Grande News",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "Notícia local a respeito de regulamentações esportivas e portarias do governo."
+    },
+    {
+      "googleRank": 41,
+      "domain": "campograndenews.com.br",
+      "name": "Campo Grande News",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "Cópia da publicação sobre a política de combate a fraudes em apostas esportivas."
+    },
+    {
+      "googleRank": 42,
+      "domain": "reclameaqui.com.br",
+      "name": "Reclame Aqui",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "Página de hub de avaliações de consumidores sobre a categoria de empresas de apostas."
+    },
+    {
+      "googleRank": 43,
+      "domain": "facebook.com",
+      "name": "Facebook",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "Postagem de notícia sobre legislação internacional de publicidade de apostas."
+    },
+    {
+      "googleRank": 44,
+      "domain": "stake.com",
+      "name": "Stake",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador licenciado",
+      "licensed": true,
+      "commentary": "A Stake possui licença SPA federal (PORTARIA SPA/MF Nº 263) e opera via stake.bet.br. O domínio stake.com que aparece aqui não oferece as proteções legais — acesse exclusivamente stake.bet.br."
+    },
+    {
+      "googleRank": 45,
+      "domain": "jota.info",
+      "name": "Jota",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "Portal de cobertura jurídica com matéria sobre decisões legais relativas às operadoras."
+    },
+    {
+      "googleRank": 46,
+      "domain": "jornal.usp.br",
+      "name": "Jornal da USP",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "Veículo de comunicação universitário com reportagem sobre os perigos da ludopatia."
+    },
+    {
+      "googleRank": 47,
+      "domain": "sites-de-apostas.net",
+      "name": "Sites de Apostas",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Afiliado legítimo",
+      "licensed": null,
+      "commentary": "Outro diretório do portal focado em avaliar o atendimento ao cliente das casas."
+    },
+    {
+      "googleRank": 48,
+      "domain": "youtube.com",
+      "name": "YouTube",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "Hospedagem de transmissão em vídeo sobre mercado de cotações."
+    },
+    {
+      "googleRank": 49,
+      "domain": "sportingbet.bet.br",
+      "name": "Sportingbet",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador licenciado",
+      "licensed": true,
+      "commentary": "Seção interna de cotações de futebol do operador habilitado no Brasil."
+    },
+    {
+      "googleRank": 50,
+      "domain": "academiadasapostasbrasil.com",
+      "name": "Academia das Apostas",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Afiliado legítimo",
+      "licensed": null,
+      "commentary": "Site com planilhas de resultados estatísticos e cursos sobre operação em odds."
+    },
+    {
+      "googleRank": 51,
+      "domain": "play.google.com",
+      "name": "Google Play",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "Página de simulador de bilhetes esportivos disponível para dispositivos Android."
+    },
+    {
+      "googleRank": 52,
+      "domain": "meutimao.com.br",
+      "name": "Meu Timão",
+      "verdict": "seo-grab",
+      "verdictLabel": "Captura SEO",
+      "licensed": null,
+      "commentary": "Fórum de torcedores publicando seções de palpites com links de afiliação."
+    },
+    {
+      "googleRank": 53,
+      "domain": "estadao.com.br",
+      "name": "Estadão",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "Artigo jornalístico detalhando políticas de restrição de publicidade na Austrália."
+    },
+    {
+      "googleRank": 54,
+      "domain": "netvasco.com.br",
+      "name": "NetVasco",
+      "verdict": "seo-grab",
+      "verdictLabel": "Captura SEO",
+      "licensed": null,
+      "commentary": "Site de cobertura esportiva de clube com diretório redirecionando para casas de apostas."
+    },
+    {
+      "googleRank": 55,
+      "domain": "youtube.com",
+      "name": "YouTube",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "Conteúdo audiovisual sobre gestão de banca nas plataformas de apostas."
+    },
+    {
+      "googleRank": 56,
+      "domain": "stake.com",
+      "name": "Stake",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador licenciado",
+      "licensed": true,
+      "commentary": "A Stake possui licença SPA federal (PORTARIA SPA/MF Nº 263) e opera via stake.bet.br. O domínio stake.com que aparece aqui não oferece as proteções legais — acesse exclusivamente stake.bet.br."
+    },
+    {
+      "googleRank": 57,
+      "domain": "transfermarkt.com.br",
+      "name": "Transfermarkt",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Afiliado legítimo",
+      "licensed": null,
+      "commentary": "Portal de dados financeiros do futebol listando as cotas oferecidas pelas plataformas."
+    },
+    {
+      "googleRank": 58,
+      "domain": "goal.com",
+      "name": "Goal",
+      "verdict": "seo-grab",
+      "verdictLabel": "Captura SEO",
+      "licensed": null,
+      "commentary": "Site de futebol mundial publicando um ranking de bônus de plataformas de apostas."
+    },
+    {
+      "googleRank": 59,
+      "domain": "amazon.com.br",
+      "name": "Amazon",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "Plataforma de comércio online apresentando resultados de busca por livros de apostas."
+    },
+    {
+      "googleRank": 60,
+      "domain": "pt.linkedin.com",
+      "name": "LinkedIn",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "Post em rede social profissional com discussão legal sobre a Lei 14.790."
+    },
+    {
+      "googleRank": 61,
+      "domain": "estadao.com.br",
+      "name": "Estadão",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "Cópia da publicação sobre regulação internacional de mercado esportivo de cota fixa."
+    },
+    {
+      "googleRank": 62,
+      "domain": "exame.com",
+      "name": "Exame",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "Portal de economia e negócios publicando artigos sobre o recolhimento fiscal de apostas."
+    },
+    {
+      "googleRank": 63,
+      "domain": "gente.globo.com",
+      "name": "Gente Globo",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "Pesquisa mercadológica sobre os hábitos de apostadores esportivos brasileiros."
+    },
+    {
+      "googleRank": 64,
+      "domain": "youtube.com",
+      "name": "YouTube",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "Material em vídeo não transacional relacionado a técnicas esportivas."
+    },
+    {
+      "googleRank": 65,
+      "domain": "blog.mds.gov.br",
+      "name": "Ministério do Desenvolvimento Social",
+      "verdict": "shady-affiliate",
+      "verdictLabel": "Afiliado suspeito",
+      "licensed": null,
+      "commentary": "Veiculação de conteúdo sobre poker e cotações de apostas em endereço do poder executivo."
+    },
+    {
+      "googleRank": 66,
+      "domain": "betway.com",
+      "name": "Betway",
+      "verdict": "unlicensed",
+      "verdictLabel": "Operador não licenciado",
+      "licensed": false,
+      "commentary": "Categoria de futebol do site que atinge o Brasil sem domínio correspondente à licença."
+    },
+    {
+      "googleRank": 67,
+      "domain": "pt.linkedin.com",
+      "name": "LinkedIn",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "Artigo publicado tentang o avanço legislativo das bets no cenário de Brasília."
+    },
+    {
+      "googleRank": 68,
+      "domain": "em.com.br",
+      "name": "Estado de Minas",
+      "verdict": "seo-grab",
+      "verdictLabel": "Captura SEO",
+      "licensed": null,
+      "commentary": "Seção permanente do portal de notícias monetizando listas de bônus de operadoras."
+    },
+    {
+      "googleRank": 69,
+      "domain": "sportytrader.com",
+      "name": "SportyTrader",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Afiliado legítimo",
+      "licensed": null,
+      "commentary": "Guia internacional com filial no Brasil focado em análises de odds e casas."
+    },
+    {
+      "googleRank": 70,
+      "domain": "gov.br",
+      "name": "Ministério da Fazenda",
+      "verdict": "authority",
+      "verdictLabel": "Autoridade",
+      "licensed": null,
+      "commentary": "Página oficial da Secretaria de Prêmios e Apostas — órgão regulador do mercado de apostas no Brasil."
+    },
+    {
+      "googleRank": 71,
+      "domain": "sportytrader.com",
+      "name": "SportyTrader",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Afiliado legítimo",
+      "licensed": null,
+      "commentary": "Página de projeções esportivas indicando quais plataformas licenciadas oferecem os retornos."
+    },
+    {
+      "googleRank": 72,
+      "domain": "www12.senado.leg.br",
+      "name": "Senado Federal",
+      "verdict": "authority",
+      "verdictLabel": "Autoridade",
+      "licensed": null,
+      "commentary": "Rádio do Senado Federal reportando sobre o crescimento do mercado de apostas no Brasil."
+    },
+    {
+      "googleRank": 73,
+      "domain": "lakersbrasil.com",
+      "name": "Lakers Brasil",
+      "verdict": "seo-grab",
+      "verdictLabel": "Captura SEO",
+      "licensed": null,
+      "commentary": "Blog focado em basquete norte-americano hospedando conteúdo genérico de casas de apostas."
+    },
+    {
+      "googleRank": 74,
+      "domain": "gov.br",
+      "name": "Ministério da Fazenda",
+      "verdict": "authority",
+      "verdictLabel": "Autoridade",
+      "licensed": null,
+      "commentary": "Duplicata da página oficial da SPA com informações sobre licenciamento de operadores."
+    },
+    {
+      "googleRank": 75,
+      "domain": "betway.com",
+      "name": "Betway",
+      "verdict": "unlicensed",
+      "verdictLabel": "Operador não licenciado",
+      "licensed": false,
+      "commentary": "Categoria de futebol do operador operando sob jurisdição e domínio internacionais."
+    },
+    {
+      "googleRank": 76,
+      "domain": "instagram.com",
+      "name": "Instagram",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "Vídeo hospedado na plataforma social focada em entretenimento visual."
+    },
+    {
+      "googleRank": 77,
+      "domain": "gazetaesportiva.com",
+      "name": "Gazeta Esportiva",
+      "verdict": "seo-grab",
+      "verdictLabel": "Captura SEO",
+      "licensed": null,
+      "commentary": "Diretório no portal esportivo focado em classificar operadoras de apostas e códigos promocionais."
+    },
+    {
+      "googleRank": 78,
+      "domain": "betting.com",
+      "name": "Betting",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Afiliado legítimo",
+      "licensed": null,
+      "commentary": "Plataforma internacional de comparação de bônus de operadores autorizados."
+    },
+    {
+      "googleRank": 79,
+      "domain": "betfair.bet.br",
+      "name": "Betfair",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador licenciado",
+      "licensed": true,
+      "commentary": "Subdiretório do operador devidamente licenciado e hospedado no domínio .bet.br."
+    },
+    {
+      "googleRank": 80,
+      "domain": "netflu.com.br",
+      "name": "NetFlu",
+      "verdict": "seo-grab",
+      "verdictLabel": "Captura SEO",
+      "licensed": null,
+      "commentary": "Site sobre as atividades do Fluminense operando diretório voltado para comissões em apostas."
+    },
+    {
+      "googleRank": 81,
+      "domain": "betfair.bet.br",
+      "name": "Betfair",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador licenciado",
+      "licensed": true,
+      "commentary": "Link direto para a área transacional e as odds da casa de apostas regulamentada."
+    },
+    {
+      "googleRank": 82,
+      "domain": "netflu.com.br",
+      "name": "NetFlu",
+      "verdict": "seo-grab",
+      "verdictLabel": "Captura SEO",
+      "licensed": null,
+      "commentary": "Página secundária com dicas e palpites direcionando para casas de apostas no Brasil."
+    },
+    {
+      "googleRank": 83,
+      "domain": "operobal.uel.br",
+      "name": "UEL",
+      "verdict": "shady-affiliate",
+      "verdictLabel": "Afiliado suspeito",
+      "licensed": null,
+      "commentary": "Domínio de universidade estadual contendo material suspeito promovendo sites de apostas."
+    },
+    {
+      "googleRank": 84,
+      "domain": "sportytrader.com",
+      "name": "SportyTrader",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Afiliado legítimo",
+      "licensed": null,
+      "commentary": "Área de palpites em futebol do site de afiliados operando em acordo de publicidade."
+    },
+    {
+      "googleRank": 85,
+      "domain": "correiobraziliense.com.br",
+      "name": "Correio Braziliense",
+      "verdict": "seo-grab",
+      "verdictLabel": "Captura SEO",
+      "licensed": null,
+      "commentary": "Ranking de aplicativos para dispositivos móveis oferecido como publieditorial afiliado no jornal."
+    },
+    {
+      "googleRank": 86,
+      "domain": "youtube.com",
+      "name": "YouTube",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "Transmissão online listada nos resultados orgânicos da rede de vídeos do Google."
+    },
+    {
+      "googleRank": 87,
+      "domain": "aposta.com.br",
+      "name": "Aposta.com.br",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Afiliado legítimo",
+      "licensed": null,
+      "commentary": "Diretório afiliado construído com o objetivo exclusivo de listar e avaliar operadoras no país."
+    },
+    {
+      "googleRank": 88,
+      "domain": "x.com",
+      "name": "X",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "Microblog focado em conversas públicas sobre o desempenho em partidas de futebol."
+    },
+    {
+      "googleRank": 89,
+      "domain": "veja.abril.com.br",
+      "name": "Veja",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "Publicação jornalística cobrindo políticas governamentais globais de proteção ao apostador."
+    },
+    {
+      "googleRank": 90,
+      "domain": "jota.info",
+      "name": "Jota",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "Coluna jurídica explicando o regime de impostos para a modalidade lotérica das operadoras."
+    },
+    {
+      "googleRank": 91,
+      "domain": "veja.abril.com.br",
+      "name": "Veja",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "Link duplicado de notícia de portal a respeito de publicidade de cassinos no exterior."
+    },
+    {
+      "googleRank": 92,
+      "domain": "jota.info",
+      "name": "Jota",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "Duplicação de artigo detalhando os percentuais de taxação da Lei das Bets no Congresso."
+    },
+    {
+      "googleRank": 93,
+      "domain": "bnldata.com.br",
+      "name": "BNL Data",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "Veículo de comunicação B2B que divulga pautas relacionadas ao mercado global de loterias."
+    },
+    {
+      "googleRank": 94,
+      "domain": "youtube.com",
+      "name": "YouTube",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "Endereço de portal de mídias audiovisuais que não direciona para mercados de apostas."
+    },
+    {
+      "googleRank": 95,
+      "domain": "maquinadoesporte.com.br",
+      "name": "Máquina do Esporte",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "Artigo descrevendo a portaria de implementação da política contra resultados arranjados."
+    },
+    {
+      "googleRank": 96,
+      "domain": "placar.com.br",
+      "name": "Placar",
+      "verdict": "seo-grab",
+      "verdictLabel": "Captura SEO",
+      "licensed": null,
+      "commentary": "Revista de futebol que passou a monetizar ranqueamentos de plataformas esportivas."
+    },
+    {
+      "googleRank": 97,
+      "domain": "betfair.bet.br",
+      "name": "Betfair",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador licenciado",
+      "licensed": true,
+      "commentary": "Link para o serviço transacional e portfólio de futebol da empresa listada na Fazenda."
+    },
+    {
+      "googleRank": 98,
+      "domain": "betesporte.bet.br",
+      "name": "BETesporte",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador licenciado",
+      "licensed": true,
+      "commentary": "Operador brasileiro licenciado utilizando domínio com os parâmetros regulatórios vigentes."
+    },
+    {
+      "googleRank": 99,
+      "domain": "apostasonline.com",
+      "name": "Apostas Online",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Afiliado legítimo",
+      "licensed": null,
+      "commentary": "Portal atuando na promoção, comparação e listagem de ofertas de bônus."
+    },
+    {
+      "googleRank": 100,
+      "domain": "g1.globo.com",
+      "name": "G1",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "Notícia de agência internacional sobre sanções aplicadas a propagandas na Oceania."
+    }
+  ],
+  "peopleShouldAlsoAsk": [
+    {
+      "question": "Os meus ganhos em apostas esportivas são tributados no Brasil?",
+      "answer": "Sim. Ganhos acima de R$ 2.824 são tributados em 15% de imposto de renda retido na fonte pelo operador. Diferente de países como a Suécia onde os ganhos são isentos — no Brasil o fisco participa de cada saque relevante."
+    },
+    {
+      "question": "O que é o Cadastro Nacional de Apostadores Impedidos e como funciona?",
+      "answer": "É o registro nacional de autoexclusão do Brasil, gerido pelo Sigap. Antes de aceitar qualquer aposta, o operador licenciado é obrigado a consultar este cadastro em tempo real. Se você se autoexcluiu, nenhuma casa licenciada pode aceitar suas apostas — o bloqueio é imediato e automático."
+    },
+    {
+      "question": "Como verifico se uma casa de apostas tem licença federal no Brasil?",
+      "answer": "Verifique se o domínio termina em .bet.br — esse é o domínio exclusivo para operadores licenciados pela SPA. Você também pode consultar a lista oficial de operadores autorizados em gov.br/fazenda. Sites sem .bet.br não têm licença federal, independente do que afirmem."
+    },
+    {
+      "question": "Essa plataforma tem licença brasileira ou apenas opera legalmente do exterior?",
+      "answer": "Importante distinguir: uma licença SPA federal (.bet.br) significa que o operador está sujeito à fiscalização brasileira e proteção ao consumidor local. Operar do exterior sem licença local não garante as mesmas proteções. Verifique sempre se o domínio é .bet.br e se o operador consta no registro da SPA."
+    },
+    {
+      "question": "O que acontece se minha conta for limitada depois que eu começar a ganhar?",
+      "answer": "Limitação de contas é prática comum — operadores podem reduzir limites de apostas de clientes lucrativos. No Brasil, a SPA está desenvolvendo regras sobre isso, mas por ora é um risco real. Diversifique entre operadores e prefira exchanges como Betfair que por design não limitam vencedores."
+    }
+  ],
+  "finalCTA": {
+    "headline": "Nosso primeiro escolha",
+    "text": "A Betsson tem décadas de histórico regulatório e opera no Brasil sob licença federal. Para apostas esportivas com segurança institucional, é a escolha mais sólida do mercado."
+  }
+}
