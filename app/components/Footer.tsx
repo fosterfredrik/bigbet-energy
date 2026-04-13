@@ -119,6 +119,9 @@ export default function Footer() {
               <Link href="/brasil" className="hover:text-amber-400 transition">
                 🇧🇷 Brasil
               </Link>
+              <Link href="/argentina" className="hover:text-amber-400 transition">
+                🇦🇷 Argentina
+              </Link>
             </div>
           </nav>
 

@@ -60,6 +60,22 @@ const COUNTRY_CONFIG: Record<string, {
       },
     ],
   },
+  argentina: {
+    flag: '🇦🇷',
+    name: 'Argentina',
+    title: 'Casino Online en Argentina',
+    description: 'Guías editoriales independientes. Analizamos lo que realmente aparece en Google para cada término de búsqueda — y explicamos por qué los resultados no siempre son lo que parecen. Sin incentivos ocultos. Sin posicionamiento pago.',
+    editorialNote: 'Estas guías están basadas en 15+ años de experiencia en la industria del juego. Analizamos los 100 primeros resultados de Google para cada término, clasificamos cada URL y explicamos qué debería estar ahí — y qué no. Links de afiliados únicamente a operadores licenciados por LOTBA o IPLyC con dominio .bet.ar.',
+    guides: [
+      {
+        category: 'Casino',
+        items: [
+          { slug: 'casino-online', label: 'Casino Online' },
+          { slug: 'casino-con-mercadopago', label: 'Casino con MercadoPago' },
+        ],
+      },
+    ],
+  },
   uk: {
     flag: '🇬🇧',
     name: 'United Kingdom',
@@ -141,7 +157,7 @@ export default function CountryIndexPage({ params }: { params: { country: string
         {/* Editorial note */}
         <div className="mt-12 bg-neutral-800 border border-neutral-700 rounded-xl p-6">
           <p className="text-xs font-bold tracking-widest uppercase text-amber-400 mb-2">
-            {params.country === 'sverige' ? 'Redaktionell princip' : params.country === 'brasil' ? 'Princípio editorial' : 'Editorial principle'}
+          {params.country === 'sverige' ? 'Redaktionell princip' : params.country === 'brasil' ? 'Princípio editorial' : params.country === 'argentina' ? 'Principio editorial' : 'Editorial principle'}
           </p>
           <p className="text-neutral-400 text-sm leading-relaxed">
             {config.editorialNote}

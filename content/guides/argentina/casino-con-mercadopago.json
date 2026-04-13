@@ -1,0 +1,1096 @@
+{
+  "slug": "casino-con-mercadopago",
+  "template": "operator",
+  "type": "operator",
+  "country": "argentina",
+  "locale": "es",
+  "keyword": "casino con mercadopago",
+  "searchIntent": "Casino con MercadoPago",
+  "h1": "#1 Casino con MercadoPago en Argentina",
+  "searchMetadata": {
+    "totalAnalyzed": 100,
+    "dateAnalyzed": "10 abril 2026",
+    "verificationDate": "Abril 2026"
+  },
+  "verdict": {
+    "summary": "Betsson lidera por licencias provinciales y soporte completo de MercadoPago."
+  },
+  "winner": {
+    "name": "Betsson",
+    "domain": "betsson.bet.ar",
+    "affiliateUrl": "https://betsson.bet.ar",
+    "affiliateLabel": "Jugar en Betsson →",
+    "logo": "/images/guides/betsson-logo.png",
+    "googleRank": 60,
+    "upsellLine": "El único casino con depósitos y retiros por MercadoPago.",
+    "whyItWins": "Betsson opera con licencias en CABA (LOTBA), Buenos Aires Province (IPLyC) y Córdoba mediante sociedad con Casino de Victoria. Es el único operador en Argentina que procesa tanto depósitos como retiros vía MercadoPago. Patrocinador de Boca Juniors y Racing Club, con oficina regional en Buenos Aires desde marzo 2025.",
+    "badges": [
+      "Licencia LOTBA verificada",
+      "Integración MercadoPago total",
+      "Verificación RENAPER activa",
+      "Autoexclusión ReVA disponible"
+    ],
+    "sectionBadge": "Análisis editorial",
+    "materialEvidence": [
+      {
+        "title": "Depósitos y retiros vía MercadoPago",
+        "description": "El único operador con licencia .bet.ar que procesa tanto depósitos como retiros a MercadoPago — bet365 y PlayUZU solo permiten depósitos."
+      },
+      {
+        "title": "Mayor cobertura provincial",
+        "description": "Licencias en CABA (LOTBA), Buenos Aires Province (IPLyC) y Córdoba — mayor alcance que bet365 o PlayUZU."
+      },
+      {
+        "title": "Soporte en español 10:00–01:00",
+        "description": "Soporte localizado en español disponible todos los días de 10:00 a 01:00 hs vía live chat (30 segundos de respuesta) y email."
+      }
+    ],
+    "customerReview": {
+      "quote": "Betsson es el único operador con licencias en tres provincias argentinas que procesa retiros a MercadoPago — una ventaja concreta sobre bet365 y PlayUZU. La sociedad con Casino de Victoria le da cobertura regulatoria que ningún competidor tiene hoy.",
+      "date": "Abril 2026",
+      "author": "BigBet.Energy redacción"
+    },
+    "termsAndConditions": "18+. Jugá con responsabilidad. Términos completos en betsson.bet.ar. Línea 148 (CABA). Autoexclusión via ReVA (LOTBA) / IPLyC.",
+    "specs": {
+      "whatYouGet": [
+        {
+          "label": "Licencia",
+          "value": "LOTBA / IPLyC / Córdoba (Argentina)"
+        },
+        {
+          "label": "Retiros",
+          "value": "MercadoPago, Skrill, Neteller, transferencia bancaria"
+        },
+        {
+          "label": "Métodos de pago",
+          "value": "MercadoPago, Skrill, Neteller, Visa, Mastercard, AstroPay, Paysafecard"
+        },
+        {
+          "label": "Autoexclusión",
+          "value": "ReVA / IPLyC integrado"
+        },
+        {
+          "label": "Atención al cliente",
+          "value": "Live chat 10:00–01:00 hs, email 24/7"
+        },
+        {
+          "label": "App móvil",
+          "value": "iOS (App Store) y Android (APK oficial)"
+        }
+      ],
+      "certifications": [
+        "Licencia .bet.ar verificada",
+        "Integración ReVA confirmada",
+        "Verificación RENAPER activa",
+        "Herramientas de juego responsable disponibles",
+        "Dominio .bet.ar verificado"
+      ]
+    }
+  },
+  "runnerUps": [
+    {
+      "name": "bet365",
+      "domain": "bet365.bet.ar",
+      "affiliateUrl": "https://bet365.bet.ar",
+      "affiliateLabel": "Jugar en bet365 →",
+      "logo": "/images/guides/bet365-logo.png",
+      "googleRank": 0,
+      "keyBenefit": "MercadoPago en marca global.",
+      "whyRunnerUp": "Bet365 opera bajo licencia .bet.ar para CABA y Buenos Aires Province. MercadoPago es su único método de billetera digital — depósitos desde 500 ARS con DNI obligatoriamente coincidente entre ambas cuentas. Soporta también Visa, Mastercard, AstroPay y DEBIN. Limitación clave: los retiros no van a MercadoPago sino a transferencia bancaria o tarjeta."
+    },
+    {
+      "name": "PlayUZU",
+      "domain": "playuzu.bet.ar",
+      "affiliateUrl": "https://playuzu.bet.ar",
+      "affiliateLabel": "Jugar en PlayUZU →",
+      "logo": "/images/guides/playuzu-logo.png",
+      "googleRank": 1,
+      "keyBenefit": "Licencia .bet.ar destacada.",
+      "whyRunnerUp": "PlayUZU opera bajo licencia LOTBA (DI-2023-335-GCABA-LOTBA) y ocupa el rank #1 orgánico para este keyword — señal de inversión local relevante. Acepta MercadoPago para depósitos desde 1000 ARS. Solo CABA, sin cobertura en Buenos Aires Province ni Córdoba."
+    }
+  ],
+  "theBubble": null,
+  "bestsellerWarning": "Los resultados top de Google a menudo priorizan sitios irrelevantes o sin licencia para jugadores argentinos.",
+  "failureCards": [
+    {
+      "badge": "Sin licencia AR",
+      "domain": "1xbet.com",
+      "productName": "1xBet",
+      "googleRank": 28,
+      "whyItFailed": "1xBet opera con licencia de Curaçao sin dominio .bet.ar, lo que lo hace ilegal en Argentina. Patrocina equipos como 9z para aparentar legitimidad, engañando a jugadores locales."
+    },
+    {
+      "badge": "Afiliado sin dueño",
+      "domain": "balloon.ar",
+      "productName": "Balloon",
+      "googleRank": 70,
+      "whyItFailed": "Aparece tres veces en el SERP (ranks 70, 79, 81) promocionando operadores sin licencia .bet.ar. No hay información de propiedad verificable en el sitio. Un jugador que sigue sus recomendaciones puede terminar en un casino sin regulación provincial."
+    },
+    {
+      "badge": "Targeting Chile",
+      "domain": "casino.cl",
+      "productName": "Casino.cl",
+      "googleRank": 26,
+      "whyItFailed": "Casino.cl está dirigido a usuarios en Chile, no a Argentina. Su posicionamiento en búsquedas locales confunde a jugadores argentinos buscando opciones reguladas y seguras."
+    }
+  ],
+  "methodology": {
+    "steps": [
+      {
+        "num": 1,
+        "title": "Recopilamos los top 100 resultados de Google",
+        "text": ""
+      },
+      {
+        "num": 2,
+        "title": "Clasificamos cada URL",
+        "text": ""
+      },
+      {
+        "num": 3,
+        "title": "Clasificación del SERP",
+        "text": "La clasificación ordenó las URL en categorías según licencias y transparencia. Los dominios con extensión .bet.ar recibieron la etiqueta de operador licenciado. Las páginas sin transparencia fueron marcadas como afiliados sospechosos."
+      },
+      {
+        "num": 4,
+        "title": "Clasificación de resultados relevantes",
+        "text": "La clasificación evaluó operadores usando criterios como licencias y funcionalidad de MercadoPago. El análisis priorizó plataformas que soportan verificación RENAPER y conexiones con ReVA."
+      }
+    ]
+  },
+  "rankingCriteria": [
+    "Licencia LOTBA/IPLyC",
+    "Dominio .bet.ar",
+    "Propiedad transparente",
+    "Integración MercadoPago",
+    "Conexión ReVA"
+  ],
+  "serpResults": [
+    {
+      "googleRank": 1,
+      "domain": "playuzu.bet.ar",
+      "name": "PlayUZU",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador licenciado",
+      "licensed": true,
+      "commentary": "El dominio utiliza la extensión .bet.ar."
+    },
+    {
+      "googleRank": 2,
+      "domain": "mercadopago.com.ar",
+      "name": "Mercado Pago",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "El sitio ofrece servicios de pago."
+    },
+    {
+      "googleRank": 3,
+      "domain": "betsson.bet.ar",
+      "name": "Betsson",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador licenciado",
+      "licensed": true,
+      "commentary": "El dominio utiliza la extensión .bet.ar."
+    },
+    {
+      "googleRank": 4,
+      "domain": "eldia.com",
+      "name": "El Dia",
+      "verdict": "seo-grab",
+      "verdictLabel": "SEO-grab",
+      "licensed": null,
+      "commentary": "El dominio pertenece a una organización de noticias."
+    },
+    {
+      "googleRank": 5,
+      "domain": "estafa.info",
+      "name": "Estafa Info",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Afiliado legítimo",
+      "licensed": null,
+      "commentary": "El sitio reseña operadores de casino."
+    },
+    {
+      "googleRank": 6,
+      "domain": "bplay.bet.ar",
+      "name": "bplay",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador licenciado",
+      "licensed": true,
+      "commentary": "El dominio utiliza la extensión .bet.ar."
+    },
+    {
+      "googleRank": 7,
+      "domain": "casinobuenosaires.com.ar",
+      "name": "Casino Buenos Aires",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador licenciado",
+      "licensed": true,
+      "commentary": "El sitio opera un local en CABA."
+    },
+    {
+      "googleRank": 8,
+      "domain": "betano.bet.ar",
+      "name": "Betano",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador licenciado",
+      "licensed": true,
+      "commentary": "El dominio utiliza la extensión .bet.ar."
+    },
+    {
+      "googleRank": 9,
+      "domain": "casino-online-ar.it.com",
+      "name": "Casino Online AR",
+      "verdict": "shady-affiliate",
+      "verdictLabel": "Afiliado sospechoso",
+      "licensed": null,
+      "commentary": "El sitio oculta detalles de propiedad."
+    },
+    {
+      "googleRank": 10,
+      "domain": "lacapital.com.ar",
+      "name": "La Capital",
+      "verdict": "seo-grab",
+      "verdictLabel": "SEO-grab",
+      "licensed": null,
+      "commentary": "El dominio pertenece a una organización de noticias."
+    },
+    {
+      "googleRank": 11,
+      "domain": "slotcatalog.com",
+      "name": "SlotCatalog",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Afiliado legítimo",
+      "licensed": null,
+      "commentary": "El sitio reseña juegos de casino."
+    },
+    {
+      "googleRank": 12,
+      "domain": "palermo.com.ar",
+      "name": "Hipódromo de Palermo",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador licenciado",
+      "licensed": true,
+      "commentary": "El sitio opera un local en CABA."
+    },
+    {
+      "googleRank": 13,
+      "domain": "citycenteronline.bet.ar",
+      "name": "City Center Online",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador licenciado",
+      "licensed": true,
+      "commentary": "El dominio utiliza la extensión .bet.ar."
+    },
+    {
+      "googleRank": 14,
+      "domain": "tribuna.com",
+      "name": "Tribuna",
+      "verdict": "seo-grab",
+      "verdictLabel": "SEO-grab",
+      "licensed": null,
+      "commentary": "El sitio publica noticias deportivas."
+    },
+    {
+      "googleRank": 15,
+      "domain": "unosantafe.com.ar",
+      "name": "Uno Santa Fe",
+      "verdict": "seo-grab",
+      "verdictLabel": "SEO-grab",
+      "licensed": null,
+      "commentary": "El dominio pertenece a una organización de noticias."
+    },
+    {
+      "googleRank": 16,
+      "domain": "infobae.com",
+      "name": "Infobae",
+      "verdict": "seo-grab",
+      "verdictLabel": "SEO-grab",
+      "licensed": null,
+      "commentary": "El dominio pertenece a una organización de noticias."
+    },
+    {
+      "googleRank": 17,
+      "domain": "casinobuenosaires.com.ar",
+      "name": "Casino Buenos Aires",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador licenciado",
+      "licensed": true,
+      "commentary": "La URL duplica el rango 7."
+    },
+    {
+      "googleRank": 18,
+      "domain": "soloazar.com",
+      "name": "SoloAzar",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Afiliado legítimo",
+      "licensed": null,
+      "commentary": "El sitio publica noticias de la industria."
+    },
+    {
+      "googleRank": 19,
+      "domain": "realpolitik.com.ar",
+      "name": "Realpolitik",
+      "verdict": "seo-grab",
+      "verdictLabel": "SEO-grab",
+      "licensed": null,
+      "commentary": "El dominio pertenece a una organización de noticias."
+    },
+    {
+      "googleRank": 20,
+      "domain": "jugabetargentinacasinoonline.com",
+      "name": "Jugabet Argentina",
+      "verdict": "shady-affiliate",
+      "verdictLabel": "Afiliado sospechoso",
+      "licensed": null,
+      "commentary": "El sitio oculta detalles de propiedad."
+    },
+    {
+      "googleRank": 21,
+      "domain": "rosario3.com",
+      "name": "Rosario3",
+      "verdict": "seo-grab",
+      "verdictLabel": "SEO-grab",
+      "licensed": null,
+      "commentary": "El dominio pertenece a una organización de noticias."
+    },
+    {
+      "googleRank": 22,
+      "domain": "diarioelnorte.com.ar",
+      "name": "Diario El Norte",
+      "verdict": "seo-grab",
+      "verdictLabel": "SEO-grab",
+      "licensed": null,
+      "commentary": "El dominio pertenece a una organización de noticias."
+    },
+    {
+      "googleRank": 23,
+      "domain": "youtube.com",
+      "name": "YouTube",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "El sitio aloja videos."
+    },
+    {
+      "googleRank": 24,
+      "domain": "altoquedeportes.com.ar",
+      "name": "Al Toque Deportes",
+      "verdict": "seo-grab",
+      "verdictLabel": "SEO-grab",
+      "licensed": null,
+      "commentary": "El sitio publica noticias deportivas."
+    },
+    {
+      "googleRank": 25,
+      "domain": "radioconvos.com.ar",
+      "name": "Radio Con Vos",
+      "verdict": "seo-grab",
+      "verdictLabel": "SEO-grab",
+      "licensed": null,
+      "commentary": "El sitio transmite programas de radio."
+    },
+    {
+      "googleRank": 26,
+      "domain": "casino.cl",
+      "name": "Casino.cl",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "El sitio está dirigido a usuarios en Chile."
+    },
+    {
+      "googleRank": 27,
+      "domain": "lacapital.com.ar",
+      "name": "La Capital",
+      "verdict": "seo-grab",
+      "verdictLabel": "SEO-grab",
+      "licensed": null,
+      "commentary": "La URL duplica el rango 10."
+    },
+    {
+      "googleRank": 28,
+      "domain": "infocanuelas.com",
+      "name": "InfoCañuelas",
+      "verdict": "seo-grab",
+      "verdictLabel": "SEO-grab",
+      "licensed": null,
+      "commentary": "El dominio pertenece a una organización de noticias."
+    },
+    {
+      "googleRank": 29,
+      "domain": "palermo.com.ar",
+      "name": "Hipódromo de Palermo",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador licenciado",
+      "licensed": true,
+      "commentary": "La URL duplica el rango 12."
+    },
+    {
+      "googleRank": 30,
+      "domain": "askgamblers.com",
+      "name": "AskGamblers",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Afiliado legítimo",
+      "licensed": null,
+      "commentary": "El sitio reseña operadores de casino."
+    },
+    {
+      "googleRank": 31,
+      "domain": "mercadopago.com.ar",
+      "name": "Mercado Pago",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "La URL duplica el rango 2."
+    },
+    {
+      "googleRank": 32,
+      "domain": "sanluis.jugadon.bet.ar",
+      "name": "Jugadon San Luis",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador licenciado",
+      "licensed": true,
+      "commentary": "El dominio utiliza la extensión .bet.ar."
+    },
+    {
+      "googleRank": 33,
+      "domain": "mendoza.puntoapunto.com.ar",
+      "name": "Punto a Punto",
+      "verdict": "seo-grab",
+      "verdictLabel": "SEO-grab",
+      "licensed": null,
+      "commentary": "El dominio pertenece a una organización de noticias."
+    },
+    {
+      "googleRank": 34,
+      "domain": "casinos-seguros.com",
+      "name": "Casinos Seguros",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Afiliado legítimo",
+      "licensed": null,
+      "commentary": "El sitio reseña operadores de casino."
+    },
+    {
+      "googleRank": 35,
+      "domain": "altoquedeportes.com.ar",
+      "name": "Al Toque Deportes",
+      "verdict": "seo-grab",
+      "verdictLabel": "SEO-grab",
+      "licensed": null,
+      "commentary": "La URL duplica el rango 24."
+    },
+    {
+      "googleRank": 36,
+      "domain": "iprofesional.com",
+      "name": "iProfesional",
+      "verdict": "seo-grab",
+      "verdictLabel": "SEO-grab",
+      "licensed": null,
+      "commentary": "El dominio pertenece a una organización de noticias."
+    },
+    {
+      "googleRank": 37,
+      "domain": "focusgn.com",
+      "name": "Focus Gaming News",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Afiliado legítimo",
+      "licensed": null,
+      "commentary": "El sitio publica noticias de la industria."
+    },
+    {
+      "googleRank": 38,
+      "domain": "radioconvos.com.ar",
+      "name": "Radio Con Vos",
+      "verdict": "seo-grab",
+      "verdictLabel": "SEO-grab",
+      "licensed": null,
+      "commentary": "La URL duplica el rango 25."
+    },
+    {
+      "googleRank": 39,
+      "domain": "lacapital.com.ar",
+      "name": "La Capital",
+      "verdict": "seo-grab",
+      "verdictLabel": "SEO-grab",
+      "licensed": null,
+      "commentary": "La URL duplica el rango 10."
+    },
+    {
+      "googleRank": 40,
+      "domain": "casino.cl",
+      "name": "Casino.cl",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "La URL duplica el rango 26."
+    },
+    {
+      "googleRank": 41,
+      "domain": "infocanuelas.com",
+      "name": "InfoCañuelas",
+      "verdict": "seo-grab",
+      "verdictLabel": "SEO-grab",
+      "licensed": null,
+      "commentary": "La URL duplica el rango 28."
+    },
+    {
+      "googleRank": 42,
+      "domain": "focusgn.com",
+      "name": "Focus Gaming News",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Afiliado legítimo",
+      "licensed": null,
+      "commentary": "La URL duplica el rango 37."
+    },
+    {
+      "googleRank": 43,
+      "domain": "on24.com.ar",
+      "name": "ON24",
+      "verdict": "seo-grab",
+      "verdictLabel": "SEO-grab",
+      "licensed": null,
+      "commentary": "El dominio pertenece a una organización de noticias."
+    },
+    {
+      "googleRank": 44,
+      "domain": "casinos-argentina.com",
+      "name": "Casinos Argentina",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Afiliado legítimo",
+      "licensed": null,
+      "commentary": "El sitio reseña operadores de casino."
+    },
+    {
+      "googleRank": 45,
+      "domain": "palermo.com.ar",
+      "name": "Hipódromo de Palermo",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador licenciado",
+      "licensed": true,
+      "commentary": "La URL duplica el rango 12."
+    },
+    {
+      "googleRank": 46,
+      "domain": "0223.com.ar",
+      "name": "0223",
+      "verdict": "seo-grab",
+      "verdictLabel": "SEO-grab",
+      "licensed": null,
+      "commentary": "El dominio pertenece a una organización de noticias."
+    },
+    {
+      "googleRank": 47,
+      "domain": "askgamblers.com",
+      "name": "AskGamblers",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Afiliado legítimo",
+      "licensed": null,
+      "commentary": "La URL duplica el rango 30."
+    },
+    {
+      "googleRank": 48,
+      "domain": "youtube.com",
+      "name": "YouTube",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "La URL duplica el rango 23."
+    },
+    {
+      "googleRank": 49,
+      "domain": "ruleta77argentina.com",
+      "name": "Ruleta77",
+      "verdict": "shady-affiliate",
+      "verdictLabel": "Afiliado sospechoso",
+      "licensed": null,
+      "commentary": "El sitio oculta detalles de propiedad."
+    },
+    {
+      "googleRank": 50,
+      "domain": "eldia.com",
+      "name": "El Dia",
+      "verdict": "seo-grab",
+      "verdictLabel": "SEO-grab",
+      "licensed": null,
+      "commentary": "La URL duplica el rango 4."
+    },
+    {
+      "googleRank": 51,
+      "domain": "playuzu.bet.ar",
+      "name": "PlayUZU",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador licenciado",
+      "licensed": true,
+      "commentary": "La URL duplica el rango 1."
+    },
+    {
+      "googleRank": 52,
+      "domain": "infobae.com",
+      "name": "Infobae",
+      "verdict": "seo-grab",
+      "verdictLabel": "SEO-grab",
+      "licensed": null,
+      "commentary": "La URL duplica el rango 16."
+    },
+    {
+      "googleRank": 53,
+      "domain": "pronto.com.ar",
+      "name": "Pronto",
+      "verdict": "seo-grab",
+      "verdictLabel": "SEO-grab",
+      "licensed": null,
+      "commentary": "El dominio pertenece a una organización de noticias."
+    },
+    {
+      "googleRank": 54,
+      "domain": "cordoba.jugadon.bet.ar",
+      "name": "Jugadon Córdoba",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador licenciado",
+      "licensed": true,
+      "commentary": "El dominio utiliza la extensión .bet.ar."
+    },
+    {
+      "googleRank": 55,
+      "domain": "lapaginamillonaria.com",
+      "name": "La Página Millonaria",
+      "verdict": "seo-grab",
+      "verdictLabel": "SEO-grab",
+      "licensed": null,
+      "commentary": "El sitio publica noticias deportivas."
+    },
+    {
+      "googleRank": 56,
+      "domain": "strafe.com",
+      "name": "Strafe",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Afiliado legítimo",
+      "licensed": null,
+      "commentary": "El sitio reseña operadores de casino."
+    },
+    {
+      "googleRank": 57,
+      "domain": "mercadopago.com.uy",
+      "name": "Mercado Pago Uruguay",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "El sitio está dirigido a usuarios en Uruguay."
+    },
+    {
+      "googleRank": 58,
+      "domain": "argentinacasinos.com",
+      "name": "Argentina Casinos",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Afiliado legítimo",
+      "licensed": null,
+      "commentary": "El sitio reseña operadores de casino."
+    },
+    {
+      "googleRank": 59,
+      "domain": "casinoinchile.com",
+      "name": "Casino en Chile",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "El sitio está dirigido a usuarios en Chile."
+    },
+    {
+      "googleRank": 60,
+      "domain": "betsson.bet.ar",
+      "name": "Betsson",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador licenciado",
+      "licensed": true,
+      "commentary": "El dominio utiliza la extensión .bet.ar."
+    },
+    {
+      "googleRank": 61,
+      "domain": "bplay.bet.ar",
+      "name": "bplay",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador licenciado",
+      "licensed": true,
+      "commentary": "El dominio utiliza la extensión .bet.ar."
+    },
+    {
+      "googleRank": 62,
+      "domain": "betsson.bet.ar",
+      "name": "Betsson",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador licenciado",
+      "licensed": true,
+      "commentary": "El dominio utiliza la extensión .bet.ar."
+    },
+    {
+      "googleRank": 63,
+      "domain": "betsson.co",
+      "name": "Betsson Colombia",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "El dominio utiliza una extensión de Colombia."
+    },
+    {
+      "googleRank": 64,
+      "domain": "casinoalto.com",
+      "name": "Casino Alto",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Afiliado legítimo",
+      "licensed": null,
+      "commentary": "El sitio reseña operadores de casino."
+    },
+    {
+      "googleRank": 65,
+      "domain": "palermo.com.ar",
+      "name": "Hipódromo de Palermo",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador licenciado",
+      "licensed": true,
+      "commentary": "La URL duplica el rango 12."
+    },
+    {
+      "googleRank": 66,
+      "domain": "argentina.gob.ar",
+      "name": "Argentina.gob.ar",
+      "verdict": "authority",
+      "verdictLabel": "Autoridad",
+      "licensed": null,
+      "commentary": "El sitio pertenece al gobierno."
+    },
+    {
+      "googleRank": 67,
+      "domain": "ruleta77argentina.com",
+      "name": "Ruleta77",
+      "verdict": "shady-affiliate",
+      "verdictLabel": "Afiliado sospechoso",
+      "licensed": null,
+      "commentary": "La URL duplica el rango 49."
+    },
+    {
+      "googleRank": 68,
+      "domain": "0223.com.ar",
+      "name": "0223",
+      "verdict": "seo-grab",
+      "verdictLabel": "SEO-grab",
+      "licensed": null,
+      "commentary": "La URL duplica el rango 46."
+    },
+    {
+      "googleRank": 69,
+      "domain": "infocielo.com",
+      "name": "Infocielo",
+      "verdict": "seo-grab",
+      "verdictLabel": "SEO-grab",
+      "licensed": null,
+      "commentary": "El dominio pertenece a una organización de noticias."
+    },
+    {
+      "googleRank": 70,
+      "domain": "balloon.ar",
+      "name": "Balloon",
+      "verdict": "shady-affiliate",
+      "verdictLabel": "Afiliado sospechoso",
+      "licensed": null,
+      "commentary": "El sitio promueve operadores sin licencias."
+    },
+    {
+      "googleRank": 71,
+      "domain": "betsson.co",
+      "name": "Betsson Colombia",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "La URL duplica el rango 63."
+    },
+    {
+      "googleRank": 72,
+      "domain": "casino.mx",
+      "name": "Casino.mx",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "El sitio está dirigido a usuarios en México."
+    },
+    {
+      "googleRank": 73,
+      "domain": "secureargentina.com.ar",
+      "name": "Secure Argentina",
+      "verdict": "shady-affiliate",
+      "verdictLabel": "Afiliado sospechoso",
+      "licensed": null,
+      "commentary": "El sitio oculta detalles de propiedad."
+    },
+    {
+      "googleRank": 74,
+      "domain": "argentina.gob.ar",
+      "name": "Argentina.gob.ar",
+      "verdict": "authority",
+      "verdictLabel": "Autoridad",
+      "licensed": null,
+      "commentary": "La URL duplica el rango 66."
+    },
+    {
+      "googleRank": 75,
+      "domain": "casinosvirtualesargentina.com",
+      "name": "Casinos Virtuales",
+      "verdict": "shady-affiliate",
+      "verdictLabel": "Afiliado sospechoso",
+      "licensed": null,
+      "commentary": "El sitio oculta detalles de propiedad."
+    },
+    {
+      "googleRank": 76,
+      "domain": "infocielo.com",
+      "name": "Infocielo",
+      "verdict": "seo-grab",
+      "verdictLabel": "SEO-grab",
+      "licensed": null,
+      "commentary": "La URL duplica el rango 69."
+    },
+    {
+      "googleRank": 77,
+      "domain": "latinoscasinos.com",
+      "name": "Latinos Casinos",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Afiliado legítimo",
+      "licensed": null,
+      "commentary": "El sitio reseña operadores de casino."
+    },
+    {
+      "googleRank": 78,
+      "domain": "diariodelanzarote.com",
+      "name": "Diario de Lanzarote",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "El sitio está dirigido a usuarios en España."
+    },
+    {
+      "googleRank": 79,
+      "domain": "balloon.ar",
+      "name": "Balloon",
+      "verdict": "shady-affiliate",
+      "verdictLabel": "Afiliado sospechoso",
+      "licensed": null,
+      "commentary": "La URL duplica el rango 70."
+    },
+    {
+      "googleRank": 80,
+      "domain": "betsson.bet.ar",
+      "name": "Betsson",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador licenciado",
+      "licensed": true,
+      "commentary": "La URL duplica el rango 3."
+    },
+    {
+      "googleRank": 81,
+      "domain": "balloon.ar",
+      "name": "Balloon",
+      "verdict": "shady-affiliate",
+      "verdictLabel": "Afiliado sospechoso",
+      "licensed": null,
+      "commentary": "La URL duplica el rango 70."
+    },
+    {
+      "googleRank": 82,
+      "domain": "lashbrowfortune.com",
+      "name": "Lash & Brow Fortune",
+      "verdict": "shady-affiliate",
+      "verdictLabel": "Afiliado sospechoso",
+      "licensed": null,
+      "commentary": "El sitio aloja contenido spam."
+    },
+    {
+      "googleRank": 83,
+      "domain": "mejorescasinos.com",
+      "name": "Mejores Casinos",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Afiliado legítimo",
+      "licensed": null,
+      "commentary": "El sitio reseña operadores de casino."
+    },
+    {
+      "googleRank": 84,
+      "domain": "casinosvirtualesargentina.com",
+      "name": "Casinos Virtuales",
+      "verdict": "shady-affiliate",
+      "verdictLabel": "Afiliado sospechoso",
+      "licensed": null,
+      "commentary": "La URL duplica el rango 75."
+    },
+    {
+      "googleRank": 85,
+      "domain": "casinoarg.com",
+      "name": "CasinoArg",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Afiliado legítimo",
+      "licensed": null,
+      "commentary": "El sitio reseña operadores de casino."
+    },
+    {
+      "googleRank": 86,
+      "domain": "juegosdeazarenespana.com",
+      "name": "Juegos de Azar en España",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "El sitio está dirigido a usuarios en España."
+    },
+    {
+      "googleRank": 87,
+      "domain": "betsson.bet.ar",
+      "name": "Betsson",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador licenciado",
+      "licensed": true,
+      "commentary": "El dominio utiliza la extensión .bet.ar."
+    },
+    {
+      "googleRank": 88,
+      "domain": "casinoonlinelegal.com",
+      "name": "Casino Online Legal",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Afiliado legítimo",
+      "licensed": null,
+      "commentary": "El sitio reseña operadores de casino."
+    },
+    {
+      "googleRank": 89,
+      "domain": "eldia.com/apuestas/mx",
+      "name": "El Dia",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "El sitio está dirigido a usuarios en México."
+    },
+    {
+      "googleRank": 90,
+      "domain": "casinoonlineuruguay.co",
+      "name": "Casino Online Uruguay",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "El sitio está dirigido a usuarios en Uruguay."
+    },
+    {
+      "googleRank": 91,
+      "domain": "playcet.bet.ar",
+      "name": "Playcet",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador licenciado",
+      "licensed": true,
+      "commentary": "El dominio utiliza la extensión .bet.ar."
+    },
+    {
+      "googleRank": 92,
+      "domain": "intriper.com",
+      "name": "Intriper",
+      "verdict": "seo-grab",
+      "verdictLabel": "SEO-grab",
+      "licensed": null,
+      "commentary": "El sitio publica contenido de viajes."
+    },
+    {
+      "googleRank": 93,
+      "domain": "lacapital.com.ar",
+      "name": "La Capital",
+      "verdict": "seo-grab",
+      "verdictLabel": "SEO-grab",
+      "licensed": null,
+      "commentary": "La URL duplica el rango 10."
+    },
+    {
+      "googleRank": 94,
+      "domain": "betsson.bet.ar",
+      "name": "Betsson",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador licenciado",
+      "licensed": true,
+      "commentary": "La URL duplica el rango 87."
+    },
+    {
+      "googleRank": 95,
+      "domain": "casinoonlinelegal.com",
+      "name": "Casino Online Legal",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Afiliado legítimo",
+      "licensed": null,
+      "commentary": "La URL duplica el rango 88."
+    },
+    {
+      "googleRank": 96,
+      "domain": "bplay.bet.ar",
+      "name": "bplay",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador licenciado",
+      "licensed": true,
+      "commentary": "La URL duplica el rango 6."
+    },
+    {
+      "googleRank": 97,
+      "domain": "betsson.bet.ar",
+      "name": "Betsson",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador licenciado",
+      "licensed": true,
+      "commentary": "La URL duplica el rango 62."
+    },
+    {
+      "googleRank": 98,
+      "domain": "santafe.bplay.bet.ar",
+      "name": "bplay Santa Fe",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador licenciado",
+      "licensed": true,
+      "commentary": "El dominio utiliza la extensión .bet.ar."
+    },
+    {
+      "googleRank": 99,
+      "domain": "betsson.bet.ar",
+      "name": "Betsson",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador licenciado",
+      "licensed": true,
+      "commentary": "La URL duplica el rango 3."
+    },
+    {
+      "googleRank": 100,
+      "domain": "betsson.bet.ar",
+      "name": "Betsson",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador licenciado",
+      "licensed": true,
+      "commentary": "La URL duplica el rango 3."
+    }
+  ],
+  "peopleShouldAlsoAsk": [
+    {
+      "question": "¿Puedo retirar fondos a MercadoPago desde un casino online?",
+      "answer": "Betsson es actualmente el único operador con licencia .bet.ar que procesa retiros a MercadoPago en Argentina. bet365 y PlayUZU solo permiten depósitos vía MercadoPago — los retiros se realizan por transferencia bancaria o tarjeta. Verificá siempre los métodos de retiro disponibles antes de depositar."
+    },
+    {
+      "question": "¿El DNI que uso en MercadoPago tiene que coincidir con el del casino?",
+      "answer": "Sí, en operadores como bet365 es un requisito estricto — el DNI registrado en tu cuenta del casino debe coincidir exactamente con el DNI vinculado a tu cuenta MercadoPago. Si no coinciden, la transacción es rechazada automáticamente. Esto es parte de la verificación RENAPER que todos los operadores licenciados deben implementar."
+    },
+    {
+      "question": "¿Qué pasa si deposito con MercadoPago en un casino sin licencia .bet.ar?",
+      "answer": "MercadoPago no distingue si el casino tiene licencia provincial o no — la transacción se procesa igual. El riesgo es que si el operador no está regulado por LOTBA o IPLyC, no hay organismo local al que recurrir si el retiro es retenido o la cuenta cerrada. La licencia .bet.ar es tu única garantía de protección como consumidor argentino."
+    },
+    {
+      "question": "¿La regulación del casino online es nacional o provincial en Argentina?",
+      "answer": "Provincial. No existe un regulador federal único. LOTBA regula CABA, IPLyC regula Buenos Aires Province, y otras provincias tienen sus propios entes. Un operador puede tener licencia en CABA y estar bloqueado en Córdoba. El dominio .bet.ar indica licencia provincial pero no especifica cuál — verificá siempre en lotba.gob.ar o iplyc.gob.ar."
+    },
+    {
+      "question": "¿Existe autoexclusión para casinos online en Argentina?",
+      "answer": "Sí, pero es provincial. LOTBA administra el ReVA (Registro Voluntario de Autoexclusión) en CABA con exclusiones de hasta 2 años. IPLyC opera su propio registro en Buenos Aires Province. Todos los operadores licenciados deben verificar estos registros antes de aceptar depósitos. Hay un proyecto federal (ReNA) en desarrollo para unificar los sistemas."
+    }
+  ],
+  "finalCTA": {
+    "headline": "Nuestra primera elección",
+    "text": "Betsson es el único operador con licencia .bet.ar que procesa retiros a MercadoPago. Licencias en CABA, Buenos Aires Province y Córdoba. Patrocinador de Boca Juniors y Racing Club, con oficina regional en Buenos Aires desde marzo 2025."
+  }
+}

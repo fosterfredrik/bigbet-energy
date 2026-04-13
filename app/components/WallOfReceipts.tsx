@@ -89,6 +89,22 @@ const WOR_LABELS: Record<string, {
     showMore: (n: number) => `Show ${n} more ▼`,
     showLess: 'Show less ▲',
   },
+  es: {
+    licensedOperator: 'Operador licenciado',
+    licensedGame: 'Casino licenciado',
+    legitAffiliate: 'Afiliado legítimo',
+    seoGrab: 'SEO-grab',
+    shadyAffiliate: 'Afiliado sospechoso',
+    unlicensed: 'Sin licencia',
+    irrelevant: 'Irrelevante',
+    authority: 'Autoridad',
+    site: 'Sitio',
+    status: 'Estado',
+    comment: 'Comentario',
+    serpIntro: (count: number) => `Análisis completo de las ${count} URLs. Verificá qué dice ser cada sitio — y lo que realmente encontramos.`,
+    showMore: (n: number) => `Ver ${n} más ▼`,
+    showLess: 'Ver menos ▲',
+  },
 };
 
 export default function WallOfReceipts({ results, type, serpHealth, locale = 'sv' }: {

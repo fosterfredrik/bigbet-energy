@@ -24,7 +24,7 @@ const VERDICT: Record<string, { bg: string; text: string; border: string; dot: s
   'authority': { bg: 'bg-neutral-800', text: 'text-neutral-400', border: 'border-neutral-600', dot: 'bg-neutral-400' },
 };
 
-const LABELS: Record<string, Record<string, string>> = {
+const LABELS: Record<string, Record<string, string | ((count: number, keyword: string, country?: string) => string)>> = {
   sv: {
     urlsAnalyzed: 'URL:er analyserade',
     firstChoice: 'Förstaval',
@@ -50,7 +50,7 @@ const LABELS: Record<string, Record<string, string>> = {
     footerResponsible: '18+ · Stödlinjen.se · Spelpaus.se · Spela ansvarsfullt',
     verifyLabel: 'Verifiera →',
     disclaimerLabel: 'Disclaimer',
-    step1: (count: number, keyword: string, country: string) =>
+    step1: (count: number, keyword: string, country?: string) =>
       `Vi hämtade de ${count} första organiska resultaten för "${keyword}" i ${country === 'sverige' ? 'Sverige' : country} via DataForSEO. Alla URL:er inkluderades oavsett relevans.`,
     step2: () =>
       `Varje URL klassificerades manuellt utifrån licensstatus, betalningslösningar och ägargenomsynlighet. Det separerade de seriösa aktörerna från resten.`,
@@ -115,6 +115,36 @@ const LABELS: Record<string, Record<string, string>> = {
     step2: () =>
       `Each URL was manually classified based on licence status, payment solutions and ownership transparency. This separated the legitimate operators from the rest.`,
   },
+  es: {
+    urlsAnalyzed: 'URLs analizadas',
+    firstChoice: 'Primera elección',
+    updated: 'Actualizado',
+    editorialRating: 'Valoración editorial',
+    whyThisOne: 'Por qué esta elección',
+    editorialComment: 'Comentario editorial',
+    keyInfo: 'Información clave',
+    whatYouGet: 'Qué obtenés',
+    verified: 'Verificado',
+    runnersUp: 'Finalistas',
+    googlePosition: 'Posición en Google',
+    whyTheyRank: 'Por qué aparecen — pero no deberían',
+    warning: 'Advertencia',
+    howWeDid: 'Cómo lo hicimos',
+    peopleShouldAsk: 'Preguntas que deberías hacer',
+    showTerms: 'Ver términos',
+    responsible: 'Jugá con responsabilidad',
+    helplineUrl: 'https://www.argentina.gob.ar',
+    helplineLabel: 'Línea 148 (CABA)',
+    selfExclusionUrl: 'https://lotba.gob.ar',
+    selfExclusionLabel: 'ReVA / IPLyC',
+    footerResponsible: '18+ · Línea 148 · Jugá con responsabilidad',
+    verifyLabel: 'Verificar →',
+    disclaimerLabel: 'Aviso legal',
+    step1: (count: number, keyword: string) =>
+      `Recopilamos los ${count} primeros resultados orgánicos de Google para "${keyword}" en Argentina via DataForSEO. Todas las URLs fueron incluidas independientemente de su relevancia.`,
+    step2: () =>
+      `Cada URL fue clasificada manualmente según el estado de licencia provincial, métodos de pago y transparencia de propiedad. Esto separó a los operadores legítimos del resto.`,
+  },
 };
 
 export default async function GuidePagePage({ params }: { params: { slug: string; country: string } }) {
@@ -128,6 +158,7 @@ export default async function GuidePagePage({ params }: { params: { slug: string
     sverige: 'Sverige',
     brasil: 'Brasil',
     uk: 'United Kingdom',
+    argentina: 'Argentina',
   };
 
   return (
@@ -698,11 +729,12 @@ export default async function GuidePagePage({ params }: { params: { slug: string
             sv: `Denna analys är baserad på granskning av Googles top ${guide.serpResults.length} organiska resultat för "${guide.keyword}" i Sverige samt 15+ års erfarenhet inom gamblingindustrin. Affiliatelänkar tillkommer enbart till Spelinspektionen-licensierade operatörer. Spela ansvarsfullt. 18+. Stödlinjen: 020-81 91 00.`,
             en: `This analysis is based on a review of the top ${guide.serpResults.length} organic Google results for "${guide.keyword}" in the UK, plus 15+ years of industry experience. Affiliate links are only provided to licensed operators. Gamble responsibly. 18+. GamCare: 0808 8020 133.`,
             pt: `Esta análise é baseada na revisão dos top ${guide.serpResults.length} resultados orgânicos do Google para "${guide.keyword}" no Brasil, com mais de 15 anos de experiência no setor. Links de afiliados apenas para operadores licenciados pelo SPA/Ministério da Fazenda. Jogue com responsabilidade. 18+. CVV: 188.`,
+            es: `Este análisis está basado en la revisión de los top ${guide.serpResults.length} resultados orgánicos de Google para "${guide.keyword}" en Argentina, con más de 15 años de experiencia en el sector. Links de afiliados únicamente a operadores licenciados por LOTBA o IPLyC con dominio .bet.ar. Jugá con responsabilidad. 18+. Línea 148 (CABA).`,
           };
           return (
             <section className="p-6 bg-neutral-800 rounded-lg border border-neutral-700 mb-8">
               <p className="text-sm text-neutral-500 leading-relaxed">
-              <strong className="text-neutral-400">{L.disclaimerLabel}:</strong>{' '}
+                <strong className="text-neutral-400">{L.disclaimerLabel}:</strong>{' '}
                 {disclaimerText[guide.locale] || disclaimerText['en']}
               </p>
             </section>

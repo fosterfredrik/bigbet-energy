@@ -1,0 +1,1101 @@
+{
+  "slug": "casino-online",
+  "template": "operator",
+  "type": "operator",
+  "country": "argentina",
+  "locale": "es",
+  "keyword": "casino online",
+  "searchIntent": "Casino Online",
+  "h1": "#1 Casino Online en Argentina",
+  "searchMetadata": {
+    "totalAnalyzed": 100,
+    "dateAnalyzed": "10 abril 2026",
+    "verificationDate": "Abril 2026"
+  },
+  "verdict": {
+    "summary": "Betsson lidera por licencias provinciales y pagos en pesos argentinos."
+  },
+  "winner": {
+    "name": "Betsson",
+    "domain": "betsson.bet.ar",
+    "affiliateUrl": "https://betsson.bet.ar",
+    "affiliateLabel": "Jugar en Betsson →",
+    "logo": "/images/guides/betsson-logo.png",
+    "googleRank": 1,
+    "upsellLine": "Casino provincial con pagos en ARS.",
+    "whyItWins": "Betsson opera con licencias en CABA (LOTBA), Buenos Aires Province (IPLyC) y Córdoba, mediante sociedad con Casino de Victoria. Es patrocinador principal de Boca Juniors y Racing Club, y abrió una oficina regional en Buenos Aires en marzo 2025. Acepta MercadoPago con verificación RENAPER en cada transacción.",
+    "badges": [
+      "Licencia LOTBA verificada",
+      "Pagos en ARS",
+      "Casino en vivo",
+      "Geolocalización estricta"
+    ],
+    "sectionBadge": "Análisis editorial",
+    "materialEvidence": [
+      {
+        "title": "Licencia LOTBA",
+        "description": "Posee licencia DI-2021-1166-GCABA-LOTBA otorgada por LOTBA."
+      },
+      {
+        "title": "Pagos en ARS",
+        "description": "Procesa depósitos y retiros en pesos argentinos."
+      },
+      {
+        "title": "Casino en vivo",
+        "description": "Ofrece juegos con crupieres en tiempo real."
+      },
+      {
+        "title": "Geolocalización estricta",
+        "description": "El acceso está restringido por geolocalización a las provincias donde opera cada subdominio — jugadores fuera de CABA, PBA o Córdoba pueden verse bloqueados."
+      }
+    ],
+    "customerReview": {
+      "quote": "Betsson es el caso más sólido del mercado argentino — licencias en tres jurisdicciones, socio local con experiencia en tierra firme, y patrocinios que ningún offshore puede igualar. La oficina en Buenos Aires es señal de compromiso a largo plazo.",
+      "date": "Abril 2026",
+      "author": "BigBet.Energy redacción"
+    },
+    "termsAndConditions": "18+. Jugá con responsabilidad. Términos completos en betsson.bet.ar. Línea 148 (CABA). Autoexclusión via ReVA (LOTBA) / IPLyC.",
+    "specs": {
+      "whatYouGet": [
+        {
+          "label": "Licencia",
+          "value": "LOTBA / IPLyC (Argentina)"
+        },
+        {
+          "label": "Retiros",
+          "value": "Procesados en ARS"
+        },
+        {
+          "label": "Métodos de pago",
+          "value": "Tarjetas, Mercado Pago, transferencias"
+        },
+        {
+          "label": "Autoexclusión",
+          "value": "ReVA / IPLyC integrado"
+        },
+        {
+          "label": "Atención al cliente",
+          "value": "Soporte local disponible"
+        },
+        {
+          "label": "App móvil",
+          "value": "Disponible para iOS y Android"
+        }
+      ],
+      "certifications": [
+        "Licencia .bet.ar verificada",
+        "Integración ReVA confirmada",
+        "Verificación RENAPER activa",
+        "Herramientas de juego responsable disponibles",
+        "Dominio .bet.ar verificado"
+      ]
+    }
+  },
+  "runnerUps": [
+    {
+      "name": "Codere",
+      "domain": "www.codere.bet.ar",
+      "affiliateUrl": "https://www.codere.bet.ar",
+      "affiliateLabel": "Jugar en Codere →",
+      "logo": "/images/guides/codere-logo.png",
+      "googleRank": 13,
+      "keyBenefit": "Verificación DNI",
+      "whyRunnerUp": "Codere opera bajo licencia LOTBA (DI-2021-238-GCABA-LOTBA) y exige verificación de DNI con número de trámite para registrar cuentas en CABA. Ofrece casino en vivo con mesas de Evolution Gaming. Su cobertura se limita a CABA — no tiene presencia en Buenos Aires Province ni Córdoba."
+    },
+    {
+      "name": "bplay",
+      "domain": "www.bplay.bet.ar",
+      "affiliateUrl": "https://www.bplay.bet.ar",
+      "affiliateLabel": "Jugar en bplay →",
+      "logo": "/images/guides/bplay-logo.png",
+      "googleRank": 3,
+      "keyBenefit": "Operador 100% argentino",
+      "whyRunnerUp": "bplay es operada por BOLDT SA y tiene licencias de LOTBA, IPLyC y Lotería de Santa Fe — el único operador con presencia en tres provincias además de Betsson. Procesa apuestas en ARS y rechaza depósitos de terceros, obligando a usar cuentas con la misma titularidad. La opción más local del mercado."
+    }
+  ],
+  "theBubble": null,
+  "bestsellerWarning": "Muchos resultados top en Google promocionan operadores sin licencia .bet.ar, engañando a jugadores argentinos.",
+  "failureCards": [
+    {
+      "badge": "Sin licencia AR",
+      "domain": "argen.1xbet.com",
+      "productName": "1xBet",
+      "googleRank": 28,
+      "whyItFailed": "1xBet opera con licencia de Curaçao y sin dominio .bet.ar. Patrocina al equipo argentino 9z Team, pero no cumple con regulaciones provinciales. Esto pone en riesgo a los jugadores locales."
+    },
+    {
+      "badge": "Offshore ilegal",
+      "domain": "stake.com",
+      "productName": "Stake",
+      "googleRank": 33,
+      "whyItFailed": "Stake opera offshore sin dominio .bet.ar ni licencia provincial argentina. Acepta jugadores locales sin verificación RENAPER ni integración ReVA. Sin regulación provincial, no hay recurso local si surgen problemas con retiros."
+    },
+    {
+      "badge": "Dueño desconocido",
+      "domain": "rojabet.com",
+      "productName": "Rojabet",
+      "googleRank": 27,
+      "whyItFailed": "Rojabet apunta a jugadores argentinos sin dominio .bet.ar ni información verificable de propiedad. No integra RENAPER ni ReVA. La ausencia total de transparencia no permite identificar ante quién reclamar."
+    }
+  ],
+  "methodology": {
+    "steps": [
+      {
+        "num": 1,
+        "title": "Recopilamos los top 100 resultados de Google",
+        "text": ""
+      },
+      {
+        "num": 2,
+        "title": "Clasificamos cada URL",
+        "text": ""
+      },
+      {
+        "num": 3,
+        "title": "Clasificación de URL",
+        "text": "Las URL se clasificaron según la presencia de un dominio .bet.ar y licencias provinciales. Los sitios sin licencias provinciales pero dirigidos a usuarios en Argentina se clasificaron como sin licencia. Las marcas globales con dominios extranjeros se consideraron irrelevantes."
+      },
+      {
+        "num": 4,
+        "title": "Ranking de resultados",
+        "text": "Los resultados se clasificaron según el cumplimiento de los requisitos de licencia argentinos y métodos de pago. Los operadores con propiedad transparente y cumplimiento provincial recibieron prioridad en los rankings finales."
+      }
+    ]
+  },
+  "rankingCriteria": [
+    "Validación de licencia provincial",
+    "Dominio .bet.ar verificable",
+    "Métodos de pago en ARS",
+    "Integración de verificación DNI",
+    "Propiedad transparente",
+    "Sincronización con registro ReVA"
+  ],
+  "serpResults": [
+    {
+      "googleRank": 1,
+      "domain": "betsson.bet.ar",
+      "name": "Betsson",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador licenciado",
+      "licensed": true,
+      "commentary": "Dominio coincide con extensión .bet.ar."
+    },
+    {
+      "googleRank": 2,
+      "domain": "citycenteronline.bet.ar",
+      "name": "City Center Online",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador licenciado",
+      "licensed": true,
+      "commentary": "Dominio coincide con extensión .bet.ar."
+    },
+    {
+      "googleRank": 3,
+      "domain": "bplay.bet.ar",
+      "name": "bplay",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador licenciado",
+      "licensed": true,
+      "commentary": "Operador posee licencia IPLyC y coincide con extensión .bet.ar."
+    },
+    {
+      "googleRank": 4,
+      "domain": "casinoclubonline.bet.ar",
+      "name": "Casino Club Online",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador licenciado",
+      "licensed": true,
+      "commentary": "Dominio coincide con extensión .bet.ar."
+    },
+    {
+      "googleRank": 5,
+      "domain": "casinobuenosaires.com.ar",
+      "name": "Casino Buenos Aires",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador licenciado",
+      "licensed": true,
+      "commentary": "Operador posee licencia LOTBA."
+    },
+    {
+      "googleRank": 6,
+      "domain": "play.google.com",
+      "name": "Google Play",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "Sitio aloja aplicaciones."
+    },
+    {
+      "googleRank": 7,
+      "domain": "betano.bet.ar",
+      "name": "Betano",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador licenciado",
+      "licensed": true,
+      "commentary": "Dominio coincide con extensión .bet.ar."
+    },
+    {
+      "googleRank": 8,
+      "domain": "casino-online-ar.it.com",
+      "name": "Casino Online AR",
+      "verdict": "shady-affiliate",
+      "verdictLabel": "Afiliado sospechoso",
+      "licensed": null,
+      "commentary": "Sitio carece de transparencia en propiedad."
+    },
+    {
+      "googleRank": 9,
+      "domain": "betfair.com",
+      "name": "Betfair",
+      "verdict": "unlicensed",
+      "verdictLabel": "Sin licencia",
+      "licensed": false,
+      "commentary": "Dominio no coincide con extensión .bet.ar."
+    },
+    {
+      "googleRank": 10,
+      "domain": "playcet.bet.ar",
+      "name": "Playcet",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador licenciado",
+      "licensed": true,
+      "commentary": "Dominio coincide con extensión .bet.ar."
+    },
+    {
+      "googleRank": 11,
+      "domain": "betsson.co",
+      "name": "Betsson Colombia",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "Dominio pertenece a Colombia y no coincide con extensión .bet.ar."
+    },
+    {
+      "googleRank": 12,
+      "domain": "betway.bet.ar",
+      "name": "Betway",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador licenciado",
+      "licensed": true,
+      "commentary": "Operador posee licencia LOTBA mediante asociación con Bingo Pilar limitada a CABA."
+    },
+    {
+      "googleRank": 13,
+      "domain": "codere.bet.ar",
+      "name": "Codere",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador licenciado",
+      "licensed": true,
+      "commentary": "Dominio coincide con extensión .bet.ar."
+    },
+    {
+      "googleRank": 14,
+      "domain": "palermo.com.ar",
+      "name": "Betfun",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador licenciado",
+      "licensed": true,
+      "commentary": "Operador posee licencia LOTBA."
+    },
+    {
+      "googleRank": 15,
+      "domain": "es.wikipedia.org",
+      "name": "Wikipedia",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "Sitio aloja entradas de enciclopedia."
+    },
+    {
+      "googleRank": 16,
+      "domain": "sanluis.jugadon.bet.ar",
+      "name": "Jugadon",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador licenciado",
+      "licensed": true,
+      "commentary": "Dominio coincide con extensión .bet.ar."
+    },
+    {
+      "googleRank": 17,
+      "domain": "bwin.co",
+      "name": "Bwin",
+      "verdict": "unlicensed",
+      "verdictLabel": "Sin licencia",
+      "licensed": false,
+      "commentary": "Dominio no coincide con extensión .bet.ar."
+    },
+    {
+      "googleRank": 18,
+      "domain": "pokerstars.com",
+      "name": "PokerStars",
+      "verdict": "unlicensed",
+      "verdictLabel": "Sin licencia",
+      "licensed": false,
+      "commentary": "Dominio no coincide con extensión .bet.ar."
+    },
+    {
+      "googleRank": 19,
+      "domain": "jugabetargentinacasinoonline.com",
+      "name": "Jugabet Argentina Casino Online",
+      "verdict": "shady-affiliate",
+      "verdictLabel": "Afiliado sospechoso",
+      "licensed": null,
+      "commentary": "Sitio carece de transparencia en propiedad."
+    },
+    {
+      "googleRank": 20,
+      "domain": "casino.bet365.bet.ar",
+      "name": "bet365",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador licenciado",
+      "licensed": true,
+      "commentary": "Dominio coincide con extensión .bet.ar."
+    },
+    {
+      "googleRank": 21,
+      "domain": "citycenteronline.bet.ar",
+      "name": "City Center Online",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador licenciado",
+      "licensed": true,
+      "commentary": "URL duplicada coincide con extensión .bet.ar."
+    },
+    {
+      "googleRank": 22,
+      "domain": "play.google.com",
+      "name": "Google Play",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "URL duplicada aloja aplicaciones."
+    },
+    {
+      "googleRank": 23,
+      "domain": "betsson.bet.ar",
+      "name": "Betsson",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador licenciado",
+      "licensed": true,
+      "commentary": "URL duplicada coincide con extensión .bet.ar."
+    },
+    {
+      "googleRank": 24,
+      "domain": "williamhill.es",
+      "name": "William Hill",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "Dominio pertenece a España."
+    },
+    {
+      "googleRank": 25,
+      "domain": "casinobuenosaires.com.ar",
+      "name": "Casino Buenos Aires",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador licenciado",
+      "licensed": true,
+      "commentary": "URL duplicada posee licencia LOTBA."
+    },
+    {
+      "googleRank": 26,
+      "domain": "bplay.bet.ar",
+      "name": "bplay",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador licenciado",
+      "licensed": true,
+      "commentary": "URL duplicada posee licencia IPLyC y coincide con extensión .bet.ar."
+    },
+    {
+      "googleRank": 27,
+      "domain": "rojabet.com",
+      "name": "Rojabet",
+      "verdict": "unlicensed",
+      "verdictLabel": "Sin licencia",
+      "licensed": false,
+      "commentary": "Dominio no coincide con extensión .bet.ar y apunta a jugadores en Argentina."
+    },
+    {
+      "googleRank": 28,
+      "domain": "argen.1xbet.com",
+      "name": "1xBet",
+      "verdict": "unlicensed",
+      "verdictLabel": "Sin licencia",
+      "licensed": false,
+      "commentary": "Operador posee licencia de Curaçao y no coincide con extensión .bet.ar mientras patrocina a 9z Team."
+    },
+    {
+      "googleRank": 29,
+      "domain": "facebook.com",
+      "name": "Facebook",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "Sitio aloja red social."
+    },
+    {
+      "googleRank": 30,
+      "domain": "rushbet.co",
+      "name": "Rushbet",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "Dominio pertenece a Colombia."
+    },
+    {
+      "googleRank": 31,
+      "domain": "rojabet.com",
+      "name": "Rojabet",
+      "verdict": "unlicensed",
+      "verdictLabel": "Sin licencia",
+      "licensed": false,
+      "commentary": "URL duplicada no coincide con extensión .bet.ar y apunta a jugadores en Argentina."
+    },
+    {
+      "googleRank": 32,
+      "domain": "facebook.com",
+      "name": "Facebook",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "URL duplicada aloja red social."
+    },
+    {
+      "googleRank": 33,
+      "domain": "stake.com",
+      "name": "Stake",
+      "verdict": "unlicensed",
+      "verdictLabel": "Sin licencia",
+      "licensed": false,
+      "commentary": "Dominio no coincide con extensión .bet.ar."
+    },
+    {
+      "googleRank": 34,
+      "domain": "doradobet.com",
+      "name": "Doradobet",
+      "verdict": "unlicensed",
+      "verdictLabel": "Sin licencia",
+      "licensed": false,
+      "commentary": "Dominio no coincide con extensión .bet.ar."
+    },
+    {
+      "googleRank": 35,
+      "domain": "playcet.bet.ar",
+      "name": "Playcet",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador licenciado",
+      "licensed": true,
+      "commentary": "URL duplicada coincide con extensión .bet.ar."
+    },
+    {
+      "googleRank": 36,
+      "domain": "casinoclubonline.bet.ar",
+      "name": "Casino Club Online",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador licenciado",
+      "licensed": true,
+      "commentary": "URL duplicada coincide con extensión .bet.ar."
+    },
+    {
+      "googleRank": 37,
+      "domain": "casinobuenosaires.com.ar",
+      "name": "Casino Buenos Aires",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador licenciado",
+      "licensed": true,
+      "commentary": "URL duplicada posee licencia LOTBA."
+    },
+    {
+      "googleRank": 38,
+      "domain": "interbet.bet.ar",
+      "name": "Interbet",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador licenciado",
+      "licensed": true,
+      "commentary": "Dominio coincide con extensión .bet.ar."
+    },
+    {
+      "googleRank": 39,
+      "domain": "casino777.es",
+      "name": "Casino777",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "Dominio pertenece a España."
+    },
+    {
+      "googleRank": 40,
+      "domain": "casinoatlanticcity.com",
+      "name": "Casino Atlantic City",
+      "verdict": "unlicensed",
+      "verdictLabel": "Sin licencia",
+      "licensed": false,
+      "commentary": "Dominio no coincide con extensión .bet.ar."
+    },
+    {
+      "googleRank": 41,
+      "domain": "youtube.com",
+      "name": "YouTube",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "Sitio aloja videos."
+    },
+    {
+      "googleRank": 42,
+      "domain": "coolbetchile.com",
+      "name": "Coolbet Chile",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "Dominio pertenece a Chile."
+    },
+    {
+      "googleRank": 43,
+      "domain": "latercera.com",
+      "name": "La Tercera",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "Dominio pertenece a Chile."
+    },
+    {
+      "googleRank": 44,
+      "domain": "jugabet.cl",
+      "name": "Jugabet Chile",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "Dominio pertenece a Chile."
+    },
+    {
+      "googleRank": 45,
+      "domain": "citycenteronline.bet.ar",
+      "name": "City Center Online",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador licenciado",
+      "licensed": true,
+      "commentary": "URL duplicada coincide con extensión .bet.ar."
+    },
+    {
+      "googleRank": 46,
+      "domain": "casumo.es",
+      "name": "Casumo",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "Dominio pertenece a España."
+    },
+    {
+      "googleRank": 47,
+      "domain": "casino.org",
+      "name": "Casino.org",
+      "verdict": "seo-grab",
+      "verdictLabel": "SEO-grab",
+      "licensed": null,
+      "commentary": "Sitio monetiza autoridad de dominio."
+    },
+    {
+      "googleRank": 48,
+      "domain": "admiralbet.es",
+      "name": "AdmiralBet",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "Dominio pertenece a España."
+    },
+    {
+      "googleRank": 49,
+      "domain": "betano.bet.ar",
+      "name": "Betano",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador licenciado",
+      "licensed": true,
+      "commentary": "URL duplicada coincide con extensión .bet.ar."
+    },
+    {
+      "googleRank": 50,
+      "domain": "facebook.com",
+      "name": "Facebook",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "URL duplicada aloja red social."
+    },
+    {
+      "googleRank": 51,
+      "domain": "facebook.com",
+      "name": "Facebook",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "URL duplicada aloja red social."
+    },
+    {
+      "googleRank": 52,
+      "domain": "vegasslotsonline.com",
+      "name": "VegasSlotsOnline",
+      "verdict": "seo-grab",
+      "verdictLabel": "SEO-grab",
+      "licensed": null,
+      "commentary": "Sitio monetiza autoridad de dominio."
+    },
+    {
+      "googleRank": 53,
+      "domain": "casumo.es",
+      "name": "Casumo",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "URL duplicada pertenece a España."
+    },
+    {
+      "googleRank": 54,
+      "domain": "admiralbet.es",
+      "name": "AdmiralBet",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "URL duplicada pertenece a España."
+    },
+    {
+      "googleRank": 55,
+      "domain": "betmaster.com.mx",
+      "name": "Betmaster",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "Dominio pertenece a México."
+    },
+    {
+      "googleRank": 56,
+      "domain": "instagram.com",
+      "name": "Instagram",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "Sitio aloja imágenes."
+    },
+    {
+      "googleRank": 57,
+      "domain": "casino.org",
+      "name": "Casino.org",
+      "verdict": "seo-grab",
+      "verdictLabel": "SEO-grab",
+      "licensed": null,
+      "commentary": "URL duplicada monetiza autoridad de dominio."
+    },
+    {
+      "googleRank": 58,
+      "domain": "es.casino.guru",
+      "name": "Casino Guru",
+      "verdict": "seo-grab",
+      "verdictLabel": "SEO-grab",
+      "licensed": null,
+      "commentary": "Sitio monetiza autoridad de dominio."
+    },
+    {
+      "googleRank": 59,
+      "domain": "sportium.es",
+      "name": "Sportium",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "Dominio pertenece a España."
+    },
+    {
+      "googleRank": 60,
+      "domain": "codere.bet.ar",
+      "name": "Codere",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador licenciado",
+      "licensed": true,
+      "commentary": "URL duplicada coincide con extensión .bet.ar."
+    },
+    {
+      "googleRank": 61,
+      "domain": "facebook.com",
+      "name": "Facebook",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "URL duplicada aloja red social."
+    },
+    {
+      "googleRank": 62,
+      "domain": "citycenteronline.bet.ar",
+      "name": "City Center Online",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador licenciado",
+      "licensed": true,
+      "commentary": "URL duplicada coincide con extensión .bet.ar."
+    },
+    {
+      "googleRank": 63,
+      "domain": "bing.com",
+      "name": "Bing",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "Sitio funciona como motor de búsqueda."
+    },
+    {
+      "googleRank": 64,
+      "domain": "argen.1xbet.com",
+      "name": "1xBet",
+      "verdict": "unlicensed",
+      "verdictLabel": "Sin licencia",
+      "licensed": false,
+      "commentary": "URL duplicada posee licencia de Curaçao y no coincide con extensión .bet.ar mientras patrocina a 9z Team."
+    },
+    {
+      "googleRank": 65,
+      "domain": "meridianbet.pe",
+      "name": "Meridianbet",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "Dominio pertenece a Perú."
+    },
+    {
+      "googleRank": 66,
+      "domain": "facebook.com",
+      "name": "Facebook",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "URL duplicada aloja red social."
+    },
+    {
+      "googleRank": 67,
+      "domain": "betmgm.com",
+      "name": "BetMGM",
+      "verdict": "unlicensed",
+      "verdictLabel": "Sin licencia",
+      "licensed": false,
+      "commentary": "Operador carece de licencia en Argentina."
+    },
+    {
+      "googleRank": 68,
+      "domain": "youtube.com",
+      "name": "YouTube",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "URL duplicada aloja videos."
+    },
+    {
+      "googleRank": 69,
+      "domain": "casinoclubonline.bet.ar",
+      "name": "Casino Club Online",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador licenciado",
+      "licensed": true,
+      "commentary": "URL duplicada coincide con extensión .bet.ar."
+    },
+    {
+      "googleRank": 70,
+      "domain": "bplay.bet.ar",
+      "name": "bplay",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador licenciado",
+      "licensed": true,
+      "commentary": "URL duplicada posee licencia IPLyC y coincide con extensión .bet.ar."
+    },
+    {
+      "googleRank": 71,
+      "domain": "casinoatlanticcity.com",
+      "name": "Casino Atlantic City",
+      "verdict": "unlicensed",
+      "verdictLabel": "Sin licencia",
+      "licensed": false,
+      "commentary": "URL duplicada no coincide con extensión .bet.ar."
+    },
+    {
+      "googleRank": 72,
+      "domain": "casino777.es",
+      "name": "Casino777",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "URL duplicada pertenece a España."
+    },
+    {
+      "googleRank": 73,
+      "domain": "gametwist.com",
+      "name": "GameTwist",
+      "verdict": "unlicensed",
+      "verdictLabel": "Sin licencia",
+      "licensed": false,
+      "commentary": "Dominio no coincide con extensión .bet.ar."
+    },
+    {
+      "googleRank": 74,
+      "domain": "latercera.com",
+      "name": "La Tercera",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "URL duplicada pertenece a Chile."
+    },
+    {
+      "googleRank": 75,
+      "domain": "facebook.com",
+      "name": "Facebook",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "URL duplicada aloja red social."
+    },
+    {
+      "googleRank": 76,
+      "domain": "doradobet.com",
+      "name": "Doradobet",
+      "verdict": "unlicensed",
+      "verdictLabel": "Sin licencia",
+      "licensed": false,
+      "commentary": "URL duplicada no coincide con extensión .bet.ar."
+    },
+    {
+      "googleRank": 77,
+      "domain": "informacionoficial.mendoza.gob.ar",
+      "name": "Juegos y Casinos Mendoza",
+      "verdict": "authority",
+      "verdictLabel": "Autoridad",
+      "licensed": null,
+      "commentary": "Dominio representa autoridad gubernamental."
+    },
+    {
+      "googleRank": 78,
+      "domain": "casinosonlineespanol.co.com",
+      "name": "Casinos Online Español",
+      "verdict": "shady-affiliate",
+      "verdictLabel": "Afiliado sospechoso",
+      "licensed": null,
+      "commentary": "Sitio carece de transparencia en propiedad."
+    },
+    {
+      "googleRank": 79,
+      "domain": "apuestasonline.net",
+      "name": "ApuestasOnline",
+      "verdict": "legit-affiliate",
+      "verdictLabel": "Afiliado legítimo",
+      "licensed": null,
+      "commentary": "Sitio muestra información de propiedad."
+    },
+    {
+      "googleRank": 80,
+      "domain": "tucuapuestas.bet.ar",
+      "name": "TUCUAPUESTAS",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador licenciado",
+      "licensed": true,
+      "commentary": "Dominio coincide con extensión .bet.ar."
+    },
+    {
+      "googleRank": 81,
+      "domain": "citycenteronline.bet.ar",
+      "name": "City Center Online",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador licenciado",
+      "licensed": true,
+      "commentary": "URL duplicada coincide con extensión .bet.ar."
+    },
+    {
+      "googleRank": 82,
+      "domain": "instagram.com",
+      "name": "Instagram",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "URL duplicada aloja imágenes."
+    },
+    {
+      "googleRank": 83,
+      "domain": "lacapital.com.ar",
+      "name": "La Capital",
+      "verdict": "seo-grab",
+      "verdictLabel": "SEO-grab",
+      "licensed": null,
+      "commentary": "Sitio monetiza autoridad de dominio."
+    },
+    {
+      "googleRank": 84,
+      "domain": "codere.bet.ar",
+      "name": "Codere",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador licenciado",
+      "licensed": true,
+      "commentary": "URL duplicada coincide con extensión .bet.ar."
+    },
+    {
+      "googleRank": 85,
+      "domain": "facebook.com",
+      "name": "Facebook",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "URL duplicada aloja red social."
+    },
+    {
+      "googleRank": 86,
+      "domain": "casino.com",
+      "name": "Casino.com",
+      "verdict": "seo-grab",
+      "verdictLabel": "SEO-grab",
+      "licensed": null,
+      "commentary": "Sitio monetiza autoridad de dominio."
+    },
+    {
+      "googleRank": 87,
+      "domain": "youtube.com",
+      "name": "YouTube",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "URL duplicada aloja videos."
+    },
+    {
+      "googleRank": 88,
+      "domain": "citycenteronline.bet.ar",
+      "name": "City Center Online",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador licenciado",
+      "licensed": true,
+      "commentary": "URL duplicada coincide con extensión .bet.ar."
+    },
+    {
+      "googleRank": 89,
+      "domain": "noda.gba.gob.ar",
+      "name": "Lotería de la Provincia",
+      "verdict": "authority",
+      "verdictLabel": "Autoridad",
+      "licensed": null,
+      "commentary": "Dominio representa autoridad gubernamental."
+    },
+    {
+      "googleRank": 90,
+      "domain": "youtube.com",
+      "name": "YouTube",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "URL duplicada aloja videos."
+    },
+    {
+      "googleRank": 91,
+      "domain": "youtube.com",
+      "name": "YouTube",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "URL duplicada aloja videos."
+    },
+    {
+      "googleRank": 92,
+      "domain": "facebook.com",
+      "name": "Facebook",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "URL duplicada aloja red social."
+    },
+    {
+      "googleRank": 93,
+      "domain": "play.google.com",
+      "name": "Google Play",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "URL duplicada aloja aplicaciones."
+    },
+    {
+      "googleRank": 94,
+      "domain": "facebook.com",
+      "name": "Facebook",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "URL duplicada aloja red social."
+    },
+    {
+      "googleRank": 95,
+      "domain": "bplay.bet.ar",
+      "name": "bplay",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador licenciado",
+      "licensed": true,
+      "commentary": "URL duplicada posee licencia IPLyC y coincide con extensión .bet.ar."
+    },
+    {
+      "googleRank": 96,
+      "domain": "betano.bet.ar",
+      "name": "Betano",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador licenciado",
+      "licensed": true,
+      "commentary": "URL duplicada coincide con extensión .bet.ar."
+    },
+    {
+      "googleRank": 97,
+      "domain": "youtube.com",
+      "name": "YouTube",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "URL duplicada aloja videos."
+    },
+    {
+      "googleRank": 98,
+      "domain": "betsson.bet.ar",
+      "name": "Betsson",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador licenciado",
+      "licensed": true,
+      "commentary": "URL duplicada coincide con extensión .bet.ar."
+    },
+    {
+      "googleRank": 99,
+      "domain": "caba.jugadon.bet.ar",
+      "name": "Jugadon",
+      "verdict": "licensed-operator",
+      "verdictLabel": "Operador licenciado",
+      "licensed": true,
+      "commentary": "URL duplicada coincide con extensión .bet.ar."
+    },
+    {
+      "googleRank": 100,
+      "domain": "youtube.com",
+      "name": "YouTube",
+      "verdict": "irrelevant",
+      "verdictLabel": "Irrelevante",
+      "licensed": null,
+      "commentary": "URL duplicada aloja videos."
+    }
+  ],
+  "peopleShouldAlsoAsk": [
+    {
+      "question": "¿La regulación del casino online es nacional o provincial en Argentina?",
+      "answer": "Provincial. No existe un regulador federal único. LOTBA regula CABA, IPLyC regula Buenos Aires Province, y otras provincias tienen sus propios entes. Un operador puede tener licencia en CABA y estar bloqueado en Córdoba. El dominio .bet.ar indica licencia provincial pero no especifica cuál — verificá siempre en lotba.gob.ar o iplyc.gob.ar."
+    },
+    {
+      "question": "¿Qué es la verificación RENAPER y por qué me la piden al retirar?",
+      "answer": "RENAPER es el sistema nacional de identidad biométrica. Todos los operadores licenciados están obligados a validar tu identidad con reconocimiento facial en cada login y cada retiro. Es un requisito regulatorio provincial, no una decisión del operador. Si un casino online no te pide verificación RENAPER, probablemente no tenga licencia provincial."
+    },
+    {
+      "question": "¿Puedo usar el casino online desde cualquier provincia de Argentina?",
+      "answer": "Depende de la cobertura de licencias del operador. Betsson opera en CABA, Buenos Aires Province y Córdoba mediante subdominios separados. bplay tiene licencias en tres provincias. Si accedés desde una provincia donde el operador no tiene licencia, la geolocalización puede bloquearte el acceso aunque tengas cuenta."
+    },
+    {
+      "question": "¿Existe autoexclusión nacional en Argentina como GamStop en el Reino Unido?",
+      "answer": "Todavía no. Hay un proyecto federal (ReNA) en desarrollo para unificar los sistemas provinciales. Por ahora LOTBA administra el ReVA en CABA — exclusiones de hasta 2 años — e IPLyC opera su propio registro en Buenos Aires Province. Lo que sí es nacional es la verificación biométrica obligatoria vía RENAPER en cada sesión."
+    },
+    {
+      "question": "¿Qué pasa si juego en un casino sin dominio .bet.ar?",
+      "answer": "No tenés protección legal como consumidor argentino. Si el operador retiene un retiro o cierra tu cuenta, no hay organismo regulatorio local al que recurrir. Los operadores sin licencia provincial no están obligados a integrar RENAPER, ReVA ni límites de depósito. El riesgo es enteramente del jugador."
+    }
+  ],
+  "finalCTA": {
+    "headline": "Nuestra primera elección",
+    "text": "Betsson es el operador con mayor cobertura provincial en Argentina — licencias en CABA, Buenos Aires Province y Córdoba, patrocinador de Boca Juniors y Racing Club, con oficina local en Buenos Aires."
+  }
+}
